@@ -1,34 +1,4 @@
-<?xml version='1.0' encoding='ISO-8859-1'?>
-<?xml-stylesheet href="emu.css"?>
-<!DOCTYPE html [
-        <!ENTITY nbsp   "&#xA0;">
-        <!ENTITY laquo  "&#xAB;">
-        <!ENTITY copy   "&#xA9;">
-        <!ENTITY reg    "&#xAE;">
-        <!ENTITY raquo  "&#xBB;">
-        <!ENTITY frac12 "&#xBD;">
-        <!ENTITY times  "&#xD7;">
-        <!ENTITY szlig  "&#xDF;">
-    	<!ENTITY divide "&#xF7;">
-        <!ENTITY pi     "&#x3C0;">
-        <!ENTITY zwj    "&#x200D;">
-        <!ENTITY ndash  "&#x2013;">
-        <!ENTITY mdash  "&#x2014;">
-        <!ENTITY lsquo  "&#x2018;">
-        <!ENTITY rsquo  "&#x2019;">
-        <!ENTITY ldquo  "&#x201C;">
-        <!ENTITY rdquo  "&#x201D;">
-        <!ENTITY hellip "&#x2026;">
-        <!ENTITY Prime  "&#x2032;">
-        <!ENTITY trade  "&#x2122;">
-        <!ENTITY rarr   "&#x2192;">
-        <!ENTITY notin  "&#x2209;">
-        <!ENTITY minus  "&#x2212;">
-        <!ENTITY infin  "&#x221E;">
-        <!ENTITY ne     "&#x2260;">
-        <!ENTITY le     "&#x2264;">
-        <!ENTITY ge     "&#x2265;">
-    ]>
+<!DOCTYPE html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8"/>
@@ -44,7 +14,7 @@
       <p class="ECMAaddress">CH-1204 Geneva</p>
       <p class="ECMAaddress">Tel: +41 22 849 6000</p>
       <p class="ECMAaddress">Fax: +41 22 849 6001</p>
-      <p class="ECMAaddress">Web: <emu-external-ref href="http://www.ecma-international.org" linktext="URL"/></p>
+      <p class="ECMAaddress">Web: <emu-external-ref href="http://www.ecma-international.org" linktext="URL"></emu-external-ref></p>
       <p><i>COPYRIGHT NOTICE</i></p>
       <p><i>&copy; 2015 Ecma International</i></p>
       <p><i>This document may be copied, published and distributed to others, and certain derivative works of it may be prepared, copied, published, and distributed, in whole or in part, provided that the above copyright notice and this Copyright License and Disclaimer are included on all such copies and derivative works. The only derivative works that are permissible under this Copyright License and Disclaimer are:</i></p>
@@ -57,7 +27,7 @@
       <p><i>The limited permissions granted above are perpetual and will not be revoked by Ecma International or its successors or assigns.</i></p>
       <p><i>This document and the information contained herein is provided on an "AS IS" basis and ECMA INTERNATIONAL DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY OWNERSHIP RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE."</i></p>
       <p><b>Software License</b></p>
-      <p>All Software contained in this document ("Software)" is protected by copyright and is being made available under the "BSD License", included below. This Software may be subject to third party rights (rights from parties other than Ecma International), including patent rights, and no licenses under such third party rights are granted under this license even if the third party concerned is a member of Ecma International. SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT <emu-external-ref href="http://www.ecma-international.org/memento/codeofconduct.htm" linktext="URL"/> FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS*.</p>
+      <p>All Software contained in this document ("Software)" is protected by copyright and is being made available under the "BSD License", included below. This Software may be subject to third party rights (rights from parties other than Ecma International), including patent rights, and no licenses under such third party rights are granted under this license even if the third party concerned is a member of Ecma International. SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT <emu-external-ref href="http://www.ecma-international.org/memento/codeofconduct.htm" linktext="URL"></emu-external-ref> FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS*.</p>
       <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
       <p>1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p>
       <p>2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
@@ -108,10 +78,10 @@
       <p>ISO/IEC 10646:2003: <i>Information Technology &ndash; Universal Multiple-Octet Coded Character Set (UCS) plus Amendment 1:2005, Amendment 2:2006, Amendment 3:2008, and Amendment 4:2008</i>, plus additional amendments and corrigenda, or successor</p>
       <p>ECMA-402, <i>ECMAScript 2015 Internationalization API Specification</i>.
         <br/>
-        <emu-external-ref href="http://www.ecma-international.org/publications/standards/Ecma-402.htm" linktext="URL"/></p>
+        <emu-external-ref href="http://www.ecma-international.org/publications/standards/Ecma-402.htm" linktext="URL"></emu-external-ref></p>
       <p>ECMA-404, <i>The JSON Data Interchange Format</i>.
         <br/>
-        <emu-external-ref href="http://www.ecma-international.org/publications/standards/Ecma-404.htm" linktext="URL"/></p>
+        <emu-external-ref href="http://www.ecma-international.org/publications/standards/Ecma-404.htm" linktext="URL"></emu-external-ref></p>
     </emu-clause>
 
     <!-- es6num="4" -->
@@ -3695,11 +3665,11 @@
               <p>Implementers of ECMAScript may find useful the paper and code written by David M. Gay for binary-to-decimal conversion of floating-point numbers:</p>
               <p>Gay, David M. Correctly Rounded Binary-Decimal and Decimal-Binary Conversions. Numerical Analysis, Manuscript 90-10. AT&amp;T Bell Laboratories (Murray Hill, New Jersey). November 30, 1990. Available as
                 <br/>
-                <emu-external-ref href="http://cm.bell-labs.com/cm/cs/doc/90/4-10.ps.gz" linktext="URL"/>. Associated code available as
+                <emu-external-ref href="http://cm.bell-labs.com/cm/cs/doc/90/4-10.ps.gz" linktext="URL"></emu-external-ref>. Associated code available as
                 <br/>
-                <emu-external-ref href="http://netlib.sandia.gov/fp/dtoa.c" linktext="URL"/> and as
+                <emu-external-ref href="http://netlib.sandia.gov/fp/dtoa.c" linktext="URL"></emu-external-ref> and as
                 <br/>
-                <emu-external-ref href="http://netlib.sandia.gov/fp/g_fmt.c" linktext="URL"/> and may also be found at the various `netlib` mirror sites.</p>
+                <emu-external-ref href="http://netlib.sandia.gov/fp/g_fmt.c" linktext="URL"></emu-external-ref> and may also be found at the various `netlib` mirror sites.</p>
             </emu-note>
           </emu-clause>
         </emu-clause>
@@ -9524,7 +9494,7 @@ function* enumerate(obj) {
           <!-- es6num="11.6.1.2" -->
           <emu-clause id="sec-identifier-names-static-semantics-stringvalue">
             <h1>Static Semantics: StringValue</h1>
-            <emu-see-also-para op="StringValue"/>
+            <emu-see-also-para op="StringValue"></emu-see-also-para>
             <emu-grammar>
               IdentifierName ::
                 IdentifierStart
@@ -9732,11 +9702,7 @@ function* enumerate(obj) {
             </emu-grammar>
             <p>The |SourceCharacter| immediately following a |NumericLiteral| must not be an |IdentifierStart| or |DecimalDigit|.</p>
             <emu-note>
-              <p>For example:
-                <pre>
-                  3in
-                </pre>
-                is an error and not the two input elements `3` and `in`.</p>
+              <p>For example: `3in` is an error and not the two input elements `3` and `in`.</p>
             </emu-note>
             <p>A conforming implementation, when processing strict mode code (see <emu-internal-ref refid="sec-strict-mode-code">NUM</emu-internal-ref>), must not extend, as described in <emu-internal-ref refid="sec-additional-syntax-numeric-literals">NUM</emu-internal-ref>, the syntax of |NumericLiteral| to include |LegacyOctalIntegerLiteral|, nor extend the syntax of |DecimalIntegerLiteral| to include |NonOctalDecimalIntegerLiteral|.</p>
 
@@ -9989,7 +9955,7 @@ function* enumerate(obj) {
           <!-- es6num="11.8.4.2" -->
           <emu-clause id="sec-string-literals-static-semantics-stringvalue">
             <h1>Static Semantics: StringValue</h1>
-            <emu-see-also-para op="StringValue"/>
+            <emu-see-also-para op="StringValue"></emu-see-also-para>
             <emu-grammar>
               StringLiteral ::
                 `"` DoubleStringCharacters? `"`
@@ -10743,7 +10709,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.1.2" -->
         <emu-clause id="sec-identifiers-static-semantics-boundnames">
           <h1>Static Semantics: BoundNames</h1>
-          <emu-see-also-para op="BoundNames"/>
+          <emu-see-also-para op="BoundNames"></emu-see-also-para>
           <emu-grammar>BindingIdentifier : Identifier</emu-grammar>
           <emu-alg>
             1. Return a new List containing the StringValue of |Identifier|.
@@ -10757,7 +10723,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.1.3" -->
         <emu-clause id="sec-identifiers-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>IdentifierReference : Identifier</emu-grammar>
           <emu-alg>
             1. If this |IdentifierReference| is contained in strict mode code and StringValue of |Identifier| is "eval" or "arguments", return *false*.
@@ -10772,7 +10738,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.1.4" -->
         <emu-clause id="sec-identifiers-static-semantics-stringvalue">
           <h1>Static Semantics: StringValue</h1>
-          <emu-see-also-para op="StringValue"/>
+          <emu-see-also-para op="StringValue"></emu-see-also-para>
           <emu-grammar>
             IdentifierReference : `yield`
 
@@ -10793,7 +10759,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-identifiers-runtime-semantics-bindinginitialization">
             <h1>Runtime Semantics: BindingInitialization</h1>
             <p>With arguments _value_ and _environment_.</p>
-            <emu-see-also-para op="BindingInitialization"/>
+            <emu-see-also-para op="BindingInitialization"></emu-see-also-para>
             <emu-note>
               <p>*undefined* is passed for _environment_ to indicate that a PutValue operation should be used to assign the initialization value. This is the case for `var` statements and formal parameter lists of some non-strict functions (See <emu-internal-ref refid="sec-functiondeclarationinstantiation">NUM</emu-internal-ref>). In those cases a lexical binding is hoisted and preinitialized prior to evaluation of its initializer.</p>
             </emu-note>
@@ -10892,7 +10858,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.1.2" -->
           <emu-clause id="sec-semantics-static-semantics-hasname">
             <h1>Static Semantics: HasName</h1>
-            <emu-see-also-para op="HasName"/>
+            <emu-see-also-para op="HasName"></emu-see-also-para>
             <emu-grammar>PrimaryExpression : CoverParenthesizedExpressionAndArrowParameterList</emu-grammar>
             <emu-alg>
               1. Let _expr_ be CoveredParenthesizedExpression of |CoverParenthesizedExpressionAndArrowParameterList|.
@@ -10904,7 +10870,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.1.3" -->
           <emu-clause id="sec-semantics-static-semantics-isfunctiondefinition">
             <h1>Static Semantics: IsFunctionDefinition</h1>
-            <emu-see-also-para op="IsFunctionDefinition"/>
+            <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
             <emu-grammar>
               PrimaryExpression :
                 `this`
@@ -10928,7 +10894,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.1.4" -->
           <emu-clause id="sec-semantics-static-semantics-isidentifierref">
             <h1>Static Semantics: IsIdentifierRef</h1>
-            <emu-see-also-para op="IsIdentifierRef"/>
+            <emu-see-also-para op="IsIdentifierRef"></emu-see-also-para>
             <emu-grammar>PrimaryExpression : IdentifierReference</emu-grammar>
             <emu-alg>
               1. Return *true*.
@@ -10954,7 +10920,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.1.5" -->
           <emu-clause id="sec-semantics-static-semantics-isvalidsimpleassignmenttarget">
             <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-            <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+            <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
             <emu-grammar>
               PrimaryExpression :
                 `this`
@@ -11240,7 +11206,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-object-initializer-static-semantics-computedpropertycontains">
             <h1>Static Semantics: ComputedPropertyContains</h1>
             <p>With parameter _symbol_.</p>
-            <emu-see-also-para op="ComputedPropertyContains"/>
+            <emu-see-also-para op="ComputedPropertyContains"></emu-see-also-para>
             <emu-grammar>PropertyName : LiteralPropertyName</emu-grammar>
             <emu-alg>
               1. Return *false*.
@@ -11255,7 +11221,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-object-initializer-static-semantics-contains">
             <h1>Static Semantics: Contains</h1>
             <p>With parameter _symbol_.</p>
-            <emu-see-also-para op="Contains"/>
+            <emu-see-also-para op="Contains"></emu-see-also-para>
             <emu-grammar>PropertyDefinition : MethodDefinition</emu-grammar>
             <emu-alg>
               1. If _symbol_ is |MethodDefinition|, return *true*.
@@ -11275,7 +11241,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.6.4" -->
           <emu-clause id="sec-object-initializer-static-semantics-hascomputedpropertykey">
             <h1>Static Semantics: HasComputedPropertyKey</h1>
-            <emu-see-also-para op="HasComputedPropertyKey"/>
+            <emu-see-also-para op="HasComputedPropertyKey"></emu-see-also-para>
             <emu-grammar>PropertyDefinitionList : PropertyDefinitionList `,` PropertyDefinition</emu-grammar>
             <emu-alg>
               1. If HasComputedPropertyKey of |PropertyDefinitionList| is *true*, return *true*.
@@ -11307,7 +11273,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.6.6" -->
           <emu-clause id="sec-object-initializer-static-semantics-propname">
             <h1>Static Semantics: PropName</h1>
-            <emu-see-also-para op="PropName"/>
+            <emu-see-also-para op="PropName"></emu-see-also-para>
             <emu-grammar>PropertyDefinition : IdentifierReference</emu-grammar>
             <emu-alg>
               1. Return StringValue of |IdentifierReference|.
@@ -11396,7 +11362,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-object-initializer-runtime-semantics-propertydefinitionevaluation">
             <h1>Runtime Semantics: PropertyDefinitionEvaluation</h1>
             <p>With parameter _object_ and _enumerable_.</p>
-            <emu-see-also-para op="PropertyDefinitionEvaluation"/>
+            <emu-see-also-para op="PropertyDefinitionEvaluation"></emu-see-also-para>
             <emu-grammar>PropertyDefinitionList : PropertyDefinitionList `,` PropertyDefinition</emu-grammar>
             <emu-alg>
               1. Let _status_ be the result of performing PropertyDefinitionEvaluation of |PropertyDefinitionList| with arguments _object_ and _enumerable_.
@@ -11552,7 +11518,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.9.2" -->
           <emu-clause id="sec-template-literals-runtime-semantics-argumentlistevaluation">
             <h1>Runtime Semantics: ArgumentListEvaluation</h1>
-            <emu-see-also-para op="ArgumentListEvaluation"/>
+            <emu-see-also-para op="ArgumentListEvaluation"></emu-see-also-para>
             <emu-grammar>TemplateLiteral : NoSubstitutionTemplate</emu-grammar>
             <emu-alg>
               1. Let _templateLiteral_ be this |TemplateLiteral|.
@@ -11721,7 +11687,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.10.2" -->
           <emu-clause id="sec-grouping-operator-static-semantics-isfunctiondefinition">
             <h1>Static Semantics: IsFunctionDefinition</h1>
-            <emu-see-also-para op="IsFunctionDefinition"/>
+            <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
             <emu-grammar>ParenthesizedExpression : `(` Expression `)`</emu-grammar>
             <emu-alg>
               1. Return IsFunctionDefinition of |Expression|.
@@ -11731,7 +11697,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.2.10.3" -->
           <emu-clause id="sec-grouping-operator-static-semantics-isvalidsimpleassignmenttarget">
             <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-            <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+            <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
             <emu-grammar>ParenthesizedExpression : `(` Expression `)`</emu-grammar>
             <emu-alg>
               1. Return IsValidSimpleAssignmentTarget of |Expression|.
@@ -11819,7 +11785,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-static-semantics-static-semantics-contains">
             <h1>Static Semantics: Contains</h1>
             <p>With parameter _symbol_.</p>
-            <emu-see-also-para op="Contains"/>
+            <emu-see-also-para op="Contains"></emu-see-also-para>
             <emu-grammar>MemberExpression : MemberExpression `.` IdentifierName</emu-grammar>
             <emu-alg>
               1. If |MemberExpression| Contains _symbol_ is *true*, return *true*.
@@ -11846,7 +11812,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.3.1.2" -->
           <emu-clause id="sec-static-semantics-static-semantics-isfunctiondefinition">
             <h1>Static Semantics: IsFunctionDefinition</h1>
-            <emu-see-also-para op="IsFunctionDefinition"/>
+            <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
             <emu-grammar>
               MemberExpression :
                 MemberExpression `[` Expression `]`
@@ -11875,7 +11841,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.3.1.3" -->
           <emu-clause id="sec-static-semantics-static-semantics-isdestructuring">
             <h1>Static Semantics: IsDestructuring</h1>
-            <emu-see-also-para op="IsDestructuring"/>
+            <emu-see-also-para op="IsDestructuring"></emu-see-also-para>
             <emu-grammar>MemberExpression : PrimaryExpression</emu-grammar>
             <emu-alg>
               1. If |PrimaryExpression| is either an |ObjectLiteral| or an |ArrayLiteral|, return *true*.
@@ -11909,7 +11875,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.3.1.4" -->
           <emu-clause id="sec-static-semantics-static-semantics-isidentifierref">
             <h1>Static Semantics: IsIdentifierRef</h1>
-            <emu-see-also-para op="IsIdentifierRef"/>
+            <emu-see-also-para op="IsIdentifierRef"></emu-see-also-para>
             <emu-grammar>
               LeftHandSideExpression :
                 CallExpression
@@ -11933,7 +11899,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.3.1.5" -->
           <emu-clause id="sec-static-semantics-static-semantics-isvalidsimpleassignmenttarget">
             <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-            <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+            <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
             <emu-grammar>
               CallExpression :
                 CallExpression `[` Expression `]`
@@ -12237,7 +12203,7 @@ a = b + c(d + e).print()
           <!-- es6num="12.3.6.1" -->
           <emu-clause id="sec-argument-lists-runtime-semantics-argumentlistevaluation">
             <h1>Runtime Semantics: ArgumentListEvaluation</h1>
-            <emu-see-also-para op="ArgumentListEvaluation"/>
+            <emu-see-also-para op="ArgumentListEvaluation"></emu-see-also-para>
             <emu-grammar>Arguments : `(` `)`</emu-grammar>
             <emu-alg>
               1. Return an empty List.
@@ -12362,7 +12328,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.4.2" -->
         <emu-clause id="sec-postfix-expressions-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
             PostfixExpression :
               LeftHandSideExpression `++`
@@ -12376,7 +12342,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.4.3" -->
         <emu-clause id="sec-postfix-expressions-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             PostfixExpression :
               LeftHandSideExpression `++`
@@ -12464,7 +12430,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.5.2" -->
         <emu-clause id="sec-unary-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
             UnaryExpression :
               `delete` UnaryExpression
@@ -12485,7 +12451,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.5.3" -->
         <emu-clause id="sec-unary-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             UnaryExpression :
               `delete` UnaryExpression
@@ -12524,11 +12490,7 @@ a = b + c(d + e).print()
               </li>
             </ul>
             <emu-note>
-              <p>The last rule means that expressions such as
-                <pre>
-                  delete (((foo)))
-                </pre>
-                produce early errors because of recursive application of the first rule.</p>
+              <p>The last rule means that expressions such as `delete (((foo)))` produce early errors because of recursive application of the first rule.</p>
             </emu-note>
           </emu-clause>
 
@@ -12829,7 +12791,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.6.1" -->
         <emu-clause id="sec-multiplicative-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <p><emu-grammar>MultiplicativeExpression : MultiplicativeExpression MultiplicativeOperator UnaryExpression</emu-grammar></p>
           <emu-alg>
             1. Return *false*.
@@ -12839,7 +12801,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.6.2" -->
         <emu-clause id="sec-multiplicative-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <p><emu-grammar>MultiplicativeExpression : MultiplicativeExpression MultiplicativeOperator UnaryExpression</emu-grammar></p>
           <emu-alg>
             1. Return *false*.
@@ -12972,7 +12934,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.7.1" -->
         <emu-clause id="sec-additive-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
             AdditiveExpression :
               AdditiveExpression `+` MultiplicativeExpression
@@ -12986,7 +12948,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.7.2" -->
         <emu-clause id="sec-additive-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             AdditiveExpression :
               AdditiveExpression `+` MultiplicativeExpression
@@ -13117,7 +13079,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.8.1" -->
         <emu-clause id="sec-bitwise-shift-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
             ShiftExpression :
               ShiftExpression `&lt;&lt;` AdditiveExpression
@@ -13132,7 +13094,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.8.2" -->
         <emu-clause id="sec-bitwise-shift-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             ShiftExpression :
               ShiftExpression `&lt;&lt;` AdditiveExpression
@@ -13253,7 +13215,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.9.1" -->
         <emu-clause id="sec-relational-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
             RelationalExpression :
               RelationalExpression `&lt;` ShiftExpression
@@ -13271,7 +13233,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.9.2" -->
         <emu-clause id="sec-relational-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             RelationalExpression :
               RelationalExpression `&lt;` ShiftExpression
@@ -13394,7 +13356,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.10.1" -->
         <emu-clause id="sec-equality-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
             EqualityExpression :
               EqualityExpression `==` RelationalExpression
@@ -13410,7 +13372,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.10.2" -->
         <emu-clause id="sec-equality-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             EqualityExpression :
               EqualityExpression `==` RelationalExpression
@@ -13531,7 +13493,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.11.1" -->
         <emu-clause id="sec-binary-bitwise-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
             BitwiseANDExpression : BitwiseANDExpression `&amp;` EqualityExpression 
 
@@ -13547,7 +13509,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.11.2" -->
         <emu-clause id="sec-binary-bitwise-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             BitwiseANDExpression : BitwiseANDExpression `&amp;` EqualityExpression 
 
@@ -13600,7 +13562,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.12.1" -->
         <emu-clause id="sec-binary-logical-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
             LogicalANDExpression : LogicalANDExpression `&amp;&amp;` BitwiseORExpression 
 
@@ -13614,7 +13576,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.12.2" -->
         <emu-clause id="sec-binary-logical-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             LogicalANDExpression : LogicalANDExpression `&amp;&amp;` BitwiseORExpression 
 
@@ -13667,7 +13629,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.13.1" -->
         <emu-clause id="sec-conditional-operator-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>ConditionalExpression : LogicalORExpression `?` AssignmentExpression `:` AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -13677,7 +13639,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.13.2" -->
         <emu-clause id="sec-conditional-operator-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>ConditionalExpression : LogicalORExpression `?` AssignmentExpression `:` AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -13741,7 +13703,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.14.2" -->
         <emu-clause id="sec-assignment-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>AssignmentExpression : ArrowFunction</emu-grammar>
           <emu-alg>
             1. Return *true*.
@@ -13760,7 +13722,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.14.3" -->
         <emu-clause id="sec-assignment-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
             AssignmentExpression :
               YieldExpression
@@ -14134,7 +14096,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.15.1" -->
         <emu-clause id="sec-comma-operator-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>Expression : Expression `,` AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -14144,7 +14106,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.15.2" -->
         <emu-clause id="sec-comma-operator-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
-          <emu-see-also-para op="IsValidSimpleAssignmentTarget"/>
+          <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>Expression : Expression `,` AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -14211,7 +14173,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-statement-semantics-static-semantics-containsduplicatelabels">
           <h1>Static Semantics: ContainsDuplicateLabels</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsDuplicateLabels"/>
+          <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
           <emu-grammar>
             Statement :
               VariableStatement
@@ -14232,7 +14194,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-statement-semantics-static-semantics-containsundefinedbreaktarget">
           <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+          <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
           <emu-grammar>
             Statement :
               VariableStatement
@@ -14252,7 +14214,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-statement-semantics-static-semantics-containsundefinedcontinuetarget">
           <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
           <p>With arguments _iterationSet_ and _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+          <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
           <emu-grammar>
             Statement :
               VariableStatement
@@ -14297,7 +14259,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.1.5" -->
         <emu-clause id="sec-statement-semantics-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>
             Statement :
               EmptyStatement
@@ -14316,7 +14278,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.1.6" -->
         <emu-clause id="sec-statement-semantics-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>
             Statement :
               EmptyStatement
@@ -14336,7 +14298,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-statement-semantics-runtime-semantics-labelledevaluation">
           <h1>Runtime Semantics: LabelledEvaluation</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="LabelledEvaluation"/>
+          <emu-see-also-para op="LabelledEvaluation"></emu-see-also-para>
           <emu-grammar>BreakableStatement : IterationStatement</emu-grammar>
           <emu-alg>
             1. Let _stmtResult_ be the result of performing LabelledEvaluation of |IterationStatement| with argument _labelSet_.
@@ -14427,7 +14389,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-block-static-semantics-containsduplicatelabels">
           <h1>Static Semantics: ContainsDuplicateLabels</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsDuplicateLabels"/>
+          <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -14448,7 +14410,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-block-static-semantics-containsundefinedbreaktarget">
           <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+          <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -14469,7 +14431,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-block-static-semantics-containsundefinedcontinuetarget">
           <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
           <p>With arguments _iterationSet_ and _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+          <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -14489,7 +14451,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.2.5" -->
         <emu-clause id="sec-block-static-semantics-lexicallydeclarednames">
           <h1>Static Semantics: LexicallyDeclaredNames</h1>
-          <emu-see-also-para op="LexicallyDeclaredNames"/>
+          <emu-see-also-para op="LexicallyDeclaredNames"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -14514,7 +14476,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.2.6" -->
         <emu-clause id="sec-block-static-semantics-lexicallyscopeddeclarations">
           <h1>Static Semantics: LexicallyScopedDeclarations</h1>
-          <emu-see-also-para op="LexicallyScopedDeclarations"/>
+          <emu-see-also-para op="LexicallyScopedDeclarations"></emu-see-also-para>
           <emu-grammar>StatementList : StatementList StatementListItem</emu-grammar>
           <emu-alg>
             1. Let _declarations_ be LexicallyScopedDeclarations of |StatementList|.
@@ -14535,7 +14497,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.2.7" -->
         <emu-clause id="sec-block-static-semantics-toplevellexicallydeclarednames">
           <h1>Static Semantics: TopLevelLexicallyDeclaredNames</h1>
-          <emu-see-also-para op="TopLevelLexicallyDeclaredNames"/>
+          <emu-see-also-para op="TopLevelLexicallyDeclaredNames"></emu-see-also-para>
           <emu-grammar>StatementList : StatementList StatementListItem</emu-grammar>
           <emu-alg>
             1. Let _names_ be TopLevelLexicallyDeclaredNames of |StatementList|.
@@ -14561,7 +14523,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.2.8" -->
         <emu-clause id="sec-block-static-semantics-toplevellexicallyscopeddeclarations">
           <h1>Static Semantics: TopLevelLexicallyScopedDeclarations</h1>
-          <emu-see-also-para op="TopLevelLexicallyScopedDeclarations"/>
+          <emu-see-also-para op="TopLevelLexicallyScopedDeclarations"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -14588,7 +14550,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.2.9" -->
         <emu-clause id="sec-block-static-semantics-toplevelvardeclarednames">
           <h1>Static Semantics: TopLevelVarDeclaredNames</h1>
-          <emu-see-also-para op="TopLevelVarDeclaredNames"/>
+          <emu-see-also-para op="TopLevelVarDeclaredNames"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -14619,7 +14581,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.2.10" -->
         <emu-clause id="sec-block-static-semantics-toplevelvarscopeddeclarations">
           <h1>Static Semantics: TopLevelVarScopedDeclarations</h1>
-          <emu-see-also-para op="TopLevelVarScopedDeclarations"/>
+          <emu-see-also-para op="TopLevelVarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -14647,7 +14609,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.2.11" -->
         <emu-clause id="sec-block-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -14667,7 +14629,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.2.12" -->
         <emu-clause id="sec-block-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>Block : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -14796,7 +14758,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.1.2" -->
           <emu-clause id="sec-let-and-const-declarations-static-semantics-boundnames">
             <h1>Static Semantics: BoundNames</h1>
-            <emu-see-also-para op="BoundNames"/>
+            <emu-see-also-para op="BoundNames"></emu-see-also-para>
             <emu-grammar>LexicalDeclaration : LetOrConst BindingList `;`</emu-grammar>
             <emu-alg>
               1. Return the BoundNames of |BindingList|.
@@ -14820,7 +14782,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.1.3" -->
           <emu-clause id="sec-let-and-const-declarations-static-semantics-isconstantdeclaration">
             <h1>Static Semantics: IsConstantDeclaration</h1>
-            <emu-see-also-para op="IsConstantDeclaration"/>
+            <emu-see-also-para op="IsConstantDeclaration"></emu-see-also-para>
             <emu-grammar>LexicalDeclaration : LetOrConst BindingList `;`</emu-grammar>
             <emu-alg>
               1. Return IsConstantDeclaration of |LetOrConst|.
@@ -14905,7 +14867,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.2.1" -->
           <emu-clause id="sec-variable-statement-static-semantics-boundnames">
             <h1>Static Semantics: BoundNames</h1>
-            <emu-see-also-para op="BoundNames"/>
+            <emu-see-also-para op="BoundNames"></emu-see-also-para>
             <emu-grammar>VariableDeclarationList : VariableDeclarationList `,` VariableDeclaration</emu-grammar>
             <emu-alg>
               1. Let _names_ be BoundNames of |VariableDeclarationList|.
@@ -14925,7 +14887,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.2.2" -->
           <emu-clause id="sec-variable-statement-static-semantics-vardeclarednames">
             <h1>Static Semantics: VarDeclaredNames</h1>
-            <emu-see-also-para op="VarDeclaredNames"/>
+            <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
             <emu-grammar>VariableStatement : `var` VariableDeclarationList `;`</emu-grammar>
             <emu-alg>
               1. Return BoundNames of |VariableDeclarationList|.
@@ -14935,7 +14897,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.2.3" -->
           <emu-clause id="sec-variable-statement-static-semantics-varscopeddeclarations">
             <h1>Static Semantics: VarScopedDeclarations</h1>
-            <emu-see-also-para op="VarScopedDeclarations"/>
+            <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
             <emu-grammar>VariableDeclarationList : VariableDeclaration</emu-grammar>
             <emu-alg>
               1. Return a new List containing |VariableDeclaration|.
@@ -15042,7 +15004,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.3.1" -->
           <emu-clause id="sec-destructuring-binding-patterns-static-semantics-boundnames">
             <h1>Static Semantics: BoundNames</h1>
-            <emu-see-also-para op="BoundNames"/>
+            <emu-see-also-para op="BoundNames"></emu-see-also-para>
             <emu-grammar>ObjectBindingPattern : `{` `}`</emu-grammar>
             <emu-alg>
               1. Return an empty List.
@@ -15098,7 +15060,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.3.2" -->
           <emu-clause id="sec-destructuring-binding-patterns-static-semantics-containsexpression">
             <h1>Static Semantics: ContainsExpression</h1>
-            <emu-see-also-para op="ContainsExpression"/>
+            <emu-see-also-para op="ContainsExpression"></emu-see-also-para>
             <emu-grammar>ObjectBindingPattern : `{` `}`</emu-grammar>
             <emu-alg>
               1. Return *false*.
@@ -15158,7 +15120,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.3.3" -->
           <emu-clause id="sec-destructuring-binding-patterns-static-semantics-hasinitializer">
             <h1>Static Semantics: HasInitializer</h1>
-            <emu-see-also-para op="HasInitializer"/>
+            <emu-see-also-para op="HasInitializer"></emu-see-also-para>
             <emu-grammar>BindingElement : BindingPattern</emu-grammar>
             <emu-alg>
               1. Return *false*.
@@ -15180,7 +15142,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.3.3.4" -->
           <emu-clause id="sec-destructuring-binding-patterns-static-semantics-issimpleparameterlist">
             <h1>Static Semantics: IsSimpleParameterList</h1>
-            <emu-see-also-para op="IsSimpleParameterList"/>
+            <emu-see-also-para op="IsSimpleParameterList"></emu-see-also-para>
             <emu-grammar>BindingElement : BindingPattern</emu-grammar>
             <emu-alg>
               1. Return *false*.
@@ -15203,7 +15165,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-destructuring-binding-patterns-runtime-semantics-bindinginitialization">
             <h1>Runtime Semantics: BindingInitialization</h1>
             <p>With parameters _value_ and _environment_.</p>
-            <emu-see-also-para op="BindingInitialization"/>
+            <emu-see-also-para op="BindingInitialization"></emu-see-also-para>
             <emu-note>
               <p>When *undefined* is passed for _environment_ it indicates that a PutValue operation should be used to assign the initialization value. This is the case for formal parameter lists of non-strict functions. In that case the formal parameter bindings are preinitialized in order to deal with the possibility of multiple parameters with the same name.</p>
             </emu-note>
@@ -15249,7 +15211,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-destructuring-binding-patterns-runtime-semantics-iteratorbindinginitialization">
             <h1>Runtime Semantics: IteratorBindingInitialization</h1>
             <p>With parameters _iteratorRecord_, and _environment_.</p>
-            <emu-see-also-para op="IteratorBindingInitialization"/>
+            <emu-see-also-para op="IteratorBindingInitialization"></emu-see-also-para>
             <emu-note>
               <p>When *undefined* is passed for _environment_ it indicates that a PutValue operation should be used to assign the initialization value. This is the case for formal parameter lists of non-strict functions. In that case the formal parameter bindings are preinitialized in order to deal with the possibility of multiple parameters with the same name.</p>
             </emu-note>
@@ -15497,7 +15459,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-if-statement-static-semantics-containsduplicatelabels">
           <h1>Static Semantics: ContainsDuplicateLabels</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsDuplicateLabels"/>
+          <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
           <emu-grammar>IfStatement : `if` `(` Expression `)` Statement `else` Statement</emu-grammar>
           <emu-alg>
             1. Let _hasUndefinedLabels_ be ContainsDuplicateLabels of the first |Statement| with argument _labelSet_.
@@ -15514,7 +15476,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-if-statement-static-semantics-containsundefinedbreaktarget">
           <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+          <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
           <emu-grammar>IfStatement : `if` `(` Expression `)` Statement `else` Statement</emu-grammar>
           <emu-alg>
             1. Let _hasUndefinedLabels_ be ContainsUndefinedBreakTarget of the first |Statement| with argument _labelSet_.
@@ -15531,7 +15493,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-if-statement-static-semantics-containsundefinedcontinuetarget">
           <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
           <p>With arguments _iterationSet_ and _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+          <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
           <emu-grammar>IfStatement : `if` `(` Expression `)` Statement `else` Statement</emu-grammar>
           <emu-alg>
             1. Let _hasUndefinedLabels_ be ContainsUndefinedContinueTarget of the first |Statement| with arguments _iterationSet_ and &laquo; &raquo;.
@@ -15547,7 +15509,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.6.5" -->
         <emu-clause id="sec-if-statement-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>IfStatement : `if` `(` Expression `)` Statement `else` Statement</emu-grammar>
           <emu-alg>
             1. Let _names_ be VarDeclaredNames of the first |Statement|.
@@ -15563,7 +15525,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.6.6" -->
         <emu-clause id="sec-if-statement-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>IfStatement : `if` `(` Expression `)` Statement `else` Statement</emu-grammar>
           <emu-alg>
             1. Let _declarations_ be VarScopedDeclarations of the first |Statement|.
@@ -15690,7 +15652,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-do-while-statement-static-semantics-containsduplicatelabels">
             <h1>Static Semantics: ContainsDuplicateLabels</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsDuplicateLabels"/>
+            <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
             <emu-grammar>IterationStatement : `do` Statement `while` `(` Expression `)` `;`</emu-grammar>
             <emu-alg>
               1. Return ContainsDuplicateLabels of |Statement| with argument _labelSet_.
@@ -15701,7 +15663,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-do-while-statement-static-semantics-containsundefinedbreaktarget">
             <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+            <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
             <emu-grammar>IterationStatement : `do` Statement `while` `(` Expression `)` `;`</emu-grammar>
             <emu-alg>
               1. Return ContainsUndefinedBreakTarget of |Statement| with argument _labelSet_.
@@ -15712,7 +15674,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-do-while-statement-static-semantics-containsundefinedcontinuetarget">
             <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
             <p>With arguments _iterationSet_ and _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+            <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
             <emu-grammar>IterationStatement : `do` Statement `while` `(` Expression `)` `;`</emu-grammar>
             <emu-alg>
               1. Return ContainsUndefinedContinueTarget of |Statement| with arguments _iterationSet_ and &laquo; &raquo;.
@@ -15722,7 +15684,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.2.4" -->
           <emu-clause id="sec-do-while-statement-static-semantics-vardeclarednames">
             <h1>Static Semantics: VarDeclaredNames</h1>
-            <emu-see-also-para op="VarDeclaredNames"/>
+            <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
             <emu-grammar>IterationStatement : `do` Statement `while` `(` Expression `)` `;`</emu-grammar>
             <emu-alg>
               1. Return the VarDeclaredNames of |Statement|.
@@ -15732,7 +15694,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.2.5" -->
           <emu-clause id="sec-do-while-statement-static-semantics-varscopeddeclarations">
             <h1>Static Semantics: VarScopedDeclarations</h1>
-            <emu-see-also-para op="VarScopedDeclarations"/>
+            <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
             <emu-grammar>IterationStatement : `do` Statement `while` `(` Expression `)` `;`</emu-grammar>
             <emu-alg>
               1. Return the VarScopedDeclarations of |Statement|.
@@ -15743,7 +15705,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-do-while-statement-runtime-semantics-labelledevaluation">
             <h1>Runtime Semantics: LabelledEvaluation</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="LabelledEvaluation"/>
+            <emu-see-also-para op="LabelledEvaluation"></emu-see-also-para>
             <emu-grammar>IterationStatement : `do` Statement `while` `(` Expression `)` `;`</emu-grammar>
             <emu-alg>
               1. Let _V_ = *undefined*.
@@ -15767,7 +15729,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-while-statement-static-semantics-containsduplicatelabels">
             <h1>Static Semantics: ContainsDuplicateLabels</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsDuplicateLabels"/>
+            <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
             <emu-grammar>IterationStatement : `while` `(` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Return ContainsDuplicateLabels of |Statement| with argument _labelSet_.
@@ -15778,7 +15740,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-while-statement-static-semantics-containsundefinedbreaktarget">
             <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+            <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
             <emu-grammar>IterationStatement : `while` `(` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Return ContainsUndefinedBreakTarget of |Statement| with argument _labelSet_.
@@ -15789,7 +15751,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-while-statement-static-semantics-containsundefinedcontinuetarget">
             <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
             <p>With arguments _iterationSet_ and _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+            <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
             <emu-grammar>IterationStatement : `while` `(` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Return ContainsUndefinedContinueTarget of |Statement| with arguments _iterationSet_ and &laquo; &raquo;.
@@ -15799,7 +15761,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.3.4" -->
           <emu-clause id="sec-while-statement-static-semantics-vardeclarednames">
             <h1>Static Semantics: VarDeclaredNames</h1>
-            <emu-see-also-para op="VarDeclaredNames"/>
+            <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
             <emu-grammar>IterationStatement : `while` `(` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Return the VarDeclaredNames of |Statement|.
@@ -15809,7 +15771,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.3.5" -->
           <emu-clause id="sec-while-statement-static-semantics-varscopeddeclarations">
             <h1>Static Semantics: VarScopedDeclarations</h1>
-            <emu-see-also-para op="VarScopedDeclarations"/>
+            <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
             <emu-grammar>IterationStatement : `while` `(` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Return the VarScopedDeclarations of |Statement|.
@@ -15820,7 +15782,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-while-statement-runtime-semantics-labelledevaluation">
             <h1>Runtime Semantics: LabelledEvaluation</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="LabelledEvaluation"/>
+            <emu-see-also-para op="LabelledEvaluation"></emu-see-also-para>
             <emu-grammar>IterationStatement : `while` `(` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Let _V_ = *undefined*.
@@ -15855,7 +15817,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-statement-static-semantics-containsduplicatelabels">
             <h1>Static Semantics: ContainsDuplicateLabels</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsDuplicateLabels"/>
+            <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
             <emu-grammar>
               IterationStatement :
                 `for` `(` Expression? `;` Expression? `;` Expression? `)` Statement
@@ -15871,7 +15833,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-statement-static-semantics-containsundefinedbreaktarget">
             <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+            <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
             <emu-grammar>
               IterationStatement :
                 `for` `(` Expression? `;` Expression? `;` Expression? `)` Statement
@@ -15887,7 +15849,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-statement-static-semantics-containsundefinedcontinuetarget">
             <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
             <p>With arguments _iterationSet_ and _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+            <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
             <emu-grammar>
               IterationStatement :
                 `for` `(` Expression? `;` Expression? `;` Expression? `)` Statement
@@ -15902,7 +15864,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.4.5" -->
           <emu-clause id="sec-for-statement-static-semantics-vardeclarednames">
             <h1>Static Semantics: VarDeclaredNames</h1>
-            <emu-see-also-para op="VarDeclaredNames"/>
+            <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
             <emu-grammar>IterationStatement : `for` `(` Expression? `;` Expression? `;` Expression? `)` Statement</emu-grammar>
             <emu-alg>
               1. Return the VarDeclaredNames of |Statement|.
@@ -15922,7 +15884,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.4.6" -->
           <emu-clause id="sec-for-statement-static-semantics-varscopeddeclarations">
             <h1>Static Semantics: VarScopedDeclarations</h1>
-            <emu-see-also-para op="VarScopedDeclarations"/>
+            <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
             <emu-grammar>IterationStatement : `for` `(` Expression? `;` Expression? `;` Expression? `)` Statement</emu-grammar>
             <emu-alg>
               1. Return the VarScopedDeclarations of |Statement|.
@@ -15943,7 +15905,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-statement-runtime-semantics-labelledevaluation">
             <h1>Runtime Semantics: LabelledEvaluation</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="LabelledEvaluation"/>
+            <emu-see-also-para op="LabelledEvaluation"></emu-see-also-para>
             <emu-grammar>IterationStatement : `for` `(` Expression? `;` Expression? `;` Expression? `)` Statement</emu-grammar>
             <emu-alg>
               1. If the first |Expression| is present, then
@@ -16080,7 +16042,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.5.2" -->
           <emu-clause id="sec-for-in-and-for-of-statements-static-semantics-boundnames">
             <h1>Static Semantics: BoundNames</h1>
-            <emu-see-also-para op="BoundNames"/>
+            <emu-see-also-para op="BoundNames"></emu-see-also-para>
             <emu-grammar>ForDeclaration : LetOrConst ForBinding</emu-grammar>
             <emu-alg>
               1. Return the BoundNames of |ForBinding|.
@@ -16091,7 +16053,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-in-and-for-of-statements-static-semantics-containsduplicatelabels">
             <h1>Static Semantics: ContainsDuplicateLabels</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsDuplicateLabels"/>
+            <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
             <emu-grammar>
               IterationStatement :
                 `for` `(` LeftHandSideExpression `in` Expression `)` Statement
@@ -16110,7 +16072,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-in-and-for-of-statements-static-semantics-containsundefinedbreaktarget">
             <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+            <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
             <emu-grammar>
               IterationStatement :
                 `for` `(` LeftHandSideExpression `in` Expression `)` Statement
@@ -16129,7 +16091,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-in-and-for-of-statements-static-semantics-containsundefinedcontinuetarget">
             <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
             <p>With arguments _iterationSet_ and _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+            <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
             <emu-grammar>
               IterationStatement :
                 `for` `(` LeftHandSideExpression `in` Expression `)` Statement
@@ -16147,7 +16109,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.5.6" -->
           <emu-clause id="sec-for-in-and-for-of-statements-static-semantics-isdestructuring">
             <h1>Static Semantics: IsDestructuring</h1>
-            <emu-see-also-para op="IsDestructuring"/>
+            <emu-see-also-para op="IsDestructuring"></emu-see-also-para>
             <emu-grammar>ForDeclaration : LetOrConst ForBinding</emu-grammar>
             <emu-alg>
               1. Return IsDestructuring of |ForBinding|.
@@ -16165,7 +16127,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.5.7" -->
           <emu-clause id="sec-for-in-and-for-of-statements-static-semantics-vardeclarednames">
             <h1>Static Semantics: VarDeclaredNames</h1>
-            <emu-see-also-para op="VarDeclaredNames"/>
+            <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
             <emu-grammar>IterationStatement : `for` `(` LeftHandSideExpression `in` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Return the VarDeclaredNames of |Statement|.
@@ -16199,7 +16161,7 @@ a = b + c(d + e).print()
           <!-- es6num="13.7.5.8" -->
           <emu-clause id="sec-for-in-and-for-of-statements-static-semantics-varscopeddeclarations">
             <h1>Static Semantics: VarScopedDeclarations</h1>
-            <emu-see-also-para op="VarScopedDeclarations"/>
+            <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
             <emu-grammar>IterationStatement : `for` `(` LeftHandSideExpression `in` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Return the VarScopedDeclarations of |Statement|.
@@ -16234,7 +16196,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-in-and-for-of-statements-runtime-semantics-bindinginitialization">
             <h1>Runtime Semantics: BindingInitialization</h1>
             <p>With arguments _value_ and _environment_.</p>
-            <emu-see-also-para op="BindingInitialization"/>
+            <emu-see-also-para op="BindingInitialization"></emu-see-also-para>
             <emu-note>
               <p>*undefined* is passed for _environment_ to indicate that a PutValue operation should be used to assign the initialization value. This is the case for `var` statements and the formal parameter lists of some non-strict functions (see <emu-internal-ref refid="sec-functiondeclarationinstantiation">NUM</emu-internal-ref>). In those cases a lexical binding is hoisted and preinitialized prior to evaluation of its initializer.</p>
             </emu-note>
@@ -16263,7 +16225,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-for-in-and-for-of-statements-runtime-semantics-labelledevaluation">
             <h1>Runtime Semantics: LabelledEvaluation</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="LabelledEvaluation"/>
+            <emu-see-also-para op="LabelledEvaluation"></emu-see-also-para>
             <emu-grammar>IterationStatement : `for` `(` LeftHandSideExpression `in` Expression `)` Statement</emu-grammar>
             <emu-alg>
               1. Let _keyResult_ be ForIn/OfHeadEvaluation( &laquo; &raquo;, |Expression|, ~enumerate~).
@@ -16426,7 +16388,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-continue-statement-static-semantics-containsundefinedcontinuetarget">
           <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
           <p>With arguments _iterationSet_ and _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+          <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
           <emu-grammar>ContinueStatement : `continue` `;`</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -16478,7 +16440,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-break-statement-static-semantics-containsundefinedbreaktarget">
           <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+          <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
           <emu-grammar>BreakStatement : `break` `;`</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -16568,7 +16530,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-with-statement-static-semantics-containsduplicatelabels">
           <h1>Static Semantics: ContainsDuplicateLabels</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsDuplicateLabels"/>
+          <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
           <emu-grammar>WithStatement : `with` `(` Expression `)` Statement</emu-grammar>
           <emu-alg>
             1. Return ContainsDuplicateLabels of |Statement| with argument _labelSet_.
@@ -16579,7 +16541,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-with-statement-static-semantics-containsundefinedbreaktarget">
           <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+          <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
           <emu-grammar>WithStatement : `with` `(` Expression `)` Statement</emu-grammar>
           <emu-alg>
             1. Return ContainsUndefinedBreakTarget of |Statement| with argument _labelSet_.
@@ -16590,7 +16552,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-with-statement-static-semantics-containsundefinedcontinuetarget">
           <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
           <p>With arguments _iterationSet_ and _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+          <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
           <emu-grammar>WithStatement : `with` `(` Expression `)` Statement</emu-grammar>
           <emu-alg>
             1. Return ContainsUndefinedContinueTarget of |Statement| with arguments _iterationSet_ and &laquo; &raquo;.
@@ -16600,7 +16562,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.11.5" -->
         <emu-clause id="sec-with-statement-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>WithStatement : `with` `(` Expression `)` Statement</emu-grammar>
           <emu-alg>
             1. Return the VarDeclaredNames of |Statement|.
@@ -16610,7 +16572,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.11.6" -->
         <emu-clause id="sec-with-statement-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>WithStatement : `with` `(` Expression `)` Statement</emu-grammar>
           <emu-alg>
             1. Return the VarScopedDeclarations of |Statement|.
@@ -16681,7 +16643,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-switch-statement-static-semantics-containsduplicatelabels">
           <h1>Static Semantics: ContainsDuplicateLabels</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsDuplicateLabels"/>
+          <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
           <emu-grammar>SwitchStatement : `switch` `(` Expression `)` CaseBlock</emu-grammar>
           <emu-alg>
             1. Return ContainsDuplicateLabels of |CaseBlock| with argument _labelSet_.
@@ -16722,7 +16684,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-switch-statement-static-semantics-containsundefinedbreaktarget">
           <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+          <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
           <emu-grammar>SwitchStatement : `switch` `(` Expression `)` CaseBlock</emu-grammar>
           <emu-alg>
             1. Return ContainsUndefinedBreakTarget of |CaseBlock| with argument _labelSet_.
@@ -16763,7 +16725,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-switch-statement-static-semantics-containsundefinedcontinuetarget">
           <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
           <p>With arguments _iterationSet_ and _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+          <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
           <emu-grammar>SwitchStatement : `switch` `(` Expression `)` CaseBlock</emu-grammar>
           <emu-alg>
             1. Return ContainsUndefinedContinueTarget of |CaseBlock| with arguments _iterationSet_ and &laquo; &raquo;.
@@ -16803,7 +16765,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.12.5" -->
         <emu-clause id="sec-switch-statement-static-semantics-lexicallydeclarednames">
           <h1>Static Semantics: LexicallyDeclaredNames</h1>
-          <emu-see-also-para op="LexicallyDeclaredNames"/>
+          <emu-see-also-para op="LexicallyDeclaredNames"></emu-see-also-para>
           <emu-grammar>CaseBlock : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -16837,7 +16799,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.12.6" -->
         <emu-clause id="sec-switch-statement-static-semantics-lexicallyscopeddeclarations">
           <h1>Static Semantics: LexicallyScopedDeclarations</h1>
-          <emu-see-also-para op="LexicallyScopedDeclarations"/>
+          <emu-see-also-para op="LexicallyScopedDeclarations"></emu-see-also-para>
           <emu-grammar>CaseBlock : `{` `}`</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -16871,7 +16833,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.12.7" -->
         <emu-clause id="sec-switch-statement-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>SwitchStatement : `switch` `(` Expression `)` CaseBlock</emu-grammar>
           <emu-alg>
             1. Return the VarDeclaredNames of |CaseBlock|.
@@ -16909,7 +16871,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.12.8" -->
         <emu-clause id="sec-switch-statement-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>SwitchStatement : `switch` `(` Expression `)` CaseBlock</emu-grammar>
           <emu-alg>
             1. Return the VarScopedDeclarations of |CaseBlock|.
@@ -17097,7 +17059,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-labelled-statements-static-semantics-containsduplicatelabels">
           <h1>Static Semantics: ContainsDuplicateLabels</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsDuplicateLabels"/>
+          <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Let _label_ be the StringValue of |LabelIdentifier|.
@@ -17115,7 +17077,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-labelled-statements-static-semantics-containsundefinedbreaktarget">
           <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+          <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Let _label_ be the StringValue of |LabelIdentifier|.
@@ -17132,7 +17094,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-labelled-statements-static-semantics-containsundefinedcontinuetarget">
           <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
           <p>With arguments _iterationSet_ and _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+          <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Let _label_ be the StringValue of |LabelIdentifier|.
@@ -17161,7 +17123,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.13.6" -->
         <emu-clause id="sec-labelled-statements-static-semantics-lexicallydeclarednames">
           <h1>Static Semantics: LexicallyDeclaredNames</h1>
-          <emu-see-also-para op="LexicallyDeclaredNames"/>
+          <emu-see-also-para op="LexicallyDeclaredNames"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Return the LexicallyDeclaredNames of |LabelledItem|.
@@ -17179,7 +17141,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.13.7" -->
         <emu-clause id="sec-labelled-statements-static-semantics-lexicallyscopeddeclarations">
           <h1>Static Semantics: LexicallyScopedDeclarations</h1>
-          <emu-see-also-para op="LexicallyScopedDeclarations"/>
+          <emu-see-also-para op="LexicallyScopedDeclarations"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Return the LexicallyScopedDeclarations of |LabelledItem|.
@@ -17197,7 +17159,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.13.8" -->
         <emu-clause id="sec-labelled-statements-static-semantics-toplevellexicallydeclarednames">
           <h1>Static Semantics: TopLevelLexicallyDeclaredNames</h1>
-          <emu-see-also-para op="TopLevelLexicallyDeclaredNames"/>
+          <emu-see-also-para op="TopLevelLexicallyDeclaredNames"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -17207,7 +17169,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.13.9" -->
         <emu-clause id="sec-labelled-statements-static-semantics-toplevellexicallyscopeddeclarations">
           <h1>Static Semantics: TopLevelLexicallyScopedDeclarations</h1>
-          <emu-see-also-para op="TopLevelLexicallyScopedDeclarations"/>
+          <emu-see-also-para op="TopLevelLexicallyScopedDeclarations"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Return a new empty List.
@@ -17217,7 +17179,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.13.10" -->
         <emu-clause id="sec-labelled-statements-static-semantics-toplevelvardeclarednames">
           <h1>Static Semantics: TopLevelVarDeclaredNames</h1>
-          <emu-see-also-para op="TopLevelVarDeclaredNames"/>
+          <emu-see-also-para op="TopLevelVarDeclaredNames"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Return the TopLevelVarDeclaredNames of |LabelledItem|.
@@ -17236,7 +17198,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.13.11" -->
         <emu-clause id="sec-labelled-statements-static-semantics-toplevelvarscopeddeclarations">
           <h1>Static Semantics: TopLevelVarScopedDeclarations</h1>
-          <emu-see-also-para op="TopLevelVarScopedDeclarations"/>
+          <emu-see-also-para op="TopLevelVarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Return the TopLevelVarScopedDeclarations of |LabelledItem|.
@@ -17255,7 +17217,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.13.12" -->
         <emu-clause id="sec-labelled-statements-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Return the VarDeclaredNames of |LabelledItem|.
@@ -17269,7 +17231,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.13.13" -->
         <emu-clause id="sec-labelled-statements-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Return the VarScopedDeclarations of |LabelledItem|.
@@ -17284,7 +17246,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-labelled-statements-runtime-semantics-labelledevaluation">
           <h1>Runtime Semantics: LabelledEvaluation</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="LabelledEvaluation"/>
+          <emu-see-also-para op="LabelledEvaluation"></emu-see-also-para>
           <emu-grammar>LabelledStatement : LabelIdentifier `:` LabelledItem</emu-grammar>
           <emu-alg>
             1. Let _label_ be the StringValue of |LabelIdentifier|.
@@ -17388,7 +17350,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-try-statement-static-semantics-containsduplicatelabels">
           <h1>Static Semantics: ContainsDuplicateLabels</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsDuplicateLabels"/>
+          <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
           <emu-grammar>TryStatement : `try` Block Catch</emu-grammar>
           <emu-alg>
             1. Let _hasDuplicates_ be ContainsDuplicateLabels of |Block| with argument _labelSet_.
@@ -17419,7 +17381,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-try-statement-static-semantics-containsundefinedbreaktarget">
           <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
           <p>With argument _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+          <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
           <emu-grammar>TryStatement : `try` Block Catch</emu-grammar>
           <emu-alg>
             1. Let _hasUndefinedLabels_ be ContainsUndefinedBreakTarget of |Block| with argument _labelSet_.
@@ -17450,7 +17412,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-try-statement-static-semantics-containsundefinedcontinuetarget">
           <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
           <p>With arguments _iterationSet_ and _labelSet_.</p>
-          <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+          <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
           <emu-grammar>TryStatement : `try` Block Catch</emu-grammar>
           <emu-alg>
             1. Let _hasUndefinedLabels_ be ContainsUndefinedContinueTarget of |Block| with arguments _iterationSet_ and &laquo; &raquo;.
@@ -17480,7 +17442,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.15.5" -->
         <emu-clause id="sec-try-statement-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>TryStatement : `try` Block Catch</emu-grammar>
           <emu-alg>
             1. Let _names_ be VarDeclaredNames of |Block|.
@@ -17509,7 +17471,7 @@ a = b + c(d + e).print()
         <!-- es6num="13.15.6" -->
         <emu-clause id="sec-try-statement-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>TryStatement : `try` Block Catch</emu-grammar>
           <emu-alg>
             1. Let _declarations_ be VarScopedDeclarations of |Block|.
@@ -17759,7 +17721,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.3" -->
         <emu-clause id="sec-function-definitions-static-semantics-boundnames">
           <h1>Static Semantics: BoundNames</h1>
-          <emu-see-also-para op="BoundNames"/>
+          <emu-see-also-para op="BoundNames"></emu-see-also-para>
           <emu-grammar>FunctionDeclaration : `function` BindingIdentifier `(` FormalParameters `)` `{` FunctionBody `}`</emu-grammar>
           <emu-alg>
             1. Return the BoundNames of |BindingIdentifier|.
@@ -17793,7 +17755,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-function-definitions-static-semantics-contains">
           <h1>Static Semantics: Contains</h1>
           <p>With parameter _symbol_.</p>
-          <emu-see-also-para op="Contains"/>
+          <emu-see-also-para op="Contains"></emu-see-also-para>
           <emu-grammar>FunctionDeclaration : `function` BindingIdentifier `(` FormalParameters `)` `{` FunctionBody `}`</emu-grammar>
           <emu-grammar>
             FunctionDeclaration : `function` `(` FormalParameters `)` `{` FunctionBody `}`
@@ -17811,7 +17773,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.5" -->
         <emu-clause id="sec-function-definitions-static-semantics-containsexpression">
           <h1>Static Semantics: ContainsExpression</h1>
-          <emu-see-also-para op="ContainsExpression"/>
+          <emu-see-also-para op="ContainsExpression"></emu-see-also-para>
           <emu-grammar>FormalParameters : [empty]</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -17834,7 +17796,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.6" -->
         <emu-clause id="sec-function-definitions-static-semantics-expectedargumentcount">
           <h1>Static Semantics: ExpectedArgumentCount</h1>
-          <emu-see-also-para op="ExpectedArgumentCount"/>
+          <emu-see-also-para op="ExpectedArgumentCount"></emu-see-also-para>
           <emu-grammar>FormalParameters : [empty]</emu-grammar>
           <emu-alg>
             1. Return 0.
@@ -17866,7 +17828,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.7" -->
         <emu-clause id="sec-function-definitions-static-semantics-hasinitializer">
           <h1>Static Semantics: HasInitializer</h1>
-          <emu-see-also-para op="HasInitializer"/>
+          <emu-see-also-para op="HasInitializer"></emu-see-also-para>
           <emu-grammar>FormalParameters : [empty]</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -17890,7 +17852,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.8" -->
         <emu-clause id="sec-function-definitions-static-semantics-hasname">
           <h1>Static Semantics: HasName</h1>
-          <emu-see-also-para op="HasName"/>
+          <emu-see-also-para op="HasName"></emu-see-also-para>
           <emu-grammar>FunctionExpression : `function` `(` FormalParameters `)` `{` FunctionBody `}`</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -17916,7 +17878,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.10" -->
         <emu-clause id="sec-function-definitions-static-semantics-isconstantdeclaration">
           <h1>Static Semantics: IsConstantDeclaration</h1>
-          <emu-see-also-para op="IsConstantDeclaration"/>
+          <emu-see-also-para op="IsConstantDeclaration"></emu-see-also-para>
           <emu-grammar>
             FunctionDeclaration : `function` BindingIdentifier `(` FormalParameters `)` `{` FunctionBody `}`
 
@@ -17930,7 +17892,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.11" -->
         <emu-clause id="sec-function-definitions-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>FunctionExpression : `function` `(` FormalParameters `)` `{` FunctionBody `}`</emu-grammar>
           <emu-alg>
             1. Return *true*.
@@ -17944,7 +17906,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.12" -->
         <emu-clause id="sec-function-definitions-static-semantics-issimpleparameterlist">
           <h1>Static Semantics: IsSimpleParameterList</h1>
-          <emu-see-also-para op="IsSimpleParameterList"/>
+          <emu-see-also-para op="IsSimpleParameterList"></emu-see-also-para>
           <emu-grammar>FormalParameters : [empty]</emu-grammar>
           <emu-alg>
             1. Return *true*.
@@ -17971,7 +17933,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.13" -->
         <emu-clause id="sec-function-definitions-static-semantics-lexicallydeclarednames">
           <h1>Static Semantics: LexicallyDeclaredNames</h1>
-          <emu-see-also-para op="LexicallyDeclaredNames"/>
+          <emu-see-also-para op="LexicallyDeclaredNames"></emu-see-also-para>
           <emu-grammar>FunctionStatementList : [empty]</emu-grammar>
           <emu-alg>
             1. Return an empty List.
@@ -17985,7 +17947,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.14" -->
         <emu-clause id="sec-function-definitions-static-semantics-lexicallyscopeddeclarations">
           <h1>Static Semantics: LexicallyScopedDeclarations</h1>
-          <emu-see-also-para op="LexicallyScopedDeclarations"/>
+          <emu-see-also-para op="LexicallyScopedDeclarations"></emu-see-also-para>
           <emu-grammar>FunctionStatementList : [empty]</emu-grammar>
           <emu-alg>
             1. Return an empty List.
@@ -17999,7 +17961,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.15" -->
         <emu-clause id="sec-function-definitions-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>FunctionStatementList : [empty]</emu-grammar>
           <emu-alg>
             1. Return an empty List.
@@ -18013,7 +17975,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.16" -->
         <emu-clause id="sec-function-definitions-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>FunctionStatementList : [empty]</emu-grammar>
           <emu-alg>
             1. Return an empty List.
@@ -18028,7 +17990,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-function-definitions-runtime-semantics-evaluatebody">
           <h1>Runtime Semantics: EvaluateBody</h1>
           <p>With parameter _functionObject_.</p>
-          <emu-see-also-para op="EvaluateBody"/>
+          <emu-see-also-para op="EvaluateBody"></emu-see-also-para>
           <emu-grammar>FunctionBody : FunctionStatementList</emu-grammar>
           <emu-alg>
             1. Return the result of evaluating |FunctionStatementList|.
@@ -18042,7 +18004,7 @@ a = b + c(d + e).print()
           <emu-note>
             <p>When *undefined* is passed for _environment_ it indicates that a PutValue operation should be used to assign the initialization value. This is the case for formal parameter lists of non-strict functions. In that case the formal parameter bindings are preinitialized in order to deal with the possibility of multiple parameters with the same name.</p>
           </emu-note>
-          <emu-see-also-para op="IteratorBindingInitialization"/>
+          <emu-see-also-para op="IteratorBindingInitialization"></emu-see-also-para>
           <emu-grammar>FormalParameters : [empty]</emu-grammar>
           <emu-alg>
             1. Return NormalCompletion(~empty~).
@@ -18081,7 +18043,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-function-definitions-runtime-semantics-instantiatefunctionobject">
           <h1>Runtime Semantics: InstantiateFunctionObject</h1>
           <p>With parameter _scope_.</p>
-          <emu-see-also-para op="InstantiateFunctionObject"/>
+          <emu-see-also-para op="InstantiateFunctionObject"></emu-see-also-para>
           <emu-grammar>FunctionDeclaration : `function` BindingIdentifier `(` FormalParameters `)` `{` FunctionBody `}`</emu-grammar>
           <emu-alg>
             1. If the function code for |FunctionDeclaration| is strict mode code, let _strict_ be *true*. Otherwise let _strict_ be *false*.
@@ -18210,7 +18172,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.2" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-boundnames">
           <h1>Static Semantics: BoundNames</h1>
-          <emu-see-also-para op="BoundNames"/>
+          <emu-see-also-para op="BoundNames"></emu-see-also-para>
           <emu-grammar>ArrowParameters : CoverParenthesizedExpressionAndArrowParameterList</emu-grammar>
           <emu-alg>
             1. Let _formals_ be CoveredFormalsList of |CoverParenthesizedExpressionAndArrowParameterList|.
@@ -18222,7 +18184,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-arrow-function-definitions-static-semantics-contains">
           <h1>Static Semantics: Contains</h1>
           <p>With parameter _symbol_.</p>
-          <emu-see-also-para op="Contains"/>
+          <emu-see-also-para op="Contains"></emu-see-also-para>
           <emu-grammar>ArrowFunction : ArrowParameters `=&gt;` ConciseBody</emu-grammar>
           <emu-alg>
             1. If _symbol_ is not one of |NewTarget|, |SuperProperty|, |SuperCall|, `super` or `this`, return *false*.
@@ -18242,7 +18204,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.4" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-containsexpression">
           <h1>Static Semantics: ContainsExpression</h1>
-          <emu-see-also-para op="ContainsExpression"/>
+          <emu-see-also-para op="ContainsExpression"></emu-see-also-para>
           <emu-grammar>ArrowParameters : BindingIdentifier</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -18257,7 +18219,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.5" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-expectedargumentcount">
           <h1>Static Semantics: ExpectedArgumentCount</h1>
-          <emu-see-also-para op="ExpectedArgumentCount"/>
+          <emu-see-also-para op="ExpectedArgumentCount"></emu-see-also-para>
           <emu-grammar>ArrowParameters : BindingIdentifier</emu-grammar>
           <emu-alg>
             1. Return 1.
@@ -18272,7 +18234,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.6" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-hasinitializer">
           <h1>Static Semantics: HasInitializer</h1>
-          <emu-see-also-para op="HasInitializer"/>
+          <emu-see-also-para op="HasInitializer"></emu-see-also-para>
           <emu-grammar>ArrowParameters : BindingIdentifier</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -18287,7 +18249,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.7" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-hasname">
           <h1>Static Semantics: HasName</h1>
-          <emu-see-also-para op="HasName"/>
+          <emu-see-also-para op="HasName"></emu-see-also-para>
           <emu-grammar>ArrowFunction : ArrowParameters `=&gt;` ConciseBody</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -18297,7 +18259,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.8" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-issimpleparameterlist">
           <h1>Static Semantics: IsSimpleParameterList</h1>
-          <emu-see-also-para op="IsSimpleParameterList"/>
+          <emu-see-also-para op="IsSimpleParameterList"></emu-see-also-para>
           <emu-grammar>ArrowParameters : BindingIdentifier</emu-grammar>
           <emu-alg>
             1. Return *true*.
@@ -18332,7 +18294,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.10" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-lexicallydeclarednames">
           <h1>Static Semantics: LexicallyDeclaredNames</h1>
-          <emu-see-also-para op="LexicallyDeclaredNames"/>
+          <emu-see-also-para op="LexicallyDeclaredNames"></emu-see-also-para>
           <emu-grammar>ConciseBody : AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Return an empty List.
@@ -18342,7 +18304,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.11" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-lexicallyscopeddeclarations">
           <h1>Static Semantics: LexicallyScopedDeclarations</h1>
-          <emu-see-also-para op="LexicallyScopedDeclarations"/>
+          <emu-see-also-para op="LexicallyScopedDeclarations"></emu-see-also-para>
           <emu-grammar>ConciseBody : AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Return an empty List.
@@ -18352,7 +18314,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.12" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>ConciseBody : AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Return an empty List.
@@ -18362,7 +18324,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.2.13" -->
         <emu-clause id="sec-arrow-function-definitions-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>ConciseBody : AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Return an empty List.
@@ -18373,7 +18335,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-arrow-function-definitions-runtime-semantics-iteratorbindinginitialization">
           <h1>Runtime Semantics: IteratorBindingInitialization</h1>
           <p>With parameters _iteratorRecord_ and _environment_.</p>
-          <emu-see-also-para op="IteratorBindingInitialization"/>
+          <emu-see-also-para op="IteratorBindingInitialization"></emu-see-also-para>
           <emu-note>
             <p>When *undefined* is passed for _environment_ it indicates that a PutValue operation should be used to assign the initialization value. This is the case for formal parameter lists of non-strict functions. In that case the formal parameter bindings are preinitialized in order to deal with the possibility of multiple parameters with the same name.</p>
           </emu-note>
@@ -18402,7 +18364,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-arrow-function-definitions-runtime-semantics-evaluatebody">
           <h1>Runtime Semantics: EvaluateBody</h1>
           <p>With parameter _functionObject_.</p>
-          <emu-see-also-para op="EvaluateBody"/>
+          <emu-see-also-para op="EvaluateBody"></emu-see-also-para>
           <emu-grammar>ConciseBody : AssignmentExpression</emu-grammar>
           <emu-alg>
             1. Let _exprRef_ be the result of evaluating |AssignmentExpression|.
@@ -18468,7 +18430,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-method-definitions-static-semantics-computedpropertycontains">
           <h1>Static Semantics: ComputedPropertyContains</h1>
           <p>With parameter _symbol_.</p>
-          <emu-see-also-para op="ComputedPropertyContains"/>
+          <emu-see-also-para op="ComputedPropertyContains"></emu-see-also-para>
           <emu-grammar>
             MethodDefinition :
               PropertyName `(` StrictFormalParameters `)` `{` FunctionBody `}`
@@ -18483,7 +18445,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.3.3" -->
         <emu-clause id="sec-method-definitions-static-semantics-expectedargumentcount">
           <h1>Static Semantics: ExpectedArgumentCount</h1>
-          <emu-see-also-para op="ExpectedArgumentCount"/>
+          <emu-see-also-para op="ExpectedArgumentCount"></emu-see-also-para>
           <emu-grammar>PropertySetParameterList : FormalParameter</emu-grammar>
           <emu-alg>
             1. If HasInitializer of |FormalParameter| is *true* return 0
@@ -18494,7 +18456,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.3.4" -->
         <emu-clause id="sec-method-definitions-static-semantics-hascomputedpropertykey">
           <h1>Static Semantics: HasComputedPropertyKey</h1>
-          <emu-see-also-para op="HasComputedPropertyKey"/>
+          <emu-see-also-para op="HasComputedPropertyKey"></emu-see-also-para>
           <emu-grammar>
             MethodDefinition :
               PropertyName `(` StrictFormalParameters `)` `{` FunctionBody `}`
@@ -18509,7 +18471,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.3.5" -->
         <emu-clause id="sec-method-definitions-static-semantics-hasdirectsuper">
           <h1>Static Semantics: HasDirectSuper</h1>
-          <emu-see-also-para op="HasDirectSuper"/>
+          <emu-see-also-para op="HasDirectSuper"></emu-see-also-para>
           <emu-grammar>MethodDefinition : PropertyName `(` StrictFormalParameters `)` `{` FunctionBody `}`</emu-grammar>
           <emu-alg>
             1. If |StrictFormalParameters| Contains |SuperCall| is *true*, return *true*.
@@ -18529,7 +18491,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.3.6" -->
         <emu-clause id="sec-method-definitions-static-semantics-propname">
           <h1>Static Semantics: PropName</h1>
-          <emu-see-also-para op="PropName"/>
+          <emu-see-also-para op="PropName"></emu-see-also-para>
           <emu-grammar>
             MethodDefinition :
               PropertyName `(` StrictFormalParameters `)` `{` FunctionBody `}`
@@ -18580,7 +18542,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-method-definitions-runtime-semantics-propertydefinitionevaluation">
           <h1>Runtime Semantics: PropertyDefinitionEvaluation</h1>
           <p>With parameters _object_ and _enumerable_.</p>
-          <emu-see-also-para op="PropertyDefinitionEvaluation"/>
+          <emu-see-also-para op="PropertyDefinitionEvaluation"></emu-see-also-para>
           <emu-grammar>MethodDefinition : PropertyName `(` StrictFormalParameters `)` `{` FunctionBody `}`</emu-grammar>
           <emu-alg>
             1. Let _methodDef_ be DefineMethod of |MethodDefinition| with argument _object_.
@@ -18709,7 +18671,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.4.2" -->
         <emu-clause id="sec-generator-function-definitions-static-semantics-boundnames">
           <h1>Static Semantics: BoundNames</h1>
-          <emu-see-also-para op="BoundNames"/>
+          <emu-see-also-para op="BoundNames"></emu-see-also-para>
           <emu-grammar>GeneratorDeclaration : `function` `*` BindingIdentifier `(` FormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. Return the BoundNames of |BindingIdentifier|.
@@ -18727,7 +18689,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-generator-function-definitions-static-semantics-computedpropertycontains">
           <h1>Static Semantics: ComputedPropertyContains</h1>
           <p>With parameter _symbol_.</p>
-          <emu-see-also-para op="ComputedPropertyContains"/>
+          <emu-see-also-para op="ComputedPropertyContains"></emu-see-also-para>
           <emu-grammar>GeneratorMethod : `*` PropertyName `(` StrictFormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. Return the result of ComputedPropertyContains for |PropertyName| with argument _symbol_.
@@ -18738,7 +18700,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-generator-function-definitions-static-semantics-contains">
           <h1>Static Semantics: Contains</h1>
           <p>With parameter _symbol_.</p>
-          <emu-see-also-para op="Contains"/>
+          <emu-see-also-para op="Contains"></emu-see-also-para>
           <emu-grammar>
             GeneratorDeclaration : `function` `*` BindingIdentifier `(` FormalParameters `)` `{` GeneratorBody `}`
 
@@ -18759,7 +18721,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.4.5" -->
         <emu-clause id="sec-generator-function-definitions-static-semantics-hascomputedpropertykey">
           <h1>Static Semantics: HasComputedPropertyKey</h1>
-          <emu-see-also-para op="HasComputedPropertyKey"/>
+          <emu-see-also-para op="HasComputedPropertyKey"></emu-see-also-para>
           <emu-grammar>GeneratorMethod : `*` PropertyName `(` StrictFormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. Return IsComputedPropertyKey of |PropertyName|.
@@ -18769,7 +18731,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.4.6" -->
         <emu-clause id="sec-generator-function-definitions-static-semantics-hasdirectsuper">
           <h1>Static Semantics: HasDirectSuper</h1>
-          <emu-see-also-para op="HasDirectSuper"/>
+          <emu-see-also-para op="HasDirectSuper"></emu-see-also-para>
           <emu-grammar>GeneratorMethod : `*` PropertyName `(` StrictFormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. If |StrictFormalParameters| Contains |SuperCall| is *true*, return *true*.
@@ -18793,7 +18755,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.4.7" -->
         <emu-clause id="sec-generator-function-definitions-static-semantics-hasname">
           <h1>Static Semantics: HasName</h1>
-          <emu-see-also-para op="HasName"/>
+          <emu-see-also-para op="HasName"></emu-see-also-para>
           <emu-grammar>GeneratorExpression : `function` `*` `(` FormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -18807,7 +18769,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.4.8" -->
         <emu-clause id="sec-generator-function-definitions-static-semantics-isconstantdeclaration">
           <h1>Static Semantics: IsConstantDeclaration</h1>
-          <emu-see-also-para op="IsConstantDeclaration"/>
+          <emu-see-also-para op="IsConstantDeclaration"></emu-see-also-para>
           <emu-grammar>
             GeneratorDeclaration : `function` `*` BindingIdentifier `(` FormalParameters `)` `{` GeneratorBody `}`
 
@@ -18821,7 +18783,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.4.9" -->
         <emu-clause id="sec-generator-function-definitions-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>GeneratorExpression : `function` `*` `(` FormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. Return *true*.
@@ -18835,7 +18797,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.4.10" -->
         <emu-clause id="sec-generator-function-definitions-static-semantics-propname">
           <h1>Static Semantics: PropName</h1>
-          <emu-see-also-para op="PropName"/>
+          <emu-see-also-para op="PropName"></emu-see-also-para>
           <emu-grammar>GeneratorMethod : `*` PropertyName `(` StrictFormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. Return PropName of |PropertyName|.
@@ -18846,7 +18808,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-generator-function-definitions-runtime-semantics-evaluatebody">
           <h1>Runtime Semantics: EvaluateBody</h1>
           <p>With parameter _functionObject_.</p>
-          <emu-see-also-para op="EvaluateBody"/>
+          <emu-see-also-para op="EvaluateBody"></emu-see-also-para>
           <emu-grammar>GeneratorBody : FunctionBody</emu-grammar>
           <emu-alg>
             1. Let _G_ be OrdinaryCreateFromConstructor(_functionObject_, "%GeneratorPrototype%", &laquo;&zwj;[[GeneratorState]], [[GeneratorContext]]&raquo; ).
@@ -18863,7 +18825,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-generator-function-definitions-runtime-semantics-instantiatefunctionobject">
           <h1>Runtime Semantics: InstantiateFunctionObject</h1>
           <p>With parameter _scope_.</p>
-          <emu-see-also-para op="InstantiateFunctionObject"/>
+          <emu-see-also-para op="InstantiateFunctionObject"></emu-see-also-para>
           <emu-grammar>GeneratorDeclaration : `function` `*` BindingIdentifier `(` FormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. If the function code for |GeneratorDeclaration| is strict mode code, let _strict_ be *true*. Otherwise let _strict_ be *false*.
@@ -18892,7 +18854,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation">
           <h1>Runtime Semantics: PropertyDefinitionEvaluation</h1>
           <p>With parameter _object_ and _enumerable_.</p>
-          <emu-see-also-para op="PropertyDefinitionEvaluation"/>
+          <emu-see-also-para op="PropertyDefinitionEvaluation"></emu-see-also-para>
           <emu-grammar>GeneratorMethod : `*` PropertyName `(` StrictFormalParameters `)` `{` GeneratorBody `}`</emu-grammar>
           <emu-alg>
             1. Let _propKey_ be the result of evaluating |PropertyName|.
@@ -19083,7 +19045,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.5.2" -->
         <emu-clause id="sec-class-definitions-static-semantics-boundnames">
           <h1>Static Semantics: BoundNames</h1>
-          <emu-see-also-para op="BoundNames"/>
+          <emu-see-also-para op="BoundNames"></emu-see-also-para>
           <emu-grammar>ClassDeclaration : `class` BindingIdentifier ClassTail</emu-grammar>
           <emu-alg>
             1. Return the BoundNames of |BindingIdentifier|.
@@ -19122,7 +19084,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-class-definitions-static-semantics-contains">
           <h1>Static Semantics: Contains</h1>
           <p>With parameter _symbol_.</p>
-          <emu-see-also-para op="Contains"/>
+          <emu-see-also-para op="Contains"></emu-see-also-para>
           <emu-grammar>ClassTail : ClassHeritage? `{` ClassBody `}`</emu-grammar>
           <emu-alg>
             1. If _symbol_ is |ClassBody|, return *true*.
@@ -19141,7 +19103,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-class-definitions-static-semantics-computedpropertycontains">
           <h1>Static Semantics: ComputedPropertyContains</h1>
           <p>With parameter _symbol_.</p>
-          <emu-see-also-para op="ComputedPropertyContains"/>
+          <emu-see-also-para op="ComputedPropertyContains"></emu-see-also-para>
           <emu-grammar>ClassElementList : ClassElementList ClassElement</emu-grammar>
           <emu-alg>
             1. Let _inList_ be the result of ComputedPropertyContains for |ClassElementList| with argument _symbol_.
@@ -19165,7 +19127,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.5.6" -->
         <emu-clause id="sec-class-definitions-static-semantics-hasname">
           <h1>Static Semantics: HasName</h1>
-          <emu-see-also-para op="HasName"/>
+          <emu-see-also-para op="HasName"></emu-see-also-para>
           <emu-grammar>ClassExpression : `class` ClassTail</emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -19179,7 +19141,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.5.7" -->
         <emu-clause id="sec-class-definitions-static-semantics-isconstantdeclaration">
           <h1>Static Semantics: IsConstantDeclaration</h1>
-          <emu-see-also-para op="IsConstantDeclaration"/>
+          <emu-see-also-para op="IsConstantDeclaration"></emu-see-also-para>
           <p><emu-grammar>ClassDeclaration : `class` BindingIdentifier ClassTail</emu-grammar></p>
           <emu-grammar>ClassDeclaration : `class` ClassTail</emu-grammar>
           <emu-alg>
@@ -19190,7 +19152,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.5.8" -->
         <emu-clause id="sec-class-definitions-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
-          <emu-see-also-para op="IsFunctionDefinition"/>
+          <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>ClassExpression : `class` ClassTail</emu-grammar>
           <emu-alg>
             1. Return *true*.
@@ -19259,7 +19221,7 @@ a = b + c(d + e).print()
         <!-- es6num="14.5.12" -->
         <emu-clause id="sec-class-definitions-static-semantics-propname">
           <h1>Static Semantics: PropName</h1>
-          <emu-see-also-para op="PropName"/>
+          <emu-see-also-para op="PropName"></emu-see-also-para>
           <emu-grammar>ClassElement : `;`</emu-grammar>
           <emu-alg>
             1. Return ~empty~.
@@ -19759,7 +19721,7 @@ a = b + c(d + e).print()
         <!-- es6num="15.1.3" -->
         <emu-clause id="sec-scripts-static-semantics-lexicallydeclarednames">
           <h1>Static Semantics: LexicallyDeclaredNames</h1>
-          <emu-see-also-para op="LexicallyDeclaredNames"/>
+          <emu-see-also-para op="LexicallyDeclaredNames"></emu-see-also-para>
           <emu-grammar>ScriptBody : StatementList</emu-grammar>
           <emu-alg>
             1. Return TopLevelLexicallyDeclaredNames of |StatementList|.
@@ -19772,7 +19734,7 @@ a = b + c(d + e).print()
         <!-- es6num="15.1.4" -->
         <emu-clause id="sec-scripts-static-semantics-lexicallyscopeddeclarations">
           <h1>Static Semantics: LexicallyScopedDeclarations</h1>
-          <emu-see-also-para op="LexicallyScopedDeclarations"/>
+          <emu-see-also-para op="LexicallyScopedDeclarations"></emu-see-also-para>
           <emu-grammar>ScriptBody : StatementList</emu-grammar>
           <emu-alg>
             1. Return TopLevelLexicallyScopedDeclarations of |StatementList|.
@@ -19782,7 +19744,7 @@ a = b + c(d + e).print()
         <!-- es6num="15.1.5" -->
         <emu-clause id="sec-scripts-static-semantics-vardeclarednames">
           <h1>Static Semantics: VarDeclaredNames</h1>
-          <emu-see-also-para op="VarDeclaredNames"/>
+          <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
           <emu-grammar>ScriptBody : StatementList</emu-grammar>
           <emu-alg>
             1. Return TopLevelVarDeclaredNames of |StatementList|.
@@ -19792,7 +19754,7 @@ a = b + c(d + e).print()
         <!-- es6num="15.1.6" -->
         <emu-clause id="sec-scripts-static-semantics-varscopeddeclarations">
           <h1>Static Semantics: VarScopedDeclarations</h1>
-          <emu-see-also-para op="VarScopedDeclarations"/>
+          <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
           <emu-grammar>ScriptBody : StatementList</emu-grammar>
           <emu-alg>
             1. Return TopLevelVarScopedDeclarations of |StatementList|.
@@ -19983,7 +19945,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-module-semantics-static-semantics-containsduplicatelabels">
             <h1>Static Semantics: ContainsDuplicateLabels</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsDuplicateLabels"/>
+            <emu-see-also-para op="ContainsDuplicateLabels"></emu-see-also-para>
             <emu-grammar>ModuleItemList : ModuleItemList ModuleItem</emu-grammar>
             <emu-alg>
               1. Let _hasDuplicates_ be ContainsDuplicateLabels of |ModuleItemList| with argument _labelSet_.
@@ -20004,7 +19966,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-module-semantics-static-semantics-containsundefinedbreaktarget">
             <h1>Static Semantics: ContainsUndefinedBreakTarget</h1>
             <p>With argument _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedBreakTarget"/>
+            <emu-see-also-para op="ContainsUndefinedBreakTarget"></emu-see-also-para>
             <emu-grammar>ModuleItemList : ModuleItemList ModuleItem</emu-grammar>
             <emu-alg>
               1. Let _hasUndefinedLabels_ be ContainsUndefinedBreakTarget of |ModuleItemList| with argument _labelSet_.
@@ -20025,7 +19987,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-module-semantics-static-semantics-containsundefinedcontinuetarget">
             <h1>Static Semantics: ContainsUndefinedContinueTarget</h1>
             <p>With arguments _iterationSet_ and _labelSet_.</p>
-            <emu-see-also-para op="ContainsUndefinedContinueTarget"/>
+            <emu-see-also-para op="ContainsUndefinedContinueTarget"></emu-see-also-para>
             <emu-grammar>ModuleItemList : ModuleItemList ModuleItem</emu-grammar>
             <emu-alg>
               1. Let _hasUndefinedLabels_ be ContainsUndefinedContinueTarget of |ModuleItemList| with arguments _iterationSet_ and &laquo; &raquo;.
@@ -20045,7 +20007,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.5" -->
           <emu-clause id="sec-module-semantics-static-semantics-exportedbindings">
             <h1>Static Semantics: ExportedBindings</h1>
-            <emu-see-also-para op="ExportedBindings"/>
+            <emu-see-also-para op="ExportedBindings"></emu-see-also-para>
             <emu-note>
               <p>ExportedBindings are the locally bound names that are explicitly associated with a |Module|'s ExportedNames.</p>
             </emu-note>
@@ -20068,7 +20030,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.6" -->
           <emu-clause id="sec-module-semantics-static-semantics-exportednames">
             <h1>Static Semantics: ExportedNames</h1>
-            <emu-see-also-para op="ExportedNames"/>
+            <emu-see-also-para op="ExportedNames"></emu-see-also-para>
             <emu-note>
               <p>ExportedNames are the externally visible names that a |Module| explicitly maps to one of its local name bindings.</p>
             </emu-note>
@@ -20095,7 +20057,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.7" -->
           <emu-clause id="sec-module-semantics-static-semantics-exportentries">
             <h1>Static Semantics: ExportEntries</h1>
-            <emu-see-also-para op="ExportEntries"/>
+            <emu-see-also-para op="ExportEntries"></emu-see-also-para>
             <emu-grammar>Module : [empty]</emu-grammar>
             <emu-alg>
               1. Return a new empty List.
@@ -20119,7 +20081,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.8" -->
           <emu-clause id="sec-module-semantics-static-semantics-importentries">
             <h1>Static Semantics: ImportEntries</h1>
-            <emu-see-also-para op="ImportEntries"/>
+            <emu-see-also-para op="ImportEntries"></emu-see-also-para>
             <emu-grammar>Module : [empty]</emu-grammar>
             <emu-alg>
               1. Return a new empty List.
@@ -20155,7 +20117,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.10" -->
           <emu-clause id="sec-module-semantics-static-semantics-modulerequests">
             <h1>Static Semantics: ModuleRequests</h1>
-            <emu-see-also-para op="ModuleRequests"/>
+            <emu-see-also-para op="ModuleRequests"></emu-see-also-para>
             <emu-grammar>Module : [empty]</emu-grammar>
             <emu-alg>
               1. Return a new empty List.
@@ -20180,7 +20142,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.11" -->
           <emu-clause id="sec-module-semantics-static-semantics-lexicallydeclarednames">
             <h1>Static Semantics: LexicallyDeclaredNames</h1>
-            <emu-see-also-para op="LexicallyDeclaredNames"/>
+            <emu-see-also-para op="LexicallyDeclaredNames"></emu-see-also-para>
             <emu-note>
               <p>The LexicallyDeclaredNames of a |Module| includes the names of all of its imported bindings.</p>
             </emu-note>
@@ -20211,7 +20173,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.12" -->
           <emu-clause id="sec-module-semantics-static-semantics-lexicallyscopeddeclarations">
             <h1>Static Semantics: LexicallyScopedDeclarations</h1>
-            <emu-see-also-para op="LexicallyScopedDeclarations"/>
+            <emu-see-also-para op="LexicallyScopedDeclarations"></emu-see-also-para>
             <emu-grammar>Module : [empty]</emu-grammar>
             <emu-alg>
               1. Return a new empty List.
@@ -20231,7 +20193,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.13" -->
           <emu-clause id="sec-module-semantics-static-semantics-vardeclarednames">
             <h1>Static Semantics: VarDeclaredNames</h1>
-            <emu-see-also-para op="VarDeclaredNames"/>
+            <emu-see-also-para op="VarDeclaredNames"></emu-see-also-para>
             <emu-grammar>Module : [empty]</emu-grammar>
             <emu-alg>
               1. Return an empty List.
@@ -20256,7 +20218,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.14" -->
           <emu-clause id="sec-module-semantics-static-semantics-varscopeddeclarations">
             <h1>Static Semantics: VarScopedDeclarations</h1>
-            <emu-see-also-para op="VarScopedDeclarations"/>
+            <emu-see-also-para op="VarScopedDeclarations"></emu-see-also-para>
             <emu-grammar>Module : [empty]</emu-grammar>
             <emu-alg>
               1. Return a new empty List.
@@ -21232,7 +21194,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.2.2" -->
           <emu-clause id="sec-imports-static-semantics-boundnames">
             <h1>Static Semantics: BoundNames</h1>
-            <emu-see-also-para op="BoundNames"/>
+            <emu-see-also-para op="BoundNames"></emu-see-also-para>
             <emu-grammar>ImportDeclaration : `import` ImportClause FromClause `;`</emu-grammar>
             <emu-alg>
               1. Return the BoundNames of |ImportClause|.
@@ -21272,7 +21234,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.2.3" -->
           <emu-clause id="sec-imports-static-semantics-importentries">
             <h1>Static Semantics: ImportEntries</h1>
-            <emu-see-also-para op="ImportEntries"/>
+            <emu-see-also-para op="ImportEntries"></emu-see-also-para>
             <emu-grammar>ImportDeclaration : `import` ImportClause FromClause `;`</emu-grammar>
             <emu-alg>
               1. Let _module_ be the sole element of ModuleRequests of |FromClause|.
@@ -21340,7 +21302,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.2.5" -->
           <emu-clause id="sec-imports-static-semantics-modulerequests">
             <h1>Static Semantics: ModuleRequests</h1>
-            <emu-see-also-para op="ModuleRequests"/>
+            <emu-see-also-para op="ModuleRequests"></emu-see-also-para>
             <emu-grammar>ImportDeclaration : `import` ImportClause FromClause `;`</emu-grammar>
             <emu-alg>
               1. Return ModuleRequests of |FromClause|.
@@ -21398,7 +21360,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.3.2" -->
           <emu-clause id="sec-exports-static-semantics-boundnames">
             <h1>Static Semantics: BoundNames</h1>
-            <emu-see-also-para op="BoundNames"/>
+            <emu-see-also-para op="BoundNames"></emu-see-also-para>
             <emu-grammar>
               ExportDeclaration :
                 `export` `*` FromClause `;`
@@ -21437,7 +21399,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.3.3" -->
           <emu-clause id="sec-exports-static-semantics-exportedbindings">
             <h1>Static Semantics: ExportedBindings</h1>
-            <emu-see-also-para op="ExportedBindings"/>
+            <emu-see-also-para op="ExportedBindings"></emu-see-also-para>
             <emu-grammar>
               ExportDeclaration :
                 `export` ExportClause FromClause `;`
@@ -21491,7 +21453,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.3.4" -->
           <emu-clause id="sec-exports-static-semantics-exportednames">
             <h1>Static Semantics: ExportedNames</h1>
-            <emu-see-also-para op="ExportedNames"/>
+            <emu-see-also-para op="ExportedNames"></emu-see-also-para>
             <emu-grammar>ExportDeclaration : `export` `*` FromClause `;`</emu-grammar>
             <emu-alg>
               1. Return a new empty List.
@@ -21545,7 +21507,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.3.5" -->
           <emu-clause id="sec-exports-static-semantics-exportentries">
             <h1>Static Semantics: ExportEntries</h1>
-            <emu-see-also-para op="ExportEntries"/>
+            <emu-see-also-para op="ExportEntries"></emu-see-also-para>
             <emu-grammar>ExportDeclaration : `export` `*` FromClause `;`</emu-grammar>
             <emu-alg>
               1. Let _module_ be the sole element of ModuleRequests of |FromClause|.
@@ -21641,7 +21603,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.3.7" -->
           <emu-clause id="sec-exports-static-semantics-isconstantdeclaration">
             <h1>Static Semantics: IsConstantDeclaration</h1>
-            <emu-see-also-para op="IsConstantDeclaration"/>
+            <emu-see-also-para op="IsConstantDeclaration"></emu-see-also-para>
             <emu-grammar>
               ExportDeclaration :
                 `export` `*` FromClause `;`
@@ -21660,7 +21622,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.3.8" -->
           <emu-clause id="sec-exports-static-semantics-lexicallyscopeddeclarations">
             <h1>Static Semantics: LexicallyScopedDeclarations</h1>
-            <emu-see-also-para op="LexicallyScopedDeclarations"/>
+            <emu-see-also-para op="LexicallyScopedDeclarations"></emu-see-also-para>
             <emu-grammar>
               ExportDeclaration :
                 `export` `*` FromClause `;`
@@ -21692,7 +21654,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.3.9" -->
           <emu-clause id="sec-exports-static-semantics-modulerequests">
             <h1>Static Semantics: ModuleRequests</h1>
-            <emu-see-also-para op="ModuleRequests"/>
+            <emu-see-also-para op="ModuleRequests"></emu-see-also-para>
             <p><emu-grammar>ExportDeclaration : `export` `*` FromClause `;`</emu-grammar></p>
             <emu-grammar>ExportDeclaration : `export` ExportClause FromClause `;`</emu-grammar>
             <emu-alg>
@@ -24524,7 +24486,7 @@ new Function("a,b", "c", "return a+b+c")
             <p>In the function descriptions below, the symbols NaN, -0, +0, -&infin; and +&infin; refer to the Number values described in <emu-internal-ref refid="sec-ecmascript-language-types-number-type">NUM</emu-internal-ref>.</p>
             <emu-note>
               <p>The behaviour of the functions `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `cos`, `cosh`, `exp`, `expm1`, `hypot`, `log`,`log1p`, `log2`, `log10`, `pow`, `random`, `sin`, `sinh`, `sqrt`, `tan`, and `tanh` is not precisely specified here except to require specific results for certain argument values that represent boundary cases of interest. For other argument values, these functions are intended to compute approximations to the results of familiar mathematical functions, but some latitude is allowed in the choice of approximation algorithms. The general intent is that an implementer should be able to use the same mathematical library for ECMAScript on a given hardware platform that is available to C programmers on that platform.</p>
-              <p>Although the choice of algorithms is left to the implementation, it is recommended (but not specified by this standard) that implementations use the approximation algorithms for IEEE 754-2008 arithmetic contained in `fdlibm`, the freely distributable mathematical library from Sun Microsystems (<emu-external-ref href="http://www.netlib.org/fdlibm" linktext="URL"/>`)`.</p>
+              <p>Although the choice of algorithms is left to the implementation, it is recommended (but not specified by this standard) that implementations use the approximation algorithms for IEEE 754-2008 arithmetic contained in `fdlibm`, the freely distributable mathematical library from Sun Microsystems (<emu-external-ref href="http://www.netlib.org/fdlibm" linktext="URL"></emu-external-ref>`)`.</p>
             </emu-note>
 
           <!-- es6num="20.2.2.1" -->
@@ -25564,7 +25526,7 @@ new Function("a,b", "c", "return a+b+c")
             <h1>Local Time Zone Adjustment</h1>
             <p>An implementation of ECMAScript is expected to determine the local time zone adjustment. The local time zone adjustment is a value LocalTZA measured in milliseconds which when added to UTC represents the local _standard_ time. Daylight saving time is _not_ reflected by LocalTZA.</p>
             <emu-note>
-              <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <emu-external-ref href="http://www.iana.org/time-zones/" linktext="URL"/>.</p>
+              <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <emu-external-ref href="http://www.iana.org/time-zones/" linktext="URL"></emu-external-ref>.</p>
             </emu-note>
           </emu-clause>
 
@@ -25573,7 +25535,7 @@ new Function("a,b", "c", "return a+b+c")
             <h1>Daylight Saving Time Adjustment</h1>
             <p>An implementation dependent algorithm using best available information on time zones to determine the local daylight saving time adjustment DaylightSavingTA(_t_), measured in milliseconds. An implementation of ECMAScript is expected to make its best effort to determine the local daylight saving time adjustment.</p>
             <emu-note>
-              <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <emu-external-ref href="http://www.iana.org/time-zones/" linktext="URL"/>.</p>
+              <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <emu-external-ref href="http://www.iana.org/time-zones/" linktext="URL"></emu-external-ref>.</p>
             </emu-note>
           </emu-clause>
 
@@ -27111,7 +27073,7 @@ Date.parse(_x_.toLocaleString())
               <p>The `localeCompare` method itself is not directly suitable as an argument to `Array.prototype.sort` because the latter requires a function of two arguments.</p>
             </emu-note>
             <emu-note>
-              <p>This function is intended to rely on whatever language-sensitive comparison functionality is available to the ECMAScript environment from the host environment, and to compare according to the rules of the host environment's current locale. However, regardless of the host provided comparison capabilities, this function must treat Strings that are canonically equivalent according to the Unicode standard as identical. It is recommended that this function should not honour Unicode compatibility equivalences or decompositions. For a definition and discussion of canonical equivalence see the Unicode Standard, chapters 2 and 3, as well as Unicode Standard Annex #15, Unicode Normalization Forms (<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"/>) and Unicode Technical Note #5, Canonical Equivalence in Applications (<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"/>). Also see Unicode Technical Standard #10, Unicode Collation Algorithm (<emu-external-ref href="http://www.unicode.org/reports/tr10/" linktext="URL"/>).</p>
+              <p>This function is intended to rely on whatever language-sensitive comparison functionality is available to the ECMAScript environment from the host environment, and to compare according to the rules of the host environment's current locale. However, regardless of the host provided comparison capabilities, this function must treat Strings that are canonically equivalent according to the Unicode standard as identical. It is recommended that this function should not honour Unicode compatibility equivalences or decompositions. For a definition and discussion of canonical equivalence see the Unicode Standard, chapters 2 and 3, as well as Unicode Standard Annex #15, Unicode Normalization Forms (<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"></emu-external-ref>) and Unicode Technical Note #5, Canonical Equivalence in Applications (<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"></emu-external-ref>). Also see Unicode Technical Standard #10, Unicode Collation Algorithm (<emu-external-ref href="http://www.unicode.org/reports/tr10/" linktext="URL"></emu-external-ref>).</p>
             </emu-note>
             <emu-note>
               <p>The `localeCompare` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
@@ -27153,7 +27115,7 @@ Date.parse(_x_.toLocaleString())
               1. Let _f_ be ToString(_form_).
               1. ReturnIfAbrupt(_f_).
               1. If _f_ is not one of "NFC", "NFD", "NFKC", or "NFKD", throw a *RangeError* exception.
-              1. Let _ns_ be the String value that is the result of normalizing _S_ into the normalization form named by _f_ as specified in <emu-external-ref href="http://www.unicode.org/reports/tr15/tr15-29.html" linktext="URL"/>.
+              1. Let _ns_ be the String value that is the result of normalizing _S_ into the normalization form named by _f_ as specified in <emu-external-ref href="http://www.unicode.org/reports/tr15/tr15-29.html" linktext="URL"></emu-external-ref>.
               1. Return _ns_.
             </emu-alg>
             <p>The `length` property of the `normalize` method is 0.</p>
@@ -33438,8 +33400,8 @@ Date.parse(_x_.toLocaleString())
           <p>WeakMap objects must be implemented using either hash tables or other mechanisms that, on average, provide access times that are sublinear on the number of key/value pairs in the collection. The data structure used in this WeakMap objects specification are only intended to describe the required observable semantics of WeakMap objects. It is not intended to be a viable implementation model.</p>
           <emu-note>
             <p>WeakMap and WeakSets are intended to provide mechanisms for dynamically associating state with an object in a manner that does not &ldquo;leak&rdquo; memory resources if, in the absence of the WeakMap or WeakSet, the object otherwise became inaccessible and subject to resource reclamation by the implementation's garbage collection mechanisms. Achieving this characteristic can be achieved by using an inverted per-object mapping of weak map instances to keys. Alternatively each weak map may internally store its key to value mappings but this approach requires coordination between the WeakMap or WeakSet implementation and the garbage collector. The following references describe mechanism that may be useful to implementations of WeakMap and WeakSets:</p>
-            <p>Barry Hayes. 1997. Ephemerons: a new finalization mechanism. In <i>Proceedings of the 12th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications (OOPSLA '97)</i>, A. Michael Berman (Ed.). ACM, New York, NY, USA, 176-183, <emu-external-ref href="http://doi.acm.org/10.1145/263698.263733" linktext="URL"/>.</p>
-            <p>Alexandra Barros, Roberto Ierusalimschy, Eliminating Cycles in Weak Tables. Journal of Universal Computer Science - J.UCS , vol. 14, no. 21, pp. 3481-3497, 2008, <emu-external-ref href="http://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak" linktext="URL"/></p>
+            <p>Barry Hayes. 1997. Ephemerons: a new finalization mechanism. In <i>Proceedings of the 12th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications (OOPSLA '97)</i>, A. Michael Berman (Ed.). ACM, New York, NY, USA, 176-183, <emu-external-ref href="http://doi.acm.org/10.1145/263698.263733" linktext="URL"></emu-external-ref>.</p>
+            <p>Alexandra Barros, Roberto Ierusalimschy, Eliminating Cycles in Weak Tables. Journal of Universal Computer Science - J.UCS , vol. 14, no. 21, pp. 3481-3497, 2008, <emu-external-ref href="http://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak" linktext="URL"></emu-external-ref></p>
           </emu-note>
 
         <!-- es6num="23.3.1" -->
@@ -37321,18 +37283,18 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
       <p><span class="marker">[1] </span>IEEE Std 754-2008: <i>IEEE Standard for Floating-Point Arithmetic</i>. Institute of Electrical and Electronic Engineers, New York (2008)</p>
       <p><span class="marker">[2] </span><i>The Unicode Standard, Version 5.0</i>, as amended by Unicode 5.1.0, or successor.
         <br/>
-        &lt;<emu-external-ref href="http://www.unicode.org/versions/latest" linktext="URL"/>&gt;</p>
+        &lt;<emu-external-ref href="http://www.unicode.org/versions/latest" linktext="URL"></emu-external-ref>&gt;</p>
       <p><span class="marker">[3] </span><i>Unicode Standard Annex #15, Unicode Normalization Forms, version Unicode 5.1.0</i>, or successor.
         <br/>
-        &lt;<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"/>&gt;</p>
-      <p><span class="marker">[4] </span><i>Unicode Standard Annex #31, Unicode Identifiers and Pattern Syntax, version Unicode 5.1.0</i>, or successor. &lt;<emu-external-ref href="http://www.unicode.org/reports/tr31/" linktext="URL"/>&gt;</p>
-      <p><span class="marker">[5] </span>Unicode Technical Note #5: Canonical Equivalence in Applications, available at &lt;<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"/>&gt;</p>
-      <p><span class="marker">[6] </span>Unicode Technical Standard #10: Unicode Collation Algorithm version 5.1.0, or successor, available at &lt;<emu-external-ref href="http://www.unicode.org/reports/tr10/" linktext="URL"/>&gt;</p>
-      <p><span class="marker">[7] </span><i>IANA Time Zone Database</i> at &lt;<emu-external-ref href="http://www.iana.org/time-zones" linktext="URL"/>&gt;</p>
+        &lt;<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"></emu-external-ref>&gt;</p>
+      <p><span class="marker">[4] </span><i>Unicode Standard Annex #31, Unicode Identifiers and Pattern Syntax, version Unicode 5.1.0</i>, or successor. &lt;<emu-external-ref href="http://www.unicode.org/reports/tr31/" linktext="URL"></emu-external-ref>&gt;</p>
+      <p><span class="marker">[5] </span>Unicode Technical Note #5: Canonical Equivalence in Applications, available at &lt;<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"></emu-external-ref>&gt;</p>
+      <p><span class="marker">[6] </span>Unicode Technical Standard #10: Unicode Collation Algorithm version 5.1.0, or successor, available at &lt;<emu-external-ref href="http://www.unicode.org/reports/tr10/" linktext="URL"></emu-external-ref>&gt;</p>
+      <p><span class="marker">[7] </span><i>IANA Time Zone Database</i> at &lt;<emu-external-ref href="http://www.iana.org/time-zones" linktext="URL"></emu-external-ref>&gt;</p>
       <p><span class="marker">[8] </span>ISO 8601:2004(E) <i>Data elements and interchange formats &ndash; Information interchange</i> &mdash; <i>Representation of dates and times</i></p>
-      <p><span class="marker">[9] </span>RFC 1738 &ldquo;Uniform Resource Locators (URL)&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc1738" linktext="URL"/>&gt;</p>
-      <p><span class="marker">[10] </span>RFC 2396 &ldquo;Uniform Resource Identifiers (URI): Generic Syntax&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc2396" linktext="URL"/>&gt;</p>
-      <p><span class="marker">[11] </span>RFC 3629 &ldquo;UTF-8, a transformation format of ISO 10646&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc3629" linktext="URL"/>&gt;</p>
+      <p><span class="marker">[9] </span>RFC 1738 &ldquo;Uniform Resource Locators (URL)&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc1738" linktext="URL"></emu-external-ref>&gt;</p>
+      <p><span class="marker">[10] </span>RFC 2396 &ldquo;Uniform Resource Identifiers (URI): Generic Syntax&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc2396" linktext="URL"></emu-external-ref>&gt;</p>
+      <p><span class="marker">[11] </span>RFC 3629 &ldquo;UTF-8, a transformation format of ISO 10646&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc3629" linktext="URL"></emu-external-ref>&gt;</p>
     </emu-annex>
   </body>
 </html>
