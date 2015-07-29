@@ -5,7 +5,7 @@
     <title>
       ECMAScript 2015 Language Specification &ndash; ECMA-262 6th Edition
     </title>
-    <link href="es6.css" rel="stylesheet"/>
+    <link href="emu.css" rel="stylesheet"/>
   </head>
   <body>
     <div class="copyright">
