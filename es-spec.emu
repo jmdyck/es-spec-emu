@@ -34,6 +34,7 @@
       <p>3. Neither the name of the authors nor Ecma International may be used to endorse or promote products derived from this software without specific prior written permission.</p>
       <p class="copyrightlast">THIS SOFTWARE IS PROVIDED BY THE ECMA INTERNATIONAL "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
     </div>
+    <emu-placeholder for="toc"></emu-placeholder>
     <emu-intro>
       <h1>Introduction</h1>
       <p>This Ecma Standard defines the ECMAScript 2015 Language. It is the sixth edition of the ECMAScript Language Specification. Since publication of the first edition in 1997, ECMAScript has grown to be one of the world's most widely used general purpose programming languages. It is best known as the language embedded in web browsers but has also been widely adopted for server and embedded applications. The sixth edition is the most extensive update to ECMAScript since the publication of the first edition in 1997.</p>
@@ -36212,6 +36213,12 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         </emu-clause>
       </emu-clause>
     </emu-clause>
+
+    <!-- es6num="A" -->
+    <emu-annex id="sec-grammar-summary" status="informative">
+        <h1>Grammar Summary</h1>
+        <emu-placeholder for="grammar-summary"></emu-placeholder>
+    </emu-annex>
 
     <!-- es6num="B" -->
     <emu-annex id="sec-additional-ecmascript-features-for-web-browsers" status="normative">

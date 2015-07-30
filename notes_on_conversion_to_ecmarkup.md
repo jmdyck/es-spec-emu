@@ -76,6 +76,17 @@ In the HTML version, both fonts are serif, though slightly different
 In case you want to retain this distinction in markup, I created
 `<emu-formula>`.
 
+### `<emu-placeholder>`
+
+I invented `<emu-placeholder>` to stand in for large chunks of content
+that can be generated based on other content.
+It has one attribute, named `for`,
+whose value indicates the content for which the element is a placeholder.
+So far, the only two values are
+`"toc"` (for the Table of Contents) and
+`"grammar-summary"` (for the guts of Annex A).
+
+
 ## Grammar stuff:
 
 There are a few constructs used in the spec's productions that aren't
@@ -123,9 +134,8 @@ more uniform treatment. (Mind you, that `<identifier-name-string>` would
 still be odd. It should maybe be changed to the actual nonterminal
 `|StringLiteral|`.)
 
-I deleted Annex A, since it'll presumably be generated based on
-productions in the document body. I maybe should have left a
-placeholder.
+I gutted Annex A and left an `<emu-placeholder for="grammar-summary">`,
+since it'll presumably be generated based on productions in the document body.
 
 ## Algorithms:
 
@@ -257,8 +267,8 @@ various cases:
 
 ## Miscellaneous:
 
-Frontmatter: I deleted everything up to the end of the ToC, except
-for the Copyright Notice.
+Frontmatter: I retained the Copyright Notice, replaced the Table of Contents
+with `<emu-placeholder for="toc">`, and deleted the rest.
 
 Sections: I figured it would be useful to know the section-number
 that each section had in ES6, so I put it into an HTML comment preceding
