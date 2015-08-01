@@ -10682,9 +10682,9 @@ a = b + c(d + e).print()
             </li>
           </ul>
           <emu-grammar>
-            IdentifierReference[Yield] : Identifier 
+            IdentifierReference[Yield] : Identifier
 
-            BindingIdentifier[Yield] : Identifier 
+            BindingIdentifier[Yield] : Identifier
 
             LabelIdentifier[Yield] : Identifier
           </emu-grammar>
@@ -13496,9 +13496,9 @@ a = b + c(d + e).print()
           <h1>Static Semantics: IsFunctionDefinition</h1>
           <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
-            BitwiseANDExpression : BitwiseANDExpression `&amp;` EqualityExpression 
+            BitwiseANDExpression : BitwiseANDExpression `&amp;` EqualityExpression
 
-            BitwiseXORExpression : BitwiseXORExpression `^` BitwiseANDExpression 
+            BitwiseXORExpression : BitwiseXORExpression `^` BitwiseANDExpression
 
             BitwiseORExpression : BitwiseORExpression `|` BitwiseXORExpression
           </emu-grammar>
@@ -13512,9 +13512,9 @@ a = b + c(d + e).print()
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
           <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
-            BitwiseANDExpression : BitwiseANDExpression `&amp;` EqualityExpression 
+            BitwiseANDExpression : BitwiseANDExpression `&amp;` EqualityExpression
 
-            BitwiseXORExpression : BitwiseXORExpression `^` BitwiseANDExpression 
+            BitwiseXORExpression : BitwiseXORExpression `^` BitwiseANDExpression
 
             BitwiseORExpression : BitwiseORExpression `|` BitwiseXORExpression
           </emu-grammar>
@@ -13565,7 +13565,7 @@ a = b + c(d + e).print()
           <h1>Static Semantics: IsFunctionDefinition</h1>
           <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
           <emu-grammar>
-            LogicalANDExpression : LogicalANDExpression `&amp;&amp;` BitwiseORExpression 
+            LogicalANDExpression : LogicalANDExpression `&amp;&amp;` BitwiseORExpression
 
             LogicalORExpression : LogicalORExpression `||` LogicalANDExpression
           </emu-grammar>
@@ -13579,7 +13579,7 @@ a = b + c(d + e).print()
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
           <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
           <emu-grammar>
-            LogicalANDExpression : LogicalANDExpression `&amp;&amp;` BitwiseORExpression 
+            LogicalANDExpression : LogicalANDExpression `&amp;&amp;` BitwiseORExpression
 
             LogicalORExpression : LogicalORExpression `||` LogicalANDExpression
           </emu-grammar>
@@ -21422,7 +21422,7 @@ a = b + c(d + e).print()
               1. Return the BoundNames of |Declaration|.
             </emu-alg>
             <emu-grammar>
-              ExportDeclaration : `export` `default` HoistableDeclaration 
+              ExportDeclaration : `export` `default` HoistableDeclaration
 
               ExportDeclaration : `export` `default` ClassDeclaration
 
@@ -21476,7 +21476,7 @@ a = b + c(d + e).print()
               1. Return the BoundNames of |Declaration|.
             </emu-alg>
             <emu-grammar>
-              ExportDeclaration : `export` `default` HoistableDeclaration 
+              ExportDeclaration : `export` `default` HoistableDeclaration
 
               ExportDeclaration : `export` `default` ClassDeclaration
 
@@ -25453,7 +25453,7 @@ new Function("a,b", "c", "return a+b+c")
           <emu-clause id="sec-month-number">
             <h1>Month Number</h1>
             <p>Months are identified by an integer in the range 0 to 11, inclusive. The mapping MonthFromTime(_t_) from a time value _t_ to a month number is defined by:</p>
-            <p class="normalBullet">MonthFromTime(_t_) 
+            <p class="normalBullet">MonthFromTime(_t_)
               <br/>
                = 0 if 0 &le; DayWithinYear(_t_) &lt; 31
               <br/>
