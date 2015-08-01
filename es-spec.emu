@@ -9973,10 +9973,10 @@ function* enumerate(obj) {
             <p>A string literal stands for a value of the String type. The String value (SV) of the literal is described in terms of code unit values contributed by the various parts of the string literal. As part of this process, some Unicode code points within the string literal are interpreted as having a mathematical value (MV), as described below or in <emu-internal-ref refid="sec-literals-numeric-literals">NUM</emu-internal-ref>.</p>
             <ul>
               <li>
-                <p>The SV of <emu-grammar>StringLiteral :: `""`</emu-grammar> is the empty code unit sequence.</p>
+                <p>The SV of <emu-grammar>StringLiteral :: `"` `"`</emu-grammar> is the empty code unit sequence.</p>
               </li>
               <li>
-                <p>The SV of <emu-grammar>StringLiteral :: `''`</emu-grammar> is the empty code unit sequence.</p>
+                <p>The SV of <emu-grammar>StringLiteral :: `'` `'`</emu-grammar> is the empty code unit sequence.</p>
               </li>
               <li>
                 <p>The SV of <emu-grammar>StringLiteral :: `"` DoubleStringCharacters `"`</emu-grammar> is the SV of |DoubleStringCharacters|.</p>
@@ -10331,16 +10331,16 @@ function* enumerate(obj) {
             <p>A template literal component is interpreted as a sequence of Unicode code points. The Template Value (TV) of a literal component is described in terms of code unit values (SV, <emu-internal-ref refid="sec-literals-string-literals">NUM</emu-internal-ref>) contributed by the various parts of the template literal component. As part of this process, some Unicode code points within the template component are interpreted as having a mathematical value (MV, <emu-internal-ref refid="sec-literals-numeric-literals">NUM</emu-internal-ref>). In determining a TV, escape sequences are replaced by the UTF-16 code unit(s) of the Unicode code point represented by the escape sequence. The Template Raw Value (TRV) is similar to a Template Value with the difference that in TRVs escape sequences are interpreted literally.</p>
             <ul>
               <li>
-                <p>The TV and TRV of <emu-grammar>NoSubstitutionTemplate :: ````</emu-grammar> is the empty code unit sequence.</p>
+                <p>The TV and TRV of <emu-grammar>NoSubstitutionTemplate :: ``` ```</emu-grammar> is the empty code unit sequence.</p>
               </li>
               <li>
-                <p>The TV and TRV of <emu-grammar>TemplateHead :: ``${`</emu-grammar> is the empty code unit sequence.</p>
+                <p>The TV and TRV of <emu-grammar>TemplateHead :: ``` `${`</emu-grammar> is the empty code unit sequence.</p>
               </li>
               <li>
-                <p>The TV and TRV of <emu-grammar>TemplateMiddle :: `}${`</emu-grammar> is the empty code unit sequence.</p>
+                <p>The TV and TRV of <emu-grammar>TemplateMiddle :: `}` `${`</emu-grammar> is the empty code unit sequence.</p>
               </li>
               <li>
-                <p>The TV and TRV of <emu-grammar>TemplateTail :: `}``</emu-grammar> is the empty code unit sequence.</p>
+                <p>The TV and TRV of <emu-grammar>TemplateTail :: `}` ```</emu-grammar> is the empty code unit sequence.</p>
               </li>
               <li>
                 <p>The TV of <emu-grammar>NoSubstitutionTemplate :: ``` TemplateCharacters ```</emu-grammar> is the TV of |TemplateCharacters|.</p>
@@ -10520,7 +10520,7 @@ function* enumerate(obj) {
                 LeftHandSideExpression[?Yield] [no LineTerminator here] `--`
 
               ContinueStatement[Yield] :
-                `continue;`
+                `continue` `;`
                 `continue` [no LineTerminator here] LabelIdentifier[?Yield] `;`
 
               BreakStatement[Yield] :
@@ -36996,7 +36996,11 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         <emu-clause id="sec-__proto__-property-names-in-object-initializers">
           <h1>__proto__ Property Names in Object Initializers</h1>
           <p>The following Early Error rule is added to those in <emu-internal-ref refid="sec-object-initializer-static-semantics-early-errors">NUM</emu-internal-ref>:</p>
-          <p><emu-grammar>ObjectLiteral : `{` PropertyDefinitionList `}ObjectLiteral` `:` `{` PropertyDefinitionList `,` `}`</emu-grammar></p>
+          <emu-grammar>
+            ObjectLiteral : `{` PropertyDefinitionList `}`
+
+            ObjectLiteral : `{` PropertyDefinitionList `,` `}`
+          </emu-grammar>
           <ul>
             <li>
               <p>It is a Syntax Error if PropertyNameList of |PropertyDefinitionList| contains any duplicate entries for "__proto__" and at least two of those entries were obtained from productions of the form <emu-grammar>PropertyDefinition : PropertyName `:` AssignmentExpression</emu-grammar> .</p>
