@@ -10314,7 +10314,7 @@ function* enumerate(obj) {
                 TemplateCharacter TemplateCharacters?
 
               TemplateCharacter ::
-                `$` [lookahead &ne; { ]
+                `$` [lookahead &ne; `{` ]
                 `\` EscapeSequence
                 LineContinuation
                 LineTerminatorSequence
@@ -15585,7 +15585,7 @@ a = b + c(d + e).print()
               `for` `(` [lookahead &notin; {`let [`}] LeftHandSideExpression[?Yield] `in` Expression[In, ?Yield] `)` Statement[?Yield, ?Return]
               `for` `(` `var` ForBinding[?Yield] `in` Expression[In, ?Yield] `)` Statement[?Yield, ?Return]
               `for` `(` ForDeclaration[?Yield] `in` Expression[In, ?Yield] `)` Statement[?Yield, ?Return]
-              `for` `(` [lookahead &ne; let ] LeftHandSideExpression[?Yield] `of` AssignmentExpression[In, ?Yield] `)` Statement[?Yield, ?Return]
+              `for` `(` [lookahead &ne; `let` ] LeftHandSideExpression[?Yield] `of` AssignmentExpression[In, ?Yield] `)` Statement[?Yield, ?Return]
               `for` `(` `var` ForBinding[?Yield] `of` AssignmentExpression[In, ?Yield] `)` Statement[?Yield, ?Return]
               `for` `(` ForDeclaration[?Yield] `of` AssignmentExpression[In, ?Yield] `)` Statement[?Yield, ?Return]
 
@@ -18129,7 +18129,7 @@ a = b + c(d + e).print()
               CoverParenthesizedExpressionAndArrowParameterList[?Yield]
 
             ConciseBody[In] :
-              [lookahead &ne; { ] AssignmentExpression[?In]
+              [lookahead &ne; `{` ] AssignmentExpression[?In]
               `{` FunctionBody `}`
           </emu-grammar>
           <h2>Supplemental Syntax</h2>
