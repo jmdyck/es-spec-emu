@@ -805,6 +805,7 @@
                 <span id="table-1">Table 1</span> &mdash; Well-known Symbols
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Specification Name
@@ -937,6 +938,7 @@
                     An object valued property whose own property names are property names that are excluded from the `with` environment bindings of the associated object.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -995,6 +997,7 @@
                 <span id="table-2">Table 2</span> &mdash; Attributes of a Data Property
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th style="border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid #000000; border-top: 1px solid black">
                     Attribute Name
@@ -1050,6 +1053,7 @@
                     If *false*, attempts to delete the property, change the property to be an accessor property, or change its attributes (other than [[Value]], or changing [[Writable]] to *false*) will fail.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p>An accessor property associates a key value with the attributes listed in <emu-internal-ref refid="table-3">TYPE NUM</emu-internal-ref>.</p>
@@ -1058,6 +1062,7 @@
                 <span id="table-3">Table 3</span> &mdash; Attributes of an Accessor Property
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th style="border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid #000000; border-top: 1px solid black">
                     Attribute Name
@@ -1113,6 +1118,7 @@
                     If *false*, attempts to delete the property, change the property to be a data property, or change its attributes will fail.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p>If the initial values of a property's attributes are not explicitly specified by this specification, the default value defined in <emu-internal-ref refid="table-4">TYPE NUM</emu-internal-ref> is used.</p>
@@ -1121,6 +1127,7 @@
                 <span id="table-4">Table 4</span> &mdash; Default Attribute Values
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th style="border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid #000000; border-top: 1px solid black">
                     Attribute Name
@@ -1177,6 +1184,7 @@
                     *false*
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -1195,6 +1203,7 @@
                 <span id="table-5">Table 5</span> &mdash; Essential Internal Methods
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Internal Method
@@ -1338,6 +1347,7 @@
                     Return a List whose elements are all of the own property keys for the object.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p><emu-internal-ref refid="table-6">TYPE NUM</emu-internal-ref> summarizes additional essential internal methods that are supported by objects that may be called as functions. A <dfn>function object</dfn> is an object that supports the [[Call]] internal methods. A <dfn>constructor</dfn> (also referred to as a <dfn>constructor function</dfn>) is a function object that supports the [[Construct]] internal method.</p>
@@ -1346,6 +1356,7 @@
                 <span id="table-6">Table 6</span> &mdash; Additional Essential Internal Methods of Function Objects
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Internal Method
@@ -1379,6 +1390,7 @@
                     Creates an object. Invoked via the `new` or `super` operators. The first argument to the internal method is a list containing the arguments of the operator. The second argument is the object to which the `new` operator was initially applied. Objects that implement this internal method are called _constructors_. A function object is not necessarily a constructor and such non-constructor function objects do not have a [[Construct]] internal method.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p>The semantics of the essential internal methods for ordinary objects and standard exotic objects are specified in <emu-internal-ref refid="sec-ordinary-and-exotic-objects-behaviours">TYPE NUM</emu-internal-ref>. If any specified use of an internal method of an exotic object is not supported by an implementation, that usage must throw a *TypeError* exception when attempted.</p>
@@ -1486,6 +1498,7 @@
                 <span id="table-7">Table 7</span> &mdash; Well-known Intrinsic Objects
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Intrinsic Name
@@ -2476,6 +2489,7 @@
                     The initial value of the `prototype` data property of %WeakSet%
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -2508,6 +2522,7 @@
                 <span id="table-8">Table 8</span> &mdash; Completion Record Fields
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Field
@@ -2552,6 +2567,7 @@
                     The target label for directed control transfers.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p>The term &ldquo;abrupt completion&rdquo; refers to any completion with a [[type]] value other than ~normal~.</p>
@@ -2947,6 +2963,7 @@
               <span id="table-9">Table 9</span> &mdash; ToPrimitive Conversions
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Input Type
@@ -3019,6 +3036,7 @@
                   Perform the steps following this table.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>When <emu-formula>Type(_input_)</emu-formula> is Object, the following steps are taken:</p>
@@ -3067,6 +3085,7 @@
               <span id="table-10">Table 10</span> &mdash; ToBoolean Conversions
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Argument Type
@@ -3139,6 +3158,7 @@
                   Return *true*.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
         </emu-clause>
@@ -3152,6 +3172,7 @@
                 <span id="table-11">Table 11</span> &mdash; ToNumber Conversions
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Argument Type
@@ -3228,6 +3249,7 @@
                     </emu-alg>
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
 
@@ -3553,6 +3575,7 @@
                 <span id="table-12">Table 12</span> &mdash; ToString Conversions
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Argument Type
@@ -3628,6 +3651,7 @@
                     <p>2. Return ToString(_primValue_).</p>
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
 
@@ -3684,6 +3708,7 @@
               <span id="table-13">Table 13</span> &mdash; ToObject Conversions
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Argument Type
@@ -3756,6 +3781,7 @@
                   Return _argument_.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
         </emu-clause>
@@ -3815,6 +3841,7 @@
               <span id="table-14">Table 14</span> &mdash; RequireObjectCoercible Results
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Argument Type
@@ -3887,6 +3914,7 @@
                   Return _argument_.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
         </emu-clause>
@@ -4679,6 +4707,7 @@
                 <span id="table-15">Table 15</span> &mdash; Abstract Methods of Environment Records
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Method
@@ -4767,6 +4796,7 @@
                     If this Environment Record is associated with a `with` statement, return the with object. Otherwise, return *undefined*.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
 
@@ -5043,6 +5073,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   <span id="table-16">Table 16</span> &mdash; Additional Fields of Function Environment Records
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Field Name
@@ -5109,6 +5140,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                       If this Environment Record was created by the [[Construct]] internal method, [[NewTarget]] is the value of the [[Construct]] _newTarget_ parameter. Otherwise, its value is *undefined*.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <p>Function Environment Records support all of the declarative Environment Record methods listed in <emu-internal-ref refid="table-15">TYPE NUM</emu-internal-ref> and share the same specifications for all of those methods except for HasThisBinding and HasSuperBinding. In addition, function Environment Records support the methods listed in <emu-internal-ref refid="table-17">TYPE NUM</emu-internal-ref>:</p>
@@ -5117,6 +5149,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   <span id="table-17">Table 17</span> &mdash; Additional Methods of Function Environment Records
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Method
@@ -5149,6 +5182,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                       Return the object that is the base for `super` property accesses bound in this Environment Record. The object is derived from this Environment Record's [[HomeObject]] field. The value *undefined* indicates that `super` property accesses will produce runtime errors.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <p>The behaviour of the additional concrete specification methods for function Environment Records is defined by the following algorithms:</p>
@@ -5221,6 +5255,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   <span id="table-18">Table 18</span> &mdash; Additional Fields of Global Environment Records
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Field Name
@@ -5265,6 +5300,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                       The string names bound by |FunctionDeclaration|, |GeneratorDeclaration|, and |VariableDeclaration| declarations in global code for the associated Realm.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <figure>
@@ -5272,6 +5308,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   <span id="table-19">Table 19</span> &mdash; Additional Methods of Global Environment Records
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Method
@@ -5344,6 +5381,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                       Create and initialize a global `function` binding in the [[ObjectRecord]] component of a global Environment Record. The binding will be a mutable binding. The corresponding global object property will have attribute values appropriate for a `function`. The String value _N_ is the bound name. _V_ is the initialization value. If the optional Boolean argument _D_ is *true* the binding is may be deleted. Logically equivalent to CreateMutableBinding followed by a SetMutableBinding but it allows function declarations to receive special treatment.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <p>The behaviour of the concrete specification methods for global Environment Records is defined by the following algorithms.</p>
@@ -5627,6 +5665,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   <span id="table-20">Table 20</span> &mdash; Additional Methods of Module Environment Records
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Method
@@ -5651,6 +5690,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                       Return the value of this Environment Record's `this` binding.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <p>The behaviour of the additional concrete specification methods for module Environment Records are defined by the following algorithms:</p>
@@ -5836,6 +5876,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               <span id="table-21">Table 21</span> &mdash; Realm Record Fields
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Field Name
@@ -5891,6 +5932,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   Template objects are canonicalized separately for each Realm using its [[templateMap]]. Each [[strings]] value is a List containing, in source text order, the raw String values of a |TemplateLiteral| that has been evaluated. The associated [[array]] value is the corresponding template object that is passed to a tag function.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>An implementation may define other, implementation specific fields.</p>
@@ -5973,6 +6015,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               <span id="table-22">Table 22</span> &mdash;State Components for All Execution Contexts
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Component
@@ -6005,6 +6048,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   The Realm from which associated code accesses ECMAScript resources.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>Evaluation of code by the running execution context may be suspended at various points defined within this specification. Once the running execution context has been suspended a different execution context may become the running execution context and commence evaluating its code. At some later time a suspended execution context may again become the running execution context and continue evaluating its code at the point where it had previously been suspended. Transition of the running execution context status among execution contexts usually occurs in stack-like last-in/first-out manner. However, some ECMAScript features require non-LIFO transitions of the running execution context.</p>
@@ -6015,6 +6059,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               <span id="table-23">Table 23</span> &mdash; Additional State Components for ECMAScript Code Execution Contexts
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Component
@@ -6039,6 +6084,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   Identifies the Lexical Environment whose EnvironmentRecord holds bindings created by |VariableStatement|s within this execution context.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>The LexicalEnvironment and VariableEnvironment components of an execution context are always Lexical Environments. When an execution context is created its LexicalEnvironment and VariableEnvironment components initially have the same value.</p>
@@ -6048,6 +6094,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               <span id="table-24">Table 24</span> &mdash; Additional State Components for Generator Execution Contexts
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Component
@@ -6064,6 +6111,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   The GeneratorObject that this execution context is evaluating.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>In most situations only the running execution context (the top of the execution context stack) is directly manipulated by algorithms within this specification. Hence when the terms &ldquo;LexicalEnvironment&rdquo;, and &ldquo;VariableEnvironment&rdquo; are used without qualification they are in reference to those components of the running execution context.</p>
@@ -6146,6 +6194,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               <span id="table-25">Table 25</span> &mdash; PendingJob Record Fields
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Field Name
@@ -6201,6 +6250,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   Field reserved for use by host environments that need to associate additional information with a pending Job.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>A Job Queue is a FIFO queue of PendingJob records. Each Job Queue has a name and the full set of available Job Queues are defined by an ECMAScript implementation. Every ECMAScript implementation has at least the Job Queues defined in <emu-internal-ref refid="table-26">TYPE NUM</emu-internal-ref>.</p>
@@ -6209,6 +6259,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               <span id="table-26">Table 26</span> &mdash; Required Job Queues
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Name
@@ -6233,6 +6284,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   Jobs that are responses to the settlement of a Promise (see <emu-internal-ref refid="sec-promise-objects">NUM</emu-internal-ref>).
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>A request for the future execution of a Job is made by enqueueing, on a Job Queue, a PendingJob record that includes a Job abstract operation name and any necessary argument values. When there is no running execution context and the execution context stack is empty, the ECMAScript implementation removes the first PendingJob from a Job Queue and uses the information contained in it to create an execution context and starts execution of the associated Job abstract operation.</p>
@@ -6701,6 +6753,7 @@ function* enumerate(obj) {
               <span id="table-27">Table 27</span> &mdash; Internal Slots of ECMAScript Function Objects
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Internal Slot
@@ -6811,6 +6864,7 @@ function* enumerate(obj) {
                   If the function uses `super`, this is the object whose [[GetPrototypeOf]] provides the object where `super` property lookups begin.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>All ECMAScript function objects have the [[Call]] internal method defined here. ECMAScript functions that are also constructors in addition have the [[Construct]] internal method. ECMAScript function objects whose code is not strict mode code have the [[GetOwnProperty]] internal method defined here.</p>
@@ -7280,6 +7334,7 @@ function* enumerate(obj) {
                 <span id="table-28">Table 28</span> &mdash; Internal Slots of Exotic Bound Function Objects
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Internal Slot
@@ -7324,6 +7379,7 @@ function* enumerate(obj) {
                     A list of values whose elements are used as the first arguments to any call to the wrapped function.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p>Unlike ECMAScript function objects, bound function objects do not use an alternative definition of the [[GetOwnProperty]] internal methods. Bound function objects provide all of the essential internal methods as specified in <emu-internal-ref refid="sec-ordinary-object-internal-methods-and-internal-slots">NUM</emu-internal-ref>. However, they use the following definitions for the essential internal methods of function objects.</p>
@@ -8032,6 +8088,7 @@ function* enumerate(obj) {
                 <span id="table-29">Table 29</span> &mdash; Internal Slots of Module Namespace Exotic Objects
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Internal Slot
@@ -8065,6 +8122,7 @@ function* enumerate(obj) {
                     A List containing the String values of the exported names exposed as own properties of this object. The list is ordered as if an Array of those String values had been sorted using `Array.prototype.sort` using SortCompare as _comparefn_.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p>Module namespace exotic objects provide alternative definitions for all of the internal methods.</p>
@@ -8239,6 +8297,7 @@ function* enumerate(obj) {
               <span id="table-30">Table 30</span> &mdash; Proxy Handler Methods
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Internal Method
@@ -8359,6 +8418,7 @@ function* enumerate(obj) {
                   `construct`
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>When a handler method is called to provide the implementation of a proxy object internal method, the handler method is passed the proxy's target object as a parameter. A proxy's handler object does not necessarily have a method corresponding to every essential internal method. Invoking an internal method on the proxy results in the invocation of the corresponding internal method on the proxy's target object if the handler object does not have a method corresponding to the internal trap.</p>
@@ -9110,6 +9170,7 @@ function* enumerate(obj) {
             <span id="table-31">Table 31</span> &mdash; Format-Control Code Point Usage
           </figcaption>
           <table class="real-table">
+           <tbody>
             <tr>
               <th>
                 Code Point
@@ -9166,6 +9227,7 @@ function* enumerate(obj) {
                 |WhiteSpace|
               </td>
             </tr>
+           </tbody>
           </table>
         </figure>
       </emu-clause>
@@ -9180,6 +9242,7 @@ function* enumerate(obj) {
             <span id="table-32">Table 32</span> &mdash; White Space Code Points
           </figcaption>
           <table class="real-table">
+           <tbody>
             <tr>
               <th>
                 Code Point
@@ -9268,6 +9331,7 @@ function* enumerate(obj) {
                 &lt;USP&gt;
               </td>
             </tr>
+           </tbody>
           </table>
         </figure>
         <p>ECMAScript implementations must recognize as |WhiteSpace| code points listed in the &ldquo;Separator, space&rdquo; (Zs) category by Unicode 5.1. ECMAScript implementations may also recognize as |WhiteSpace| additional category Zs code points from subsequent editions of the Unicode Standard.</p>
@@ -9299,6 +9363,7 @@ function* enumerate(obj) {
             <span id="table-33">Table 33</span> &mdash; Line Terminator Code Points
           </figcaption>
           <table class="real-table">
+           <tbody>
             <tr>
               <th>
                 Code Point
@@ -9354,6 +9419,7 @@ function* enumerate(obj) {
                 &lt;PS&gt;
               </td>
             </tr>
+           </tbody>
           </table>
         </figure>
         <p>Only the Unicode code points in <emu-internal-ref refid="table-33">TYPE NUM</emu-internal-ref> are treated as line terminators. Other new line or line breaking Unicode code points are not treated as line terminators but are treated as white space if they meet the requirements listed in <emu-internal-ref refid="table-32">TYPE NUM</emu-internal-ref>. The sequence &lt;CR&gt;&lt;LF&gt; is commonly used as a line terminator. It should be considered a single |SourceCharacter| for the purpose of reporting line numbers.</p>
@@ -9552,6 +9618,7 @@ function* enumerate(obj) {
               <p>Use of the following tokens within strict mode code (see <emu-internal-ref refid="sec-strict-mode-code">NUM</emu-internal-ref>) is also reserved. That usage is restricted using static semantic restrictions (see <emu-internal-ref refid="sec-identifiers-static-semantics-early-errors">NUM</emu-internal-ref>) rather than the lexical grammar:</p>
               <figure>
                 <table class="lightweight-table">
+                 <tbody>
                   <tr>
                     <td>
                       `implements`
@@ -9578,6 +9645,7 @@ function* enumerate(obj) {
                     <td>
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
             </emu-note>
@@ -10035,6 +10103,7 @@ function* enumerate(obj) {
                 <span id="table-34">Table 34</span> &mdash; String Single Character Escape Sequences
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Escape Sequence
@@ -10175,6 +10244,7 @@ function* enumerate(obj) {
                     `\`
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <ul>
@@ -12565,6 +12635,7 @@ a = b + c(d + e).print()
                 <span id="table-35">Table 35</span> &mdash; typeof Operator Results
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Type of _val_
@@ -12653,6 +12724,7 @@ a = b + c(d + e).print()
                     Implementation-defined. Must not be "undefined", "boolean", "function", "number", "symbol", or "string".
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <emu-note>
@@ -20252,6 +20324,7 @@ a = b + c(d + e).print()
                 <span id="table-36">Table 36</span> &mdash; Module Record Fields
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Field Name
@@ -20307,6 +20380,7 @@ a = b + c(d + e).print()
                     Initially *false*, *true* if evaluation of this module has started. Remains *true* when evaluation completes, even if it is an abrupt completion.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <figure>
@@ -20314,6 +20388,7 @@ a = b + c(d + e).print()
                 <span id="table-37">Table 37</span> &mdash; Abstract Methods of Module Records
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Method
@@ -20355,6 +20430,7 @@ a = b + c(d + e).print()
                     <p>ModuleDeclarationInstantiation must be completed prior to invoking this method.</p>
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -20369,6 +20445,7 @@ a = b + c(d + e).print()
                   <span id="table-38">Table 38</span> &mdash; Additional Fields of Source Text Module Records
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Field Name
@@ -20446,6 +20523,7 @@ a = b + c(d + e).print()
                       A List of ExportEntry records derived from the code of this module that correspond to export * declarations that occur within the module.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <p>An ImportEntry Record is a Record that digests information about a single declarative import. Each ImportEntry Record has the fields defined in <emu-internal-ref refid="table-39">TYPE NUM</emu-internal-ref>:</p>
@@ -20454,6 +20532,7 @@ a = b + c(d + e).print()
                   <span id="table-39">Table 39</span> &mdash; ImportEntry Record Fields
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Field Name
@@ -20498,6 +20577,7 @@ a = b + c(d + e).print()
                       The name that is used to locally access the imported value from within the importing module.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <emu-note>
@@ -20507,6 +20587,7 @@ a = b + c(d + e).print()
                     <span id="table-40">Table 40</span> (Informative) &mdash; Import Forms Mappings to ImportEntry Records
                   </figcaption>
                   <table class="real-table">
+                   <tbody>
                     <tr>
                       <th>
                         <i>Import Statement Form</i>
@@ -20585,6 +20666,7 @@ a = b + c(d + e).print()
                         An ImportEntry Record is not created.
                       </td>
                     </tr>
+                   </tbody>
                   </table>
                 </figure>
               </emu-note>
@@ -20594,6 +20676,7 @@ a = b + c(d + e).print()
                   <span id="table-41">Table 41</span> &mdash; ExportEntry Record Fields
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Field Name
@@ -20649,6 +20732,7 @@ a = b + c(d + e).print()
                       The name that is used to locally access the exported value from within the importing module. *null* if the exported value is not locally accessible from within the module.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <emu-note>
@@ -20658,6 +20742,7 @@ a = b + c(d + e).print()
                     <span id="table-42">Table 42</span> (Informative) &mdash; Export Forms Mappings to ExportEntry Records
                   </figcaption>
                   <table class="real-table">
+                   <tbody>
                     <tr>
                       <th>
                         <i>Export Statement Form</i>
@@ -20828,6 +20913,7 @@ a = b + c(d + e).print()
                         *null*
                       </td>
                     </tr>
+                   </tbody>
                   </table>
                 </figure>
               </emu-note>
@@ -22249,6 +22335,7 @@ a = b + c(d + e).print()
                     <span id="table-43">Table 43</span> (Informative) &mdash; UTF-8 Encodings
                   </figcaption>
                   <table class="real-table">
+                   <tbody>
                     <tr>
                       <th>
                         Code Unit Value
@@ -22406,6 +22493,7 @@ a = b + c(d + e).print()
                       <td>
                       </td>
                     </tr>
+                   </tbody>
                   </table>
                 </figure>
                 <p>Where
@@ -23577,6 +23665,7 @@ new Function("a,b", "c", "return a+b+c")
                 <span id="table-44">Table 44</span> &mdash; GlobalSymbolRegistry Record Fields
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Field Name
@@ -23610,6 +23699,7 @@ new Function("a,b", "c", "return a+b+c")
                     A symbol that can be retrieved from any Realm.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -25642,6 +25732,7 @@ new Function("a,b", "c", "return a+b+c")
               <p>Where the fields are as follows:</p>
               <figure>
                 <table class="lightweight-table">
+                 <tbody>
                   <tr>
                     <td>
                       `YYYY`
@@ -25738,6 +25829,7 @@ new Function("a,b", "c", "return a+b+c")
                       is the time zone offset specified as "Z" (for UTC) or either "+" or "-" followed by a time expression `HH:mm`
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
               <p>This format includes date-only forms:</p>
@@ -25769,6 +25861,7 @@ THH:mm:ss.sss
                 <p>Examples of extended years:</p>
                 <figure>
                   <table class="lightweight-table">
+                   <tbody>
                     <tr>
                       <td>
                         <p class="NoteCode">-283457-03-21T15:00:59.008Z</p>
@@ -25825,6 +25918,7 @@ THH:mm:ss.sss
                         <p class="NoteCode">287396 A.D.</p>
                       </td>
                     </tr>
+                   </tbody>
                   </table>
                 </figure>
               </emu-note>
@@ -27207,6 +27301,7 @@ Date.parse(_x_.toLocaleString())
                   <span id="table-45">Table 45</span> &mdash; Replacement Text Symbol Substitutions
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Code units
@@ -27307,6 +27402,7 @@ Date.parse(_x_.toLocaleString())
                       `$`
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
             </emu-clause>
@@ -27702,6 +27798,7 @@ Date.parse(_x_.toLocaleString())
                 <span id="table-46">Table 46</span> &mdash; Internal Slots of String Iterator Instances
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Internal Slot
@@ -27726,6 +27823,7 @@ Date.parse(_x_.toLocaleString())
                     The integer index of the next string index to be examined by this iteration.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -28212,6 +28310,7 @@ Date.parse(_x_.toLocaleString())
                 1. If _c_ is one of the sixty-three characters below, return *true*.
                   <figure>
                     <table class="lightweight-table">
+                     <tbody>
                       <tr>
                         <td>
                           `a`
@@ -28437,6 +28536,7 @@ Date.parse(_x_.toLocaleString())
                         <td>
                         </td>
                       </tr>
+                     </tbody>
                     </table>
                   </figure>
                 1. Return *false*.
@@ -28661,6 +28761,7 @@ Date.parse(_x_.toLocaleString())
                 <span id="table-47">Table 47</span> &mdash; ControlEscape Character Values
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     ControlEscape
@@ -28763,6 +28864,7 @@ Date.parse(_x_.toLocaleString())
                     &lt;CR&gt;
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p>The production <emu-grammar>CharacterEscape :: `c` ControlLetter</emu-grammar> evaluates as follows:</p>
@@ -28850,6 +28952,7 @@ Date.parse(_x_.toLocaleString())
             <p>The production <emu-grammar>CharacterClassEscape :: `w`</emu-grammar> evaluates by returning the set of characters containing the sixty-three characters:</p>
             <figure>
               <table class="lightweight-table">
+               <tbody>
                 <tr>
                   <td>
                     `a`
@@ -29075,6 +29178,7 @@ Date.parse(_x_.toLocaleString())
                   <td>
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <p>The production <emu-grammar>CharacterClassEscape :: `W`</emu-grammar> evaluates by returning the set of all characters not included in the set returned by <emu-grammar>CharacterClassEscape :: `w`</emu-grammar> .</p>
@@ -31454,6 +31558,7 @@ Date.parse(_x_.toLocaleString())
                 <span id="table-48">Table 48</span> &mdash; Internal Slots of Array Iterator Instances
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Internal Slot
@@ -31486,6 +31591,7 @@ Date.parse(_x_.toLocaleString())
                     A String value that identifies what is returned for each element of the iteration. The possible values are: "key", "value", "key+value".
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -31501,6 +31607,7 @@ Date.parse(_x_.toLocaleString())
               <span id="table-49">Table 49</span> &ndash; The _TypedArray_ Constructors
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th style="background-color: #BFBFBF">
                   Constructor Name and Intrinsic
@@ -31717,6 +31824,7 @@ Date.parse(_x_.toLocaleString())
                   double
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
           <p>In the definitions below, references to _TypedArray_ should be replaced with the appropriate constructor name from the above table. The phrase &ldquo;the element size in bytes&rdquo; refers to the value in the Element Size column of the table in the row corresponding to the constructor. The phrase &ldquo;element Type&rdquo; refers to the value in the Element Type column for that row.</p>
@@ -33005,6 +33113,7 @@ Date.parse(_x_.toLocaleString())
                 <span id="table-50">Table 50</span> &mdash; Internal Slots of Map Iterator Instances
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Internal Slot
@@ -33037,6 +33146,7 @@ Date.parse(_x_.toLocaleString())
                     A String value that identifies what is to be returned for each element of the iteration. The possible values are: "key", "value", "key+value".
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -33355,6 +33465,7 @@ Date.parse(_x_.toLocaleString())
                 <span id="table-51">Table 51</span> &mdash; Internal Slots of Set Iterator Instances
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th style="background-color: #BFBFBF">
                     Internal Slot
@@ -33387,6 +33498,7 @@ Date.parse(_x_.toLocaleString())
                     A String value that identifies what is to be returned for each element of the iteration. The possible values are: "key", "value", "key+value". "key" and "value" have the same meaning.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -34568,6 +34680,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                       1. Let _product_ be the concatenation of _product_ and code unit 0x005C (REVERSE SOLIDUS).
                       1. Let _abbrev_ be the String value corresponding to the value of _C_ as follows:
                         <table class="lightweight">
+                         <tbody>
                           <tr>
                             <td>
                               BACKSPACE
@@ -34608,6 +34721,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                               "t"
                             </td>
                           </tr>
+                         </tbody>
                         </table>
                       1. Let _product_ be the concatenation of _product_ and _abbrev_.
                   1. Else if _C_ has a code unit value less than 0x0020 (SPACE), then
@@ -34734,6 +34848,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 <span id="table-52">Table 52</span> &mdash; _Iterable_ Interface Required Properties
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th style="background-color: #A6A6A6">
                     Property
@@ -34756,6 +34871,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     The returned object must conform to the _Iterator_ interface.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -34769,6 +34885,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 <span id="table-53">Table 53</span> &mdash; _Iterator_ Interface Required Properties
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th style="background-color: #A6A6A6">
                     Property
@@ -34791,6 +34908,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     The returned object must conform to the _IteratorResult_ interface. If a previous call to the `next` method of an _Iterator_ has returned an _IteratorResult_ object whose `done` property is *true*, then all subsequent calls to the `next` method of that object should also return an _IteratorResult_ object whose `done` property is *true*. However, this requirement is not enforced.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <emu-note>
@@ -34801,6 +34919,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 <span id="table-54">Table 54</span> &mdash; _Iterator_ Interface Optional Properties
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th style="background-color: #A6A6A6">
                     Property
@@ -34834,6 +34953,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     The returned object must conform to the _IteratorResult_ interface. Invoking this method notifies the _Iterator_ object that the caller has detected an error condition. The argument may be used to identify the error condition and typically will be an exception object. A typical response is to `throw` the value passed as the argument. If the method does not `throw`, the returned _IteratorResult_ object will typically have a `done` property whose value is *true*.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
             <emu-note>
@@ -34850,6 +34970,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 <span id="table-55">Table 55</span> &mdash; _IteratorResult_ Interface Properties
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th style="background-color: #A6A6A6">
                     Property
@@ -34883,6 +35004,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     If done is *false*, this is the current iteration element value. If done is *true*, this is the return value of the iterator, if it supplied one. If the iterator does not have a return value, `value` is *undefined*. In that case, the `value` property may be absent from the conforming object if it does not inherit an explicit `value` property.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -35096,6 +35218,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               <span id="table-56">Table 56</span> &mdash; Internal Slots of Generator Instances
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Internal Slot
@@ -35120,6 +35243,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                   The execution context that is used when executing the code of this generator.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
         </emu-clause>
@@ -35268,6 +35392,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                   <span id="table-57">Table 57</span> &mdash; PromiseCapability Record Fields
                 </figcaption>
                 <table class="real-table">
+                 <tbody>
                   <tr>
                     <th>
                       Field Name
@@ -35312,6 +35437,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                       The function that is used to reject the given promise object.
                     </td>
                   </tr>
+                 </tbody>
                 </table>
               </figure>
 
@@ -35343,6 +35469,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 <span id="table-58">Table 58</span> &mdash; PromiseReaction Record Fields
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Field Name
@@ -35376,6 +35503,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     The function that should be applied to the incoming value, and whose return value will govern what happens to the derived promise. If [[Handler]] is "Identity" it is equivalent to a function that simply returns its first argument. If [[Handler]] is "Thrower" it is equivalent to a function that throws its first argument as an exception.
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
           </emu-clause>
@@ -35894,6 +36022,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               <span id="table-59">Table 59</span> &mdash; Internal Slots of Promise Instances
             </figcaption>
             <table class="real-table">
+             <tbody>
               <tr>
                 <th>
                   Internal Slot
@@ -35934,6 +36063,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                   A List of PromiseReaction records to be processed when/if the promise transitions from the "pending" state to the "rejected" state.
                 </td>
               </tr>
+             </tbody>
             </table>
           </figure>
         </emu-clause>
@@ -36217,7 +36347,54 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
     <!-- es6num="A" -->
     <emu-annex id="sec-grammar-summary" status="informative">
         <h1>Grammar Summary</h1>
-        <emu-placeholder for="grammar-summary"></emu-placeholder>
+
+      <!-- es6num="A.1" -->
+      <emu-clause id="sec-lexical-grammar">
+        <h1>Lexical Grammar</h1>
+        <emu-placeholder for="grammar-summary/lexical-grammar"></emu-placeholder>
+      </emu-clause>
+
+      <!-- es6num="A.2" -->
+      <emu-clause id="sec-expressions">
+        <h1>Expressions</h1>
+        <emu-placeholder for="grammar-summary/expressions"></emu-placeholder>
+      </emu-clause>
+
+      <!-- es6num="A.3" -->
+      <emu-clause id="sec-statements">
+        <h1>Statements</h1>
+        <emu-placeholder for="grammar-summary/statements"></emu-placeholder>
+      </emu-clause>
+
+      <!-- es6num="A.4" -->
+      <emu-clause id="sec-functions-and-classes">
+        <h1>Functions and Classes</h1>
+        <emu-placeholder for="grammar-summary/functions-and-classes"></emu-placeholder>
+      </emu-clause>
+
+      <!-- es6num="A.5" -->
+      <emu-clause id="sec-scripts-and-modules">
+        <h1>Scripts and Modules</h1>
+        <emu-placeholder for="grammar-summary/scripts-and-modules"></emu-placeholder>
+      </emu-clause>
+
+      <!-- es6num="A.6" -->
+      <emu-clause id="sec-number-conversions">
+        <h1>Number Conversions</h1>
+        <emu-placeholder for="grammar-summary/number-conversions"></emu-placeholder>
+      </emu-clause>
+
+      <!-- es6num="A.7" -->
+      <emu-clause id="sec-universal-resource-identifier-character-classes">
+        <h1>Universal Resource Identifier Character Classes</h1>
+        <emu-placeholder for="grammar-summary/universal-resource-identifier-character-classes"></emu-placeholder>
+      </emu-clause>
+
+      <!-- es6num="A.8" -->
+      <emu-clause id="sec-regular-expressions">
+        <h1>Regular Expressions</h1>
+        <emu-placeholder for="grammar-summary/regular-expressions"></emu-placeholder>
+      </emu-clause>
     </emu-annex>
 
     <!-- es6num="B" -->
@@ -36591,6 +36768,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 <span id="table-60">Table 60</span> &mdash; Additional Well-known Intrinsic Objects
               </figcaption>
               <table class="real-table">
+               <tbody>
                 <tr>
                   <th>
                     Intrinsic Name
@@ -36624,6 +36802,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     The `unescape` function (<emu-internal-ref refid="sec-unescape-string">NUM</emu-internal-ref>)
                   </td>
                 </tr>
+               </tbody>
               </table>
             </figure>
 
