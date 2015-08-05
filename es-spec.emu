@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="utf-8"/>
-    <title>
-      ECMAScript 2015 Language Specification &ndash; ECMA-262 6th Edition
-    </title>
+    <meta charset="ascii"/>
     <link href="emu.css" rel="stylesheet"/>
   </head>
   <body>
+    <emu-placeholder for="title-page"></emu-placeholder>
     <div class="copyright">
       <p class="ECMAaddress">Ecma International</p>
       <p class="ECMAaddress">Rue du Rhone 114</p>
@@ -54,6 +52,7 @@
         ECMA-262, 6<sup>th</sup> Edition Project Editor</p>
       <p>This Ecma Standard has been adopted by the General Assembly of June 2015.</p>
     </emu-intro>
+    <emu-placeholder for="inner-title"></emu-placeholder>
 
     <!-- es6num="1" -->
     <emu-clause id="sec-scope">
