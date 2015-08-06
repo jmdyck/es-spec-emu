@@ -14040,7 +14040,7 @@ a = b + c(d + e).print()
             </emu-alg>
             <emu-grammar>AssignmentElisionElement : AssignmentElement</emu-grammar>
             <emu-alg>
-              1. _R_eturn the result of performing IteratorDestructuringAssignmentEvaluation of |AssignmentElement| with _iteratorRecord_ as the argument.
+              1. Return the result of performing IteratorDestructuringAssignmentEvaluation of |AssignmentElement| with _iteratorRecord_ as the argument.
             </emu-alg>
             <emu-grammar>AssignmentElisionElement : Elision AssignmentElement</emu-grammar>
             <emu-alg>
