@@ -2804,7 +2804,7 @@
             <p>When the abstract operation FromPropertyDescriptor is called with Property Descriptor _Desc_, the following steps are taken:</p>
             <emu-alg>
               1. If _Desc_ is *undefined*, return *undefined*.
-              1. Let _obj_ be ObjectCreate(~%ObjectPrototype%~).
+              1. Let _obj_ be ObjectCreate(%ObjectPrototype%).
               1. Assert: _obj_ is an extensible ordinary object with no own properties.
               1. If _Desc_ has a [[Value]] field, then
                   1. Perform CreateDataProperty(_obj_, `"value"`, _Desc_.[[Value]]).
@@ -4633,7 +4633,7 @@
           <p>The abstract operation CreateIterResultObject with arguments _value_ and _done_ creates an object that supports the IteratorResult interface by performing the following steps:</p>
           <emu-alg>
             1. Assert: Type(_done_) is Boolean.
-            1. Let _obj_ be ObjectCreate(~%ObjectPrototype%~).
+            1. Let _obj_ be ObjectCreate(%ObjectPrototype%).
             1. Perform CreateDataProperty(_obj_, `"value"`, _value_).
             1. Perform CreateDataProperty(_obj_, `"done"`, _done_).
             1. Return _obj_.
@@ -5961,7 +5961,7 @@ function f(){eval("var x; x = (delete x, 0);")}
             1. Set _intrinsics_.[[%ObjectPrototype%]] to _objProto_.
             1. Let _throwerSteps_ be the algorithm steps specified in <emu-internal-ref refid="sec-%throwtypeerror%">NUM</emu-internal-ref> for the %ThrowTypeError% function.
             1. Let _thrower_ be CreateBuiltinFunction(_realmRec_, _throwerSteps_, *null*).
-            1. Set _intrinsics_.[[~%ThrowTypeError%~]] to _thrower_.
+            1. Set _intrinsics_.[[%ThrowTypeError%]] to _thrower_.
             1. Let _noSteps_ be an empty sequence of algorithm steps.
             1. Let _funcProto_ be CreateBuiltinFunction(_realmRec_, _noSteps_, _objProto_).
             1. Set _intrinsics_.[[%FunctionPrototype%]] to _funcProto_.
@@ -7052,8 +7052,8 @@ function* enumerate(obj) {
             <h1>AddRestrictedFunctionProperties ( F, realm )</h1>
             <p>The abstract operation AddRestrictedFunctionProperties is called with a function object _F_ and Realm Record _realm_ as its argument. It performs the following steps:</p>
             <emu-alg>
-              1. Assert: _realm_.[[intrinsics]].[[~%ThrowTypeError%~]] exists and has been initialized.
-              1. Let _thrower_ be _realm_.[[intrinsics]].[[~%ThrowTypeError%~]].
+              1. Assert: _realm_.[[intrinsics]].[[%ThrowTypeError%]] exists and has been initialized.
+              1. Let _thrower_ be _realm_.[[intrinsics]].[[%ThrowTypeError%]].
               1. Let _status_ be DefinePropertyOrThrow(_F_, `"caller"`, PropertyDescriptor {[[Get]]: _thrower_, [[Set]]: _thrower_, [[Enumerable]]: *false*, [[Configurable]]: *true*}).
               1. Assert: _status_ is not an abrupt completion.
               1. Return DefinePropertyOrThrow(_F_ , `"arguments"`, PropertyDescriptor {[[Get]]: _thrower_, [[Set]]: _thrower_, [[Enumerable]]: *false*, [[Configurable]]: *true*}).
@@ -7082,7 +7082,7 @@ function* enumerate(obj) {
             1. Assert: _F_ is an extensible object that does not have a `prototype` own property.
             1. If the _writablePrototype_ argument was not provided, let _writablePrototype_ be *true*.
             1. If the _prototype_ argument was not provided, then
-                1. Let _prototype_ be ObjectCreate(~%ObjectPrototype%~).
+                1. Let _prototype_ be ObjectCreate(%ObjectPrototype%).
                 1. Let _status_ be DefinePropertyOrThrow(_prototype_, `"constructor"`, PropertyDescriptor{[[Value]]: _F_, [[Writable]]: _writablePrototype_, [[Enumerable]]: *false*, [[Configurable]]: *true* }).
                 1. Assert: _status_ is not an abrupt completion.
             1. Let _status_ be DefinePropertyOrThrow(_F_, `"prototype"`, PropertyDescriptor{[[Value]]: _prototype_, [[Writable]]: _writablePrototype_, [[Enumerable]]: *false*, [[Configurable]]: *false*}).
@@ -7478,7 +7478,7 @@ function* enumerate(obj) {
               1. Assert: _length_ is an integer Number &ge; 0.
               1. If _length_ is -0, let _length_ be +0.
               1. If _length_&gt;2<sup>32</sup>-1, throw a *RangeError* exception.
-              1. If the _proto_ argument was not passed, let _proto_ be the intrinsic object ~%ArrayPrototype%~.
+              1. If the _proto_ argument was not passed, let _proto_ be the intrinsic object %ArrayPrototype%.
               1. Let _A_ be a newly created Array exotic object.
               1. Set _A_'s essential internal methods except for [[DefineOwnProperty]] to the default ordinary object definitions specified in <emu-internal-ref refid="sec-ordinary-object-internal-methods-and-internal-slots">NUM</emu-internal-ref>.
               1. Set the [[DefineOwnProperty]] internal method of _A_ as specified in <emu-internal-ref refid="sec-array-exotic-objects-defineownproperty-p-desc">NUM</emu-internal-ref>.
@@ -11393,7 +11393,7 @@ a = b + c(d + e).print()
             <h1>Runtime Semantics: Evaluation</h1>
             <emu-grammar>ObjectLiteral : `{` `}`</emu-grammar>
             <emu-alg>
-              1. Return ObjectCreate(~%ObjectPrototype%~).
+              1. Return ObjectCreate(%ObjectPrototype%).
             </emu-alg>
             <emu-grammar>
               ObjectLiteral :
@@ -18903,7 +18903,7 @@ a = b + c(d + e).print()
             1. If the function code for |GeneratorDeclaration| is strict mode code, let _strict_ be *true*. Otherwise let _strict_ be *false*.
             1. Let _name_ be StringValue of |BindingIdentifier|.
             1. Let _F_ be GeneratorFunctionCreate(~Normal~, |FormalParameters|, |GeneratorBody|, _scope_, _strict_).
-            1. Let _prototype_ be ObjectCreate(~%GeneratorPrototype%~).
+            1. Let _prototype_ be ObjectCreate(%GeneratorPrototype%).
             1. Perform MakeConstructor(_F_, *true*, _prototype_).
             1. Perform SetFunctionName(_F_, _name_).
             1. Return _F_.
@@ -18912,7 +18912,7 @@ a = b + c(d + e).print()
           <emu-alg>
             1. If the function code for |GeneratorDeclaration| is strict mode code, let _strict_ be *true*. Otherwise let _strict_ be *false*.
             1. Let _F_ be GeneratorFunctionCreate(~Normal~, |FormalParameters|, |GeneratorBody|, _scope_, _strict_).
-            1. Let _prototype_ be ObjectCreate(~%GeneratorPrototype%~).
+            1. Let _prototype_ be ObjectCreate(%GeneratorPrototype%).
             1. Perform MakeConstructor(_F_, *true*, _prototype_).
             1. Perform SetFunctionName(_F_, `"default"`).
             1. Return _F_.
@@ -18935,7 +18935,7 @@ a = b + c(d + e).print()
             1. Let _scope_ be the running execution context's LexicalEnvironment.
             1. Let _closure_ be GeneratorFunctionCreate(~Method~, |StrictFormalParameters|, |GeneratorBody|, _scope_, _strict_).
             1. Perform MakeMethod(_closure_, _object_).
-            1. Let _prototype_ be ObjectCreate(~%GeneratorPrototype%~).
+            1. Let _prototype_ be ObjectCreate(%GeneratorPrototype%).
             1. Perform MakeConstructor(_closure_, *true*, _prototype_).
             1. Perform SetFunctionName(_closure_, _propKey_).
             1. Let _desc_ be the Property Descriptor{[[Value]]: _closure_, [[Writable]]: *true*, [[Enumerable]]: _enumerable_, [[Configurable]]: *true*}.
@@ -18951,7 +18951,7 @@ a = b + c(d + e).print()
             1. If the function code for this |GeneratorExpression| is strict mode code, let _strict_ be *true*. Otherwise let _strict_ be *false*.
             1. Let _scope_ be the LexicalEnvironment of the running execution context.
             1. Let _closure_ be GeneratorFunctionCreate(~Normal~, |FormalParameters|, |GeneratorBody|, _scope_, _strict_).
-            1. Let _prototype_ be ObjectCreate(~%GeneratorPrototype%~).
+            1. Let _prototype_ be ObjectCreate(%GeneratorPrototype%).
             1. Perform MakeConstructor(_closure_, *true*, _prototype_).
             1. Return _closure_.
           </emu-alg>
@@ -18964,7 +18964,7 @@ a = b + c(d + e).print()
             1. Let _name_ be StringValue of |BindingIdentifier|.
             1. Perform _envRec_.CreateImmutableBinding(_name_).
             1. Let _closure_ be GeneratorFunctionCreate(~Normal~, |FormalParameters|, |GeneratorBody|, _funcEnv_, _strict_).
-            1. Let _prototype_ be ObjectCreate(~%GeneratorPrototype%~).
+            1. Let _prototype_ be ObjectCreate(%GeneratorPrototype%).
             1. Perform MakeConstructor (_closure_, *true*, _prototype_).
             1. Perform SetFunctionName(_closure_, _name_).
             1. Perform _envRec_.InitializeBinding(_name_, _closure_).
@@ -23312,7 +23312,7 @@ new Function("a,b", "c", "return a+b+c")
                 1. Let _scope_ be _realmF_.[[globalEnv]].
                 1. Perform FunctionInitialize(_F_, ~Normal~, _parameters_, _body_, _scope_).
                 1. If _kind_ is `"generator"`, then
-                    1. Let _prototype_ be ObjectCreate(~%GeneratorPrototype%~).
+                    1. Let _prototype_ be ObjectCreate(%GeneratorPrototype%).
                     1. Perform MakeConstructor(_F_, *true*, _prototype_).
                 1. Else, perform MakeConstructor(_F_).
                 1. Perform SetFunctionName(_F_, `"anonymous"`).
@@ -31889,7 +31889,7 @@ Date.parse(_x_.toLocaleString())
                 1. Else,
                     1. Let _elementSize_ be the Element Size value in <emu-internal-ref refid="table-49">TYPE NUM</emu-internal-ref> for _constructorName_.
                     1. Let _byteLength_ be _elementSize_ &times; _length_.
-                    1. Let _data_ be AllocateArrayBuffer(~%ArrayBuffer%~, _byteLength_).
+                    1. Let _data_ be AllocateArrayBuffer(%ArrayBuffer%, _byteLength_).
                     1. ReturnIfAbrupt(_data_).
                     1. Set _obj_'s [[ViewedArrayBuffer]] internal slot to _data_.
                     1. Set _obj_'s [[ByteLength]] internal slot to _byteLength_.
