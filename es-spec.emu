@@ -19353,9 +19353,17 @@ a = b + c(d + e).print()
             1. Else, let _constructor_ be ConstructorMethod of |ClassBody|.
             1. If _constructor_ is ~empty~, then,
                 1. If |ClassHeritage|<sub>opt</sub> is present, then
-                    1. Let _constructor_ be the result of parsing the source text `constructor(... args){ super (...args);}` using the syntactic grammar with the goal symbol |MethodDefinition|.
+                    1. Let _constructor_ be the result of parsing the source text
+                      <pre>
+                          constructor(... args){ super (...args);}
+                      </pre>
+                      using the syntactic grammar with the goal symbol |MethodDefinition|.
                 1. Else,
-                    1. Let _constructor_ be the result of parsing the source text `constructor( ){ }` using the syntactic grammar with the goal symbol |MethodDefinition|.
+                    1. Let _constructor_ be the result of parsing the source text
+                      <pre>
+                          constructor( ){ }
+                      </pre>
+                      using the syntactic grammar with the goal symbol |MethodDefinition|.
             1. Set the running execution context's LexicalEnvironment to _classScope_.
             1. Let _constructorInfo_ be the result of performing DefineMethod for _constructor_ with arguments _proto_ and _constructorParent_ as the optional _functionPrototype_ argument.
             1. Assert: _constructorInfo_ is not an abrupt completion.
