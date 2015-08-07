@@ -134,8 +134,21 @@ more uniform treatment. (Mind you, that `<identifier-name-string>` would
 still be odd. It should maybe be changed to the actual nonterminal
 `|StringLiteral|`.)
 
-I gutted Annex A and left an `<emu-placeholder for="grammar-summary">`,
-since it'll presumably be generated based on productions in the document body.
+I mostly gutted Annex A, leaving behind just an
+```
+    <emu-placeholder for="grammar-summary/...">
+```
+for each section,
+allowing it to be generarated based on productions in the document body.
+One interesting thing about Annex A is that it isn't *just* productions,
+there are also some prose paragraphs.
+But not every paragraph from a 'Syntax' section gets copied to Annex A,
+and it's not obvious what the selection criterion is,
+so I've marked certain `<p>` elements with the attribute
+```
+    copy_to_summary="yes"
+```
+
 
 ## Algorithms:
 
