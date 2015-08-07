@@ -966,7 +966,7 @@
           <p>where _s_ is +1 or -1, _m_ is a positive integer less than 2<sup>52</sup>, and _e_ is -1074.</p>
           <p>Note that all the positive and negative integers whose magnitude is no greater than 2<sup>53</sup> are representable in the Number type (indeed, the integer 0 has two representations, `+0` and `-0`).</p>
           <p>A finite number has an <dfn>odd significand</dfn> if it is nonzero and the integer _m_ used to express it (in one of the two forms shown above) is odd. Otherwise, it has an <dfn>even significand</dfn>.</p>
-          <p>In this specification, the phrase &ldquo;<emu-formula>the Number value for _x_</emu-formula>&rdquo; where _x_ represents an exact nonzero real mathematical quantity (which might even be an irrational number such as *&pi;*) means a Number value chosen in the following manner. Consider the set of all finite values of the Number type, with *-0* removed and with two additional values added to it that are not representable in the Number type, namely 2<sup>1024</sup> (which is <emu-formula>+1 &times; 2<sup>53</sup> &times; 2<sup>971</sup></emu-formula>) and <emu-formula>-2<sup>1024</sup></emu-formula> (which is <emu-formula>-1 &times; 2<sup>53</sup> &times; 2<sup>971</sup></emu-formula>). Choose the member of this set that is closest in value to _x_. If two values of the set are equally close, then the one with an even significand is chosen; for this purpose, the two extra values 2<sup>1024</sup> and <emu-formula>-2<sup>1024</sup></emu-formula> are considered to have even significands. Finally, if 2<sup>1024</sup> was chosen, replace it with *+&infin;*; if <emu-formula>-2<sup>1024</sup></emu-formula> was chosen, replace it with *-&infin;*; if *+0* was chosen, replace it with *-0* if and only if _x_ is less than zero; any other chosen value is used unchanged. The result is the Number value for _x_. (This procedure corresponds exactly to the behaviour of the IEEE 754-2008 &ldquo;round to nearest, ties to even&rdquo; mode.)</p>
+          <p>In this specification, the phrase &ldquo;<emu-formula>the Number value for _x_</emu-formula>&rdquo; where _x_ represents an exact nonzero real mathematical quantity (which might even be an irrational number such as &pi;) means a Number value chosen in the following manner. Consider the set of all finite values of the Number type, with *-0* removed and with two additional values added to it that are not representable in the Number type, namely 2<sup>1024</sup> (which is <emu-formula>+1 &times; 2<sup>53</sup> &times; 2<sup>971</sup></emu-formula>) and <emu-formula>-2<sup>1024</sup></emu-formula> (which is <emu-formula>-1 &times; 2<sup>53</sup> &times; 2<sup>971</sup></emu-formula>). Choose the member of this set that is closest in value to _x_. If two values of the set are equally close, then the one with an even significand is chosen; for this purpose, the two extra values 2<sup>1024</sup> and <emu-formula>-2<sup>1024</sup></emu-formula> are considered to have even significands. Finally, if 2<sup>1024</sup> was chosen, replace it with *+&infin;*; if <emu-formula>-2<sup>1024</sup></emu-formula> was chosen, replace it with *-&infin;*; if *+0* was chosen, replace it with *-0* if and only if _x_ is less than zero; any other chosen value is used unchanged. The result is the Number value for _x_. (This procedure corresponds exactly to the behaviour of the IEEE 754-2008 &ldquo;round to nearest, ties to even&rdquo; mode.)</p>
           <p>Some ECMAScript operators deal only with integers in specific ranges such as <emu-formula>-2<sup>31</sup></emu-formula> through <emu-formula>2<sup>31</sup>-1</emu-formula>, inclusive, or in the range 0 through <emu-formula>2<sup>16</sup>-1</emu-formula>, inclusive. These operators accept any value of the Number type but first convert each such value to an integer value in the expected range. See the descriptions of the numeric conversion operations in <emu-internal-ref refid="sec-type-conversion">NUM</emu-internal-ref>.</p>
         </emu-clause>
 
@@ -24540,7 +24540,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="20.2.1.6" -->
           <emu-clause id="sec-math.pi">
             <h1>Math.PI</h1>
-            <p>The Number value for *&pi;*, the ratio of the circumference of a circle to its diameter, which is approximately 3.1415926535897932.</p>
+            <p>The Number value for &pi;, the ratio of the circumference of a circle to its diameter, which is approximately 3.1415926535897932.</p>
             <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
           </emu-clause>
 
@@ -24599,7 +24599,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="20.2.2.2" -->
           <emu-clause id="sec-math.acos">
             <h1>Math.acos ( x )</h1>
-            <p>Returns an implementation-dependent approximation to the arc cosine of _x_. The result is expressed in radians and ranges from *+0* to *+&pi;*.</p>
+            <p>Returns an implementation-dependent approximation to the arc cosine of _x_. The result is expressed in radians and ranges from *+0* to +&pi;.</p>
             <ul>
               <li>
                 If _x_ is NaN, the result is NaN.
@@ -24639,7 +24639,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="20.2.2.4" -->
           <emu-clause id="sec-math.asin">
             <h1>Math.asin ( x )</h1>
-            <p>Returns an implementation-dependent approximation to the arc sine of _x_. The result is expressed in radians and ranges from *-&pi;/2* to *+&pi;/2*.</p>
+            <p>Returns an implementation-dependent approximation to the arc sine of _x_. The result is expressed in radians and ranges from -&pi;/2 to +&pi;/2.</p>
             <ul>
               <li>
                 If _x_ is NaN, the result is NaN.
@@ -24685,7 +24685,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="20.2.2.6" -->
           <emu-clause id="sec-math.atan">
             <h1>Math.atan ( x )</h1>
-            <p>Returns an implementation-dependent approximation to the arc tangent of _x_. The result is expressed in radians and ranges from *-&pi;/2* to *+&pi;/2*.</p>
+            <p>Returns an implementation-dependent approximation to the arc tangent of _x_. The result is expressed in radians and ranges from -&pi;/2 to +&pi;/2.</p>
             <ul>
               <li>
                 If _x_ is NaN, the result is NaN.
@@ -24737,7 +24737,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="20.2.2.8" -->
           <emu-clause id="sec-math.atan2">
             <h1>Math.atan2 ( y, x )</h1>
-            <p>Returns an implementation-dependent approximation to the arc tangent of the quotient <emu-formula>_y_/_x_</emu-formula> of the arguments _y_ and _x_, where the signs of _y_ and _x_ are used to determine the quadrant of the result. Note that it is intentional and traditional for the two-argument arc tangent function that the argument named _y_ be first and the argument named _x_ be second. The result is expressed in radians and ranges from *-&pi;* to *+&pi;*.</p>
+            <p>Returns an implementation-dependent approximation to the arc tangent of the quotient <emu-formula>_y_/_x_</emu-formula> of the arguments _y_ and _x_, where the signs of _y_ and _x_ are used to determine the quadrant of the result. Note that it is intentional and traditional for the two-argument arc tangent function that the argument named _y_ be first and the argument named _x_ be second. The result is expressed in radians and ranges from -&pi; to +&pi;.</p>
             <ul>
               <li>
                 If either _x_ or _y_ is NaN, the result is NaN.
@@ -31149,7 +31149,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <p>Unless the sort order is specified above to be implementation-defined, the returned object must have the following two characteristics:</p>
               <ul>
                 <li>
-                  <p>There must be some mathematical permutation *&pi;* of the nonnegative integers less than _len_, such that for every nonnegative integer _j_ less than _len_, if property <emu-formula>old[_j_]</emu-formula> existed, then <emu-formula>new[&pi;(_j_)]</emu-formula> is exactly the same value as <emu-formula>old[_j_]</emu-formula>. But if property <emu-formula>old[_j_]</emu-formula> did not exist, then <emu-formula>new[&pi;(_j_)]</emu-formula> does not exist.</p>
+                  <p>There must be some mathematical permutation &pi; of the nonnegative integers less than _len_, such that for every nonnegative integer _j_ less than _len_, if property <emu-formula>old[_j_]</emu-formula> existed, then <emu-formula>new[&pi;(_j_)]</emu-formula> is exactly the same value as <emu-formula>old[_j_]</emu-formula>. But if property <emu-formula>old[_j_]</emu-formula> did not exist, then <emu-formula>new[&pi;(_j_)]</emu-formula> does not exist.</p>
                 </li>
                 <li>
                   <p>Then for all nonnegative integers _j_ and _k_, each less than _len_, if <emu-formula>SortCompare(old[_j_], old[_k_]) &lt; 0</emu-formula> (see SortCompare below), then <emu-formula>new[&pi;(_j_)] &lt; new[&pi;(_k_)]</emu-formula>.</p>
