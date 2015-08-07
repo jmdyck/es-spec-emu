@@ -198,9 +198,9 @@ expositional metavariable. The HTML spec isn't consistent in how it
 marks these up, but I decided that each should be a single `<code>`
 element with embedded `<i>` or `<var>` elements. The problem comes when
 converting this to ecmarkdown. The ecmarkdown readme doesn't say, but
-I suspect that when a backtick-delimited span of text is converted to
+I gather that when a backtick-delimited span of text is converted to
 a `<code>` element, no further processing of that span is done. For
-example, if I down-convert:
+example, if I were to down-convert:
 ```
     <code><i>constructor</i>.prototype</code>
 ```
@@ -208,15 +208,13 @@ to
 ```
     `_constructor_.prototype`
 ```
-then I suspect ecmarkdown will up-convert that to
+then I believe ecmarkdown would up-convert that to
 ```
     <code>_constructor_.prototype</code>
 ```
 not recognizing the embedded variable.
 
-Despite that suspicion, I've done the naive down-conversion, because
-it's easiest and this is just a first draft.  But I made a list of the
-various cases:
+Consequently, I didn't do any down-conversion in the following cases:
 
     4.3.5 / note
     <code><i>constructor</i>.prototype</code>
