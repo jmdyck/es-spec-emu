@@ -19423,7 +19423,9 @@ a = b + c(d + e).print()
             1. ReturnIfAbrupt(_status_).
             1. Return NormalCompletion(~empty~).
           </emu-alg>
-          <p><emu-grammar>ClassDeclaration : `class` ClassTail</emu-grammar> only occurs as part of an |ExportDeclaration| and is never directly evaluated.</p>
+          <emu-note>
+            <p><emu-grammar>ClassDeclaration : `class` ClassTail</emu-grammar> only occurs as part of an |ExportDeclaration| and is never directly evaluated.</p>
+          </emu-note>
           <emu-grammar>ClassExpression : `class` BindingIdentifier? ClassTail</emu-grammar>
           <emu-alg>
             1. If |BindingIdentifier|<sub>opt</sub> is not present, let _className_ be *undefined*.
