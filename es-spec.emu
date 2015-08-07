@@ -186,7 +186,7 @@
           <h1>prototype</h1>
           <p>object that provides shared properties for other objects</p>
           <emu-note>
-            <p>When a constructor creates an object, that object implicitly references the constructor's `prototype` property for the purpose of resolving property references. The constructor's `prototype` property can be referenced by the program expression `_constructor_.prototype`, and properties added to an object's prototype are shared, through inheritance, by all objects sharing the prototype. Alternatively, a new object may be created with an explicitly specified prototype by using the `Object.create` built-in function.</p>
+            <p>When a constructor creates an object, that object implicitly references the constructor's `prototype` property for the purpose of resolving property references. The constructor's `prototype` property can be referenced by the program expression <code><i>constructor</i>.prototype</code>, and properties added to an object's prototype are shared, through inheritance, by all objects sharing the prototype. Alternatively, a new object may be created with an explicitly specified prototype by using the `Object.create` built-in function.</p>
           </emu-note>
         </emu-clause>
 
@@ -22264,7 +22264,7 @@ a = b + c(d + e).print()
                         1. Let _j_ be 0.
                         1. Repeat, while _j_ &lt; _L_
                             1. Let _jOctet_ be the value at index _j_ within _Octets_.
-                            1. Let _S_ be a String containing three code units `"%_XY_"` where _XY_ are two uppercase hexadecimal digits encoding the value of _jOctet_.
+                            1. Let _S_ be a String containing three code units <code>"%<i>XY</i>"</code> where _XY_ are two uppercase hexadecimal digits encoding the value of _jOctet_.
                             1. Let _R_ be a new String value computed by concatenating the previous value of _R_ and _S_.
                             1. Increase _j_ by 1.
                     1. Increase _k_ by 1.
@@ -22360,10 +22360,10 @@ a = b + c(d + e).print()
                         `0x0000 - 0x007F`
                       </td>
                       <td>
-                        `00000000 0_zzzzzzz_`
+                        <code>00000000 0<i>zzzzzzz</i></code>
                       </td>
                       <td>
-                        `0_zzzzzzz_`
+                        <code>0<i>zzzzzzz</i></code>
                       </td>
                       <td>
                       </td>
@@ -22380,10 +22380,10 @@ a = b + c(d + e).print()
                         <code>00000<i>yyy yyzzzzzz</i></code>
                       </td>
                       <td>
-                        `110_yyyyy_`
+                        <code>110<i>yyyyy</i></code>
                       </td>
                       <td>
-                        `10_zzzzzz_`
+                        <code>10<i>zzzzzz</i></code>
                       </td>
                       <td>
                       </td>
@@ -22398,13 +22398,13 @@ a = b + c(d + e).print()
                         <code><i>xxxxyyyy yyzzzzzz</i></code>
                       </td>
                       <td>
-                        `1110_xxxx_`
+                        <code>1110<i>xxxx</i></code>
                       </td>
                       <td>
-                        `10_yyyyyy_`
+                        <code>10<i>yyyyyy</i></code>
                       </td>
                       <td>
-                        `10_zzzzzz_`
+                        <code>10<i>zzzzzz</i></code>
                       </td>
                       <td>
                       </td>
@@ -22425,16 +22425,16 @@ a = b + c(d + e).print()
                         <code>110111<i>yy yyzzzzzz</i></code>
                       </td>
                       <td>
-                        `11110_uuu_`
+                        <code>11110<i>uuu</i></code>
                       </td>
                       <td>
-                        `10_uuwwww_`
+                        <code>10<i>uuwwww</i></code>
                       </td>
                       <td>
-                        `10_xxyyyy_`
+                        <code>10<i>xxyyyy</i></code>
                       </td>
                       <td>
-                        `10_zzzzzz_`
+                        <code>10<i>zzzzzz</i></code>
                       </td>
                     </tr>
                     <tr>
@@ -22481,13 +22481,13 @@ a = b + c(d + e).print()
                         <code><i>xxxxyyyy yyzzzzzz</i></code>
                       </td>
                       <td>
-                        `1110_xxxx_`
+                        <code>1110<i>xxxx</i></code>
                       </td>
                       <td>
-                        `10_yyyyyy_`
+                        <code>10<i>yyyyyy</i></code>
                       </td>
                       <td>
-                        `10_zzzzzz_`
+                        <code>10<i>zzzzzz</i></code>
                       </td>
                       <td>
                       </td>
@@ -24032,7 +24032,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="19.5.6.1" -->
           <emu-clause id="sec-nativeerror-constructors">
               <h1>_NativeError_ Constructors</h1>
-              <p>When a _NativeError_ constructor is called as a function rather than as a constructor, it creates and initializes a new _NativeError_ object. A call of the object as a function is equivalent to calling it as a constructor with the same arguments. Thus the function call `_NativeError_(&hellip;)` is equivalent to the object creation expression `new _NativeError_(&hellip;)` with the same arguments.</p>
+              <p>When a _NativeError_ constructor is called as a function rather than as a constructor, it creates and initializes a new _NativeError_ object. A call of the object as a function is equivalent to calling it as a constructor with the same arguments. Thus the function call <code><i>NativeError</i>(&hellip;)</code> is equivalent to the object creation expression <code>new <i>NativeError</i>(&hellip;)</code> with the same arguments.</p>
               <p>Each _NativeError_ constructor is designed to be subclassable. It may be used as the value of an `extends` clause of a class definition. Subclass constructors that intend to inherit the specified _NativeError_ behaviour must include a `super` call to the _NativeError_ constructor to create and initialize subclass instances with a [[ErrorData]] internal slot.</p>
 
             <!-- es6num="19.5.6.1.1" -->
@@ -24041,7 +24041,7 @@ new Function("a,b", "c", "return a+b+c")
               <p>When a _NativeError_ function is called with argument _message_ the following steps are taken:</p>
               <emu-alg>
                 1. If NewTarget is *undefined*, let _newTarget_ be the active function object, else let _newTarget_ be NewTarget.
-                1. Let _O_ be OrdinaryCreateFromConstructor(_newTarget_, `"%_NativeError_Prototype%"`, &laquo;[[ErrorData]]&raquo; ).
+                1. Let _O_ be OrdinaryCreateFromConstructor(_newTarget_, <code>"%<i>NativeError</i>Prototype%"</code>, &laquo;[[ErrorData]]&raquo; ).
                 1. ReturnIfAbrupt(_O_).
                 1. If _message_ is not *undefined*, then
                     1. Let _msg_ be ToString(_message_).
@@ -24063,7 +24063,7 @@ new Function("a,b", "c", "return a+b+c")
             <!-- es6num="19.5.6.2.1" -->
             <emu-clause id="sec-nativeerror.prototype">
               <h1>NativeError.prototype</h1>
-              <p>The initial value of `_NativeError_.prototype` is a _NativeError_ prototype object (<emu-internal-ref refid="sec-properties-of-the-nativeerror-prototype-objects">NUM</emu-internal-ref>). Each _NativeError_ constructor has a distinct prototype object.</p>
+              <p>The initial value of <code><i>NativeError</i>.prototype</code> is a _NativeError_ prototype object (<emu-internal-ref refid="sec-properties-of-the-nativeerror-prototype-objects">NUM</emu-internal-ref>). Each _NativeError_ constructor has a distinct prototype object.</p>
               <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
             </emu-clause>
           </emu-clause>
@@ -26717,7 +26717,7 @@ Date.parse(<i>x</i>.toLocaleString())
                 1. Return ToDateString(_tv_).
               </emu-alg>
               <emu-note>
-                <p>For any Date object `_d_` whose milliseconds amount is zero, the result of `Date.parse(_d_.toString())` is equal to `_d_.valueOf()`. See <emu-internal-ref refid="sec-date.parse">NUM</emu-internal-ref>.</p>
+                <p>For any Date object <code><i>d</i></code> whose milliseconds amount is zero, the result of <code>Date.parse(<i>d</i>.toString())</code> is equal to <code><i>d</i>.valueOf()</code>. See <emu-internal-ref refid="sec-date.parse">NUM</emu-internal-ref>.</p>
               </emu-note>
               <emu-note>
                 <p>The `toString` function is intentionally generic; it does not require that its *this* value be a Date object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
@@ -26929,7 +26929,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <emu-note>
               <p>Returns a single element String containing the code unit at index _pos_ in the String value resulting from converting this object to a String. If there is no element at that index, the result is the empty String. The result is a String value, not a String object.</p>
             </emu-note>
-            <p class="NoteMore">If _pos_ is a value of Number type that is an integer, then the result of `x.charAt(_pos_)` is equal to the result of `x.substring(_pos_, _pos_+1)`.</p>
+            <p class="NoteMore">If _pos_ is a value of Number type that is an integer, then the result of <code>x.charAt(<i>pos</i>)</code> is equal to the result of <code>x.substring(<i>pos</i>, <i>pos</i>+1)</code>.</p>
             <p>When the `charAt` method is called with one argument _pos_, the following steps are taken:</p>
             <emu-alg>
               1. Let _O_ be RequireObjectCoercible(*this* value).
@@ -32746,14 +32746,14 @@ Date.parse(<i>x</i>.toLocaleString())
           <!-- es6num="22.2.6.1" -->
           <emu-clause id="sec-typedarray.prototype.bytes_per_element">
             <h1>_TypedArray_.prototype.BYTES_PER_ELEMENT</h1>
-            <p>The value of `_TypedArray_.prototype.BYTES_PER_ELEMENT` is the Number value of the Element Size value specified in <emu-internal-ref refid="table-49">TYPE NUM</emu-internal-ref> for _TypedArray_.</p>
+            <p>The value of <code><i>TypedArray</i>.prototype.BYTES_PER_ELEMENT</code> is the Number value of the Element Size value specified in <emu-internal-ref refid="table-49">TYPE NUM</emu-internal-ref> for _TypedArray_.</p>
             <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
           </emu-clause>
 
           <!-- es6num="22.2.6.2" -->
           <emu-clause id="sec-typedarray.prototype.constructor">
             <h1>_TypedArray_.prototype.constructor</h1>
-            <p>The initial value of a `_TypedArray_.prototype.constructor` is the corresponding %_TypedArray_% intrinsic object.</p>
+            <p>The initial value of a <code><i>TypedArray</i>.prototype.constructor</code> is the corresponding %_TypedArray_% intrinsic object.</p>
           </emu-clause>
         </emu-clause>
 
@@ -36809,7 +36809,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           <emu-clause id="sec-escape-string">
             <h1>escape (string)</h1>
             <p>The `escape` function is a property of the global object. It computes a new version of a String value in which certain code units have been replaced by a hexadecimal escape sequence.</p>
-            <p>For those code units being replaced whose value is `0x00FF` or less, a two-digit escape sequence of the form `%_xx_` is used. For those characters being replaced whose code unit value is greater than `0x00FF`, a four-digit escape sequence of the form `%u_xxxx_` is used.</p>
+            <p>For those code units being replaced whose value is `0x00FF` or less, a two-digit escape sequence of the form <code>%<i>xx</i></code> is used. For those characters being replaced whose code unit value is greater than `0x00FF`, a four-digit escape sequence of the form <code>%u<i>xxxx</i></code> is used.</p>
             <p>The `escape` function is the %escape% intrinsic object. When the `escape` function is called with one argument _string_, the following steps are taken:</p>
             <emu-alg>
               1. Let _string_ be ToString(_string_).
@@ -36822,9 +36822,9 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                   1. If _char_ is one of the code units in `"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@*_+-./"`, then
                       1. Let _S_ be a String containing the single code unit _char_.
                   1. Else if _char_ &ge; 256, then
-                      1. Let _S_ be a String containing six code units `"%u_wxyz_"` where _wxyz_ are the code units of the four hexadecimal digits encoding the value of _char_.
+                      1. Let _S_ be a String containing six code units <code>"%u<i>wxyz</i>"</code> where _wxyz_ are the code units of the four hexadecimal digits encoding the value of _char_.
                   1. Else, _char_ &lt; 256
-                      1. Let _S_ be a String containing three code units `"%_xy_"` where _xy_ are the code units of two hexadecimal digits encoding the value of _char_.
+                      1. Let _S_ be a String containing three code units <code>"%<i>xy</i>"</code> where _xy_ are the code units of two hexadecimal digits encoding the value of _char_.
                   1. Let _R_ be a new String value computed by concatenating the previous value of _R_ and _S_.
                   1. Increase _k_ by 1.
               1. Return _R_.
