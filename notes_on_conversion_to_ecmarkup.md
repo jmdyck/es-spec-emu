@@ -82,9 +82,11 @@ I invented `<emu-placeholder>` to stand in for large chunks of content
 that can be generated based on other content.
 It has one attribute, named `for`,
 whose value indicates the content for which the element is a placeholder.
-So far, the only two values are
-`"toc"` (for the Table of Contents) and
-`"grammar-summary"` (for the guts of Annex A).
+So far, the values are:
+`"title-page"` (for the title page, including disclaimer),
+`"toc"` (for the Table of Contents),
+`"inner-title"` (for the inner title div), and
+8 forms of `"grammar-summary/..."` (for the guts of Annex A).
 
 
 ## Grammar stuff:
