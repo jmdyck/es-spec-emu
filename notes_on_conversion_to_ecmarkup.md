@@ -188,8 +188,8 @@ There are also two places in the HTML where an algorithm contains an
  - 22.1.3.24 / alg 3 / step 1
  - B.2.3.2.1 / step 5.d
 
-In the emu-doc, I could have left those as-is, but instead I invented
-a markdown for the list-items: "@.".
+Originally, ecmarkdown didn't have a way to denote unordered-list-items,
+so I invented one, but I'm now using the label '*'.
 
 In the PDF, "NOTE" steps in algorithms are rendered in sans-serif, but
 in the HTML, they're generally in serif, the same as other steps. I
