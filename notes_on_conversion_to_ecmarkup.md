@@ -39,7 +39,7 @@ The content of all the "See also" paragraphs can be generated based on
 the other content of the base document, so I invented the
 `<emu-see-also-para>` element as a placeholder. For example, 11.6.1.2 has
 ```
-    <emu-see-also-para op="StringValue"/>
+    <emu-see-also-para op="StringValue"></emu-see-also-para>
 ```
 The 'op' attribute could probably be inferred from the containing
 subclause, but having it in the attribute is a little easier.  Of
