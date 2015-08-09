@@ -724,13 +724,13 @@ grammar_converter = LexerConverter(
         (r'(\w+|@)',                   r'<span class="nt">\1</span>'),
 
         # units that start with a left-square-bracket:
-        (r'\[(lookahead &ne;) (&lt;[A-Z]+&gt;) \]',
-            r'<span class="grhsannot">[\1 \2 ]</span>'),
-        (r'\[(lookahead &ne;) `([^ `]+)` \]',
-            r'<span class="grhsannot">[\1 <code class="t">\2</code> ]</span>'),
-        (r'\[(lookahead &notin;) (\w+)\]',
-            r'<span class="grhsannot">[\1 <span class="nt">\2</span>]</span>'),
-        (r'\[lookahead &notin; {(.+?)}\]',
+        (r'\[lookahead != (&lt;[A-Z]+&gt;) \]',
+            r'<span class="grhsannot">[lookahead &ne; \1 ]</span>'),
+        (r'\[lookahead != `([^ `]+)` \]',
+            r'<span class="grhsannot">[lookahead &ne; <code class="t">\1</code> ]</span>'),
+        (r'\[lookahead &lt;! (\w+)\]',
+            r'<span class="grhsannot">[lookahead &notin; <span class="nt">\1</span>]</span>'),
+        (r'\[lookahead &lt;! {(.+?)}\]',
             lambda mo: (
                     r'<span class="grhsannot">[lookahead &notin; {'
                     + re.sub('`([^`]+)`', r'<code class="t">\1</code>', mo.group(1))
