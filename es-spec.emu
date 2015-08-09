@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="ascii"/>
-    <link href="emu.css" rel="stylesheet"/>
+    <meta charset="ascii">
+    <link href="emu.css" rel="stylesheet">
   </head>
   <body>
     <emu-placeholder for="title-page"></emu-placeholder>
@@ -48,7 +48,7 @@
       <p>Dozens of individuals representing many organizations have made very significant contributions within Ecma TC39 to the development of this edition and to the prior editions. In addition, a vibrant informal community has emerged supporting TC39's ECMAScript efforts. This community has reviewed numerous drafts, filed thousands of bug reports, performed implementation experiments, contributed test suites, and educated the world-wide developer community about ECMAScript. Unfortunately, it is impossible to identify and acknowledge every person and organization who has contributed to this effort.</p>
       <p>New uses and requirements for ECMAScript continue to emerge. The sixth edition provides the foundation for regular, incremental language and library enhancements.</p>
       <p>Allen Wirfs-Brock
-        <br/>
+        <br>
         ECMA-262, 6<sup>th</sup> Edition Project Editor</p>
       <p>This Ecma Standard has been adopted by the General Assembly of June 2015.</p>
     </emu-intro>
@@ -77,10 +77,10 @@
       <p>The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
       <p>ISO/IEC 10646:2003: <i>Information Technology &ndash; Universal Multiple-Octet Coded Character Set (UCS) plus Amendment 1:2005, Amendment 2:2006, Amendment 3:2008, and Amendment 4:2008</i>, plus additional amendments and corrigenda, or successor</p>
       <p>ECMA-402, <i>ECMAScript 2015 Internationalization API Specification</i>.
-        <br/>
+        <br>
         <emu-external-ref href="http://www.ecma-international.org/publications/standards/Ecma-402.htm" linktext="URL"></emu-external-ref></p>
       <p>ECMA-404, <i>The JSON Data Interchange Format</i>.
-        <br/>
+        <br>
         <emu-external-ref href="http://www.ecma-international.org/publications/standards/Ecma-404.htm" linktext="URL"></emu-external-ref></p>
     </emu-clause>
 
@@ -122,7 +122,7 @@
           <p>Even though ECMAScript includes syntax for class definitions, ECMAScript objects are not fundamentally class-based such as those in C++, Smalltalk, or Java. Instead objects may be created in various ways including via a literal notation or via <dfn>constructors</dfn> which create objects and then execute code that initializes all or part of them by assigning initial values to their properties. Each constructor is a function that has a property named `"prototype"` that is used to implement <dfn>prototype-based inheritance</dfn> and <dfn>shared properties</dfn>. Objects are created by using constructors in <b>new</b> expressions; for example, `new Date(2009,11)` creates a new Date object. Invoking a constructor without using <b>new</b> has consequences that depend on the constructor. For example, `Date()` produces a string representation of the current date and time rather than an object.</p>
           <p>Every object created by a constructor has an implicit reference (called the object's _prototype_) to the value of its constructor's `"prototype"` property. Furthermore, a prototype may have a non-null implicit reference to its prototype, and so on; this is called the <dfn>prototype chain</dfn>. When a reference is made to a property in an object, that reference is to the property of that name in the first object in the prototype chain that contains a property of that name. In other words, first the object mentioned directly is examined for such a property; if that object contains the named property, that is the property to which the reference refers; if that object does not contain the named property, the prototype for that object is examined next; and so on.</p>
           <figure>
-            <object data="figure-1.svg" height="354" type="image/svg+xml" width="719"> <img alt="An image of lots of boxes and arrows." height="354" src="figure-1.png" width="719"/> </object>
+            <object data="figure-1.svg" height="354" type="image/svg+xml" width="719"> <img alt="An image of lots of boxes and arrows." height="354" src="figure-1.png" width="719"> </object>
             <figcaption>
               Figure 1 &mdash; Object/Prototype Relationships
             </figcaption>
@@ -3688,11 +3688,11 @@
             <emu-note>
               <p>Implementers of ECMAScript may find useful the paper and code written by David M. Gay for binary-to-decimal conversion of floating-point numbers:</p>
               <p>Gay, David M. Correctly Rounded Binary-Decimal and Decimal-Binary Conversions. Numerical Analysis, Manuscript 90-10. AT&amp;T Bell Laboratories (Murray Hill, New Jersey). November 30, 1990. Available as
-                <br/>
+                <br>
                 <emu-external-ref href="http://cm.bell-labs.com/cm/cs/doc/90/4-10.ps.gz" linktext="URL"></emu-external-ref>. Associated code available as
-                <br/>
+                <br>
                 <emu-external-ref href="http://netlib.sandia.gov/fp/dtoa.c" linktext="URL"></emu-external-ref> and as
-                <br/>
+                <br>
                 <emu-external-ref href="http://netlib.sandia.gov/fp/g_fmt.c" linktext="URL"></emu-external-ref> and may also be found at the various `netlib` mirror sites.</p>
             </emu-note>
           </emu-clause>
@@ -12013,13 +12013,13 @@ a = b + c(d + e).print()
             <p>Properties are accessed by name, using either the dot notation:</p>
             <div class="rhs">
               |MemberExpression| `.` |IdentifierName|
-              <br/>
+              <br>
               |CallExpression| `.` |IdentifierName|
             </div>
             <p>or the bracket notation:</p>
             <div class="rhs">
               |MemberExpression| `[` |Expression| `]`
-              <br/>
+              <br>
               |CallExpression| `[` |Expression| `]`
             </div>
             <p>The dot notation is explained by the following syntactic conversion:</p>
@@ -12553,9 +12553,9 @@ a = b + c(d + e).print()
               </li>
               <li>
                 <p>It is a Syntax Error if the derived |UnaryExpression| is
-                  <br/>
+                  <br>
                   <emu-grammar>PrimaryExpression : CoverParenthesizedExpressionAndArrowParameterList</emu-grammar>
-                  <br/>
+                  <br>
                   and |CoverParenthesizedExpressionAndArrowParameterList| ultimately derives a phrase that, if used in place of |UnaryExpression|, would produce a Syntax Error according to these rules. This rule is recursively applied.</p>
               </li>
             </ul>
@@ -22422,16 +22422,16 @@ a = b + c(d + e).print()
                     <tr>
                       <td>
                         `0xD800 - 0xDBFF`
-                        <br/>
+                        <br>
                         followed by
-                        <br/>
+                        <br>
                         `0xDC00 - 0xDFFF`
                       </td>
                       <td>
                         <code>110110<i>vv vvwwwwxx</i></code>
-                        <br/>
+                        <br>
                         followed by
-                        <br/>
+                        <br>
                         <code>110111<i>yy yyzzzzzz</i></code>
                       </td>
                       <td>
@@ -22450,9 +22450,9 @@ a = b + c(d + e).print()
                     <tr>
                       <td>
                         `0xD800 - 0xDBFF`
-                        <br/>
+                        <br>
                         not followed by
-                        <br/>
+                        <br>
                         `0xDC00 - 0xDFFF`
                       </td>
                       <td>
@@ -22506,9 +22506,9 @@ a = b + c(d + e).print()
                   </table>
                 </figure>
                 <p>Where
-                  <br/>
+                  <br>
                         _uuuuu_ = _vvvv_ + 1
-                  <br/>
+                  <br>
                   to account for the addition of 0x10000 as in Surrogates, section 3.7, of the Unicode Standard.</p>
                 <p>The range of code unit values 0xD800-0xDFFF is used to encode surrogate pairs; the above transformation combines a UTF-16 surrogate pair into a UTF-32 representation and encodes the resulting 21-bit value in UTF-8. Decoding reconstructs the surrogate pair.</p>
                 <p>RFC 3629 prohibits the decoding of invalid UTF-8 octet sequences. For example, the invalid sequence C0 80 must not decode into the code unit 0x0000. Implementations of the Decode algorithm are required to throw a *URIError* when encountering such invalid sequences.</p>
@@ -24394,7 +24394,7 @@ new Function("a,b", "c", "return a+b+c")
             <emu-note>
               <p>The output of `toFixed` may be more precise than `toString` for some values because toString only prints enough significant digits to distinguish the number from adjacent number values. For example,</p>
               <p>`(1000000000000000128).toString()` returns `"1000000000000000100"`, while
-                <br/>
+                <br>
                 `(1000000000000000128).toFixed(0)` returns `"1000000000000000128"`.</p>
             </emu-note>
           </emu-clause>
@@ -25526,13 +25526,13 @@ new Function("a,b", "c", "return a+b+c")
             <h1>Year Number</h1>
             <p>ECMAScript uses an extrapolated Gregorian system to map a day number to a year number and to determine the month and date within that year. In this system, leap years are precisely those which are (divisible by 4) and ((not divisible by 100) or (divisible by 400)). The number of days in year number _y_ is therefore defined by</p>
             <p class="normalBullet">DaysInYear(_y_)
-              <br/>
+              <br>
               = 365 if (_y_ modulo 4) &ne; 0
-              <br/>
+              <br>
               = 366 if (_y_ modulo 4) = 0 and (_y_ modulo 100) &ne; 0
-              <br/>
+              <br>
               = 365 if (_y_ modulo 100) = 0 and (_y_ modulo 400) &ne; 0
-              <br/>
+              <br>
               = 366 if (_y_ modulo 400) = 0</p>
             <p>All non-leap years have 365 days with the usual number of days per month and leap years have an extra day in February. The day number of the first day of year _y_ is given by:</p>
             <p class="normalBullet">DayFromYear(_y_) = 365 &times; (_y_-1970) + floor((_y_-1969)/4) - floor((_y_-1901)/100) + floor((_y_-1601)/400)</p>
@@ -25542,9 +25542,9 @@ new Function("a,b", "c", "return a+b+c")
             <p class="normalBullet">YearFromTime(_t_) = the largest integer _y_ (closest to positive infinity) such that TimeFromYear(_y_) &le; _t_</p>
             <p>The leap-year function is 1 for a time within a leap year and otherwise is zero:</p>
             <p class="normalBullet">InLeapYear(_t_)
-              <br/>
+              <br>
               = 0 if DaysInYear(YearFromTime(_t_)) = 365
-              <br/>
+              <br>
               = 1 if DaysInYear(YearFromTime(_t_)) = 366</p>
           </emu-clause>
 
@@ -25553,29 +25553,29 @@ new Function("a,b", "c", "return a+b+c")
             <h1>Month Number</h1>
             <p>Months are identified by an integer in the range 0 to 11, inclusive. The mapping MonthFromTime(_t_) from a time value _t_ to a month number is defined by:</p>
             <p class="normalBullet">MonthFromTime(_t_)
-              <br/>
+              <br>
                = 0 if 0 &le; DayWithinYear(_t_) &lt; 31
-              <br/>
+              <br>
                = 1 if 31 &le; DayWithinYear (_t_) &lt; 59+InLeapYear(_t_)
-              <br/>
+              <br>
                = 2 if 59+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 90+InLeapYear(_t_)
-              <br/>
+              <br>
                = 3 if 90+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 120+InLeapYear(_t_)
-              <br/>
+              <br>
                = 4 if 120+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 151+InLeapYear(_t_)
-              <br/>
+              <br>
                = 5 if 151+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 181+InLeapYear(_t_)
-              <br/>
+              <br>
                = 6 if 181+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 212+InLeapYear(_t_)
-              <br/>
+              <br>
                = 7 if 212+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 243+InLeapYear(_t_)
-              <br/>
+              <br>
                = 8 if 243+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 273+InLeapYear(_t_)
-              <br/>
+              <br>
                = 9 if 273+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 304+InLeapYear(_t_)
-              <br/>
+              <br>
                = 10 if 304+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 334+InLeapYear(_t_)
-              <br/>
+              <br>
                = 11 if 334+InLeapYear(_t_) &le; DayWithinYear (_t_) &lt; 365+InLeapYear(_t_)</p>
             <p>where</p>
             <p class="normalBullet">DayWithinYear(_t_) = Day(_t_)-DayFromYear(YearFromTime(_t_))</p>
@@ -25587,29 +25587,29 @@ new Function("a,b", "c", "return a+b+c")
             <h1>Date Number</h1>
             <p>A date number is identified by an integer in the range 1 through 31, inclusive. The mapping DateFromTime(_t_) from a time value _t_ to a date number is defined by:</p>
             <p class="normalBullet">DateFromTime(_t_)
-              <br/>
+              <br>
                 = DayWithinYear(_t_)+1  if MonthFromTime(_t_)=0
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-30  if MonthFromTime(_t_)=1
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-58-InLeapYear(_t_) if MonthFromTime(_t_)=2
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-89-InLeapYear(_t_) if MonthFromTime(_t_)=3
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-119-InLeapYear(_t_) if MonthFromTime(_t_)=4
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-150-InLeapYear(_t_) if MonthFromTime(_t_)=5
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-180-InLeapYear(_t_) if MonthFromTime(_t_)=6
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-211-InLeapYear(_t_) if MonthFromTime(_t_)=7
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-242-InLeapYear(_t_) if MonthFromTime(_t_)=8
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-272-InLeapYear(_t_) if MonthFromTime(_t_)=9
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-303-InLeapYear(_t_) if MonthFromTime(_t_)=10
-              <br/>
+              <br>
                 = DayWithinYear(_t_)-333-InLeapYear(_t_) if MonthFromTime(_t_)=11</p>
           </emu-clause>
 
@@ -27369,14 +27369,14 @@ Date.parse(<i>x</i>.toLocaleString())
                   <tr>
                     <td>
                       0x0024, N
-                      <br/>
+                      <br>
                       Where
-                      <br/>
+                      <br>
                       0x0031 &le; N &le; 0x0039
                     </td>
                     <td>
                       `$n` where
-                      <br/>
+                      <br>
                       `n` is one of `1 2 3 4 5 6 7 8 9` and `$n` is not followed by a decimal digit
                     </td>
                     <td>
@@ -27386,14 +27386,14 @@ Date.parse(<i>x</i>.toLocaleString())
                   <tr>
                     <td>
                       0x0024, N, N
-                      <br/>
+                      <br>
                       Where
-                      <br/>
+                      <br>
                       0x0030 &le; N &le; 0x0039
                     </td>
                     <td>
                       `$nn` where
-                      <br/>
+                      <br>
                       `n` is one of `0 1 2 3 4 5 6 7 8 9`
                     </td>
                     <td>
@@ -31640,7 +31640,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Int8Array
-                  <br/>
+                  <br>
                   %Int8Array%
                 </td>
                 <td>
@@ -31662,7 +31662,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Uint8Array
-                  <br/>
+                  <br>
                   %Uint8Array%
                 </td>
                 <td>
@@ -31684,7 +31684,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Uint8ClampedArray
-                  <br/>
+                  <br>
                   %Uint8ClampedArray%
                 </td>
                 <td>
@@ -31706,7 +31706,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Int16Array
-                  <br/>
+                  <br>
                   %Int16Array%
                 </td>
                 <td>
@@ -31728,7 +31728,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Uint16Array
-                  <br/>
+                  <br>
                   %Uint16Array%
                 </td>
                 <td>
@@ -31750,7 +31750,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Int32Array
-                  <br/>
+                  <br>
                   %Int32Array%
                 </td>
                 <td>
@@ -31772,7 +31772,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Uint32Array
-                  <br/>
+                  <br>
                   %Uint32Array%
                 </td>
                 <td>
@@ -31794,7 +31794,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Float32Array
-                  <br/>
+                  <br>
                   %Float32Array%
                 </td>
                 <td>
@@ -31815,7 +31815,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <tr>
                 <td>
                   Float64Array
-                  <br/>
+                  <br>
                   %Float64Array%
                 </td>
                 <td>
@@ -35048,7 +35048,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           <h1>GeneratorFunction Objects</h1>
           <p>Generator Function objects are constructor functions that are usually created by evaluating |GeneratorDeclaration|, |GeneratorExpression|, and |GeneratorMethod| syntactic productions. They may also be created by calling the %GeneratorFunction% intrinsic.</p>
           <figure>
-            <img alt="A staggering variety of boxes and arrows." height="958" src="figure-2.png" width="968"/>
+            <img alt="A staggering variety of boxes and arrows." height="958" src="figure-2.png" width="968">
             <figcaption>
               Figure 2 (informative) &mdash; Generator Objects Relationships
             </figcaption>
@@ -37198,9 +37198,9 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <p>The List returned by PropertyNameList does not include string literal property names defined as using a |ComputedPropertyName|.</p>
           </emu-note>
           <p>In <emu-internal-ref refid="sec-object-initializer-runtime-semantics-propertydefinitionevaluation">NUM</emu-internal-ref> the PropertyDefinitionEvaluation algorithm for the production
-            <br/>
+            <br>
             <emu-grammar>PropertyDefinition : PropertyName `:` AssignmentExpression</emu-grammar>
-            <br/>
+            <br>
             is replaced with the following definition:</p>
           <emu-grammar>PropertyDefinition : PropertyName `:` AssignmentExpression</emu-grammar>
           <emu-alg>
@@ -37481,10 +37481,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
       <h1>Bibliography</h1>
       <p><span class="marker">[1] </span>IEEE Std 754-2008: <i>IEEE Standard for Floating-Point Arithmetic</i>. Institute of Electrical and Electronic Engineers, New York (2008)</p>
       <p><span class="marker">[2] </span><i>The Unicode Standard, Version 5.0</i>, as amended by Unicode 5.1.0, or successor.
-        <br/>
+        <br>
         &lt;<emu-external-ref href="http://www.unicode.org/versions/latest" linktext="URL"></emu-external-ref>&gt;</p>
       <p><span class="marker">[3] </span><i>Unicode Standard Annex #15, Unicode Normalization Forms, version Unicode 5.1.0</i>, or successor.
-        <br/>
+        <br>
         &lt;<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"></emu-external-ref>&gt;</p>
       <p><span class="marker">[4] </span><i>Unicode Standard Annex #31, Unicode Identifiers and Pattern Syntax, version Unicode 5.1.0</i>, or successor. &lt;<emu-external-ref href="http://www.unicode.org/reports/tr31/" linktext="URL"></emu-external-ref>&gt;</p>
       <p><span class="marker">[5] </span>Unicode Technical Note #5: Canonical Equivalence in Applications, available at &lt;<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"></emu-external-ref>&gt;</p>
