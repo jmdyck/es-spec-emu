@@ -143,7 +143,7 @@ class SectionInfo:
                 num_within_parent = 'ABCDEFGHIJK'[parent_si.lettered_child_counter-1]
                 self.dotnum = inherited_dotnum + num_within_parent
                 dotnum_phrase = 'Annex ' + self.dotnum
-                status = bica.getAttribute('status')
+                status = 'normative' if bica.hasAttribute('normative') else 'informative'
                 status_piece = '<span class="section-status">(%s)</span> ' % status
             else:
                 parent_si.numbered_child_counter += 1
@@ -460,7 +460,7 @@ def serialize(node, apply_emd_expansions):
                 except:
                     current_section_id = None
                 output_name = 'section'
-                if 'status' in attrs: del attrs['status'] # RECONSTRUCTING
+                if 'normative' in attrs: del attrs['normative'] # RECONSTRUCTING
             elif name == 'emu-formula':
                 output_name = 'span'
                 attrs['style'] = 'font-family: Times New Roman'

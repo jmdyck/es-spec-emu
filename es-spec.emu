@@ -36354,7 +36354,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
     </emu-clause>
 
     <!-- es6num="A" -->
-    <emu-annex id="sec-grammar-summary" status="informative">
+    <emu-annex id="sec-grammar-summary">
         <h1>Grammar Summary</h1>
 
       <!-- es6num="A.1" -->
@@ -36407,7 +36407,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
     </emu-annex>
 
     <!-- es6num="B" -->
-    <emu-annex id="sec-additional-ecmascript-features-for-web-browsers" status="normative">
+    <emu-annex id="sec-additional-ecmascript-features-for-web-browsers" normative>
         <h1>Additional ECMAScript Features for Web Browsers</h1>
         <p>The ECMAScript language syntax and semantics defined in this annex are required when the ECMAScript host is a web browser. The content of this annex is normative but optional if the ECMAScript host is not a web browser.</p>
         <emu-note>
@@ -37358,7 +37358,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
     </emu-annex>
 
     <!-- es6num="C" -->
-    <emu-annex id="sec-strict-mode-of-ecmascript" status="informative">
+    <emu-annex id="sec-strict-mode-of-ecmascript">
       <h1>The Strict Mode of ECMAScript</h1>
       <p><b>The strict mode restriction and exceptions</b></p>
       <ul>
@@ -37417,7 +37417,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
     </emu-annex>
 
     <!-- es6num="D" -->
-    <emu-annex id="sec-corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact" status="informative">
+    <emu-annex id="sec-corrections-and-clarifications-in-ecmascript-2015-with-possible-compatibility-impact">
       <h1>Corrections and Clarifications in ECMAScript 2015 with Possible Compatibility Impact</h1>
       <p><emu-internal-ref refid="sec-candeclareglobalvar">NUM</emu-internal-ref>-<emu-internal-ref refid="sec-createglobalfunctionbinding">NUM</emu-internal-ref> Edition 5 and <emu-internal-ref refid="sec-syntactic-and-lexical-grammars">NUM</emu-internal-ref> used a property existence test to determine whether a global object property corresponding to a new global declaration already existed. ECMAScript 2015 uses an own property existence test. This corresponds to what has been most commonly implemented by web browsers.</p>
       <p><emu-internal-ref refid="sec-array-exotic-objects-defineownproperty-p-desc">NUM</emu-internal-ref>: The 5<sup>th</sup> Edition moved the capture of the current array length prior to the integer conversion of the array index or new length value. However, the captured length value could become invalid if the conversion process has the side-effect of changing the array length. ECMAScript 2015 specifies that the current array length must be captured after the possible occurrence of such side-effects.</p>
@@ -37431,7 +37431,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
     </emu-annex>
 
     <!-- es6num="E" -->
-    <emu-annex id="sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions" status="informative">
+    <emu-annex id="sec-additions-and-changes-that-introduce-incompatibilities-with-prior-editions">
       <h1>Additions and Changes That Introduce Incompatibilities with Prior Editions</h1>
       <p><emu-internal-ref refid="sec-tonumber-applied-to-the-string-type">NUM</emu-internal-ref>: In ECMAScript 2015, ToNumber applied to a String value now recognizes and converts |BinaryIntegerLiteral| and |OctalIntegerLiteral| numeric strings. In previous editions such strings were converted to *NaN*,</p>
       <p><emu-internal-ref refid="sec-reference-specification-type">NUM</emu-internal-ref>: In ECMAScript 2015, Function calls are not allowed to return a Reference value.</p>
@@ -37477,7 +37477,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
     </emu-annex>
 
     <!-- es6num="F" -->
-    <emu-annex id="sec-bibliography" status="?">
+    <emu-annex id="sec-bibliography">
       <h1>Bibliography</h1>
       <p><span class="marker">[1] </span>IEEE Std 754-2008: <i>IEEE Standard for Floating-Point Arithmetic</i>. Institute of Electrical and Electronic Engineers, New York (2008)</p>
       <p><span class="marker">[2] </span><i>The Unicode Standard, Version 5.0</i>, as amended by Unicode 5.1.0, or successor.
