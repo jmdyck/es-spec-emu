@@ -106,8 +106,8 @@ class SectionInfo:
             # This won't become a section,
             # but it's useful to build a SectionInfo for it.
             self.level = 0
-            self.child_clause_counter = 0
-            self.child_annex_counter = 0
+            self.numbered_child_counter = 0
+            self.lettered_child_counter = 0
 
             global section_info_root
             section_info_root = self
@@ -137,21 +137,20 @@ class SectionInfo:
             else:
                 inherited_dotnum = parent_si.dotnum + '.'
 
-            if bica.nodeName == 'emu-clause':
-                parent_si.child_clause_counter += 1
-                num_within_parent = str(parent_si.child_clause_counter)
-                self.dotnum = inherited_dotnum + num_within_parent
-                dotnum_phrase = self.dotnum
-                status_piece = ''
-            else:
-                assert self.level == 1
+            if bica.nodeName == 'emu-annex' and self.level == 1:
                 assert inherited_dotnum == ''
-                parent_si.child_annex_counter += 1
-                num_within_parent = 'ABCDEFGHIJK'[parent_si.child_annex_counter-1]
+                parent_si.lettered_child_counter += 1
+                num_within_parent = 'ABCDEFGHIJK'[parent_si.lettered_child_counter-1]
                 self.dotnum = inherited_dotnum + num_within_parent
                 dotnum_phrase = 'Annex ' + self.dotnum
                 status = bica.getAttribute('status')
                 status_piece = '<span class="section-status">(%s)</span> ' % status
+            else:
+                parent_si.numbered_child_counter += 1
+                num_within_parent = str(parent_si.numbered_child_counter)
+                self.dotnum = inherited_dotnum + num_within_parent
+                dotnum_phrase = self.dotnum
+                status_piece = ''
 
             self.toc_thing = '<span class="secnum"><a href="#%s">%s</a></span> %s%s' % (
                 self.id,
@@ -182,7 +181,7 @@ class SectionInfo:
             else:
                 self.type_for_internal_refs = 'Annex'
 
-            self.child_clause_counter = 0
+            self.numbered_child_counter = 0
 
 # ------------------------------------------------------------------------------
 
@@ -785,7 +784,7 @@ def handle_emu_grammar_node(emu_grammar):
         s = grammar_converter.process(body_xml)
 
         pn = emu_grammar.parentNode.nodeName
-        if pn == 'emu-clause':
+        if pn in ['emu-clause', 'emu-annex']:
             indent = emu_grammar.previousSibling.nodeValue
             put('<div class="gp prod">')
             put(indent + '  ' + s)

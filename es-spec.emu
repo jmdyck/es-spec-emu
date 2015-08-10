@@ -36358,52 +36358,52 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         <h1>Grammar Summary</h1>
 
       <!-- es6num="A.1" -->
-      <emu-clause id="sec-lexical-grammar">
+      <emu-annex id="sec-lexical-grammar">
         <h1>Lexical Grammar</h1>
         <emu-placeholder for="grammar-summary/lexical-grammar"></emu-placeholder>
-      </emu-clause>
+      </emu-annex>
 
       <!-- es6num="A.2" -->
-      <emu-clause id="sec-expressions">
+      <emu-annex id="sec-expressions">
         <h1>Expressions</h1>
         <emu-placeholder for="grammar-summary/expressions"></emu-placeholder>
-      </emu-clause>
+      </emu-annex>
 
       <!-- es6num="A.3" -->
-      <emu-clause id="sec-statements">
+      <emu-annex id="sec-statements">
         <h1>Statements</h1>
         <emu-placeholder for="grammar-summary/statements"></emu-placeholder>
-      </emu-clause>
+      </emu-annex>
 
       <!-- es6num="A.4" -->
-      <emu-clause id="sec-functions-and-classes">
+      <emu-annex id="sec-functions-and-classes">
         <h1>Functions and Classes</h1>
         <emu-placeholder for="grammar-summary/functions-and-classes"></emu-placeholder>
-      </emu-clause>
+      </emu-annex>
 
       <!-- es6num="A.5" -->
-      <emu-clause id="sec-scripts-and-modules">
+      <emu-annex id="sec-scripts-and-modules">
         <h1>Scripts and Modules</h1>
         <emu-placeholder for="grammar-summary/scripts-and-modules"></emu-placeholder>
-      </emu-clause>
+      </emu-annex>
 
       <!-- es6num="A.6" -->
-      <emu-clause id="sec-number-conversions">
+      <emu-annex id="sec-number-conversions">
         <h1>Number Conversions</h1>
         <emu-placeholder for="grammar-summary/number-conversions"></emu-placeholder>
-      </emu-clause>
+      </emu-annex>
 
       <!-- es6num="A.7" -->
-      <emu-clause id="sec-universal-resource-identifier-character-classes">
+      <emu-annex id="sec-universal-resource-identifier-character-classes">
         <h1>Universal Resource Identifier Character Classes</h1>
         <emu-placeholder for="grammar-summary/universal-resource-identifier-character-classes"></emu-placeholder>
-      </emu-clause>
+      </emu-annex>
 
       <!-- es6num="A.8" -->
-      <emu-clause id="sec-regular-expressions">
+      <emu-annex id="sec-regular-expressions">
         <h1>Regular Expressions</h1>
         <emu-placeholder for="grammar-summary/regular-expressions"></emu-placeholder>
-      </emu-clause>
+      </emu-annex>
     </emu-annex>
 
     <!-- es6num="B" -->
@@ -36416,11 +36416,11 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         </emu-note>
 
       <!-- es6num="B.1" -->
-      <emu-clause id="sec-additional-syntax">
+      <emu-annex id="sec-additional-syntax">
           <h1>Additional Syntax</h1>
 
         <!-- es6num="B.1.1" -->
-        <emu-clause id="sec-additional-syntax-numeric-literals">
+        <emu-annex id="sec-additional-syntax-numeric-literals">
           <h1>Numeric Literals</h1>
           <p>The syntax and semantics of <emu-internal-ref refid="sec-literals-numeric-literals">NUM</emu-internal-ref> is extended as follows except that this extension is not allowed for strict mode code:</p>
           <h2>Syntax</h2>
@@ -36455,7 +36455,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-grammar>
 
           <!-- es6num="B.1.1.1" -->
-          <emu-clause id="sec-???">
+          <emu-annex id="sec-???">
           <h1>Static Semantics</h1>
           <ul>
             <li>
@@ -36489,11 +36489,11 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               <p>The MV of <emu-grammar>NonOctalDigit :: `9`</emu-grammar> is 9.</p>
             </li>
           </ul>
-          </emu-clause>
-        </emu-clause>
+          </emu-annex>
+        </emu-annex>
 
         <!-- es6num="B.1.2" -->
-        <emu-clause id="sec-additional-syntax-string-literals">
+        <emu-annex id="sec-additional-syntax-string-literals">
           <h1>String Literals</h1>
           <p>The syntax and semantics of <emu-internal-ref refid="sec-literals-string-literals">NUM</emu-internal-ref> is extended as follows except that this extension is not allowed for strict mode code:</p>
           <h2>Syntax</h2>
@@ -36519,7 +36519,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           <p>This definition of |EscapeSequence| is not used in strict mode or when parsing |TemplateCharacter| (<emu-internal-ref refid="sec-template-literal-lexical-components">NUM</emu-internal-ref>).</p>
 
           <!-- es6num="B.1.2.1" -->
-          <emu-clause id="sec-???">
+          <emu-annex id="sec-???">
           <h1>Static Semantics</h1>
           <ul>
             <li>
@@ -36562,11 +36562,11 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               The MV of <emu-grammar>FourToSeven :: `7`</emu-grammar> is 7.
             </li>
           </ul>
-          </emu-clause>
-        </emu-clause>
+          </emu-annex>
+        </emu-annex>
 
         <!-- es6num="B.1.3" -->
-        <emu-clause id="sec-html-like-comments">
+        <emu-annex id="sec-html-like-comments">
           <h1>HTML-like Comments</h1>
           <p>The syntax and semantics of <emu-internal-ref refid="sec-comments">NUM</emu-internal-ref> is extended as follows except that this extension is not allowed when parsing source code using the goal symbol |Module|:</p>
           <h2>Syntax</h2>
@@ -36617,10 +36617,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               SingleLineDelimitedComment WhiteSpaceSequence? SingleLineDelimitedCommentSequence?
           </emu-grammar>
           <p>Similar to a |MultiLineComment| that contains a line terminator code point, a |SingleLineHTMLCloseComment| is considered to be a |LineTerminator| for purposes of parsing by the syntactic grammar.</p>
-        </emu-clause>
+        </emu-annex>
 
         <!-- es6num="B.1.4" -->
-        <emu-clause id="sec-regular-expressions-patterns">
+        <emu-annex id="sec-regular-expressions-patterns">
           <h1>Regular Expressions Patterns</h1>
           <p>The syntax of <emu-internal-ref refid="sec-patterns">NUM</emu-internal-ref> is modified and extended as follows. These changes introduce ambiguities that are broken by the ordering of grammar productions and by contextual information. When parsing using the following grammar, each alternative is considered only if previous production alternatives do not match.</p>
           <p>This alternative pattern grammar and semantics only changes the syntax and semantics of BMP patterns. The following grammar extensions include productions parameterized with the [U] parameter. However, none of these extensions change the syntax of Unicode patterns recognized when parsing with the [U] parameter present on the goal symbol.</p>
@@ -36737,7 +36737,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-note>
 
           <!-- es6num="B.1.4.1" -->
-          <emu-clause id="sec-???">
+          <emu-annex id="sec-???">
           <h1>Pattern Semantics</h1>
           <p>The semantics of <emu-internal-ref refid="sec-pattern-semantics">NUM</emu-internal-ref> is extended as follows:</p>
           <p>Within <emu-internal-ref refid="sec-term">NUM</emu-internal-ref> reference to &ldquo;<emu-grammar>Atom :: `(` Disjunction `)`</emu-grammar> &rdquo; are to be interpreted as meaning &ldquo;<emu-grammar>Atom :: `(` Disjunction `)`</emu-grammar> &rdquo; or &ldquo;<emu-grammar>AtomNoBrace :: `(` Disjunction `)`</emu-grammar> &rdquo;.</p>
@@ -36759,17 +36759,17 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           <p>The production <emu-grammar>ClassAtomNoDashInRange :: SourceCharacter but not one of `\` or `]` or `-`</emu-grammar> evaluates by returning a one-element CharSet containing the character represented by |SourceCharacter|.</p>
           <p>The production <emu-grammar>ClassAtomNoDashInRange :: `\` ClassEscape</emu-grammar> but only if&hellip;, evaluates by evaluating |ClassEscape| to obtain a CharSet and returning that CharSet.</p>
           <p>The production <emu-grammar>ClassAtomNoDashInRange :: `\` IdentityEscape</emu-grammar> evaluates by returning the character represented by |IdentityEscape|.</p>
-          </emu-clause>
-        </emu-clause>
-      </emu-clause>
+          </emu-annex>
+        </emu-annex>
+      </emu-annex>
 
       <!-- es6num="B.2" -->
-      <emu-clause id="sec-additional-built-in-properties">
+      <emu-annex id="sec-additional-built-in-properties">
           <h1>Additional Built-in Properties</h1>
           <p>When the ECMAScript host is a web browser the following additional properties of the standard built-in objects are defined.</p>
 
         <!-- es6num="B.2.1" -->
-        <emu-clause id="sec-additional-properties-of-the-global-object">
+        <emu-annex id="sec-additional-properties-of-the-global-object">
             <h1>Additional Properties of the Global Object</h1>
             <p>The entries in <emu-internal-ref refid="table-60">TYPE NUM</emu-internal-ref> are added to <emu-internal-ref refid="table-7">TYPE NUM</emu-internal-ref>.</p>
             <figure>
@@ -36816,7 +36816,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             </figure>
 
           <!-- es6num="B.2.1.1" -->
-          <emu-clause id="sec-escape-string">
+          <emu-annex id="sec-escape-string">
             <h1>escape (string)</h1>
             <p>The `escape` function is a property of the global object. It computes a new version of a String value in which certain code units have been replaced by a hexadecimal escape sequence.</p>
             <p>For those code units being replaced whose value is `0x00FF` or less, a two-digit escape sequence of the form <code>%<i>xx</i></code> is used. For those characters being replaced whose code unit value is greater than `0x00FF`, a four-digit escape sequence of the form <code>%u<i>xxxx</i></code> is used.</p>
@@ -36842,10 +36842,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <emu-note>
               <p>The encoding is partly based on the encoding described in RFC 1738, but the entire encoding specified in this standard is described above without regard to the contents of RFC 1738. This encoding does not reflect changes to RFC 1738 made by RFC 3986.</p>
             </emu-note>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.1.2" -->
-          <emu-clause id="sec-unescape-string">
+          <emu-annex id="sec-unescape-string">
             <h1>unescape (string)</h1>
             <p>The `unescape` function is a property of the global object. It computes a new version of a String value in which each escape sequence of the sort that might be introduced by the `escape` function is replaced with the code unit that it represents.</p>
             <p>The `unescape` function is the %unescape% intrinsic object. When the `unescape` function is called with one argument _string_, the following steps are taken:</p>
@@ -36868,20 +36868,20 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                   1. Increase _k_ by 1.
               1. Return _R_.
             </emu-alg>
-          </emu-clause>
-        </emu-clause>
+          </emu-annex>
+        </emu-annex>
 
         <!-- es6num="B.2.2" -->
-        <emu-clause id="sec-additional-properties-of-the-object.prototype-object">
+        <emu-annex id="sec-additional-properties-of-the-object.prototype-object">
             <h1>Additional Properties of the Object.prototype Object</h1>
 
           <!-- es6num="B.2.2.1" -->
-          <emu-clause id="sec-object.prototype.__proto__">
+          <emu-annex id="sec-object.prototype.__proto__">
               <h1>Object.prototype.__proto__</h1>
               <p>Object.prototype.__proto__ is an accessor property with attributes { [[Enumerable]]: *false*, [[Configurable]]: *true* }. The [[Get]] and [[Set]] attributes are defined as follows</p>
 
             <!-- es6num="B.2.2.1.1" -->
-            <emu-clause id="sec-get-object.prototype.__proto__">
+            <emu-annex id="sec-get-object.prototype.__proto__">
               <h1>get Object.prototype.__proto__</h1>
               <p>The value of the [[Get]] attribute is a built-in function that requires no arguments. It performs the following steps:</p>
               <emu-alg>
@@ -36889,10 +36889,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 1. ReturnIfAbrupt(_O_).
                 1. Return _O_.[[GetPrototypeOf]]().
               </emu-alg>
-            </emu-clause>
+            </emu-annex>
 
             <!-- es6num="B.2.2.1.2" -->
-            <emu-clause id="sec-set-object.prototype.__proto__">
+            <emu-annex id="sec-set-object.prototype.__proto__">
               <h1>set Object.prototype.__proto__</h1>
               <p>The value of the [[Set]] attribute is a built-in function that takes an argument _proto_. It performs the following steps:</p>
               <emu-alg>
@@ -36905,16 +36905,16 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 1. If _status_ is *false*, throw a *TypeError* exception.
                 1. Return *undefined*.
               </emu-alg>
-            </emu-clause>
-          </emu-clause>
-        </emu-clause>
+            </emu-annex>
+          </emu-annex>
+        </emu-annex>
 
         <!-- es6num="B.2.3" -->
-        <emu-clause id="sec-additional-properties-of-the-string.prototype-object">
+        <emu-annex id="sec-additional-properties-of-the-string.prototype-object">
             <h1>Additional Properties of the String.prototype Object</h1>
 
           <!-- es6num="B.2.3.1" -->
-          <emu-clause id="sec-string.prototype.substr">
+          <emu-annex id="sec-string.prototype.substr">
             <h1>String.prototype.substr (start, length)</h1>
             <p>The `substr` method takes two arguments, _start_ and _length_, and returns a substring of the result of converting the *this* object to a String, starting from index _start_ and running for _length_ code units (or through the end of the String if _length_ is *undefined*). If _start_ is negative, it is treated as <emu-formula>(_sourceLength_+_start_)</emu-formula> where _sourceLength_ is the length of the String. The result is a String value, not a String object. The following steps are taken:</p>
             <emu-alg>
@@ -36935,10 +36935,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <emu-note>
               <p>The `substr` function is intentionally generic; it does not require that its *this* value be a String object. Therefore it can be transferred to other kinds of objects for use as a method.</p>
             </emu-note>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.2" -->
-          <emu-clause id="sec-string.prototype.anchor">
+          <emu-annex id="sec-string.prototype.anchor">
               <h1>String.prototype.anchor ( name )</h1>
               <p>When the `anchor` method is called with argument _name_, the following steps are taken:</p>
               <emu-alg>
@@ -36947,7 +36947,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </emu-alg>
 
             <!-- es6num="B.2.3.2.1" -->
-            <emu-clause id="sec-createhtml">
+            <emu-annex id="sec-createhtml">
               <h1>Runtime Semantics: CreateHTML ( string, tag, attribute, value )</h1>
               <p>The abstract operation CreateHTML is called with arguments _string_, _tag_, _attribute_, and _value_. The arguments _tag_ and _attribute_ must be String values. The following steps are taken:</p>
               <emu-alg>
@@ -36972,136 +36972,136 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 1. Let _p4_ be the String value that is the concatenation of _p3_, `"&lt;/"`, _tag_, and `"&gt;"`.
                 1. Return _p4_.
               </emu-alg>
-            </emu-clause>
-          </emu-clause>
+            </emu-annex>
+          </emu-annex>
 
           <!-- es6num="B.2.3.3" -->
-          <emu-clause id="sec-string.prototype.big">
+          <emu-annex id="sec-string.prototype.big">
             <h1>String.prototype.big ()</h1>
             <p>When the `big` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"big"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.4" -->
-          <emu-clause id="sec-string.prototype.blink">
+          <emu-annex id="sec-string.prototype.blink">
             <h1>String.prototype.blink ()</h1>
             <p>When the `blink` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"blink"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.5" -->
-          <emu-clause id="sec-string.prototype.bold">
+          <emu-annex id="sec-string.prototype.bold">
             <h1>String.prototype.bold ()</h1>
             <p>When the `bold` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"b"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.6" -->
-          <emu-clause id="sec-string.prototype.fixed">
+          <emu-annex id="sec-string.prototype.fixed">
             <h1>String.prototype.fixed ()</h1>
             <p>When the `fixed` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"tt"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.7" -->
-          <emu-clause id="sec-string.prototype.fontcolor">
+          <emu-annex id="sec-string.prototype.fontcolor">
             <h1>String.prototype.fontcolor ( color )</h1>
             <p>When the `fontcolor` method is called with argument _color_, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"font"`, `"color"`, _color_).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.8" -->
-          <emu-clause id="sec-string.prototype.fontsize">
+          <emu-annex id="sec-string.prototype.fontsize">
             <h1>String.prototype.fontsize ( size )</h1>
             <p>When the `fontsize` method is called with argument _size_, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"font"`, `"size"`, _size_).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.9" -->
-          <emu-clause id="sec-string.prototype.italics">
+          <emu-annex id="sec-string.prototype.italics">
             <h1>String.prototype.italics ()</h1>
             <p>When the `italics` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"i"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.10" -->
-          <emu-clause id="sec-string.prototype.link">
+          <emu-annex id="sec-string.prototype.link">
             <h1>String.prototype.link ( url )</h1>
             <p>When the `link` method is called with argument _url_, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"a"`, `"href"`, _url_).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.11" -->
-          <emu-clause id="sec-string.prototype.small">
+          <emu-annex id="sec-string.prototype.small">
             <h1>String.prototype.small ()</h1>
             <p>When the `small` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"small"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.12" -->
-          <emu-clause id="sec-string.prototype.strike">
+          <emu-annex id="sec-string.prototype.strike">
             <h1>String.prototype.strike ()</h1>
             <p>When the `strike` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"strike"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.13" -->
-          <emu-clause id="sec-string.prototype.sub">
+          <emu-annex id="sec-string.prototype.sub">
             <h1>String.prototype.sub ()</h1>
             <p>When the `sub` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"sub"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.3.14" -->
-          <emu-clause id="sec-string.prototype.sup">
+          <emu-annex id="sec-string.prototype.sup">
             <h1>String.prototype.sup ()</h1>
             <p>When the `sup` method is called with no arguments, the following steps are taken:</p>
             <emu-alg>
               1. Let _S_ be the *this* value.
               1. Return CreateHTML(_S_, `"sup"`, `""`, `""`).
             </emu-alg>
-          </emu-clause>
-        </emu-clause>
+          </emu-annex>
+        </emu-annex>
 
         <!-- es6num="B.2.4" -->
-        <emu-clause id="sec-additional-properties-of-the-date.prototype-object">
+        <emu-annex id="sec-additional-properties-of-the-date.prototype-object">
             <h1>Additional Properties of the Date.prototype Object</h1>
 
           <!-- es6num="B.2.4.1" -->
-          <emu-clause id="sec-date.prototype.getyear">
+          <emu-annex id="sec-date.prototype.getyear">
             <h1>Date.prototype.getYear ( )</h1>
             <emu-note>
               <p>The `getFullYear` method is preferred for nearly all purposes, because it avoids the &ldquo;year 2000 problem.&rdquo;</p>
@@ -37113,10 +37113,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               1. If _t_ is *NaN*, return *NaN*.
               1. Return YearFromTime(LocalTime(_t_)) - 1900.
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.4.2" -->
-          <emu-clause id="sec-date.prototype.setyear">
+          <emu-annex id="sec-date.prototype.setyear">
             <h1>Date.prototype.setYear (year)</h1>
             <emu-note>
               <p>The `setFullYear` method is preferred for nearly all purposes, because it avoids the &ldquo;year 2000 problem.&rdquo;</p>
@@ -37136,24 +37136,24 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               1. Set the [[DateValue]] internal slot of this Date object to TimeClip(_date_).
               1. Return the value of the [[DateValue]] internal slot of this Date object.
             </emu-alg>
-          </emu-clause>
+          </emu-annex>
 
           <!-- es6num="B.2.4.3" -->
-          <emu-clause id="sec-date.prototype.togmtstring">
+          <emu-annex id="sec-date.prototype.togmtstring">
             <h1>Date.prototype.toGMTString ( )</h1>
             <emu-note>
               <p>The property `toUTCString` is preferred. The `toGMTString` property is provided principally for compatibility with old code. It is recommended that the `toUTCString` property be used in new ECMAScript code.</p>
             </emu-note>
             <p>The function object that is the initial value of `Date.prototype.toGMTString` is the same function object that is the initial value of `Date.prototype.toUTCString`.</p>
-          </emu-clause>
-        </emu-clause>
+          </emu-annex>
+        </emu-annex>
 
         <!-- es6num="B.2.5" -->
-        <emu-clause id="sec-additional-properties-of-the-regexp.prototype-object">
+        <emu-annex id="sec-additional-properties-of-the-regexp.prototype-object">
             <h1>Additional Properties of the RegExp.prototype Object</h1>
 
           <!-- es6num="B.2.5.1" -->
-          <emu-clause id="sec-regexp.prototype.compile">
+          <emu-annex id="sec-regexp.prototype.compile">
             <h1>RegExp.prototype.compile (pattern, flags )</h1>
             <p>When the `compile` method is called with arguments _pattern_ and _flags_, the following steps are taken:</p>
             <emu-alg>
@@ -37172,16 +37172,16 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <emu-note>
               <p>The `compile` method completely reinitializes the *this* object RegExp with a new pattern and flags. An implementation may interpret use of this method as an assertion that the resulting RegExp object will be used multiple times and hence is a candidate for extra optimization.</p>
             </emu-note>
-          </emu-clause>
-        </emu-clause>
-      </emu-clause>
+          </emu-annex>
+        </emu-annex>
+      </emu-annex>
 
       <!-- es6num="B.3" -->
-      <emu-clause id="sec-other-additional-features">
+      <emu-annex id="sec-other-additional-features">
           <h1>Other Additional Features</h1>
 
         <!-- es6num="B.3.1" -->
-        <emu-clause id="sec-__proto__-property-names-in-object-initializers">
+        <emu-annex id="sec-__proto__-property-names-in-object-initializers">
           <h1>__proto__ Property Names in Object Initializers</h1>
           <p>The following Early Error rule is added to those in <emu-internal-ref refid="sec-object-initializer-static-semantics-early-errors">NUM</emu-internal-ref>:</p>
           <emu-grammar>
@@ -37220,10 +37220,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             1. Assert: _enumerable_ is *true*.
             1. Return CreateDataPropertyOrThrow(_object_, _propKey_, _propValue_).
           </emu-alg>
-        </emu-clause>
+        </emu-annex>
 
         <!-- es6num="B.3.2" -->
-        <emu-clause id="sec-labelled-function-declarations">
+        <emu-annex id="sec-labelled-function-declarations">
           <h1>Labelled Function Declarations</h1>
           <p>Prior to ECMAScript 2015, the specification of |LabelledStatement| did not allow for the association of a statement label with a |FunctionDeclaration|. However, a labelled |FunctionDeclaration| was an allowable extension for non-strict code and most browser-hosted ECMAScript implementations supported that extension. In ECMAScript 2015, the grammar productions for |LabelledStatement| permits use of |FunctionDeclaration| as a |LabelledItem| but <emu-internal-ref refid="sec-labelled-statements-static-semantics-early-errors">NUM</emu-internal-ref> includes an Early Error rule that produces a Syntax Error if that occurs. For web browser compatibility, that rule is modified with the addition of the underlined text:</p>
           <emu-grammar>LabelledItem : FunctionDeclaration</emu-grammar>
@@ -37232,10 +37232,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               It is a Syntax Error if any strict mode source code matches this rule.
             </li>
           </ul>
-        </emu-clause>
+        </emu-annex>
 
         <!-- es6num="B.3.3" -->
-        <emu-clause id="sec-block-level-function-declarations-web-legacy-compatibility-semantics">
+        <emu-annex id="sec-block-level-function-declarations-web-legacy-compatibility-semantics">
           <h1>Block-Level Function Declarations Web Legacy Compatibility Semantics</h1>
           <p>Prior to ECMAScript 2015, the ECMAScript specification did not define the occurrence of a |FunctionDeclaration| as an element of a |Block| statement's |StatementList|. However, support for that form of |FunctionDeclaration| was an allowable extension and most browser-hosted ECMAScript implementations permitted them. Unfortunately, the semantics of such declarations differ among those implementations. Because of these semantic differences, existing web ECMAScript code that uses |Block| level function declarations is only portable among browser implementation if the usage only depends upon the semantic intersection of all of the browser implementations for such declarations. The following are the use cases that fall within that intersection semantics:</p>
           <ol>
@@ -37314,10 +37314,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                             1. Return NormalCompletion(~empty~).
           </emu-alg>
           <p>If an ECMAScript implementation has a mechanism for reporting diagnostic warning messages, a warning should be produced for each function whose function code contains a |FunctionDeclaration| for which steps 1.a.ii.1-3 will be performed.</p>
-        </emu-clause>
+        </emu-annex>
 
         <!-- es6num="B.3.4" -->
-        <emu-clause id="sec-functiondeclarations-in-ifstatement-statement-clauses">
+        <emu-annex id="sec-functiondeclarations-in-ifstatement-statement-clauses">
           <h1>FunctionDeclarations in IfStatement Statement Clauses</h1>
           <p>The following rules for |IfStatement| augment those in <emu-internal-ref refid="sec-if-statement">NUM</emu-internal-ref>:</p>
           <emu-grammar>
@@ -37328,10 +37328,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               `if` `(` Expression[In, ?Yield] `)` FunctionDeclaration[?Yield]
           </emu-grammar>
           <p>The above rules are only applied when parsing code that is not strict mode code. If any such code is match by one of these rules subsequent processing of that code takes places as if each matching occurrence of |FunctionDeclaration|<sub>[?Yield]</sub> was the sole |StatementListItem| of a |BlockStatement| occupying that position in the source code. The semantics of such a synthetic |BlockStatement| includes the web legacy compatibility semantics specified in <emu-internal-ref refid="sec-block-level-function-declarations-web-legacy-compatibility-semantics">NUM</emu-internal-ref>.</p>
-        </emu-clause>
+        </emu-annex>
 
         <!-- es6num="B.3.5" -->
-        <emu-clause id="sec-variablestatements-in-catch-blocks">
+        <emu-annex id="sec-variablestatements-in-catch-blocks">
           <h1>VariableStatements in Catch blocks</h1>
           <p>The content of <emu-internal-ref refid="sec-try-statement-static-semantics-early-errors">TYPE NUM</emu-internal-ref> is replaced with the following:</p>
           <emu-grammar>Catch : `catch` `(` CatchParameter `)` Block</emu-grammar>
@@ -37353,8 +37353,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           <p>Step 5.d.ii.2.a.i is replaced by:</p>
           <p class="special2">i. If _thisEnvRec_ is not the Environment Record for a |Catch| clause, throw a *SyntaxError* exception.</p>
           <p class="special2">ii. If _name_ is bound by any syntactic form other than a |FunctionDeclaration|, a |VariableStatement|, the |VariableDeclarationList| of a for statement, or the |ForBinding| of a for-in statement, throw a *SyntaxError* exception.</p>
-        </emu-clause>
-      </emu-clause>
+        </emu-annex>
+      </emu-annex>
     </emu-annex>
 
     <!-- es6num="C" -->
