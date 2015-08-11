@@ -66,6 +66,8 @@ def do_prep(doc):
         bica._section_info = SectionInfo(bica)
 
     print >> sys.stderr, "Inferring section kinds..."
+    global n_defns_for_rec_method
+    n_defns_for_rec_method = collections.defaultdict(int)
     infer_section_kind(section_info_root)
     # We could do this in SectionInfo(),
     # but it's somewhat easier after the section-tree has been built.
@@ -209,7 +211,7 @@ def infer_section_kind(si, expectation='general'):
 
             (r'^(Runtime|Static) Semantics: (?P<op_name>[\w]+)$', 'production_based_operation'),
 
-            (r'^(?P<op_name>\w+) *\((?P<params>[^()]*)\) Concrete Method$', 'module_rec_method'),
+            (r'^(?P<method_name>\w+) *\((?P<params>[^()]*)\) Concrete Method$', 'module_rec_method'),
 
             (r'^\[\[(?P<im_name>\w+)\]\] *\((?P<params>[^()]*)\)$', 'internal_method'),
 
@@ -267,7 +269,30 @@ def infer_section_kind(si, expectation='general'):
     if re.match(r'^\w+ Environment Records$', si.title_xml):
         assert si.kind == 'catchall'
         for si_child in si.children:
+            mo = re.match(r'^(?P<method_name>\w+) *\((?P<params>.*)\)$', si_child.title_xml)
+            assert mo, si_child.title_xml
             si_child.kind = 'env_rec_method'
+            si_child.kind_stuff = mo.groupdict()
+
+            n_defns_for_rec_method[si_child.kind_stuff['method_name']] += 1
+
+            if 0:
+                if si_child.kind_stuff['method_name'] in [
+                    'HasBinding',
+                    'CreateMutableBinding',
+                    'CreateImmutableBinding',
+                    'InitializeBinding',
+                    'SetMutableBinding',
+                    'GetBindingValue',
+                    'DeleteBinding',
+                    'HasThisBinding',
+                    'HasSuperBinding',
+                    'WithBaseObject',
+                ]:
+                    si_child.kind += '_IOAM' # implementation of abstract method
+                else:
+                    si_child.kind += '_IBTC' # introduced by this 'class'
+
             recurse(si_child, 'general')
         return
 
@@ -287,6 +312,11 @@ def infer_section_kind(si, expectation='general'):
 
     elif kind in ['properties_of_an_intrinsic_object', 'group_of_properties1', 'group_of_properties2']:
         expectation = 'properties'
+
+    elif kind == 'module_rec_method':
+        n_defns_for_rec_method[si.kind_stuff['method_name']] += 1
+        expectation = 'general'
+
     else:
         expectation = 'general'
 
@@ -1137,6 +1167,11 @@ def prep_for_add_xlinks(si):
             if '.' in fullname and '%.' not in fullname:
                 section_is_target_for(si.id, fullname)
 
+    elif si.kind.endswith('_rec_method'):
+        method_name = si.kind_stuff['method_name']
+        if n_defns_for_rec_method[method_name] == 1:
+            section_is_target_for(si.id, method_name)
+
     for si_child in si.children: 
         prep_for_add_xlinks(si_child)
 
@@ -1148,29 +1183,16 @@ ad_hoc_xlink_info = [
     ('sec-algorithm-conventions', 'abs'),
     ('sec-algorithm-conventions', 'floor'),
     ('sec-algorithm-conventions', 'modulo'),
-    ('sec-bindthisvalue', 'BindThisValue'),
-    ('sec-candeclareglobalfunction', 'CanDeclareGlobalFunction'),
-    ('sec-candeclareglobalvar', 'CanDeclareGlobalVar'),
     ('sec-completion-record-specification-type', 'Completion'),
-    ('sec-createglobalfunctionbinding', 'CreateGlobalFunctionBinding'),
-    ('sec-createglobalvarbinding', 'CreateGlobalVarBinding'),
-    ('sec-createimportbinding', 'CreateImportBinding'),
     ('sec-date-number', 'DateFromTime'),
     ('sec-day-number-and-time-within-day', 'Day'),
     ('sec-day-number-and-time-within-day', 'TimeWithinDay'),
     ('sec-daylight-saving-time-adjustment', 'DaylightSavingTA'),
     ('sec-ecmascript-data-types-and-values', 'Type'),
-    ('sec-getexportednames', 'GetExportedNames'),
-    ('sec-getsuperbase', 'GetSuperBase'),
-    ('sec-haslexicaldeclaration', 'HasLexicalDeclaration'),
-    ('sec-hasrestrictedglobalproperty', 'HasRestrictedGlobalProperty'),
-    ('sec-hasvardeclaration', 'HasVarDeclaration'),
     ('sec-hours-minutes-second-and-milliseconds', 'HourFromTime'),
     ('sec-hours-minutes-second-and-milliseconds', 'MinFromTime'),
     ('sec-hours-minutes-second-and-milliseconds', 'SecFromTime'),
     ('sec-hours-minutes-second-and-milliseconds', 'msFromTime'),
-    ('sec-moduledeclarationinstantiation', 'ModuleDeclarationInstantiation'),
-    ('sec-moduleevaluation', 'ModuleEvaluation'),
     ('sec-month-number', 'DayWithinYear'),
     ('sec-month-number', 'MonthFromTime'),
     ('sec-reference-specification-type', 'GetBase'),
@@ -1180,7 +1202,6 @@ ad_hoc_xlink_info = [
     ('sec-reference-specification-type', 'IsStrictReference'),
     ('sec-reference-specification-type', 'IsSuperReference'),
     ('sec-reference-specification-type', 'IsUnresolvableReference'),
-    ('sec-resolveexport', 'ResolveExport'),
     ('sec-week-day', 'WeekDay'),
     ('sec-year-number', 'InLeapYear'),
     ('sec-year-number', 'YearFromTime'),
