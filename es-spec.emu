@@ -2636,7 +2636,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.2.5" -->
-          <emu-clause id="sec-updateempty">
+          <emu-clause id="sec-updateempty" aoid="UpdateEmpty">
             <h1>UpdateEmpty ( completionRecord, value)</h1>
             <p>The abstract operation UpdateEmpty with arguments _completionRecord_ and _value_ performs the following steps:</p>
             <emu-alg>
@@ -2683,7 +2683,7 @@
             <p>The following abstract operations are used in this specification to operate on references:</p>
 
           <!-- es6num="6.2.3.1" -->
-          <emu-clause id="sec-getvalue">
+          <emu-clause id="sec-getvalue" aoid="GetValue">
             <h1>GetValue (V)</h1>
             <emu-alg>
               1. ReturnIfAbrupt(_V_).
@@ -2704,7 +2704,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.3.2" -->
-          <emu-clause id="sec-putvalue">
+          <emu-clause id="sec-putvalue" aoid="PutValue">
             <h1>PutValue (V, W)</h1>
             <emu-alg>
               1. ReturnIfAbrupt(_V_).
@@ -2733,7 +2733,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.3.3" -->
-          <emu-clause id="sec-getthisvalue">
+          <emu-clause id="sec-getthisvalue" aoid="GetThisValue">
             <h1>GetThisValue (V)</h1>
             <emu-alg>
               1. Assert: IsPropertyReference(_V_) is *true*.
@@ -2744,7 +2744,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.3.4" -->
-          <emu-clause id="sec-initializereferencedbinding">
+          <emu-clause id="sec-initializereferencedbinding" aoid="InitializeReferencedBinding">
             <h1>InitializeReferencedBinding (V, W)</h1>
             <emu-alg>
               1. ReturnIfAbrupt(_V_).
@@ -2766,7 +2766,7 @@
             <p>The following abstract operations are used in this specification to operate upon Property Descriptor values:</p>
 
           <!-- es6num="6.2.4.1" -->
-          <emu-clause id="sec-isaccessordescriptor">
+          <emu-clause id="sec-isaccessordescriptor" aoid="IsAccessorDescriptor">
             <h1>IsAccessorDescriptor ( Desc )</h1>
             <p>When the abstract operation IsAccessorDescriptor is called with Property Descriptor _Desc_, the following steps are taken:</p>
             <emu-alg>
@@ -2777,7 +2777,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.4.2" -->
-          <emu-clause id="sec-isdatadescriptor">
+          <emu-clause id="sec-isdatadescriptor" aoid="IsDataDescriptor">
             <h1>IsDataDescriptor ( Desc )</h1>
             <p>When the abstract operation IsDataDescriptor is called with Property Descriptor _Desc_, the following steps are taken:</p>
             <emu-alg>
@@ -2788,7 +2788,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.4.3" -->
-          <emu-clause id="sec-isgenericdescriptor">
+          <emu-clause id="sec-isgenericdescriptor" aoid="IsGenericDescriptor">
             <h1>IsGenericDescriptor ( Desc )</h1>
             <p>When the abstract operation IsGenericDescriptor is called with Property Descriptor _Desc_, the following steps are taken:</p>
             <emu-alg>
@@ -2799,7 +2799,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.4.4" -->
-          <emu-clause id="sec-frompropertydescriptor">
+          <emu-clause id="sec-frompropertydescriptor" aoid="FromPropertyDescriptor">
             <h1>FromPropertyDescriptor ( Desc )</h1>
             <p>When the abstract operation FromPropertyDescriptor is called with Property Descriptor _Desc_, the following steps are taken:</p>
             <emu-alg>
@@ -2824,7 +2824,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.4.5" -->
-          <emu-clause id="sec-topropertydescriptor">
+          <emu-clause id="sec-topropertydescriptor" aoid="ToPropertyDescriptor">
             <h1>ToPropertyDescriptor ( Obj )</h1>
             <p>When the abstract operation ToPropertyDescriptor is called with object _Obj_, the following steps are taken:</p>
             <emu-alg>
@@ -2876,7 +2876,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.4.6" -->
-          <emu-clause id="sec-completepropertydescriptor">
+          <emu-clause id="sec-completepropertydescriptor" aoid="CompletePropertyDescriptor">
             <h1>CompletePropertyDescriptor ( Desc )</h1>
             <p>When the abstract operation CompletePropertyDescriptor is called with Property Descriptor _Desc_ the following steps are taken:</p>
             <emu-alg>
@@ -2910,7 +2910,7 @@
             <p>The following abstract operations are used in this specification to operate upon Data Block values:</p>
 
           <!-- es6num="6.2.6.1" -->
-          <emu-clause id="sec-createbytedatablock">
+          <emu-clause id="sec-createbytedatablock" aoid="CreateByteDataBlock">
             <h1>CreateByteDataBlock(size)</h1>
             <p>When the abstract operation CreateByteDataBlock is called with integer argument _size_, the following steps are taken:</p>
             <emu-alg>
@@ -2922,7 +2922,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.6.2" -->
-          <emu-clause id="sec-copydatablockbytes">
+          <emu-clause id="sec-copydatablockbytes" aoid="CopyDataBlockBytes">
             <h1>CopyDataBlockBytes(toBlock, toIndex, fromBlock, fromIndex, count)</h1>
             <p>When the abstract operation CopyDataBlockBytes is called the following steps are taken:</p>
             <emu-alg>
@@ -2954,7 +2954,7 @@
           <p>The ECMAScript language implicitly performs automatic type conversion as needed. To clarify the semantics of certain constructs it is useful to define a set of conversion abstract operations. The conversion abstract operations are polymorphic; they can accept a value of any ECMAScript language type or of a Completion Record value. But no other specification types are used with these operations.</p>
 
         <!-- es6num="7.1.1" -->
-        <emu-clause id="sec-toprimitive">
+        <emu-clause id="sec-toprimitive" aoid="ToPrimitive">
           <h1>ToPrimitive ( input [, PreferredType] )</h1>
           <p>The abstract operation ToPrimitive takes an _input_ argument and an optional argument _PreferredType_. The abstract operation ToPrimitive converts its _input_ argument to a non-Object type. If an object is capable of converting to more than one primitive type, it may use the optional hint _PreferredType_ to favour that type. Conversion occurs according to <emu-internal-ref refid="table-9">TYPE NUM</emu-internal-ref>:</p>
           <figure>
@@ -3076,7 +3076,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.2" -->
-        <emu-clause id="sec-toboolean">
+        <emu-clause id="sec-toboolean" aoid="ToBoolean">
           <h1>ToBoolean ( argument )</h1>
           <p>The abstract operation ToBoolean converts _argument_ to a value of type Boolean according to <emu-internal-ref refid="table-10">TYPE NUM</emu-internal-ref>:</p>
           <figure>
@@ -3163,7 +3163,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.3" -->
-        <emu-clause id="sec-tonumber">
+        <emu-clause id="sec-tonumber" aoid="ToNumber">
             <h1>ToNumber ( argument )</h1>
             <p>The abstract operation ToNumber converts _argument_ to a value of type Number according to <emu-internal-ref refid="table-11">TYPE NUM</emu-internal-ref>:</p>
             <figure>
@@ -3406,7 +3406,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.4" -->
-        <emu-clause id="sec-tointeger">
+        <emu-clause id="sec-tointeger" aoid="ToInteger">
           <h1>ToInteger ( argument )</h1>
           <p>The abstract operation ToInteger converts _argument_ to an integral numeric value. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3419,7 +3419,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.5" -->
-        <emu-clause id="sec-toint32">
+        <emu-clause id="sec-toint32" aoid="ToInt32">
           <h1>ToInt32 ( argument )</h1>
           <p>The abstract operation ToInt32 converts _argument_ to one of 2<sup>32</sup> integer values in the range <emu-formula>-2<sup>31</sup></emu-formula> through <emu-formula>2<sup>31</sup>-1</emu-formula>, inclusive. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3447,7 +3447,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.6" -->
-        <emu-clause id="sec-touint32">
+        <emu-clause id="sec-touint32" aoid="ToUint32">
           <h1>ToUint32 ( argument )</h1>
           <p>The abstract operation ToUint32 converts _argument_ to one of 2<sup>32</sup> integer values in the range 0 through <emu-formula>2<sup>32</sup>-1</emu-formula>, inclusive. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3478,7 +3478,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.7" -->
-        <emu-clause id="sec-toint16">
+        <emu-clause id="sec-toint16" aoid="ToInt16">
           <h1>ToInt16 ( argument )</h1>
           <p>The abstract operation ToInt16 converts _argument_ to one of 2<sup>16</sup> integer values in the range -32768 through 32767, inclusive. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3492,7 +3492,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.8" -->
-        <emu-clause id="sec-touint16">
+        <emu-clause id="sec-touint16" aoid="ToUint16">
           <h1>ToUint16 ( argument )</h1>
           <p>The abstract operation ToUint16 converts _argument_ to one of 2<sup>16</sup> integer values in the range 0 through <emu-formula>2<sup>16</sup>-1</emu-formula>, inclusive. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3517,7 +3517,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.9" -->
-        <emu-clause id="sec-toint8">
+        <emu-clause id="sec-toint8" aoid="ToInt8">
           <h1>ToInt8 ( argument )</h1>
           <p>The abstract operation ToInt8 converts _argument_ to one of 2<sup>8</sup> integer values in the range -128 through 127, inclusive. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3531,7 +3531,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.10" -->
-        <emu-clause id="sec-touint8">
+        <emu-clause id="sec-touint8" aoid="ToUint8">
           <h1>ToUint8 ( argument )</h1>
           <p>The abstract operation ToUint8 converts _argument_ to one of 2<sup>8</sup> integer values in the range 0 through 255, inclusive. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3545,7 +3545,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.11" -->
-        <emu-clause id="sec-touint8clamp">
+        <emu-clause id="sec-touint8clamp" aoid="ToUint8Clamp">
           <h1>ToUint8Clamp ( argument )</h1>
           <p>The abstract operation ToUint8Clamp converts _argument_ to one of 2<sup>8</sup> integer values in the range 0 through 255, inclusive. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3566,7 +3566,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.12" -->
-        <emu-clause id="sec-tostring">
+        <emu-clause id="sec-tostring" aoid="ToString">
             <h1>ToString ( argument )</h1>
             <p>The abstract operation ToString converts _argument_ to a value of type String according to <emu-internal-ref refid="table-12">TYPE NUM</emu-internal-ref>:</p>
             <figure>
@@ -3655,7 +3655,7 @@
             </figure>
 
           <!-- es6num="7.1.12.1" -->
-          <emu-clause id="sec-tostring-applied-to-the-number-type">
+          <emu-clause id="sec-tostring-applied-to-the-number-type" aoid="ToString Applied to the Number Type">
             <h1>ToString Applied to the Number Type</h1>
             <p>The abstract operation ToString converts a Number _m_ to String format as follows:</p>
             <emu-alg>
@@ -3699,7 +3699,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.13" -->
-        <emu-clause id="sec-toobject">
+        <emu-clause id="sec-toobject" aoid="ToObject">
           <h1>ToObject ( argument )</h1>
           <p>The abstract operation ToObject converts _argument_ to a value of type Object according to <emu-internal-ref refid="table-13">TYPE NUM</emu-internal-ref>:</p>
           <figure>
@@ -3786,7 +3786,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.14" -->
-        <emu-clause id="sec-topropertykey">
+        <emu-clause id="sec-topropertykey" aoid="ToPropertyKey">
           <h1>ToPropertyKey ( argument )</h1>
           <p>The abstract operation ToPropertyKey converts _argument_ to a value that can be used as a property key by performing the following steps:</p>
           <emu-alg>
@@ -3799,7 +3799,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.15" -->
-        <emu-clause id="sec-tolength">
+        <emu-clause id="sec-tolength" aoid="ToLength">
           <h1>ToLength ( argument )</h1>
           <p>The abstract operation ToLength converts _argument_ to an integer suitable for use as the length of an array-like object. It performs the following steps:</p>
           <emu-alg>
@@ -3813,7 +3813,7 @@
         </emu-clause>
 
         <!-- es6num="7.1.16" -->
-        <emu-clause id="sec-canonicalnumericindexstring">
+        <emu-clause id="sec-canonicalnumericindexstring" aoid="CanonicalNumericIndexString">
           <h1>CanonicalNumericIndexString ( argument )</h1>
           <p>The abstract operation CanonicalNumericIndexString returns _argument_ converted to a numeric value if it is a String representation of a Number that would be produced by ToString, or the string `"-0"`. Otherwise, it returns *undefined*. This abstract operation functions as follows:</p>
           <emu-alg>
@@ -3832,7 +3832,7 @@
           <h1>Testing and Comparison Operations</h1>
 
         <!-- es6num="7.2.1" -->
-        <emu-clause id="sec-requireobjectcoercible">
+        <emu-clause id="sec-requireobjectcoercible" aoid="RequireObjectCoercible">
           <h1>RequireObjectCoercible ( argument )</h1>
           <p>The abstract operation RequireObjectCoercible throws an error if _argument_ is a value that cannot be converted to an Object using ToObject. It is defined by <emu-internal-ref refid="table-14">TYPE NUM</emu-internal-ref>:</p>
           <figure>
@@ -3919,7 +3919,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.2" -->
-        <emu-clause id="sec-isarray">
+        <emu-clause id="sec-isarray" aoid="IsArray">
           <h1>IsArray ( argument )</h1>
           <p>The abstract operation IsArray takes one argument _argument_, and performs the following steps:</p>
           <emu-alg>
@@ -3934,7 +3934,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.3" -->
-        <emu-clause id="sec-iscallable">
+        <emu-clause id="sec-iscallable" aoid="IsCallable">
           <h1>IsCallable ( argument )</h1>
           <p>The abstract operation IsCallable determines if _argument_, which must be an ECMAScript language value or a Completion Record, is a callable function with a [[Call]] internal method.</p>
           <emu-alg>
@@ -3946,7 +3946,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.4" -->
-        <emu-clause id="sec-isconstructor">
+        <emu-clause id="sec-isconstructor" aoid="IsConstructor">
           <h1>IsConstructor ( argument )</h1>
           <p>The abstract operation IsConstructor determines if _argument_, which must be an ECMAScript language value or a Completion Record, is a function object with a [[Construct]] internal method.</p>
           <emu-alg>
@@ -3958,7 +3958,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.5" -->
-        <emu-clause id="sec-isextensible-o">
+        <emu-clause id="sec-isextensible-o" aoid="IsExtensible">
           <h1>IsExtensible (O)</h1>
           <p>The abstract operation IsExtensible is used to determine whether additional properties can be added to the object that is _O_. A Boolean value is returned. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -3968,7 +3968,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.6" -->
-        <emu-clause id="sec-isinteger">
+        <emu-clause id="sec-isinteger" aoid="IsInteger">
           <h1>IsInteger ( argument )</h1>
           <p>The abstract operation IsInteger determines if _argument_ is a finite integer numeric value.</p>
           <emu-alg>
@@ -3981,7 +3981,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.7" -->
-        <emu-clause id="sec-ispropertykey">
+        <emu-clause id="sec-ispropertykey" aoid="IsPropertyKey">
           <h1>IsPropertyKey ( argument )</h1>
           <p>The abstract operation IsPropertyKey determines if _argument_, which must be an ECMAScript language value or a Completion Record, is a value that may be used as a property key.</p>
           <emu-alg>
@@ -3993,7 +3993,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.8" -->
-        <emu-clause id="sec-isregexp">
+        <emu-clause id="sec-isregexp" aoid="IsRegExp">
           <h1>IsRegExp ( argument )</h1>
           <p>The abstract operation IsRegExp with argument _argument_ performs the following steps:</p>
           <emu-alg>
@@ -4007,7 +4007,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.9" -->
-        <emu-clause id="sec-samevalue">
+        <emu-clause id="sec-samevalue" aoid="SameValue">
           <h1>SameValue(x, y)</h1>
           <p>The internal comparison abstract operation SameValue(_x_, _y_), where _x_ and _y_ are ECMAScript language values, produces *true* or *false*. Such a comparison is performed as follows:</p>
           <emu-alg>
@@ -4036,7 +4036,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.10" -->
-        <emu-clause id="sec-samevaluezero">
+        <emu-clause id="sec-samevaluezero" aoid="SameValueZero">
           <h1>SameValueZero(x, y)</h1>
           <p>The internal comparison abstract operation SameValueZero(_x_, _y_), where _x_ and _y_ are ECMAScript language values, produces *true* or *false*. Such a comparison is performed as follows:</p>
           <emu-alg>
@@ -4065,7 +4065,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.11" -->
-        <emu-clause id="sec-abstract-relational-comparison">
+        <emu-clause id="sec-abstract-relational-comparison" aoid="Abstract Relational Comparison">
           <h1>Abstract Relational Comparison</h1>
           <p>The comparison _x_ &lt; _y_, where _x_ and _y_ are values, produces *true*, *false*, or *undefined* (which indicates that at least one operand is *NaN*). In addition to _x_ and _y_ the algorithm takes a Boolean flag named _LeftFirst_ as a parameter. The flag is used to control the order in which operations with potentially visible side-effects are performed upon _x_ and _y_. It is necessary because ECMAScript specifies left to right evaluation of expressions. The default value of _LeftFirst_ is *true* and indicates that the _x_ parameter corresponds to an expression that occurs to the left of the _y_ parameter's corresponding expression. If _LeftFirst_ is *false*, the reverse is the case and operations must be performed upon _y_ before _x_. Such a comparison is performed as follows:</p>
           <emu-alg>
@@ -4113,7 +4113,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.12" -->
-        <emu-clause id="sec-abstract-equality-comparison">
+        <emu-clause id="sec-abstract-equality-comparison" aoid="Abstract Equality Comparison">
           <h1>Abstract Equality Comparison</h1>
           <p>The comparison _x_ == _y_, where _x_ and _y_ are values, produces *true* or *false*. Such a comparison is performed as follows:</p>
           <emu-alg>
@@ -4134,7 +4134,7 @@
         </emu-clause>
 
         <!-- es6num="7.2.13" -->
-        <emu-clause id="sec-strict-equality-comparison">
+        <emu-clause id="sec-strict-equality-comparison" aoid="Strict Equality Comparison">
           <h1>Strict Equality Comparison</h1>
           <p>The comparison _x_ === _y_, where _x_ and _y_ are values, produces *true* or *false*. Such a comparison is performed as follows:</p>
           <emu-alg>
@@ -4169,7 +4169,7 @@
           <h1>Operations on Objects</h1>
 
         <!-- es6num="7.3.1" -->
-        <emu-clause id="sec-get-o-p">
+        <emu-clause id="sec-get-o-p" aoid="Get">
           <h1>Get (O, P)</h1>
           <p>The abstract operation Get is used to retrieve the value of a specific property of an object. The operation is called with arguments _O_ and _P_ where _O_ is the object and _P_ is the property key. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4180,7 +4180,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.2" -->
-        <emu-clause id="sec-getv">
+        <emu-clause id="sec-getv" aoid="GetV">
           <h1>GetV (V, P)</h1>
           <p>The abstract operation GetV is used to retrieve the value of a specific property of an ECMAScript language value. If the value is not an object, the property lookup is performed using a wrapper object appropriate for the type of the value. The operation is called with arguments _V_ and _P_ where _V_ is the value and _P_ is the property key. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4192,7 +4192,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.3" -->
-        <emu-clause id="sec-set-o-p-v-throw">
+        <emu-clause id="sec-set-o-p-v-throw" aoid="Set">
           <h1>Set (O, P, V, Throw)</h1>
           <p>The abstract operation Set is used to set the value of a specific property of an object. The operation is called with arguments _O_, _P_, _V_, and _Throw_ where _O_ is the object, _P_ is the property key, _V_ is the new value for the property and _Throw_ is a Boolean flag. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4207,7 +4207,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.4" -->
-        <emu-clause id="sec-createdataproperty">
+        <emu-clause id="sec-createdataproperty" aoid="CreateDataProperty">
           <h1>CreateDataProperty (O, P, V)</h1>
           <p>The abstract operation CreateDataProperty is used to create a new own property of an object. The operation is called with arguments _O_, _P_, and _V_ where _O_ is the object, _P_ is the property key, and _V_ is the value for the property. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4222,7 +4222,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.5" -->
-        <emu-clause id="sec-createmethodproperty">
+        <emu-clause id="sec-createmethodproperty" aoid="CreateMethodProperty">
           <h1>CreateMethodProperty (O, P, V)</h1>
           <p>The abstract operation CreateMethodProperty is used to create a new own property of an object. The operation is called with arguments _O_, _P_, and _V_ where _O_ is the object, _P_ is the property key, and _V_ is the value for the property. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4237,7 +4237,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.6" -->
-        <emu-clause id="sec-createdatapropertyorthrow">
+        <emu-clause id="sec-createdatapropertyorthrow" aoid="CreateDataPropertyOrThrow">
           <h1>CreateDataPropertyOrThrow (O, P, V)</h1>
           <p>The abstract operation CreateDataPropertyOrThrow is used to create a new own property of an object. It throws a *TypeError* exception if the requested property update cannot be performed. The operation is called with arguments _O_, _P_, and _V_ where _O_ is the object, _P_ is the property key, and _V_ is the value for the property. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4254,7 +4254,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.7" -->
-        <emu-clause id="sec-definepropertyorthrow">
+        <emu-clause id="sec-definepropertyorthrow" aoid="DefinePropertyOrThrow">
           <h1>DefinePropertyOrThrow (O, P, desc)</h1>
           <p>The abstract operation DefinePropertyOrThrow is used to call the [[DefineOwnProperty]] internal method of an object in a manner that will throw a *TypeError* exception if the requested property update cannot be performed. The operation is called with arguments _O_, _P_, and _desc_ where _O_ is the object, _P_ is the property key, and _desc_ is the Property Descriptor for the property. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4268,7 +4268,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.8" -->
-        <emu-clause id="sec-deletepropertyorthrow">
+        <emu-clause id="sec-deletepropertyorthrow" aoid="DeletePropertyOrThrow">
           <h1>DeletePropertyOrThrow (O, P)</h1>
           <p>The abstract operation DeletePropertyOrThrow is used to remove a specific own property of an object. It throws an exception if the property is not configurable. The operation is called with arguments _O_ and _P_ where _O_ is the object and _P_ is the property key. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4282,7 +4282,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.9" -->
-        <emu-clause id="sec-getmethod">
+        <emu-clause id="sec-getmethod" aoid="GetMethod">
           <h1>GetMethod (O, P)</h1>
           <p>The abstract operation GetMethod is used to get the value of a specific property of an object when the value of the property is expected to be a function. The operation is called with arguments _O_ and _P_ where _O_ is the object, _P_ is the property key. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4296,7 +4296,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.10" -->
-        <emu-clause id="sec-hasproperty">
+        <emu-clause id="sec-hasproperty" aoid="HasProperty">
           <h1>HasProperty (O, P)</h1>
           <p>The abstract operation HasProperty is used to determine whether an object has a property with the specified property key. The property may be either an own or inherited. A Boolean value is returned. The operation is called with arguments _O_ and _P_ where _O_ is the object and _P_ is the property key. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4307,7 +4307,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.11" -->
-        <emu-clause id="sec-hasownproperty">
+        <emu-clause id="sec-hasownproperty" aoid="HasOwnProperty">
           <h1>HasOwnProperty (O, P)</h1>
           <p>The abstract operation HasOwnProperty is used to determine whether an object has an own property with the specified property key. A Boolean value is returned. The operation is called with arguments _O_ and _P_ where _O_ is the object and _P_ is the property key. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4321,7 +4321,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.12" -->
-        <emu-clause id="sec-call">
+        <emu-clause id="sec-call" aoid="Call">
           <h1>Call(F, V, [argumentsList])</h1>
           <p>The abstract operation Call is used to call the [[Call]] internal method of a function object. The operation is called with arguments _F_, _V_ , and optionally _argumentsList_ where _F_ is the function object, _V_ is an ECMAScript language value that is the *this* value of the [[Call]], and _argumentsList_ is the value passed to the corresponding argument of the internal method. If _argumentsList_ is not present, an empty List is used as its value. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4333,7 +4333,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.13" -->
-        <emu-clause id="sec-construct">
+        <emu-clause id="sec-construct" aoid="Construct">
           <h1>Construct (F, [argumentsList], [newTarget])</h1>
           <p>The abstract operation Construct is used to call the [[Construct]] internal method of a function object. The operation is called with arguments _F_, and optionally _argumentsList_, and _newTarget_ where _F_ is the function object. _argumentsList_ and _newTarget_ are the values to be passed as the corresponding arguments of the internal method. If _argumentsList_ is not present, an empty List is used as its value. If _newTarget_ is not present, _F_ is used as its value. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4349,7 +4349,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.14" -->
-        <emu-clause id="sec-setintegritylevel">
+        <emu-clause id="sec-setintegritylevel" aoid="SetIntegrityLevel">
           <h1>SetIntegrityLevel (O, level)</h1>
           <p>The abstract operation SetIntegrityLevel is used to fix the set of own properties of an object. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4380,7 +4380,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.15" -->
-        <emu-clause id="sec-testintegritylevel">
+        <emu-clause id="sec-testintegritylevel" aoid="TestIntegrityLevel">
           <h1>TestIntegrityLevel (O, level)</h1>
           <p>The abstract operation TestIntegrityLevel is used to determine if the set of own properties of an object are fixed. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4404,7 +4404,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.16" -->
-        <emu-clause id="sec-createarrayfromlist">
+        <emu-clause id="sec-createarrayfromlist" aoid="CreateArrayFromList">
           <h1>CreateArrayFromList (elements)</h1>
           <p>The abstract operation CreateArrayFromList is used to create an Array object whose elements are provided by a List. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4420,7 +4420,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.17" -->
-        <emu-clause id="sec-createlistfromarraylike">
+        <emu-clause id="sec-createlistfromarraylike" aoid="CreateListFromArrayLike">
           <h1>CreateListFromArrayLike (obj [, elementTypes] )</h1>
           <p>The abstract operation CreateListFromArrayLike is used to create a List value whose elements are provided by the indexed properties of an array-like object, _obj_. The optional argument _elementTypes_ is a List containing the names of ECMAScript Language Types that are allowed for element values of the List that is created. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4443,7 +4443,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.18" -->
-        <emu-clause id="sec-invoke">
+        <emu-clause id="sec-invoke" aoid="Invoke">
           <h1>Invoke(O,P, [argumentsList])</h1>
           <p>The abstract operation Invoke is used to call a method property of an object. The operation is called with arguments _O_, _P_ , and optionally _argumentsList_ where _O_ serves as both the lookup point for the property and the *this* value of the call, _P_ is the property key, and _argumentsList_ is the list of arguments values passed to the method. If _argumentsList_ is not present, an empty List is used as its value. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4455,7 +4455,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.19" -->
-        <emu-clause id="sec-ordinaryhasinstance">
+        <emu-clause id="sec-ordinaryhasinstance" aoid="OrdinaryHasInstance">
           <h1>OrdinaryHasInstance (C, O)</h1>
           <p>The abstract operation OrdinaryHasInstance implements the default algorithm for determining if an object _O_ inherits from the instance object inheritance path provided by constructor _C_. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4476,7 +4476,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.20" -->
-        <emu-clause id="sec-speciesconstructor">
+        <emu-clause id="sec-speciesconstructor" aoid="SpeciesConstructor">
           <h1>SpeciesConstructor ( O, defaultConstructor )</h1>
           <p>The abstract operation SpeciesConstructor is used to retrieve the constructor that should be used to create new objects that are derived from the argument object _O_. The _defaultConstructor_ argument is the constructor to use if a constructor @@species property cannot be found starting from _O_. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -4494,7 +4494,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.21" -->
-        <emu-clause id="sec-enumerableownnames">
+        <emu-clause id="sec-enumerableownnames" aoid="EnumerableOwnNames">
           <h1>EnumerableOwnNames (O)</h1>
           <p>When the abstract operation EnumerableOwnNames is called with Object _O_ the following steps are taken:</p>
           <emu-alg>
@@ -4517,7 +4517,7 @@
         </emu-clause>
 
         <!-- es6num="7.3.22" -->
-        <emu-clause id="sec-getfunctionrealm">
+        <emu-clause id="sec-getfunctionrealm" aoid="GetFunctionRealm">
           <h1>GetFunctionRealm ( obj )</h1>
           <p>The abstract operation GetFunctionRealm with argument _obj_ performs the following steps:</p>
           <emu-alg>
@@ -4545,7 +4545,7 @@
           <p>See Common Iteration Interfaces (<emu-internal-ref refid="sec-iteration">NUM</emu-internal-ref>).</p>
 
         <!-- es6num="7.4.1" -->
-        <emu-clause id="sec-getiterator">
+        <emu-clause id="sec-getiterator" aoid="GetIterator">
           <h1>GetIterator ( obj, method )</h1>
           <p>The abstract operation GetIterator with argument _obj_ and optional argument _method_ performs the following steps:</p>
           <emu-alg>
@@ -4561,7 +4561,7 @@
         </emu-clause>
 
         <!-- es6num="7.4.2" -->
-        <emu-clause id="sec-iteratornext">
+        <emu-clause id="sec-iteratornext" aoid="IteratorNext">
           <h1>IteratorNext ( iterator, value )</h1>
           <p>The abstract operation IteratorNext with argument _iterator_ and optional argument _value_ performs the following steps:</p>
           <emu-alg>
@@ -4576,7 +4576,7 @@
         </emu-clause>
 
         <!-- es6num="7.4.3" -->
-        <emu-clause id="sec-iteratorcomplete">
+        <emu-clause id="sec-iteratorcomplete" aoid="IteratorComplete">
           <h1>IteratorComplete ( iterResult )</h1>
           <p>The abstract operation IteratorComplete with argument _iterResult_ performs the following steps:</p>
           <emu-alg>
@@ -4586,7 +4586,7 @@
         </emu-clause>
 
         <!-- es6num="7.4.4" -->
-        <emu-clause id="sec-iteratorvalue">
+        <emu-clause id="sec-iteratorvalue" aoid="IteratorValue">
           <h1>IteratorValue ( iterResult )</h1>
           <p>The abstract operation IteratorValue with argument _iterResult_ performs the following steps:</p>
           <emu-alg>
@@ -4596,7 +4596,7 @@
         </emu-clause>
 
         <!-- es6num="7.4.5" -->
-        <emu-clause id="sec-iteratorstep">
+        <emu-clause id="sec-iteratorstep" aoid="IteratorStep">
           <h1>IteratorStep ( iterator )</h1>
           <p>The abstract operation IteratorStep with argument _iterator_ requests the next value from _iterator_ and returns either *false* indicating that the iterator has reached its end or the IteratorResult object if a next value is available. IteratorStep performs the following steps:</p>
           <emu-alg>
@@ -4610,7 +4610,7 @@
         </emu-clause>
 
         <!-- es6num="7.4.6" -->
-        <emu-clause id="sec-iteratorclose">
+        <emu-clause id="sec-iteratorclose" aoid="IteratorClose">
           <h1>IteratorClose( iterator, completion )</h1>
           <p>The abstract operation IteratorClose with arguments _iterator_ and _completion_ is used to notify an iterator that it should perform any actions it would normally perform when it has reached its completed state:</p>
           <emu-alg>
@@ -4628,7 +4628,7 @@
         </emu-clause>
 
         <!-- es6num="7.4.7" -->
-        <emu-clause id="sec-createiterresultobject">
+        <emu-clause id="sec-createiterresultobject" aoid="CreateIterResultObject">
           <h1>CreateIterResultObject ( value, done )</h1>
           <p>The abstract operation CreateIterResultObject with arguments _value_ and _done_ creates an object that supports the IteratorResult interface by performing the following steps:</p>
           <emu-alg>
@@ -4641,7 +4641,7 @@
         </emu-clause>
 
         <!-- es6num="7.4.8" -->
-        <emu-clause id="sec-createlistiterator">
+        <emu-clause id="sec-createlistiterator" aoid="CreateListIterator">
             <h1>CreateListIterator ( list )</h1>
             <p>The abstract operation CreateListIterator with argument _list_ creates an Iterator (<emu-internal-ref refid="sec-iterator-interface">NUM</emu-internal-ref>) object whose next method returns the successive elements of _list_. It performs the following steps:</p>
             <emu-alg>
@@ -5768,7 +5768,7 @@ function f(){eval("var x; x = (delete x, 0);")}
             <p>The following abstract operations are used in this specification to operate upon lexical environments:</p>
 
           <!-- es6num="8.1.2.1" -->
-          <emu-clause id="sec-getidentifierreference">
+          <emu-clause id="sec-getidentifierreference" aoid="GetIdentifierReference">
             <h1>GetIdentifierReference (lex, name, strict)</h1>
             <p>The abstract operation GetIdentifierReference is called with a Lexical Environment _lex_, a String _name_, and a Boolean flag _strict_. The value of _lex_ may be *null*. When called, the following steps are performed:</p>
             <emu-alg>
@@ -5786,7 +5786,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           </emu-clause>
 
           <!-- es6num="8.1.2.2" -->
-          <emu-clause id="sec-newdeclarativeenvironment">
+          <emu-clause id="sec-newdeclarativeenvironment" aoid="NewDeclarativeEnvironment">
             <h1>NewDeclarativeEnvironment (E)</h1>
             <p>When the abstract operation NewDeclarativeEnvironment is called with a Lexical Environment as argument _E_ the following steps are performed:</p>
             <emu-alg>
@@ -5799,7 +5799,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           </emu-clause>
 
           <!-- es6num="8.1.2.3" -->
-          <emu-clause id="sec-newobjectenvironment">
+          <emu-clause id="sec-newobjectenvironment" aoid="NewObjectEnvironment">
             <h1>NewObjectEnvironment (O, E)</h1>
             <p>When the abstract operation NewObjectEnvironment is called with an Object _O_ and a Lexical Environment _E_ as arguments, the following steps are performed:</p>
             <emu-alg>
@@ -5812,7 +5812,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           </emu-clause>
 
           <!-- es6num="8.1.2.4" -->
-          <emu-clause id="sec-newfunctionenvironment">
+          <emu-clause id="sec-newfunctionenvironment" aoid="NewFunctionEnvironment">
             <h1>NewFunctionEnvironment ( F, newTarget )</h1>
             <p>When the abstract operation NewFunctionEnvironment is called with arguments _F_ and _newTarget_ the following steps are performed:</p>
             <emu-alg>
@@ -5833,7 +5833,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           </emu-clause>
 
           <!-- es6num="8.1.2.5" -->
-          <emu-clause id="sec-newglobalenvironment">
+          <emu-clause id="sec-newglobalenvironment" aoid="NewGlobalEnvironment">
             <h1>NewGlobalEnvironment ( G )</h1>
             <p>When the abstract operation NewGlobalEnvironment is called with an ECMAScript Object _G_ as its argument, the following steps are performed:</p>
             <emu-alg>
@@ -5851,7 +5851,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           </emu-clause>
 
           <!-- es6num="8.1.2.6" -->
-          <emu-clause id="sec-newmoduleenvironment">
+          <emu-clause id="sec-newmoduleenvironment" aoid="NewModuleEnvironment">
             <h1>NewModuleEnvironment (E)</h1>
             <p>When the abstract operation NewModuleEnvironment is called with a Lexical Environment argument _E_ the following steps are performed:</p>
             <emu-alg>
@@ -5937,7 +5937,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           <p>An implementation may define other, implementation specific fields.</p>
 
         <!-- es6num="8.2.1" -->
-        <emu-clause id="sec-createrealm">
+        <emu-clause id="sec-createrealm" aoid="CreateRealm">
           <h1>CreateRealm ( )</h1>
           <p>The abstract operation CreateRealm with no arguments performs the following steps:</p>
           <emu-alg>
@@ -5951,7 +5951,7 @@ function f(){eval("var x; x = (delete x, 0);")}
         </emu-clause>
 
         <!-- es6num="8.2.2" -->
-        <emu-clause id="sec-createintrinsics">
+        <emu-clause id="sec-createintrinsics" aoid="CreateIntrinsics">
           <h1>CreateIntrinsics ( realmRec )</h1>
           <p>When the abstract operation CreateIntrinsics with argument _realmRec_ performs the following steps:</p>
           <emu-alg>
@@ -5973,7 +5973,7 @@ function f(){eval("var x; x = (delete x, 0);")}
         </emu-clause>
 
         <!-- es6num="8.2.3" -->
-        <emu-clause id="sec-setrealmglobalobject">
+        <emu-clause id="sec-setrealmglobalobject" aoid="SetRealmGlobalObject">
           <h1>SetRealmGlobalObject ( realmRec, globalObj )</h1>
           <p>The abstract operation SetRealmGlobalObject with arguments _realmRec_ and _globalObj_ performs the following steps:</p>
           <emu-alg>
@@ -5989,7 +5989,7 @@ function f(){eval("var x; x = (delete x, 0);")}
         </emu-clause>
 
         <!-- es6num="8.2.4" -->
-        <emu-clause id="sec-setdefaultglobalbindings">
+        <emu-clause id="sec-setdefaultglobalbindings" aoid="SetDefaultGlobalBindings">
           <h1>SetDefaultGlobalBindings ( realmRec )</h1>
           <p>The abstract operation SetDefaultGlobalBindings with argument _realmRec_ performs the following steps:</p>
           <emu-alg>
@@ -6117,7 +6117,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           <p>An execution context is purely a specification mechanism and need not correspond to any particular artefact of an ECMAScript implementation. It is impossible for ECMAScript code to directly access or observe an execution context.</p>
 
         <!-- es6num="8.3.1" -->
-        <emu-clause id="sec-resolvebinding">
+        <emu-clause id="sec-resolvebinding" aoid="ResolveBinding">
           <h1>ResolveBinding ( name, [env] )</h1>
           <p>The ResolveBinding abstract operation is used to determine the binding of _name_ passed as a String value. The optional argument _env_ can be used to explicitly provide the Lexical Environment that is to be searched for the binding. During execution of ECMAScript code, ResolveBinding is performed using the following algorithm:</p>
           <emu-alg>
@@ -6133,7 +6133,7 @@ function f(){eval("var x; x = (delete x, 0);")}
         </emu-clause>
 
         <!-- es6num="8.3.2" -->
-        <emu-clause id="sec-getthisenvironment">
+        <emu-clause id="sec-getthisenvironment" aoid="GetThisEnvironment">
           <h1>GetThisEnvironment ( )</h1>
           <p>The abstract operation GetThisEnvironment finds the Environment Record that currently supplies the binding of the keyword `this`. GetThisEnvironment performs the following steps:</p>
           <emu-alg>
@@ -6151,7 +6151,7 @@ function f(){eval("var x; x = (delete x, 0);")}
         </emu-clause>
 
         <!-- es6num="8.3.3" -->
-        <emu-clause id="sec-resolvethisbinding">
+        <emu-clause id="sec-resolvethisbinding" aoid="ResolveThisBinding">
           <h1>ResolveThisBinding ( )</h1>
           <p>The abstract operation ResolveThisBinding determines the binding of the keyword `this` using the LexicalEnvironment of the running execution context. ResolveThisBinding performs the following steps:</p>
           <emu-alg>
@@ -6161,7 +6161,7 @@ function f(){eval("var x; x = (delete x, 0);")}
         </emu-clause>
 
         <!-- es6num="8.3.4" -->
-        <emu-clause id="sec-getnewtarget">
+        <emu-clause id="sec-getnewtarget" aoid="GetNewTarget">
           <h1>GetNewTarget ( )</h1>
           <p>The abstract operation GetNewTarget determines the NewTarget value using the LexicalEnvironment of the running execution context. GetNewTarget performs the following steps:</p>
           <emu-alg>
@@ -6172,7 +6172,7 @@ function f(){eval("var x; x = (delete x, 0);")}
         </emu-clause>
 
         <!-- es6num="8.3.5" -->
-        <emu-clause id="sec-getglobalobject">
+        <emu-clause id="sec-getglobalobject" aoid="GetGlobalObject">
           <h1>GetGlobalObject ( )</h1>
           <p>The abstract operation GetGlobalObject returns the global object used by the currently running execution context. GetGlobalObject performs the following steps:</p>
           <emu-alg>
@@ -6294,7 +6294,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           <p>The following abstract operations are used to create and manage Jobs and Job Queues:</p>
 
         <!-- es6num="8.4.1" -->
-        <emu-clause id="sec-enqueuejob">
+        <emu-clause id="sec-enqueuejob" aoid="EnqueueJob">
           <h1>EnqueueJob (queueName, job, arguments)</h1>
           <p>The EnqueueJob abstract operation requires three arguments: _queueName_, _job_, and _arguments_. It performs the following steps:</p>
           <emu-alg>
@@ -6311,7 +6311,7 @@ function f(){eval("var x; x = (delete x, 0);")}
         </emu-clause>
 
         <!-- es6num="8.4.2" -->
-        <emu-clause id="sec-nextjob-result">
+        <emu-clause id="sec-nextjob-result" aoid="NextJob">
           <h1>NextJob result</h1>
           <p>An algorithm step such as:</p>
           <emu-alg>
@@ -6338,7 +6338,7 @@ function f(){eval("var x; x = (delete x, 0);")}
       </emu-clause>
 
       <!-- es6num="8.5" -->
-      <emu-clause id="sec-ecmascript-initialization">
+      <emu-clause id="sec-ecmascript-initialization" aoid="Initialization">
           <h1>ECMAScript Initialization()</h1>
           <p>An ECMAScript implementation performs the following steps prior to the execution of any Jobs or the evaluation of any ECMAScript code:</p>
           <emu-alg>
@@ -6360,7 +6360,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           </emu-alg>
 
         <!-- es6num="8.5.1" -->
-        <emu-clause id="sec-initializehostdefinedrealm">
+        <emu-clause id="sec-initializehostdefinedrealm" aoid="InitializeHostDefinedRealm">
           <h1>InitializeHostDefinedRealm ( realm )</h1>
           <p>The abstract operation InitializeHostDefinedRealm with parameter _realm_ performs the following steps:</p>
           <emu-alg>
@@ -6449,7 +6449,7 @@ function f(){eval("var x; x = (delete x, 0);")}
             </emu-alg>
 
           <!-- es6num="9.1.5.1" -->
-          <emu-clause id="sec-ordinarygetownproperty">
+          <emu-clause id="sec-ordinarygetownproperty" aoid="OrdinaryGetOwnProperty">
             <h1>OrdinaryGetOwnProperty (O, P)</h1>
             <p>When the abstract operation OrdinaryGetOwnProperty is called with Object _O_ and with property key _P_, the following steps are taken:</p>
             <emu-alg>
@@ -6479,7 +6479,7 @@ function f(){eval("var x; x = (delete x, 0);")}
             </emu-alg>
 
           <!-- es6num="9.1.6.1" -->
-          <emu-clause id="sec-ordinarydefineownproperty">
+          <emu-clause id="sec-ordinarydefineownproperty" aoid="OrdinaryDefineOwnProperty">
             <h1>OrdinaryDefineOwnProperty (O, P, Desc)</h1>
             <p>When the abstract operation OrdinaryDefineOwnProperty is called with Object _O_, property key _P_, and Property Descriptor _Desc_ the following steps are taken:</p>
             <emu-alg>
@@ -6491,7 +6491,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           </emu-clause>
 
           <!-- es6num="9.1.6.2" -->
-          <emu-clause id="sec-iscompatiblepropertydescriptor">
+          <emu-clause id="sec-iscompatiblepropertydescriptor" aoid="IsCompatiblePropertyDescriptor">
             <h1>IsCompatiblePropertyDescriptor (Extensible, Desc, Current)</h1>
             <p>When the abstract operation IsCompatiblePropertyDescriptor is called with Boolean value _Extensible_, and Property Descriptors _Desc_, and _Current_ the following steps are taken:</p>
             <emu-alg>
@@ -6500,7 +6500,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           </emu-clause>
 
           <!-- es6num="9.1.6.3" -->
-          <emu-clause id="sec-validateandapplypropertydescriptor">
+          <emu-clause id="sec-validateandapplypropertydescriptor" aoid="ValidateAndApplyPropertyDescriptor">
             <h1>ValidateAndApplyPropertyDescriptor (O, P, extensible, Desc, current)</h1>
             <p>When the abstract operation ValidateAndApplyPropertyDescriptor is called with Object _O_, property key _P_, Boolean value _extensible_, and Property Descriptors _Desc_, and _current_ the following steps are taken:</p>
             <p>This algorithm contains steps that test various fields of the Property Descriptor _Desc_ for specific values. The fields that are tested in this manner need not actually exist in _Desc_. If a field is absent then its value is considered to be *false*.</p>
@@ -6558,7 +6558,7 @@ function f(){eval("var x; x = (delete x, 0);")}
             </emu-alg>
 
           <!-- es6num="9.1.7.1" -->
-          <emu-clause id="sec-ordinaryhasproperty">
+          <emu-clause id="sec-ordinaryhasproperty" aoid="OrdinaryHasProperty">
             <h1>OrdinaryHasProperty (O, P)</h1>
             <p>When the abstract operation OrdinaryHasProperty is called with Object _O_ and with property key _P_, the following steps are taken:</p>
             <emu-alg>
@@ -6696,7 +6696,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.1.13" -->
-        <emu-clause id="sec-objectcreate">
+        <emu-clause id="sec-objectcreate" aoid="ObjectCreate">
           <h1>ObjectCreate(proto, internalSlotsList)</h1>
           <p>The abstract operation ObjectCreate with argument _proto_ (an object or null) is used to specify the runtime creation of new ordinary objects. The optional argument _internalSlotsList_ is a List of the names of additional internal slots that must be defined as part of the object. If the list is not provided, an empty List is used. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -6710,7 +6710,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.1.14" -->
-        <emu-clause id="sec-ordinarycreatefromconstructor">
+        <emu-clause id="sec-ordinarycreatefromconstructor" aoid="OrdinaryCreateFromConstructor">
           <h1>OrdinaryCreateFromConstructor ( constructor, intrinsicDefaultProto, internalSlotsList )</h1>
           <p>The abstract operation OrdinaryCreateFromConstructor creates an ordinary object whose [[Prototype]] value is retrieved from a constructor's `prototype` property, if it exists. Otherwise the intrinsic named by _intrinsicDefaultProto_ is used for [[Prototype]]. The optional _internalSlotsList_ is a List of the names of additional internal slots that must be defined as part of the object. If the list is not provided, an empty List is used. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -6722,7 +6722,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.1.15" -->
-        <emu-clause id="sec-getprototypefromconstructor">
+        <emu-clause id="sec-getprototypefromconstructor" aoid="GetPrototypeFromConstructor">
           <h1>GetPrototypeFromConstructor ( constructor, intrinsicDefaultProto )</h1>
           <p>The abstract operation GetPrototypeFromConstructor determines the [[Prototype]] value that should be used to create an object corresponding to a specific constructor. The value is retrieved from the constructor's `prototype` property, if it exists. Otherwise the intrinsic named by _intrinsicDefaultProto_ is used for [[Prototype]]. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -6890,7 +6890,7 @@ function* enumerate(obj) {
             </emu-note>
 
           <!-- es6num="9.2.1.1" -->
-          <emu-clause id="sec-prepareforordinarycall">
+          <emu-clause id="sec-prepareforordinarycall" aoid="PrepareForOrdinaryCall">
             <h1>PrepareForOrdinaryCall( F, newTarget )</h1>
             <p>When the abstract operation PrepareForOrdinaryCall is called with function object _F_ and ECMAScript language value _newTarget_, the following steps are taken:</p>
             <emu-alg>
@@ -6911,7 +6911,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.2.1.2" -->
-          <emu-clause id="sec-ordinarycallbindthis">
+          <emu-clause id="sec-ordinarycallbindthis" aoid="OrdinaryCallBindThis">
             <h1>OrdinaryCallBindThis ( F, calleeContext, thisArgument )</h1>
             <p>When the abstract operation OrdinaryCallBindThis is called with function object _F_, execution context _calleeContext_, and ECMAScript value _thisArgument_ the following steps are taken:</p>
             <emu-alg>
@@ -6934,7 +6934,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.2.1.3" -->
-          <emu-clause id="sec-ordinarycallevaluatebody">
+          <emu-clause id="sec-ordinarycallevaluatebody" aoid="OrdinaryCallEvaluateBody">
             <h1>OrdinaryCallEvaluateBody ( F, argumentsList )</h1>
             <p>When the abstract operation OrdinaryCallEvaluateBody is called with function object _F_ and List _argumentsList_ the following steps are taken:</p>
             <emu-alg>
@@ -6974,7 +6974,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.3" -->
-        <emu-clause id="sec-functionallocate">
+        <emu-clause id="sec-functionallocate" aoid="FunctionAllocate">
           <h1>FunctionAllocate (functionPrototype, strict [,functionKind] )</h1>
           <p>The abstract operation FunctionAllocate requires the two arguments _functionPrototype_ and _strict_. It also accepts one optional argument, _functionKind_. FunctionAllocate performs the following steps:</p>
           <emu-alg>
@@ -7003,7 +7003,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.4" -->
-        <emu-clause id="sec-functioninitialize">
+        <emu-clause id="sec-functioninitialize" aoid="FunctionInitialize">
           <h1>FunctionInitialize (F, kind, ParameterList, Body, Scope)</h1>
           <p>The abstract operation FunctionInitialize requires the arguments: a function object _F_, _kind_ which is one of (Normal, Method, Arrow), a parameter list production specified by _ParameterList_, a body production specified by _Body_, a Lexical Environment specified by _Scope_. FunctionInitialize performs the following steps:</p>
           <emu-alg>
@@ -7023,7 +7023,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.5" -->
-        <emu-clause id="sec-functioncreate">
+        <emu-clause id="sec-functioncreate" aoid="FunctionCreate">
           <h1>FunctionCreate (kind, ParameterList, Body, Scope, Strict, prototype)</h1>
           <p>The abstract operation FunctionCreate requires the arguments: _kind_ which is one of (Normal, Method, Arrow), a parameter list production specified by _ParameterList_, a body production specified by _Body_, a Lexical Environment specified by _Scope_, a Boolean flag _Strict_, and optionally, an object _prototype_. FunctionCreate performs the following steps:</p>
           <emu-alg>
@@ -7037,7 +7037,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.6" -->
-        <emu-clause id="sec-generatorfunctioncreate">
+        <emu-clause id="sec-generatorfunctioncreate" aoid="GeneratorFunctionCreate">
           <h1>GeneratorFunctionCreate (kind, ParameterList, Body, Scope, Strict)</h1>
           <p>The abstract operation GeneratorFunctionCreate requires the arguments: _kind_ which is one of (Normal, Method), a parameter list production specified by _ParameterList_, a body production specified by _Body_, a Lexical Environment specified by _Scope_, and a Boolean flag _Strict_. GeneratorFunctionCreate performs the following steps:</p>
           <emu-alg>
@@ -7048,7 +7048,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.7" -->
-        <emu-clause id="sec-addrestrictedfunctionproperties">
+        <emu-clause id="sec-addrestrictedfunctionproperties" aoid="AddRestrictedFunctionProperties">
             <h1>AddRestrictedFunctionProperties ( F, realm )</h1>
             <p>The abstract operation AddRestrictedFunctionProperties is called with a function object _F_ and Realm Record _realm_ as its argument. It performs the following steps:</p>
             <emu-alg>
@@ -7073,7 +7073,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.8" -->
-        <emu-clause id="sec-makeconstructor">
+        <emu-clause id="sec-makeconstructor" aoid="MakeConstructor">
           <h1>MakeConstructor (F, writablePrototype, prototype)</h1>
           <p>The abstract operation MakeConstructor requires a Function argument _F_ and optionally, a Boolean _writablePrototype_ and an object _prototype_. If _prototype_ is provided it is assumed to already contain, if needed, a `"constructor"` property whose value is _F_. This operation converts _F_ into a constructor by performing the following steps:</p>
           <emu-alg>
@@ -7092,7 +7092,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.9" -->
-        <emu-clause id="sec-makeclassconstructor">
+        <emu-clause id="sec-makeclassconstructor" aoid="MakeClassConstructor">
           <h1>MakeClassConstructor ( F)</h1>
           <p>The abstract operation MakeClassConstructor with argument _F_ performs the following steps:</p>
           <emu-alg>
@@ -7104,7 +7104,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.10" -->
-        <emu-clause id="sec-makemethod">
+        <emu-clause id="sec-makemethod" aoid="MakeMethod">
           <h1>MakeMethod ( F, homeObject)</h1>
           <p>The abstract operation MakeMethod with arguments _F_ and _homeObject_ configures _F_ as a method by performing the following steps:</p>
           <emu-alg>
@@ -7116,7 +7116,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.11" -->
-        <emu-clause id="sec-setfunctionname">
+        <emu-clause id="sec-setfunctionname" aoid="SetFunctionName">
           <h1>SetFunctionName (F, name, prefix)</h1>
           <p>The abstract operation SetFunctionName requires a Function argument _F_, a String or Symbol argument _name_ and optionally a String argument _prefix_. This operation adds a `name` property to _F_ by performing the following steps:</p>
           <emu-alg>
@@ -7135,7 +7135,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.2.12" -->
-        <emu-clause id="sec-functiondeclarationinstantiation">
+        <emu-clause id="sec-functiondeclarationinstantiation" aoid="FunctionDeclarationInstantiation">
           <h1>FunctionDeclarationInstantiation(func, argumentsList)</h1>
           <emu-note>
             <p>When an execution context is established for evaluating an ECMAScript function a new function Environment Record is created and bindings for each formal parameter are instantiated in that Environment Record. Each declaration in the function body is also instantiated. If the function's formal parameters do not include any default value initializers then the body declarations are instantiated in the same Environment Record as the parameters. If default value parameter initializers exist, a second Environment Record is created for the body declarations. Formal parameters and functions are initialized as part of FunctionDeclarationInstantiation. All other bindings are initialized during evaluation of the function body.</p>
@@ -7303,7 +7303,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.3.3" -->
-        <emu-clause id="sec-createbuiltinfunction">
+        <emu-clause id="sec-createbuiltinfunction" aoid="CreateBuiltinFunction">
           <h1>CreateBuiltinFunction(realm, steps, prototype, internalSlotsList)</h1>
           <p>The abstract operation CreateBuiltinFunction takes arguments _realm_, _prototype_, and _steps_. The optional argument _internalSlotsList_ is a List of the names of additional internal slots that must be defined as part of the object. If the list is not provided, an empty List is used. CreateBuiltinFunction returns a built-in function object created by the following steps:</p>
           <emu-alg>
@@ -7411,7 +7411,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.1.3" -->
-          <emu-clause id="sec-boundfunctioncreate">
+          <emu-clause id="sec-boundfunctioncreate" aoid="BoundFunctionCreate">
             <h1>BoundFunctionCreate (targetFunction, boundThis, boundArgs)</h1>
             <p>The abstract operation BoundFunctionCreate with arguments _targetFunction_, _boundThis_ and _boundArgs_ is used to specify the creation of new Bound Function exotic objects. It performs the following steps:</p>
             <emu-alg>
@@ -7471,7 +7471,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.2.2" -->
-          <emu-clause id="sec-arraycreate">
+          <emu-clause id="sec-arraycreate" aoid="ArrayCreate">
             <h1>ArrayCreate(length, proto)</h1>
             <p>The abstract operation ArrayCreate with argument _length_ (a positive integer) and optional argument _proto_ is used to specify the creation of new Array exotic objects. It performs the following steps:</p>
             <emu-alg>
@@ -7491,7 +7491,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.2.3" -->
-          <emu-clause id="sec-arrayspeciescreate">
+          <emu-clause id="sec-arrayspeciescreate" aoid="ArraySpeciesCreate">
             <h1>ArraySpeciesCreate(originalArray, length)</h1>
             <p>The abstract operation ArraySpeciesCreate with arguments _originalArray_ and _length_ is used to specify the creation of a new Array object using a constructor function that is derived from _originalArray_. It performs the following steps:</p>
             <emu-alg>
@@ -7523,7 +7523,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.2.4" -->
-          <emu-clause id="sec-arraysetlength">
+          <emu-clause id="sec-arraysetlength" aoid="ArraySetLength">
             <h1>ArraySetLength(A, Desc)</h1>
             <p>When the abstract operation ArraySetLength is called with an Array exotic object _A_, and Property Descriptor _Desc_ the following steps are taken:</p>
             <emu-alg>
@@ -7589,7 +7589,7 @@ function* enumerate(obj) {
               </emu-alg>
 
             <!-- es6num="9.4.3.1.1" -->
-            <emu-clause id="sec-stringgetindexproperty">
+            <emu-clause id="sec-stringgetindexproperty" aoid="StringGetIndexProperty">
               <h1>StringGetIndexProperty (S, P)</h1>
               <p>When the abstract operation StringGetIndexProperty is called with an exotic String object _S_ and with property key _P_, the following steps are taken:</p>
               <emu-alg>
@@ -7640,7 +7640,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.3.4" -->
-          <emu-clause id="sec-stringcreate">
+          <emu-clause id="sec-stringcreate" aoid="StringCreate">
             <h1>StringCreate( value, prototype)</h1>
             <p>The abstract operation StringCreate with arguments _value_ and _prototype_ is used to specify the creation of new exotic String objects. It performs the following steps:</p>
             <emu-alg>
@@ -7773,7 +7773,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.4.6" -->
-          <emu-clause id="sec-createunmappedargumentsobject">
+          <emu-clause id="sec-createunmappedargumentsobject" aoid="CreateUnmappedArgumentsObject">
             <h1>CreateUnmappedArgumentsObject(argumentsList)</h1>
             <p>The abstract operation CreateUnmappedArgumentsObject called with an argument _argumentsList_ performs the following steps:</p>
             <emu-alg>
@@ -7795,7 +7795,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.4.7" -->
-          <emu-clause id="sec-createmappedargumentsobject">
+          <emu-clause id="sec-createmappedargumentsobject" aoid="CreateMappedArgumentsObject">
               <h1>CreateMappedArgumentsObject ( func, formals, argumentsList, env )</h1>
               <p>The abstract operation CreateMappedArgumentsObject is called with object _func_, parsed grammar phrase _formals_, List _argumentsList_, and Environment Record _env_. The following steps are performed:</p>
               <emu-alg>
@@ -7838,7 +7838,7 @@ function* enumerate(obj) {
               </emu-alg>
 
             <!-- es6num="9.4.4.7.1" -->
-            <emu-clause id="sec-makearggetter">
+            <emu-clause id="sec-makearggetter" aoid="MakeArgGetter">
               <h1>MakeArgGetter ( name, env)</h1>
               <p>The abstract operation MakeArgGetter called with String _name_ and Environment Record _env_ creates a built-in function object that when executed returns the value bound for _name_ in _env_. It performs the following steps:</p>
               <emu-alg>
@@ -7861,7 +7861,7 @@ function* enumerate(obj) {
             </emu-clause>
 
             <!-- es6num="9.4.4.7.2" -->
-            <emu-clause id="sec-makeargsetter">
+            <emu-clause id="sec-makeargsetter" aoid="MakeArgSetter">
               <h1>MakeArgSetter ( name, env)</h1>
               <p>The abstract operation MakeArgSetter called with String _name_ and Environment Record _env_ creates a built-in function object that when executed sets the value bound for _name_ in _env_. It performs the following steps:</p>
               <emu-alg>
@@ -8011,7 +8011,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.5.7" -->
-          <emu-clause id="sec-integerindexedobjectcreate">
+          <emu-clause id="sec-integerindexedobjectcreate" aoid="IntegerIndexedObjectCreate">
             <h1>IntegerIndexedObjectCreate (prototype, internalSlotsList)</h1>
             <p>The abstract operation IntegerIndexedObjectCreate with arguments _prototype_ and _internalSlotsList_ is used to specify the creation of new Integer Indexed exotic objects. The argument _internalSlotsList_ is a List of the names of additional internal slots that must be defined as part of the object. IntegerIndexedObjectCreate performs the following steps:</p>
             <emu-alg>
@@ -8030,7 +8030,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.5.8" -->
-          <emu-clause id="sec-integerindexedelementget">
+          <emu-clause id="sec-integerindexedelementget" aoid="IntegerIndexedElementGet">
             <h1>IntegerIndexedElementGet ( O, index )</h1>
             <p>The abstract operation IntegerIndexedElementGet with arguments _O_ and _index_ performs the following steps:</p>
             <emu-alg>
@@ -8052,7 +8052,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.5.9" -->
-          <emu-clause id="sec-integerindexedelementset">
+          <emu-clause id="sec-integerindexedelementset" aoid="IntegerIndexedElementSet">
             <h1>IntegerIndexedElementSet ( O, index, value )</h1>
             <p>The abstract operation IntegerIndexedElementSet with arguments _O_, _index_, and _value_ performs the following steps:</p>
             <emu-alg>
@@ -8268,7 +8268,7 @@ function* enumerate(obj) {
           </emu-clause>
 
           <!-- es6num="9.4.6.13" -->
-          <emu-clause id="sec-modulenamespacecreate">
+          <emu-clause id="sec-modulenamespacecreate" aoid="ModuleNamespaceCreate">
             <h1>ModuleNamespaceCreate (module, exports)</h1>
             <p>The abstract operation ModuleNamespaceCreate with arguments _module_, and _exports_ is used to specify the creation of new module namespace exotic objects. It performs the following steps:</p>
             <emu-alg>
@@ -8982,7 +8982,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="9.5.15" -->
-        <emu-clause id="sec-proxycreate">
+        <emu-clause id="sec-proxycreate" aoid="ProxyCreate">
           <h1>ProxyCreate(target, handler)</h1>
           <p>The abstract operation ProxyCreate with arguments _target_ and _handler_ is used to specify the creation of new Proxy exotic objects. It performs the following steps:</p>
           <emu-alg>
@@ -9024,7 +9024,7 @@ function* enumerate(obj) {
           </emu-note>
 
         <!-- es6num="10.1.1" -->
-        <emu-clause id="sec-utf16encoding">
+        <emu-clause id="sec-utf16encoding" aoid="UTF16Encoding">
           <h1>Static Semantics: UTF16Encoding ( cp )</h1>
           <p>The UTF16Encoding of a numeric code point value, _cp_, is determined as follows:</p>
           <emu-alg>
@@ -9037,7 +9037,7 @@ function* enumerate(obj) {
         </emu-clause>
 
         <!-- es6num="10.1.2" -->
-        <emu-clause id="sec-utf16decode">
+        <emu-clause id="sec-utf16decode" aoid="UTF16Decode">
           <h1>Static Semantics: UTF16Decode( lead, trail )</h1>
           <p>Two code units, _lead_ and _trail_, that form a UTF-16 surrogate pair are converted to a code point by performing the following steps:</p>
           <emu-alg>
@@ -10844,7 +10844,7 @@ a = b + c(d + e).print()
             </emu-alg>
 
           <!-- es6num="12.1.5.1" -->
-          <emu-clause id="sec-initializeboundname">
+          <emu-clause id="sec-initializeboundname" aoid="InitializeBoundName">
             <h1>Runtime Semantics: InitializeBoundName(name, value, environment)</h1>
             <emu-alg>
               1. Assert: Type(_name_) is String.
@@ -11609,7 +11609,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="12.2.9.3" -->
-          <emu-clause id="sec-gettemplateobject">
+          <emu-clause id="sec-gettemplateobject" aoid="GetTemplateObject">
             <h1>Runtime Semantics: GetTemplateObject ( templateLiteral )</h1>
             <p>The abstract operation GetTemplateObject is called with a grammar production, _templateLiteral_, as an argument. It performs the following steps:</p>
             <emu-alg>
@@ -12094,7 +12094,7 @@ a = b + c(d + e).print()
               </emu-alg>
 
             <!-- es6num="12.3.3.1.1" -->
-            <emu-clause id="sec-evaluatenew">
+            <emu-clause id="sec-evaluatenew" aoid="EvaluateNew">
               <h1>Runtime Semantics: EvaluateNew(constructProduction, arguments)</h1>
               <p>The abstract operation EvaluateNew with arguments _constructProduction_, and _arguments_ performs the following steps:</p>
               <emu-alg>
@@ -12158,7 +12158,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="12.3.4.2" -->
-          <emu-clause id="sec-evaluatecall">
+          <emu-clause id="sec-evaluatecall" aoid="EvaluateCall">
             <h1>Runtime Semantics: EvaluateCall( ref, arguments, tailPosition )</h1>
             <p>The abstract operation EvaluateCall takes as arguments a value _ref_, a syntactic grammar production _arguments_, and a Boolean argument _tailPosition_. It performs the following steps:</p>
             <emu-alg>
@@ -12177,7 +12177,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="12.3.4.3" -->
-          <emu-clause id="sec-evaluatedirectcall">
+          <emu-clause id="sec-evaluatedirectcall" aoid="EvaluateDirectCall">
             <h1>Runtime Semantics: EvaluateDirectCall( func, thisValue, arguments, tailPosition )</h1>
             <p>The abstract operation EvaluateDirectCall takes as arguments a value _func_, a value _thisValue_, a syntactic grammar production _arguments_, and a Boolean argument _tailPosition_. It performs the following steps:</p>
             <emu-alg>
@@ -12232,7 +12232,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="12.3.5.2" -->
-          <emu-clause id="sec-getsuperconstructor">
+          <emu-clause id="sec-getsuperconstructor" aoid="GetSuperConstructor">
             <h1>Runtime Semantics: GetSuperConstructor ( )</h1>
             <p>The abstract operation GetSuperConstructor performs the following steps:</p>
             <emu-alg>
@@ -12247,7 +12247,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="12.3.5.3" -->
-          <emu-clause id="sec-makesuperpropertyreference">
+          <emu-clause id="sec-makesuperpropertyreference" aoid="MakeSuperPropertyReference">
             <h1>Runtime Semantics: MakeSuperPropertyReference(propertyKey, strict)</h1>
             <p>The abstract operation MakeSuperPropertyReference with arguments _propertyKey_ and _strict_ performs the following steps:</p>
             <emu-alg>
@@ -13391,7 +13391,7 @@ a = b + c(d + e).print()
         </emu-clause>
 
         <!-- es6num="12.9.4" -->
-        <emu-clause id="sec-instanceofoperator">
+        <emu-clause id="sec-instanceofoperator" aoid="InstanceofOperator">
           <h1>Runtime Semantics: InstanceofOperator(O, C)</h1>
           <p>The abstract operation <emu-formula>InstanceofOperator(_O_, _C_)</emu-formula> implements the generic algorithm for determining if an object _O_ inherits from the inheritance path defined by constructor _C_. This abstract operation performs the following steps:</p>
           <emu-alg>
@@ -14756,7 +14756,7 @@ a = b + c(d + e).print()
         </emu-clause>
 
         <!-- es6num="13.2.14" -->
-        <emu-clause id="sec-blockdeclarationinstantiation">
+        <emu-clause id="sec-blockdeclarationinstantiation" aoid="BlockDeclarationInstantiation">
           <h1>Runtime Semantics: BlockDeclarationInstantiation( code, env )</h1>
           <emu-note>
             <p>When a |Block| or |CaseBlock| production is evaluated a new declarative Environment Record is created and bindings for each block scoped variable, constant, function, generator function, or class declared in the block are instantiated in the Environment Record.</p>
@@ -15700,7 +15700,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="13.7.1.2" -->
-          <emu-clause id="sec-loopcontinues">
+          <emu-clause id="sec-loopcontinues" aoid="LoopContinues">
             <h1>Runtime Semantics: LoopContinues(completion, labelSet)</h1>
             <p>The abstract operation LoopContinues with arguments _completion_ and _labelSet_ is defined by the following steps:</p>
             <emu-alg>
@@ -16017,7 +16017,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="13.7.4.8" -->
-          <emu-clause id="sec-forbodyevaluation">
+          <emu-clause id="sec-forbodyevaluation" aoid="ForBodyEvaluation">
             <h1>Runtime Semantics: ForBodyEvaluation( test, increment, stmt, perIterationBindings, labelSet )</h1>
             <p>The abstract operation ForBodyEvaluation with arguments _test_, _increment_, _stmt_, _perIterationBindings_, and _labelSet_ is performed as follows:</p>
             <emu-alg>
@@ -16043,7 +16043,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="13.7.4.9" -->
-          <emu-clause id="sec-createperiterationenvironment">
+          <emu-clause id="sec-createperiterationenvironment" aoid="CreatePerIterationEnvironment">
             <h1>Runtime Semantics: CreatePerIterationEnvironment( perIterationBindings )</h1>
             <p>The abstract operation CreatePerIterationEnvironment with argument _perIterationBindings_ is performed as follows:</p>
             <emu-alg>
@@ -16337,7 +16337,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="13.7.5.12" -->
-          <emu-clause id="sec-runtime-semantics-forin-div-ofheadevaluation-tdznames-expr-iterationkind">
+          <emu-clause id="sec-runtime-semantics-forin-div-ofheadevaluation-tdznames-expr-iterationkind" aoid="ForIn/OfHeadEvaluation">
             <h1>Runtime Semantics: ForIn/OfHeadEvaluation ( TDZnames, expr, iterationKind)</h1>
             <p>The abstract operation ForIn/OfHeadEvaluation is called with arguments _TDZnames_, _expr_, and _iterationKind_. The value of _iterationKind_ is either ~enumerate~ or ~iterate~.</p>
             <emu-alg>
@@ -16365,7 +16365,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="13.7.5.13" -->
-          <emu-clause id="sec-runtime-semantics-forin-div-ofbodyevaluation-lhs-stmt-iterator-lhskind-labelset">
+          <emu-clause id="sec-runtime-semantics-forin-div-ofbodyevaluation-lhs-stmt-iterator-lhskind-labelset" aoid="ForIn/OfBodyEvaluation">
             <h1>Runtime Semantics: ForIn/OfBodyEvaluation ( lhs, stmt, iterator, lhsKind, labelSet )</h1>
             <p>The abstract operation ForIn/OfBodyEvaluation is called with arguments _lhs_, _stmt_, _iterator_, _lhsKind_, and _labelSet_. The value of _lhsKind_ is either ~assignment~, ~varBinding~ or ~lexicalBinding~.</p>
             <emu-alg>
@@ -17180,7 +17180,7 @@ a = b + c(d + e).print()
         </emu-clause>
 
         <!-- es6num="13.13.5" -->
-        <emu-clause id="sec-islabelledfunction">
+        <emu-clause id="sec-islabelledfunction" aoid="IsLabelledFunction">
           <h1>Static Semantics: IsLabelledFunction ( stmt )</h1>
           <p>The abstract operation IsLabelledFunction with argument _stmt_ performs the following steps:</p>
           <emu-alg>
@@ -17936,7 +17936,7 @@ a = b + c(d + e).print()
         </emu-clause>
 
         <!-- es6num="14.1.9" -->
-        <emu-clause id="sec-isanonymousfunctiondefinition">
+        <emu-clause id="sec-isanonymousfunctiondefinition" aoid="IsAnonymousFunctionDefinition">
           <h1>Static Semantics: IsAnonymousFunctionDefinition ( production )</h1>
           <p>The abstract operation IsAnonymousFunctionDefinition determines if its argument is a function definition that does not bind a name. The argument _production_ is the result of parsing an |AssignmentExpression| or |Initializer|. The following steps are taken:</p>
           <emu-alg>
@@ -19450,7 +19450,7 @@ a = b + c(d + e).print()
           <h1>Tail Position Calls</h1>
 
         <!-- es6num="14.6.1" -->
-        <emu-clause id="sec-isintailposition">
+        <emu-clause id="sec-isintailposition" aoid="IsInTailPosition">
           <h1>Static Semantics: IsInTailPosition(nonterminal)</h1>
           <p>The abstract operation IsInTailPosition with argument _nonterminal_ performs the following steps:</p>
           <emu-alg>
@@ -19726,7 +19726,7 @@ a = b + c(d + e).print()
         </emu-clause>
 
         <!-- es6num="14.6.3" -->
-        <emu-clause id="sec-preparefortailcall">
+        <emu-clause id="sec-preparefortailcall" aoid="PrepareForTailCall">
           <h1>Runtime Semantics: PrepareForTailCall ( )</h1>
           <p>The abstract operation PrepareForTailCall performs the following steps:</p>
           <emu-alg>
@@ -19871,7 +19871,7 @@ a = b + c(d + e).print()
         </emu-clause>
 
         <!-- es6num="15.1.8" -->
-        <emu-clause id="sec-globaldeclarationinstantiation">
+        <emu-clause id="sec-globaldeclarationinstantiation" aoid="GlobalDeclarationInstantiation">
           <h1>Runtime Semantics: GlobalDeclarationInstantiation (script, env)</h1>
           <emu-note>
             <p>When an execution context is established for evaluating scripts, declarations are instantiated in the current global environment. Each global binding declared in the code is instantiated.</p>
@@ -19940,7 +19940,7 @@ a = b + c(d + e).print()
         </emu-clause>
 
         <!-- es6num="15.1.9" -->
-        <emu-clause id="sec-scriptevaluationjob">
+        <emu-clause id="sec-scriptevaluationjob" aoid="ScriptEvaluationJob">
           <h1>Runtime Semantics: ScriptEvaluationJob ( sourceText )</h1>
           <p>The job ScriptEvaluationJob with parameter _sourceText_ parses, validates, and evaluates _sourceText_ as a |Script|.</p>
           <emu-alg>
@@ -20185,7 +20185,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="15.2.1.9" -->
-          <emu-clause id="sec-importedlocalnames">
+          <emu-clause id="sec-importedlocalnames" aoid="ImportedLocalNames">
             <h1>Static Semantics: ImportedLocalNames ( importEntries )</h1>
             <p>The abstract operation ImportedLocalNames with argument _importEntries_ creates a List of all of the local name bindings defined by a List of ImportEntry Records (see <emu-internal-ref refid="table-39">TYPE NUM</emu-internal-ref>). ImportedLocalNames performs the following steps:</p>
             <emu-alg>
@@ -20929,7 +20929,7 @@ a = b + c(d + e).print()
               <p>The following definitions specify the required concrete methods and other abstract operations for Source Text Module Records</p>
 
             <!-- es6num="15.2.1.16.1" -->
-            <emu-clause id="sec-parsemodule">
+            <emu-clause id="sec-parsemodule" aoid="ParseModule">
               <h1>Runtime Semantics: ParseModule ( sourceText )</h1>
               <p>The abstract operation ParseModule with argument _sourceText_ creates a Source Text Module Record based upon the result of parsing _sourceText_ as a |Module|. ParseModule performs the following steps:</p>
               <emu-alg>
@@ -21138,7 +21138,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="15.2.1.17" -->
-          <emu-clause id="sec-hostresolveimportedmodule">
+          <emu-clause id="sec-hostresolveimportedmodule" aoid="HostResolveImportedModule">
             <h1>Runtime Semantics: HostResolveImportedModule (referencingModule, specifier )</h1>
             <p>HostResolveImportedModule is an implementation defined abstract operation that provides the concrete Module Record subclass instance that corresponds to the |ModuleSpecifier| String, _specifier_, occurring within the context of the module represented by the Module Record _referencingModule_.</p>
             <p>The implementation of HostResolveImportedModule must conform to the following requirements:</p>
@@ -21157,7 +21157,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="15.2.1.18" -->
-          <emu-clause id="sec-getmodulenamespace">
+          <emu-clause id="sec-getmodulenamespace" aoid="GetModuleNamespace">
             <h1>Runtime Semantics: GetModuleNamespace( module )</h1>
             <p>The abstract operation GetModuleNamespace called with argument _module_ performs the following steps:</p>
             <emu-alg>
@@ -21178,7 +21178,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="15.2.1.19" -->
-          <emu-clause id="sec-toplevelmoduleevaluationjob">
+          <emu-clause id="sec-toplevelmoduleevaluationjob" aoid="TopLevelModuleEvaluationJob">
             <h1>Runtime Semantics: TopLevelModuleEvaluationJob ( sourceText)</h1>
             <p>A TopLevelModuleEvaluationJob with parameter _sourceText_ is a job that parses, validates, and evaluates _sourceText_ as a |Module|.</p>
             <emu-alg>
@@ -21976,7 +21976,7 @@ a = b + c(d + e).print()
             </emu-alg>
 
           <!-- es6num="18.2.1.1" -->
-          <emu-clause id="sec-performeval">
+          <emu-clause id="sec-performeval" aoid="PerformEval">
             <h1>Runtime Semantics: PerformEval( x, evalRealm, strictCaller, direct)</h1>
             <p>The abstract operation PerformEval with arguments _x_, _evalRealm_, _strictCaller_, and _direct_ performs the following steps:</p>
             <emu-alg>
@@ -22016,7 +22016,7 @@ a = b + c(d + e).print()
           </emu-clause>
 
           <!-- es6num="18.2.1.2" -->
-          <emu-clause id="sec-evaldeclarationinstantiation">
+          <emu-clause id="sec-evaldeclarationinstantiation" aoid="EvalDeclarationInstantiation">
             <h1>Runtime Semantics: EvalDeclarationInstantiation( body, varEnv, lexEnv, strict)</h1>
             <p>When the abstract operation EvalDeclarationInstantiation is called with arguments _body_, _varEnv_, _lexEnv_, and _strict_ the following steps are taken:</p>
             <emu-alg>
@@ -22247,7 +22247,7 @@ a = b + c(d + e).print()
               <p>When a code unit to be included in a URI is not listed above or is not intended to have the special meaning sometimes given to the reserved code units, that code unit must be encoded. The code unit is transformed into its UTF-8 encoding, with surrogate pairs first converted from UTF-16 to the corresponding code point value. (Note that for code units in the range [0,127] this results in a single octet with the same value.) The resulting sequence of octets is then transformed into a String with each octet represented by an escape sequence of the form `"%xx"`.</p>
 
             <!-- es6num="18.2.6.1.1" -->
-            <emu-clause id="sec-encode">
+            <emu-clause id="sec-encode" aoid="Encode">
               <h1>Runtime Semantics: Encode ( string, unescapedSet )</h1>
               <p>The encoding and escaping process is described by the abstract operation Encode taking two String arguments _string_ and _unescapedSet_.</p>
               <emu-alg>
@@ -22282,7 +22282,7 @@ a = b + c(d + e).print()
             </emu-clause>
 
             <!-- es6num="18.2.6.1.2" -->
-            <emu-clause id="sec-decode">
+            <emu-clause id="sec-decode" aoid="Decode">
               <h1>Runtime Semantics: Decode ( string, reservedSet )</h1>
               <p>The unescaping and decoding process is described by the abstract operation Decode taking two String arguments _string_ and _reservedSet_.</p>
               <emu-alg>
@@ -22886,7 +22886,7 @@ a = b + c(d + e).print()
               </emu-alg>
 
             <!-- es6num="19.1.2.3.1" -->
-            <emu-clause id="sec-objectdefineproperties">
+            <emu-clause id="sec-objectdefineproperties" aoid="ObjectDefineProperties">
               <h1>Runtime Semantics: ObjectDefineProperties ( O, Properties )</h1>
               <p>The abstract operation ObjectDefineProperties with arguments _O_ and _Properties_ performs the following steps:</p>
               <emu-alg>
@@ -22977,7 +22977,7 @@ a = b + c(d + e).print()
               </emu-alg>
 
             <!-- es6num="19.1.2.8.1" -->
-            <emu-clause id="sec-getownpropertykeys">
+            <emu-clause id="sec-getownpropertykeys" aoid="GetOwnPropertyKeys">
               <h1>Runtime Semantics: GetOwnPropertyKeys ( O, Type )</h1>
               <p>The abstract operation GetOwnPropertyKeys is called with arguments _O_ and _Type_ where _O_ is an Object and _Type_ is one of the ECMAScript specification types String or Symbol. The following steps are taken:</p>
               <emu-alg>
@@ -23272,7 +23272,7 @@ new Function("a,b", "c", "return a+b+c")
               </emu-note>
 
             <!-- es6num="19.2.1.1.1" -->
-            <emu-clause id="sec-createdynamicfunction">
+            <emu-clause id="sec-createdynamicfunction" aoid="CreateDynamicFunction">
               <h1>Runtime Semantics: CreateDynamicFunction(constructor, newTarget, kind, args)</h1>
               <p>The abstract operation CreateDynamicFunction is called with arguments _constructor_, _newTarget_, _kind_, and _args_. _constructor_ is the constructor function that is performing this action, _newTarget_ is the constructor that `new` was initially applied to, _kind_ is either `"normal"` or `"generator"`, and _args_ is a List containing the actual argument values that were passed to _constructor_. The following steps are taken:</p>
               <emu-alg>
@@ -23838,7 +23838,7 @@ new Function("a,b", "c", "return a+b+c")
               </emu-alg>
 
             <!-- es6num="19.4.3.2.1" -->
-            <emu-clause id="sec-symboldescriptivestring">
+            <emu-clause id="sec-symboldescriptivestring" aoid="SymbolDescriptiveString">
               <h1>Runtime Semantics: SymbolDescriptiveString ( sym )</h1>
               <p>When the abstract operation SymbolDescriptiveString is called with argument _sym_, the following steps are taken:</p>
               <emu-alg>
@@ -25640,7 +25640,7 @@ new Function("a,b", "c", "return a+b+c")
           </emu-clause>
 
           <!-- es6num="20.3.1.9" -->
-          <emu-clause id="sec-localtime">
+          <emu-clause id="sec-localtime" aoid="LocalTime">
             <h1>LocalTime ( t )</h1>
             <p>The abstract operation LocalTime with argument _t_ converts _t_ from UTC to local time by performing the following steps:</p>
             <emu-alg>
@@ -25650,7 +25650,7 @@ new Function("a,b", "c", "return a+b+c")
           </emu-clause>
 
           <!-- es6num="20.3.1.10" -->
-          <emu-clause id="sec-utc-t">
+          <emu-clause id="sec-utc-t" aoid="UTC">
             <h1>UTC ( t )</h1>
             <p>The abstract operation UTC with argument _t_ converts _t_ from local time to UTC is defined by performing the following steps:</p>
             <emu-alg>
@@ -25680,7 +25680,7 @@ new Function("a,b", "c", "return a+b+c")
           </emu-clause>
 
           <!-- es6num="20.3.1.12" -->
-          <emu-clause id="sec-maketime">
+          <emu-clause id="sec-maketime" aoid="MakeTime">
             <h1>MakeTime (hour, min, sec, ms)</h1>
             <p>The abstract operation MakeTime calculates a number of milliseconds from its four arguments, which must be ECMAScript Number values. This operator functions as follows:</p>
             <emu-alg>
@@ -25695,7 +25695,7 @@ new Function("a,b", "c", "return a+b+c")
           </emu-clause>
 
           <!-- es6num="20.3.1.13" -->
-          <emu-clause id="sec-makeday">
+          <emu-clause id="sec-makeday" aoid="MakeDay">
             <h1>MakeDay (year, month, date)</h1>
             <p>The abstract operation MakeDay calculates a number of days from its three arguments, which must be ECMAScript Number values. This operator functions as follows:</p>
             <emu-alg>
@@ -25711,7 +25711,7 @@ new Function("a,b", "c", "return a+b+c")
           </emu-clause>
 
           <!-- es6num="20.3.1.14" -->
-          <emu-clause id="sec-makedate">
+          <emu-clause id="sec-makedate" aoid="MakeDate">
             <h1>MakeDate (day, time)</h1>
             <p>The abstract operation MakeDate calculates a number of milliseconds from its two arguments, which must be ECMAScript Number values. This operator functions as follows:</p>
             <emu-alg>
@@ -25721,7 +25721,7 @@ new Function("a,b", "c", "return a+b+c")
           </emu-clause>
 
           <!-- es6num="20.3.1.15" -->
-          <emu-clause id="sec-timeclip">
+          <emu-clause id="sec-timeclip" aoid="TimeClip">
             <h1>TimeClip (time)</h1>
             <p>The abstract operation TimeClip calculates a number of milliseconds from its argument, which must be an ECMAScript Number value. This operator functions as follows:</p>
             <emu-alg>
@@ -26734,7 +26734,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-note>
 
             <!-- es6num="20.3.4.41.1" -->
-            <emu-clause id="sec-todatestring">
+            <emu-clause id="sec-todatestring" aoid="ToDateString">
               <h1>Runtime Semantics: ToDateString(tv)</h1>
               <p>The following steps are performed:</p>
               <emu-alg>
@@ -27288,7 +27288,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-note>
 
             <!-- es6num="21.1.3.14.1" -->
-            <emu-clause id="sec-getsubstitution">
+            <emu-clause id="sec-getsubstitution" aoid="GetSubstitution">
               <h1>Runtime Semantics: GetSubstitution(matched, str, position, captures, replacement)</h1>
               <p>The abstract operation GetSubstitution performs the following steps:</p>
               <emu-alg>
@@ -27537,7 +27537,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-note>
 
             <!-- es6num="21.1.3.17.1" -->
-            <emu-clause id="sec-splitmatch">
+            <emu-clause id="sec-splitmatch" aoid="SplitMatch">
               <h1>Runtime Semantics: SplitMatch ( S, q, R )</h1>
               <p>The abstract operation SplitMatch takes three parameters, a String _S_, an integer _q_, and a String _R_, and performs the following steps in order to return either *false* or the end index of a match:</p>
               <emu-alg>
@@ -27747,7 +27747,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>An String Iterator is an object, that represents a specific iteration over some specific String instance object. There is not a named constructor for String Iterator objects. Instead, String iterator objects are created by calling certain methods of String instance objects.</p>
 
           <!-- es6num="21.1.5.1" -->
-          <emu-clause id="sec-createstringiterator">
+          <emu-clause id="sec-createstringiterator" aoid="CreateStringIterator">
             <h1>CreateStringIterator Abstract Operation</h1>
             <p>Several methods of String objects return Iterator objects. The abstract operation CreateStringIterator with argument _string_ is used to create such iterator objects. It performs the following steps:</p>
             <emu-alg>
@@ -28156,7 +28156,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-alg>
 
             <!-- es6num="21.2.2.5.1" -->
-            <emu-clause id="sec-runtime-semantics-repeatmatcher-abstract-operation">
+            <emu-clause id="sec-runtime-semantics-repeatmatcher-abstract-operation" aoid="RepeatMatcher">
               <h1>Runtime Semantics: RepeatMatcher Abstract Operation</h1>
               <p>The abstract operation RepeatMatcher takes eight parameters, a Matcher _m_, an integer _min_, an integer (or &infin;) _max_, a Boolean _greedy_, a State _x_, a Continuation _c_, an integer _parenIndex_, and an integer _parenCount_, and performs the following steps:</p>
               <emu-alg>
@@ -28310,7 +28310,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-alg>
 
             <!-- es6num="21.2.2.6.1" -->
-            <emu-clause id="sec-runtime-semantics-iswordchar-abstract-operation">
+            <emu-clause id="sec-runtime-semantics-iswordchar-abstract-operation" aoid="IsWordChar">
               <h1>Runtime Semantics: IsWordChar Abstract Operation</h1>
               <p>The abstract operation IsWordChar takes an integer parameter _e_ and performs the following steps:</p>
               <emu-alg>
@@ -28640,7 +28640,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-alg>
 
             <!-- es6num="21.2.2.8.1" -->
-            <emu-clause id="sec-runtime-semantics-charactersetmatcher-abstract-operation">
+            <emu-clause id="sec-runtime-semantics-charactersetmatcher-abstract-operation" aoid="CharacterSetMatcher">
               <h1>Runtime Semantics: CharacterSetMatcher Abstract Operation</h1>
               <p>The abstract operation CharacterSetMatcher takes two arguments, a CharSet _A_ and a Boolean flag _invert_, and performs the following steps:</p>
               <emu-alg>
@@ -28660,7 +28660,7 @@ Date.parse(<i>x</i>.toLocaleString())
             </emu-clause>
 
             <!-- es6num="21.2.2.8.2" -->
-            <emu-clause id="sec-runtime-semantics-canonicalize-ch">
+            <emu-clause id="sec-runtime-semantics-canonicalize-ch" aoid="Canonicalize">
               <h1>Runtime Semantics: Canonicalize ( ch )</h1>
               <p>The abstract operation Canonicalize takes a character parameter _ch_ and performs the following steps:</p>
               <emu-alg>
@@ -29230,7 +29230,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-alg>
 
             <!-- es6num="21.2.2.15.1" -->
-            <emu-clause id="sec-runtime-semantics-characterrange-abstract-operation">
+            <emu-clause id="sec-runtime-semantics-characterrange-abstract-operation" aoid="CharacterRange">
               <h1>Runtime Semantics: CharacterRange Abstract Operation</h1>
               <p>The abstract operation CharacterRange takes two CharSet parameters _A_ and _B_ and performs the following steps:</p>
               <emu-alg>
@@ -29377,7 +29377,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <h1>Abstract Operations for the RegExp Constructor</h1>
 
             <!-- es6num="21.2.3.2.1" -->
-            <emu-clause id="sec-regexpalloc">
+            <emu-clause id="sec-regexpalloc" aoid="RegExpAlloc">
               <h1>Runtime Semantics: RegExpAlloc ( newTarget )</h1>
               <p>When the abstract operation RegExpAlloc with argument _newTarget_ is called, the following steps are taken:</p>
               <emu-alg>
@@ -29390,7 +29390,7 @@ Date.parse(<i>x</i>.toLocaleString())
             </emu-clause>
 
             <!-- es6num="21.2.3.2.2" -->
-            <emu-clause id="sec-regexpinitialize">
+            <emu-clause id="sec-regexpinitialize" aoid="RegExpInitialize">
               <h1>Runtime Semantics: RegExpInitialize ( obj, pattern, flags )</h1>
               <p>When the abstract operation RegExpInitialize with arguments _obj_, _pattern_, and _flags_ is called, the following steps are taken:</p>
               <emu-alg>
@@ -29418,7 +29418,7 @@ Date.parse(<i>x</i>.toLocaleString())
             </emu-clause>
 
             <!-- es6num="21.2.3.2.3" -->
-            <emu-clause id="sec-regexpcreate">
+            <emu-clause id="sec-regexpcreate" aoid="RegExpCreate">
               <h1>Runtime Semantics: RegExpCreate ( P, F )</h1>
               <p>When the abstract operation RegExpCreate with arguments _P_ and _F_ is called, the following steps are taken:</p>
               <emu-alg>
@@ -29429,7 +29429,7 @@ Date.parse(<i>x</i>.toLocaleString())
             </emu-clause>
 
             <!-- es6num="21.2.3.2.4" -->
-            <emu-clause id="sec-escaperegexppattern">
+            <emu-clause id="sec-escaperegexppattern" aoid="EscapeRegExpPattern">
               <h1>Runtime Semantics: EscapeRegExpPattern ( P, F )</h1>
               <p>When the abstract operation EscapeRegExpPattern with arguments _P_ and _F_ is called, the following occurs:</p>
               <emu-alg>
@@ -29498,7 +29498,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-alg>
 
             <!-- es6num="21.2.5.2.1" -->
-            <emu-clause id="sec-regexpexec">
+            <emu-clause id="sec-regexpexec" aoid="RegExpExec">
               <h1>Runtime Semantics: RegExpExec ( R, S )</h1>
               <p>The abstract operation RegExpExec with arguments _R_ and _S_ performs the following steps:</p>
               <emu-alg>
@@ -29520,7 +29520,7 @@ Date.parse(<i>x</i>.toLocaleString())
             </emu-clause>
 
             <!-- es6num="21.2.5.2.2" -->
-            <emu-clause id="sec-regexpbuiltinexec">
+            <emu-clause id="sec-regexpbuiltinexec" aoid="RegExpBuiltinExec">
               <h1>Runtime Semantics: RegExpBuiltinExec ( R, S )</h1>
               <p>The abstract operation RegExpBuiltinExec with arguments _R_ and _S_ performs the following steps:</p>
               <emu-alg>
@@ -29584,7 +29584,7 @@ Date.parse(<i>x</i>.toLocaleString())
             </emu-clause>
 
             <!-- es6num="21.2.5.2.3" -->
-            <emu-clause id="sec-advancestringindex">
+            <emu-clause id="sec-advancestringindex" aoid="AdvanceStringIndex">
               <h1>AdvanceStringIndex ( S, index, unicode )</h1>
               <p>The abstract operation AdvanceStringIndex with arguments _S_, _index_, and _unicode_ performs the following steps:</p>
               <emu-alg>
@@ -30284,7 +30284,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-note>
 
             <!-- es6num="22.1.3.1.1" -->
-            <emu-clause id="sec-isconcatspreadable">
+            <emu-clause id="sec-isconcatspreadable" aoid="IsConcatSpreadable">
               <h1>Runtime Semantics: IsConcatSpreadable ( O )</h1>
               <p>The abstract operation IsConcatSpreadable with argument _O_ performs the following steps:</p>
               <emu-alg>
@@ -31198,7 +31198,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-note>
 
             <!-- es6num="22.1.3.24.1" -->
-            <emu-clause id="sec-sortcompare">
+            <emu-clause id="sec-sortcompare" aoid="SortCompare">
               <h1>Runtime Semantics: SortCompare( x, y )</h1>
               <p>The SortCompare abstract operation is called with two arguments _x_ and _y_. It also has access to the _comparefn_ argument passed to the current invocation of the `sort` method. The following steps are taken:</p>
               <emu-alg>
@@ -31500,7 +31500,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>An Array Iterator is an object, that represents a specific iteration over some specific Array instance object. There is not a named constructor for Array Iterator objects. Instead, Array iterator objects are created by calling certain methods of Array instance objects.</p>
 
           <!-- es6num="22.1.5.1" -->
-          <emu-clause id="sec-createarrayiterator">
+          <emu-clause id="sec-createarrayiterator" aoid="CreateArrayIterator">
             <h1>CreateArrayIterator Abstract Operation</h1>
             <p>Several methods of Array objects return Iterator objects. The abstract operation CreateArrayIterator with arguments _array_ and _kind_ is used to create such iterator objects. It performs the following steps:</p>
             <emu-alg>
@@ -31872,7 +31872,7 @@ Date.parse(<i>x</i>.toLocaleString())
               </emu-alg>
 
             <!-- es6num="22.2.1.2.1" -->
-            <emu-clause id="sec-allocatetypedarray">
+            <emu-clause id="sec-allocatetypedarray" aoid="AllocateTypedArray">
               <h1>Runtime Semantics: AllocateTypedArray (newTarget, length )</h1>
               <p>The abstract operation AllocateTypedArray with argument _newTarget_ and optional argument _length_ is used to validate and create an instance of a TypedArray constructor. If the _length_ argument is passed an ArrayBuffer of that length is also allocated and associated with the new TypedArray instance. AllocateTypedArray provides common semantics that is used by all of the %TypeArray% overloads and other methods. AllocateTypedArray performs the following steps:</p>
               <emu-alg>
@@ -32028,7 +32028,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <p>The `length` property of the `from` method is 1.</p>
 
             <!-- es6num="22.2.2.1.1" -->
-            <emu-clause id="sec-typedarrayfrom">
+            <emu-clause id="sec-typedarrayfrom" aoid="TypedArrayFrom">
               <h1>Runtime Semantics: TypedArrayFrom( constructor, items, mapfn, thisArg )</h1>
               <p>When the TypedArrayFrom abstract operation is called with arguments _constructor_, _items_, _mapfn_, and _thisArg_, the following steps are taken:</p>
               <emu-alg>
@@ -32203,7 +32203,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <p>The `length` property of the `copyWithin` method is 2.</p>
 
             <!-- es6num="22.2.3.5.1" -->
-            <emu-clause id="sec-validatetypedarray">
+            <emu-clause id="sec-validatetypedarray" aoid="ValidateTypedArray">
               <h1>Runtime Semantics: ValidateTypedArray ( O )</h1>
               <p>When called with argument _O_ the following steps are taken:</p>
               <emu-alg>
@@ -33057,7 +33057,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>A Map Iterator is an object, that represents a specific iteration over some specific Map instance object. There is not a named constructor for Map Iterator objects. Instead, map iterator objects are created by calling certain methods of Map instance objects.</p>
 
           <!-- es6num="23.1.5.1" -->
-          <emu-clause id="sec-createmapiterator">
+          <emu-clause id="sec-createmapiterator" aoid="CreateMapIterator">
             <h1>CreateMapIterator Abstract Operation</h1>
             <p>Several methods of Map objects return Iterator objects. The abstract operation CreateMapIterator with arguments _map_ and _kind_ is used to create such iterator objects. It performs the following steps:</p>
             <emu-alg>
@@ -33412,7 +33412,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>A Set Iterator is an ordinary object, with the structure defined below, that represents a specific iteration over some specific Set instance object. There is not a named constructor for Set Iterator objects. Instead, set iterator objects are created by calling certain methods of Set instance objects.</p>
 
           <!-- es6num="23.2.5.1" -->
-          <emu-clause id="sec-createsetiterator">
+          <emu-clause id="sec-createsetiterator" aoid="CreateSetIterator">
             <h1>CreateSetIterator Abstract Operation</h1>
             <p>Several methods of Set objects return Iterator objects. The abstract operation CreateSetIterator with arguments _set_ and _kind_ is used to create such iterator objects. It performs the following steps:</p>
             <emu-alg>
@@ -33841,7 +33841,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <h1>Abstract Operations For ArrayBuffer Objects</h1>
 
           <!-- es6num="24.1.1.1" -->
-          <emu-clause id="sec-allocatearraybuffer">
+          <emu-clause id="sec-allocatearraybuffer" aoid="AllocateArrayBuffer">
             <h1>AllocateArrayBuffer( constructor, byteLength )</h1>
             <p>The abstract operation AllocateArrayBuffer with arguments _constructor_ and _byteLength_ is used to create an ArrayBuffer object. It performs the following steps:</p>
             <emu-alg>
@@ -33857,7 +33857,7 @@ Date.parse(<i>x</i>.toLocaleString())
           </emu-clause>
 
           <!-- es6num="24.1.1.2" -->
-          <emu-clause id="sec-isdetachedbuffer">
+          <emu-clause id="sec-isdetachedbuffer" aoid="IsDetachedBuffer">
             <h1>IsDetachedBuffer( arrayBuffer )</h1>
             <p>The abstract operation IsDetachedBuffer with argument _arrayBuffer_ performs the following steps:</p>
             <emu-alg>
@@ -33868,7 +33868,7 @@ Date.parse(<i>x</i>.toLocaleString())
           </emu-clause>
 
           <!-- es6num="24.1.1.3" -->
-          <emu-clause id="sec-detacharraybuffer">
+          <emu-clause id="sec-detacharraybuffer" aoid="DetachArrayBuffer">
             <h1>DetachArrayBuffer( arrayBuffer )</h1>
             <p>The abstract operation DetachArrayBuffer with argument _arrayBuffer_ performs the following steps:</p>
             <emu-alg>
@@ -33883,7 +33883,7 @@ Date.parse(<i>x</i>.toLocaleString())
           </emu-clause>
 
           <!-- es6num="24.1.1.4" -->
-          <emu-clause id="sec-clonearraybuffer">
+          <emu-clause id="sec-clonearraybuffer" aoid="CloneArrayBuffer">
             <h1>CloneArrayBuffer( srcBuffer, srcByteOffset [, cloneConstructor] )</h1>
             <p>The abstract operation CloneArrayBuffer takes three parameters, an ArrayBuffer _srcBuffer_, an integer _srcByteOffset_ and optionally a constructor function _cloneConstructor_. It creates a new ArrayBuffer whose data is a copy of _srcBuffer_'s data starting at _srcByteOffset_. This operation performs the following steps:</p>
             <emu-alg>
@@ -33907,7 +33907,7 @@ Date.parse(<i>x</i>.toLocaleString())
           </emu-clause>
 
           <!-- es6num="24.1.1.5" -->
-          <emu-clause id="sec-getvaluefrombuffer">
+          <emu-clause id="sec-getvaluefrombuffer" aoid="GetValueFromBuffer">
             <h1>GetValueFromBuffer ( arrayBuffer, byteIndex, type, isLittleEndian )</h1>
             <p>The abstract operation GetValueFromBuffer takes four parameters, an ArrayBuffer _arrayBuffer_, an integer _byteIndex_, a String _type_, and optionally a Boolean _isLittleEndian_. This operation performs the following steps:</p>
             <emu-alg>
@@ -33936,7 +33936,7 @@ Date.parse(<i>x</i>.toLocaleString())
           </emu-clause>
 
           <!-- es6num="24.1.1.6" -->
-          <emu-clause id="sec-setvalueinbuffer">
+          <emu-clause id="sec-setvalueinbuffer" aoid="SetValueInBuffer">
             <h1>SetValueInBuffer ( arrayBuffer, byteIndex, type, value, isLittleEndian )</h1>
             <p>The abstract operation SetValueInBuffer takes five parameters, an ArrayBuffer _arrayBuffer_, an integer _byteIndex_, a String _type_, a Number _value_, and optionally a Boolean _isLittleEndian_. This operation performs the following steps:</p>
             <emu-alg>
@@ -34109,7 +34109,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <h1>Abstract Operations For DataView Objects</h1>
 
           <!-- es6num="24.2.1.1" -->
-          <emu-clause id="sec-getviewvalue">
+          <emu-clause id="sec-getviewvalue" aoid="GetViewValue">
             <h1>GetViewValue ( view, requestIndex, isLittleEndian, type )</h1>
             <p>The abstract operation GetViewValue with arguments _view_, _requestIndex_, _isLittleEndian_, and _type_ is used by functions on DataView instances is to retrieve values from the view's buffer. It performs the following steps:</p>
             <emu-alg>
@@ -34132,7 +34132,7 @@ Date.parse(<i>x</i>.toLocaleString())
           </emu-clause>
 
           <!-- es6num="24.2.1.2" -->
-          <emu-clause id="sec-setviewvalue">
+          <emu-clause id="sec-setviewvalue" aoid="SetViewValue">
             <h1>SetViewValue ( view, requestIndex, isLittleEndian, type, value )</h1>
             <p>The abstract operation SetViewValue with arguments _view_, _requestIndex_, _isLittleEndian_, _type_, and _value_ is used by functions on DataView instances to store values into the view's buffer. It performs the following steps:</p>
             <emu-alg>
@@ -34501,7 +34501,7 @@ Date.parse(<i>x</i>.toLocaleString())
             </emu-note>
 
           <!-- es6num="24.3.1.1" -->
-          <emu-clause id="sec-internalizejsonproperty">
+          <emu-clause id="sec-internalizejsonproperty" aoid="InternalizeJSONProperty">
             <h1>Runtime Semantics: InternalizeJSONProperty( holder, name)</h1>
             <p>The abstract operation InternalizeJSONProperty is a recursive abstract operation that takes two parameters: a _holder_ object and the String _name_ of a property in that object. InternalizeJSONProperty uses the value of _reviver_ that was originally passed to the above parse function.</p>
             <emu-alg>
@@ -34635,7 +34635,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             </emu-note>
 
           <!-- es6num="24.3.2.1" -->
-          <emu-clause id="sec-serializejsonproperty">
+          <emu-clause id="sec-serializejsonproperty" aoid="SerializeJSONProperty">
             <h1>Runtime Semantics: SerializeJSONProperty ( key, holder )</h1>
             <p>The abstract operation SerializeJSONProperty with arguments _key_, and _holder_ has access to _ReplacerFunction_ from the invocation of the `stringify` method. Its algorithm is as follows:</p>
             <emu-alg>
@@ -34676,7 +34676,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="24.3.2.2" -->
-          <emu-clause id="sec-quotejsonstring">
+          <emu-clause id="sec-quotejsonstring" aoid="QuoteJSONString">
             <h1>Runtime Semantics: QuoteJSONString ( value )</h1>
             <p>The abstract operation QuoteJSONString with argument _value_ wraps a String value in QUOTATION MARK code units and escapes certain other code units within it.</p>
             <emu-alg>
@@ -34746,7 +34746,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="24.3.2.3" -->
-          <emu-clause id="sec-serializejsonobject">
+          <emu-clause id="sec-serializejsonobject" aoid="SerializeJSONObject">
             <h1>Runtime Semantics: SerializeJSONObject ( value )</h1>
             <p>The abstract operation SerializeJSONObject with argument _value_ serializes an object. It has access to the _stack_, _indent_, _gap_, and _PropertyList_ values of the current invocation of the `stringify` method.</p>
             <emu-alg>
@@ -34786,7 +34786,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="24.3.2.4" -->
-          <emu-clause id="sec-serializejsonarray">
+          <emu-clause id="sec-serializejsonarray" aoid="SerializeJSONArray">
             <h1>Runtime Semantics: SerializeJSONArray ( value )</h1>
             <p>The abstract operation SerializeJSONArray with argument _value_ serializes an array. It has access to the _stack_, _indent_, and _gap_ values of the current invocation of the `stringify` method.</p>
             <emu-alg>
@@ -35262,7 +35262,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <h1>Generator Abstract Operations</h1>
 
           <!-- es6num="25.3.3.1" -->
-          <emu-clause id="sec-generatorstart">
+          <emu-clause id="sec-generatorstart" aoid="GeneratorStart">
             <h1>GeneratorStart (generator, generatorBody)</h1>
             <p>The abstract operation GeneratorStart with arguments _generator_ and _generatorBody_ performs the following steps:</p>
             <emu-alg>
@@ -35287,7 +35287,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.3.3.2" -->
-          <emu-clause id="sec-generatorvalidate">
+          <emu-clause id="sec-generatorvalidate" aoid="GeneratorValidate">
             <h1>GeneratorValidate ( generator )</h1>
             <p>The abstract operation GeneratorValidate with argument _generator_ performs the following steps:</p>
             <emu-alg>
@@ -35301,7 +35301,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.3.3.3" -->
-          <emu-clause id="sec-generatorresume">
+          <emu-clause id="sec-generatorresume" aoid="GeneratorResume">
             <h1>GeneratorResume ( generator, value )</h1>
             <p>The abstract operation GeneratorResume with arguments _generator_ and _value_ performs the following steps:</p>
             <emu-alg>
@@ -35321,7 +35321,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.3.3.4" -->
-          <emu-clause id="sec-generatorresumeabrupt">
+          <emu-clause id="sec-generatorresumeabrupt" aoid="GeneratorResumeAbrupt">
             <h1>GeneratorResumeAbrupt(generator, abruptCompletion)</h1>
             <p>The abstract operation GeneratorResumeAbrupt with arguments _generator_ and _abruptCompletion_ performs the following steps:</p>
             <emu-alg>
@@ -35348,7 +35348,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.3.3.5" -->
-          <emu-clause id="sec-generatoryield">
+          <emu-clause id="sec-generatoryield" aoid="GeneratorYield">
             <h1>GeneratorYield ( iterNextObj )</h1>
             <p>The abstract operation GeneratorYield with argument _iterNextObj_ performs the following steps:</p>
             <emu-alg>
@@ -35518,7 +35518,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.4.1.3" -->
-          <emu-clause id="sec-createresolvingfunctions">
+          <emu-clause id="sec-createresolvingfunctions" aoid="CreateResolvingFunctions">
               <h1>CreateResolvingFunctions ( promise )</h1>
               <p>When CreateResolvingFunctions is performed with argument _promise_, the following steps are taken:</p>
               <emu-alg>
@@ -35578,7 +35578,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.4.1.4" -->
-          <emu-clause id="sec-fulfillpromise">
+          <emu-clause id="sec-fulfillpromise" aoid="FulfillPromise">
             <h1>FulfillPromise ( promise, value)</h1>
             <p>When the FulfillPromise abstract operation is called with arguments _promise_ and _value_ the following steps are taken:</p>
             <emu-alg>
@@ -35593,7 +35593,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.4.1.5" -->
-          <emu-clause id="sec-newpromisecapability">
+          <emu-clause id="sec-newpromisecapability" aoid="NewPromiseCapability">
               <h1>NewPromiseCapability ( C )</h1>
               <p>The abstract operation NewPromiseCapability takes a constructor function, and attempts to use that constructor function in the fashion of the built-in `Promise` constructor to create a Promise object and extract its resolve and reject functions. The promise plus the resolve and reject functions are used to initialize a new PromiseCapability record which is returned as the value of this abstract operation.</p>
               <emu-alg>
@@ -35632,7 +35632,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.4.1.6" -->
-          <emu-clause id="sec-ispromise">
+          <emu-clause id="sec-ispromise" aoid="IsPromise">
             <h1>IsPromise ( x )</h1>
             <p>The abstract operation IsPromise checks for the promise brand on an object.</p>
             <emu-alg>
@@ -35643,7 +35643,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.4.1.7" -->
-          <emu-clause id="sec-rejectpromise">
+          <emu-clause id="sec-rejectpromise" aoid="RejectPromise">
             <h1>RejectPromise ( promise, reason)</h1>
             <p>When the RejectPromise abstract operation is called with arguments _promise_ and _reason_ the following steps are taken:</p>
             <emu-alg>
@@ -35658,7 +35658,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.4.1.8" -->
-          <emu-clause id="sec-triggerpromisereactions">
+          <emu-clause id="sec-triggerpromisereactions" aoid="TriggerPromiseReactions">
             <h1>TriggerPromiseReactions ( reactions, argument )</h1>
             <p>The abstract operation TriggerPromiseReactions takes a collection of PromiseReactionRecords and enqueues a new Job for each record. Each such Job processes the [[Handler]] of the PromiseReactionRecord, and if the [[Handler]] is a function calls it passing the given argument.</p>
             <emu-alg>
@@ -35674,7 +35674,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <h1>Promise Jobs</h1>
 
           <!-- es6num="25.4.2.1" -->
-          <emu-clause id="sec-promisereactionjob">
+          <emu-clause id="sec-promisereactionjob" aoid="PromiseReactionJob">
             <h1>PromiseReactionJob ( reaction, argument )</h1>
             <p>The job PromiseReactionJob with parameters _reaction_ and _argument_ applies the appropriate handler to the incoming value, and uses the handler's return value to resolve or reject the derived promise associated with that handler.</p>
             <emu-alg>
@@ -35693,7 +35693,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-clause>
 
           <!-- es6num="25.4.2.2" -->
-          <emu-clause id="sec-promiseresolvethenablejob">
+          <emu-clause id="sec-promiseresolvethenablejob" aoid="PromiseResolveThenableJob">
             <h1>PromiseResolveThenableJob ( promiseToResolve, thenable, then)</h1>
             <p>The job PromiseResolveThenableJob with parameters _promiseToResolve_, _thenable_, and _then_ performs the following steps:</p>
             <emu-alg>
@@ -35776,7 +35776,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </emu-note>
 
             <!-- es6num="25.4.4.1.1" -->
-            <emu-clause id="sec-performpromiseall">
+            <emu-clause id="sec-performpromiseall" aoid="PerformPromiseAll">
               <h1>Runtime Semantics: PerformPromiseAll( iteratorRecord, constructor, resultCapability)</h1>
               <p>When the PerformPromiseAll abstract operation is called with arguments _iteratorRecord_, _constructor_, and _resultCapability_ the following steps are taken:</p>
               <emu-alg>
@@ -35876,7 +35876,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </emu-note>
 
             <!-- es6num="25.4.4.3.1" -->
-            <emu-clause id="sec-performpromiserace">
+            <emu-clause id="sec-performpromiserace" aoid="PerformPromiseRace">
               <h1>Runtime Semantics: PerformPromiseRace ( iteratorRecord, promiseCapability, C )</h1>
               <p>When the PerformPromiseRace abstract operation is called with arguments _iteratorRecord_, _promiseCapability_, and _C_ the following steps are taken:</p>
               <emu-alg>
@@ -35988,7 +35988,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </emu-alg>
 
             <!-- es6num="25.4.5.3.1" -->
-            <emu-clause id="sec-performpromisethen">
+            <emu-clause id="sec-performpromisethen" aoid="PerformPromiseThen">
               <h1>PerformPromiseThen ( promise, onFulfilled, onRejected, resultCapability )</h1>
               <p>The abstract operation PerformPromiseThen performs the &ldquo;then&rdquo; operation on _promise_ using _onFulfilled_ and _onRejected_ as its settlement actions. The result is _resultCapability_'s promise.</p>
               <emu-alg>
@@ -36947,7 +36947,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </emu-alg>
 
             <!-- es6num="B.2.3.2.1" -->
-            <emu-annex id="sec-createhtml">
+            <emu-annex id="sec-createhtml" aoid="CreateHTML">
               <h1>Runtime Semantics: CreateHTML ( string, tag, attribute, value )</h1>
               <p>The abstract operation CreateHTML is called with arguments _string_, _tag_, _attribute_, and _value_. The arguments _tag_ and _attribute_ must be String values. The following steps are taken:</p>
               <emu-alg>

@@ -461,6 +461,7 @@ def serialize(node, apply_emd_expansions):
                     current_section_id = None
                 output_name = 'section'
                 if 'normative' in attrs: del attrs['normative'] # RECONSTRUCTING
+                if 'aoid' in attrs: del attrs['aoid'] # RECONSTRUCTING
             elif name == 'emu-formula':
                 output_name = 'span'
                 attrs['style'] = 'font-family: Times New Roman'
