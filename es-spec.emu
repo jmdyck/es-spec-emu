@@ -2572,7 +2572,7 @@
             <p>The term &ldquo;abrupt completion&rdquo; refers to any completion with a [[type]] value other than ~normal~.</p>
 
           <!-- es6num="6.2.2.1" -->
-          <emu-clause id="sec-normalcompletion">
+          <emu-clause id="sec-normalcompletion" aoid="NormalCompletion">
             <h1>NormalCompletion</h1>
             <p>The abstract operation NormalCompletion with a single _argument_, such as:</p>
             <emu-alg>
@@ -2585,7 +2585,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.2.2" -->
-          <emu-clause id="sec-implicit-completion-values">
+          <emu-clause id="sec-implicit-completion-values" aoid="Completion">
             <h1>Implicit Completion Values</h1>
             <p>The algorithms of this specification often implicitly return Completion Records whose [[type]] is ~normal~. Unless it is otherwise obvious from the context, an algorithm statement that returns a value that is not a Completion Record, such as:</p>
             <emu-alg>
@@ -2622,7 +2622,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.2.4" -->
-          <emu-clause id="sec-returnifabrupt">
+          <emu-clause id="sec-returnifabrupt" aoid="ReturnIfAbrupt">
             <h1>ReturnIfAbrupt</h1>
             <p>Algorithms steps that say</p>
             <emu-alg>
@@ -35451,7 +35451,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </figure>
 
             <!-- es6num="25.4.1.1.1" -->
-            <emu-clause id="sec-ifabruptrejectpromise">
+            <emu-clause id="sec-ifabruptrejectpromise" aoid="IfAbruptRejectPromise">
               <h1>IfAbruptRejectPromise ( value, capability )</h1>
               <p>IfAbruptRejectPromise is a short hand for a sequence of algorithm steps that use a PromiseCapability record. An algorithm step of the form:</p>
               <emu-alg>
