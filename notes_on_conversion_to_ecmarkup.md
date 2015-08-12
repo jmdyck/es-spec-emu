@@ -100,9 +100,7 @@ listed as valid in https://github.com/rbuckton/grammarkdown:
  - "but only if ..." (in rhs for AtomEscape and ClassAtomNoDashInRange in B.1.4)
 
 In each case, I just passed the text through as emu-grammar content.
-
-Also, I didn't use grammarkdown's defined operators for lookahead
-assertions, I just used the operator in the spec ("!=" or "&notin;").
+(It looks like the first 3 are actually valid, they just aren't listed as such.)
 
 For the two cases of "one of `<table>`" (in 11.6.2.1 Keyword and
 11.7 Punctuator), I didn't want a `<table>` in an `<emu-grammar>`,
