@@ -7167,7 +7167,7 @@ function* enumerate(obj) {
                     1. Let _fn_ be the sole element of the BoundNames of _d_.
                     1. If _fn_ is not an element of _functionNames_, then
                         1. Insert _fn_ as the first element of _functionNames_.
-                        1. NOTE If there are multiple _FunctionDeclarations_ or _GeneratorDeclarations_ for the same name, the last declaration is used.
+                        1. NOTE If there are multiple |FunctionDeclaration|s or |GeneratorDeclaration|s for the same name, the last declaration is used.
                         1. Insert _d_ as the first element of _functionsToInitialize_.
             1. Let _argumentsObjectNeeded_ be *true*.
             1. If the value of the [[ThisMode]] internal slot of _func_ is ~lexical~, then
@@ -19927,7 +19927,7 @@ a = b + c(d + e).print()
             1. For each _d_ in _varDeclarations_, in reverse list order do
                 1. If _d_ is neither a |VariableDeclaration| or a |ForBinding|, then
                     1. Assert: _d_ is either a |FunctionDeclaration| or a |GeneratorDeclaration|.
-                    1. NOTE If there are multiple _FunctionDeclarations_ for the same name, the last declaration is used.
+                    1. NOTE If there are multiple |FunctionDeclaration|s for the same name, the last declaration is used.
                     1. Let _fn_ be the sole element of the BoundNames of _d_.
                     1. If _fn_ is not an element of _declaredFunctionNames_, then
                         1. Let _fnDefinable_ be _envRec_.CanDeclareGlobalFunction(_fn_).
@@ -22079,7 +22079,7 @@ a = b + c(d + e).print()
               1. For each _d_ in _varDeclarations_, in reverse list order do
                   1. If _d_ is neither a |VariableDeclaration| or a |ForBinding|, then
                       1. Assert: _d_ is either a |FunctionDeclaration| or a |GeneratorDeclaration|.
-                      1. NOTE If there are multiple _FunctionDeclarations_ for the same name, the last declaration is used.
+                      1. NOTE If there are multiple |FunctionDeclaration|s for the same name, the last declaration is used.
                       1. Let _fn_ be the sole element of the BoundNames of _d_.
                       1. If _fn_ is not an element of _declaredFunctionNames_, then
                           1. If _varEnvRec_ is a global Environment Record, then
@@ -37338,7 +37338,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 1. For each |FunctionDeclaration| _f_ in _varDeclarations_ that is directly contained in the |StatementList| of a |Block|, |CaseClause|, or |DefaultClause|,
                     1. Let _F_ be StringValue of the |BindingIdentifier| of |FunctionDeclaration| _f_.
                     1. If replacing the |FunctionDeclaration| _f_ with a |VariableStatement| that has _F_ as a |BindingIdentifier| would not produce any Early Errors for _func_ and _F_ is not an element of BoundNames of _argumentsList_, then
-                        1. NOTE A var binding for _F_ is only instantiated here if it is neither a VarDeclaredName, the name of a formal parameter, or another _FunctionDeclarations_.
+                        1. NOTE A var binding for _F_ is only instantiated here if it is neither a VarDeclaredName, the name of a formal parameter, or another |FunctionDeclaration|s.
                         1. If _instantiatedVarNames_ does not contain _F_, then
                             1. Let _status_ be _varEnvRec_.CreateMutableBinding(_F_).
                             1. Assert: _status_ is never an abrupt completion.
