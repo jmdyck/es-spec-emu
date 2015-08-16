@@ -13281,7 +13281,7 @@ a = b + c(d + e).print()
               ShiftExpression[?Yield]
               RelationalExpression[?In, ?Yield] `&lt;` ShiftExpression[?Yield]
               RelationalExpression[?In, ?Yield] `&gt;` ShiftExpression[?Yield]
-              RelationalExpression[?In, ?Yield] `&lt;=` ShiftExpression[? Yield]
+              RelationalExpression[?In, ?Yield] `&lt;=` ShiftExpression[?Yield]
               RelationalExpression[?In, ?Yield] `&gt;=` ShiftExpression[?Yield]
               RelationalExpression[?In, ?Yield] `instanceof` ShiftExpression[?Yield]
               [+In] RelationalExpression[In, ?Yield] `in` ShiftExpression[?Yield]
@@ -13698,7 +13698,7 @@ a = b + c(d + e).print()
           <emu-grammar>
             ConditionalExpression[In, Yield] :
               LogicalORExpression[?In, ?Yield]
-              LogicalORExpression[?In,?Yield] `?` AssignmentExpression[In, ?Yield] `:` AssignmentExpression[?In, ?Yield]
+              LogicalORExpression[?In, ?Yield] `?` AssignmentExpression[In, ?Yield] `:` AssignmentExpression[?In, ?Yield]
           </emu-grammar>
           <emu-note>
             <p>The grammar for a |ConditionalExpression| in ECMAScript is slightly different from that in C and Java, which each allow the second subexpression to be an |Expression| but restrict the third expression to be a |ConditionalExpression|. The motivation for this difference in ECMAScript is to allow an assignment expression to be governed by either arm of a conditional and to eliminate the confusing and fairly useless case of a comma expression as the centre expression.</p>
@@ -13889,11 +13889,11 @@ a = b + c(d + e).print()
                 Elision? AssignmentElement[?Yield]
 
               AssignmentProperty[Yield] :
-                IdentifierReference[?Yield] Initializer[In,?Yield]?
+                IdentifierReference[?Yield] Initializer[In, ?Yield]?
                 PropertyName `:` AssignmentElement[?Yield]
 
               AssignmentElement[Yield] :
-                DestructuringAssignmentTarget[?Yield] Initializer[In,?Yield]?
+                DestructuringAssignmentTarget[?Yield] Initializer[In, ?Yield]?
 
               AssignmentRestElement[Yield] :
                 `...` DestructuringAssignmentTarget[?Yield]
@@ -14235,7 +14235,7 @@ a = b + c(d + e).print()
             LexicalDeclaration[In, ?Yield]
 
           HoistableDeclaration[Yield, Default] :
-            FunctionDeclaration[?Yield,?Default]
+            FunctionDeclaration[?Yield, ?Default]
             GeneratorDeclaration[?Yield, ?Default]
 
           BreakableStatement[Yield, Return] :
