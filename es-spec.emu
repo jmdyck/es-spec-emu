@@ -3646,8 +3646,10 @@
                   </td>
                   <td>
                     <p>Apply the following steps:</p>
-                    <p>1. Let _primValue_ be ToPrimitive(_argument_, hint String).</p>
-                    <p>2. Return ToString(_primValue_).</p>
+                    <emu-alg>
+                      1. Let _primValue_ be ToPrimitive(_argument_, hint String).
+                      1. Return ToString(_primValue_).
+                    </emu-alg>
                   </td>
                 </tr>
                </tbody>
@@ -3683,7 +3685,9 @@
             </emu-note>
             <emu-note>
               <p>For implementations that provide more accurate conversions than required by the rules above, it is recommended that the following alternative version of step 5 be used as a guideline:</p>
-              <p class="special4">5. Otherwise, let _n_, _k_, and _s_ be integers such that _k_ &ge; 1, 10<sup>_k_-1</sup> &le; _s_ &lt; 10<sup>_k_</sup>, the Number value for _s_ &times; 10<sup>_n_-_k_</sup> is _m_, and _k_ is as small as possible. If there are multiple possibilities for _s_, choose the value of _s_ for which _s_ &times; 10<sup>_n_-_k_</sup> is closest in value to _m_. If there are two such possible values of _s_, choose the one that is even. Note that _k_ is the number of digits in the decimal representation of _s_ and that _s_ is not divisible by 10.</p>
+              <emu-alg>
+                5. Otherwise, let _n_, _k_, and _s_ be integers such that _k_ &ge; 1, 10<sup>_k_-1</sup> &le; _s_ &lt; 10<sup>_k_</sup>, the Number value for _s_ &times; 10<sup>_n_-_k_</sup> is _m_, and _k_ is as small as possible. If there are multiple possibilities for _s_, choose the value of _s_ for which _s_ &times; 10<sup>_n_-_k_</sup> is closest in value to _m_. If there are two such possible values of _s_, choose the one that is even. Note that _k_ is the number of digits in the decimal representation of _s_ and that _s_ is not divisible by 10.
+              </emu-alg>
             </emu-note>
             <emu-note>
               <p>Implementers of ECMAScript may find useful the paper and code written by David M. Gay for binary-to-decimal conversion of floating-point numbers:</p>
@@ -7299,7 +7303,9 @@ function* enumerate(obj) {
         <emu-clause id="sec-built-in-function-objects-construct-argumentslist-newtarget">
           <h1>[[Construct]] (argumentsList, newTarget)</h1>
           <p>The [[Construct]] internal method for built-in function object _F_ is called with parameters _argumentsList_ and _newTarget_. The steps performed are the same as [[Call]] (see <emu-internal-ref refid="sec-built-in-function-objects-call-thisargument-argumentslist">NUM</emu-internal-ref>) except that step 9 is replaced by:</p>
-          <p class="special1" style="-ooxml-indentation: 18.0pt">9. Let _result_ be the Completion Record that is the result of evaluating _F_ in an implementation defined manner that conforms to the specification of _F_. The *this* value is uninitialized, _argumentsList_ provides the named parameters, and _newTarget_ provides the NewTarget value.</p>
+          <emu-alg>
+            9. Let _result_ be the Completion Record that is the result of evaluating _F_ in an implementation defined manner that conforms to the specification of _F_. The *this* value is uninitialized, _argumentsList_ provides the named parameters, and _newTarget_ provides the NewTarget value.
+          </emu-alg>
         </emu-clause>
 
         <!-- es6num="9.3.3" -->
@@ -24352,7 +24358,9 @@ new Function("a,b", "c", "return a+b+c")
             <p>If the `toExponential` method is called with more than one argument, then the behaviour is undefined (see <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">TYPE NUM</emu-internal-ref>).</p>
             <emu-note>
               <p>For implementations that provide more accurate conversions than required by the rules above, it is recommended that the following alternative version of step 12.b.i be used as a guideline:</p>
-              <p class="special3">i. Let _e_, _n_, and _f_ be integers such that _f_ &ge; 0, 10<sup>_f_</sup> &le; n &lt; 10<sup>_f_+1</sup>, the Number value for n &times; 10<sup>_e_-_f_</sup> is x, and _f_ is as small as possible. If there are multiple possibilities for _n_, choose the value of _n_ for which _n_ &times; 10<sup>_e_-_f_</sup> is closest in value to _x_. If there are two such possible values of _n_, choose the one that is even.</p>
+              <emu-alg>
+                i. Let _e_, _n_, and _f_ be integers such that _f_ &ge; 0, 10<sup>_f_</sup> &le; n &lt; 10<sup>_f_+1</sup>, the Number value for n &times; 10<sup>_e_-_f_</sup> is x, and _f_ is as small as possible. If there are multiple possibilities for _n_, choose the value of _n_ for which _n_ &times; 10<sup>_e_-_f_</sup> is closest in value to _x_. If there are two such possible values of _n_, choose the one that is even.
+              </emu-alg>
             </emu-note>
           </emu-clause>
 
@@ -37351,8 +37359,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-note>
           <p>This modified behaviour also applies to `var` and `function` declarations introduced by direct evals contained within the |Block| of a |Catch| clause. This change is accomplished by modify the algorithm of <emu-internal-ref refid="sec-evaldeclarationinstantiation">NUM</emu-internal-ref> as follows:</p>
           <p>Step 5.d.ii.2.a.i is replaced by:</p>
-          <p class="special2">i. If _thisEnvRec_ is not the Environment Record for a |Catch| clause, throw a *SyntaxError* exception.</p>
-          <p class="special2">ii. If _name_ is bound by any syntactic form other than a |FunctionDeclaration|, a |VariableStatement|, the |VariableDeclarationList| of a for statement, or the |ForBinding| of a for-in statement, throw a *SyntaxError* exception.</p>
+          <emu-alg>
+            i. If _thisEnvRec_ is not the Environment Record for a |Catch| clause, throw a *SyntaxError* exception.
+            1. If _name_ is bound by any syntactic form other than a |FunctionDeclaration|, a |VariableStatement|, the |VariableDeclarationList| of a for statement, or the |ForBinding| of a for-in statement, throw a *SyntaxError* exception.
+          </emu-alg>
         </emu-annex>
       </emu-annex>
     </emu-annex>
