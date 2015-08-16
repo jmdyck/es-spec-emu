@@ -14095,7 +14095,7 @@ a = b + c(d + e).print()
                   1. ReturnIfAbrupt(_v_).
               1. Else, let _v_ be _value_.
               1. If |DestructuringAssignmentTarget| is an |ObjectLiteral| or an |ArrayLiteral|, then
-                  1. Let _nestedAssignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
+                  1. Let _nestedAssignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub>[Yield]</sub> parameter.
                   1. Return the result of performing DestructuringAssignmentEvaluation of _nestedAssignmentPattern_ with _v_ as the argument.
               1. If |Initializer| is present and _value_ is *undefined* and IsAnonymousFunctionDefinition(|Initializer|) and IsIdentifierRef of |DestructuringAssignmentTarget| are both *true*, then
                   1. Let _hasNameProperty_ be HasOwnProperty(_v_, `"name"`).
@@ -14127,7 +14127,7 @@ a = b + c(d + e).print()
                       1. Increment _n_ by 1.
               1. If |DestructuringAssignmentTarget| is neither an |ObjectLiteral| nor an |ArrayLiteral|, then
                   1. Return PutValue(_lref_, _A_).
-              1. Let _nestedAssignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
+              1. Let _nestedAssignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub>[Yield]</sub> parameter.
               1. Return the result of performing DestructuringAssignmentEvaluation of _nestedAssignmentPattern_ with _A_ as the argument.
             </emu-alg>
           </emu-clause>
@@ -14149,7 +14149,7 @@ a = b + c(d + e).print()
                   1. ReturnIfAbrupt(_rhsValue_).
               1. Else, let _rhsValue_ be _v_.
               1. If |DestructuringAssignmentTarget| is an |ObjectLiteral| or an |ArrayLiteral|, then
-                  1. Let _assignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
+                  1. Let _assignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub>[Yield]</sub> parameter.
                   1. Return the result of performing DestructuringAssignmentEvaluation of _assignmentPattern_ with _rhsValue_ as the argument.
               1. If |Initializer| is present and _v_ is *undefined* and IsAnonymousFunctionDefinition(|Initializer|) and IsIdentifierRef of |DestructuringAssignmentTarget| are both *true*, then
                   1. Let _hasNameProperty_ be HasOwnProperty(_rhsValue_, `"name"`).
