@@ -37521,21 +37521,45 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
     <!-- es6num="F" -->
     <emu-annex id="sec-bibliography">
       <h1>Bibliography</h1>
-      <p><span class="marker">[1] </span>IEEE Std 754-2008: <i>IEEE Standard for Floating-Point Arithmetic</i>. Institute of Electrical and Electronic Engineers, New York (2008)</p>
-      <p><span class="marker">[2] </span><i>The Unicode Standard, Version 5.0</i>, as amended by Unicode 5.1.0, or successor.
+      <ol>
+        <li>
+          IEEE Std 754-2008: <i>IEEE Standard for Floating-Point Arithmetic</i>. Institute of Electrical and Electronic Engineers, New York (2008)
+        </li>
+        <li>
+          <i>The Unicode Standard, Version 5.0</i>, as amended by Unicode 5.1.0, or successor.
         <br>
-        &lt;<emu-external-ref href="http://www.unicode.org/versions/latest" linktext="URL"></emu-external-ref>&gt;</p>
-      <p><span class="marker">[3] </span><i>Unicode Standard Annex #15, Unicode Normalization Forms, version Unicode 5.1.0</i>, or successor.
+        &lt;<emu-external-ref href="http://www.unicode.org/versions/latest" linktext="URL"></emu-external-ref>&gt;
+        </li>
+        <li>
+          <i>Unicode Standard Annex #15, Unicode Normalization Forms, version Unicode 5.1.0</i>, or successor.
         <br>
-        &lt;<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"></emu-external-ref>&gt;</p>
-      <p><span class="marker">[4] </span><i>Unicode Standard Annex #31, Unicode Identifiers and Pattern Syntax, version Unicode 5.1.0</i>, or successor. &lt;<emu-external-ref href="http://www.unicode.org/reports/tr31/" linktext="URL"></emu-external-ref>&gt;</p>
-      <p><span class="marker">[5] </span>Unicode Technical Note #5: Canonical Equivalence in Applications, available at &lt;<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"></emu-external-ref>&gt;</p>
-      <p><span class="marker">[6] </span>Unicode Technical Standard #10: Unicode Collation Algorithm version 5.1.0, or successor, available at &lt;<emu-external-ref href="http://www.unicode.org/reports/tr10/" linktext="URL"></emu-external-ref>&gt;</p>
-      <p><span class="marker">[7] </span><i>IANA Time Zone Database</i> at &lt;<emu-external-ref href="http://www.iana.org/time-zones" linktext="URL"></emu-external-ref>&gt;</p>
-      <p><span class="marker">[8] </span>ISO 8601:2004(E) <i>Data elements and interchange formats &ndash; Information interchange</i> &mdash; <i>Representation of dates and times</i></p>
-      <p><span class="marker">[9] </span>RFC 1738 &ldquo;Uniform Resource Locators (URL)&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc1738" linktext="URL"></emu-external-ref>&gt;</p>
-      <p><span class="marker">[10] </span>RFC 2396 &ldquo;Uniform Resource Identifiers (URI): Generic Syntax&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc2396" linktext="URL"></emu-external-ref>&gt;</p>
-      <p><span class="marker">[11] </span>RFC 3629 &ldquo;UTF-8, a transformation format of ISO 10646&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc3629" linktext="URL"></emu-external-ref>&gt;</p>
+        &lt;<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"></emu-external-ref>&gt;
+        </li>
+        <li>
+          <i>Unicode Standard Annex #31, Unicode Identifiers and Pattern Syntax, version Unicode 5.1.0</i>, or successor. &lt;<emu-external-ref href="http://www.unicode.org/reports/tr31/" linktext="URL"></emu-external-ref>&gt;
+        </li>
+        <li>
+          Unicode Technical Note #5: Canonical Equivalence in Applications, available at &lt;<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"></emu-external-ref>&gt;
+        </li>
+        <li>
+          Unicode Technical Standard #10: Unicode Collation Algorithm version 5.1.0, or successor, available at &lt;<emu-external-ref href="http://www.unicode.org/reports/tr10/" linktext="URL"></emu-external-ref>&gt;
+        </li>
+        <li>
+          <i>IANA Time Zone Database</i> at &lt;<emu-external-ref href="http://www.iana.org/time-zones" linktext="URL"></emu-external-ref>&gt;
+        </li>
+        <li>
+          ISO 8601:2004(E) <i>Data elements and interchange formats &ndash; Information interchange</i> &mdash; <i>Representation of dates and times</i>
+        </li>
+        <li>
+          RFC 1738 &ldquo;Uniform Resource Locators (URL)&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc1738" linktext="URL"></emu-external-ref>&gt;
+        </li>
+        <li>
+          RFC 2396 &ldquo;Uniform Resource Identifiers (URI): Generic Syntax&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc2396" linktext="URL"></emu-external-ref>&gt;
+        </li>
+        <li>
+          RFC 3629 &ldquo;UTF-8, a transformation format of ISO 10646&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc3629" linktext="URL"></emu-external-ref>&gt;
+        </li>
+      </ol>
     </emu-annex>
   </body>
 </html>
