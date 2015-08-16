@@ -120,7 +120,7 @@
         <emu-clause id="sec-objects">
           <h1>Objects</h1>
           <p>Even though ECMAScript includes syntax for class definitions, ECMAScript objects are not fundamentally class-based such as those in C++, Smalltalk, or Java. Instead objects may be created in various ways including via a literal notation or via <em>constructors</em> which create objects and then execute code that initializes all or part of them by assigning initial values to their properties. Each constructor is a function that has a property named `"prototype"` that is used to implement <em>prototype-based inheritance</em> and <em>shared properties</em>. Objects are created by using constructors in <b>new</b> expressions; for example, `new Date(2009,11)` creates a new Date object. Invoking a constructor without using <b>new</b> has consequences that depend on the constructor. For example, `Date()` produces a string representation of the current date and time rather than an object.</p>
-          <p>Every object created by a constructor has an implicit reference (called the object's _prototype_) to the value of its constructor's `"prototype"` property. Furthermore, a prototype may have a non-null implicit reference to its prototype, and so on; this is called the <em>prototype chain</em>. When a reference is made to a property in an object, that reference is to the property of that name in the first object in the prototype chain that contains a property of that name. In other words, first the object mentioned directly is examined for such a property; if that object contains the named property, that is the property to which the reference refers; if that object does not contain the named property, the prototype for that object is examined next; and so on.</p>
+          <p>Every object created by a constructor has an implicit reference (called the object's <em>prototype</em>) to the value of its constructor's `"prototype"` property. Furthermore, a prototype may have a non-null implicit reference to its prototype, and so on; this is called the <em>prototype chain</em>. When a reference is made to a property in an object, that reference is to the property of that name in the first object in the prototype chain that contains a property of that name. In other words, first the object mentioned directly is examined for such a property; if that object contains the named property, that is the property to which the reference refers; if that object does not contain the named property, the prototype for that object is examined next; and so on.</p>
           <figure>
             <object data="figure-1.svg" height="354" type="image/svg+xml" width="719"> <img alt="An image of lots of boxes and arrows." height="354" src="figure-1.png" width="719"> </object>
             <figcaption>
@@ -587,7 +587,7 @@
             VariableDeclaration_In :
               BindingIdentifier Initializer_In
           </emu-grammar>
-          <p>If a right-hand side alternative is prefixed with &ldquo;[+parameter]&rdquo; that alternative is only available if the named parameter was used in referencing the production's nonterminal symbol. If a right-hand side alternative is prefixed with &ldquo;[\~parameter]&rdquo; that alternative is only available if the named parameter was _not_ used in referencing the production's nonterminal symbol. This means that:</p>
+          <p>If a right-hand side alternative is prefixed with &ldquo;[+parameter]&rdquo; that alternative is only available if the named parameter was used in referencing the production's nonterminal symbol. If a right-hand side alternative is prefixed with &ldquo;[\~parameter]&rdquo; that alternative is only available if the named parameter was <em>not</em> used in referencing the production's nonterminal symbol. This means that:</p>
           <emu-grammar>
             StatementList[Return] :
               [+Return] ReturnStatement
@@ -679,7 +679,7 @@
       <emu-clause id="sec-algorithm-conventions">
         <h1>Algorithm Conventions</h1>
         <p>The specification often uses a numbered list to specify steps in an algorithm. These algorithms are used to precisely specify the required semantics of ECMAScript language constructs. The algorithms are not intended to imply the use of any specific implementation technique. In practice, there may be more efficient algorithms available to implement a given feature.</p>
-        <p>Algorithms may be explicitly parameterized, in which case the names and usage of the parameters must be provided as part of the algorithm's definition. In order to facilitate their use in multiple parts of this specification, some algorithms, called _abstract_ _operations_, are named and written in parameterized functional form so that they may be referenced by name from within other algorithms. Abstract operations are typically referenced using a functional application style such as <emu-formula>operationName(_arg1_, _arg2_)</emu-formula>. Some abstract operations are treated as polymorphically dispatched methods of class-like specification abstractions. Such method-like abstract operations are typically referenced using a method application style such as <emu-formula>_someValue_.operationName(_arg1_, _arg2_)</emu-formula>.</p>
+        <p>Algorithms may be explicitly parameterized, in which case the names and usage of the parameters must be provided as part of the algorithm's definition. In order to facilitate their use in multiple parts of this specification, some algorithms, called <em>abstract operations</em>, are named and written in parameterized functional form so that they may be referenced by name from within other algorithms. Abstract operations are typically referenced using a functional application style such as <emu-formula>operationName(_arg1_, _arg2_)</emu-formula>. Some abstract operations are treated as polymorphically dispatched methods of class-like specification abstractions. Such method-like abstract operations are typically referenced using a method application style such as <emu-formula>_someValue_.operationName(_arg1_, _arg2_)</emu-formula>.</p>
         <p>Algorithms may be associated with productions of one of the ECMAScript grammars. A production that has multiple alternative definitions will typically have a distinct algorithm for each alternative. When an algorithm is associated with a grammar production, it may reference the terminal and nonterminal symbols of the production alternative as if they were parameters of the algorithm. When used in this manner, nonterminal symbols refer to the actual alternative definition that is matched when parsing the source text.</p>
         <p>When an algorithm is associated with a production alternative, the alternative is typically shown without any &ldquo;[ ]&rdquo; grammar annotations. Such annotations should only affect the syntactic recognition of the alternative and have no effect on the associated semantics for the alternative.</p>
         <p>Unless explicitly specified otherwise, all chain productions have an implicit definition for every algorithm that might be applied to that production's left-hand side nonterminal. The implicit definition simply reapplies the same algorithm name with the same parameters, if any, to the chain production's sole right-hand side nonterminal and then returns the result. For example, assume there is a production:</p>
@@ -984,7 +984,7 @@
             </ul>
             <p>Properties are identified using key values. A property key value is either an ECMAScript String value or a Symbol value. All String and Symbol values, including the empty string, are valid as property keys. A <em>property name</em> is a property key that is a String value.</p>
             <p>An <em>integer index</em> is a String-valued property key that is a canonical numeric String (see <emu-internal-ref refid="sec-canonicalnumericindexstring">NUM</emu-internal-ref>) and whose numeric value is either *+0* or a positive integer &le; 2<sup>53</sup>-1. An <em>array index</em> is an integer index whose numeric value _i_ is in the range <emu-formula>+0 &le; _i_ &lt; 2<sup>32</sup>-1</emu-formula>.</p>
-            <p>Property keys are used to access properties and their values. There are two kinds of access for properties: _get_ and _set_, corresponding to value retrieval and assignment, respectively. The properties accessible via get and set access includes both <em>own properties</em> that are a direct part of an object and <em>inherited properties</em> which are provided by another associated object via a property inheritance relationship. Inherited properties may be either own or inherited properties of the associated object. Each own property of an object must each have a key value that is distinct from the key values of the other own properties of that object.</p>
+            <p>Property keys are used to access properties and their values. There are two kinds of access for properties: <em>get</em> and <em>set</em>, corresponding to value retrieval and assignment, respectively. The properties accessible via get and set access includes both <em>own properties</em> that are a direct part of an object and <em>inherited properties</em> which are provided by another associated object via a property inheritance relationship. Inherited properties may be either own or inherited properties of the associated object. Each own property of an object must each have a key value that is distinct from the key values of the other own properties of that object.</p>
             <p>All objects are logically collections of properties, but there are multiple forms of objects that differ in their semantics for accessing and manipulating their properties. <em>Ordinary objects</em> are the most common form of objects and have the default object semantics. An <em>exotic object</em> is any form of object whose property semantics differ in any way from the default semantics.</p>
 
           <!-- es6num="6.1.7.1" -->
@@ -1375,7 +1375,7 @@
                     (_any_, a List of _any_) <b>&rarr;</b> _any_
                   </td>
                   <td>
-                    Executes code associated with this object. Invoked via a function call expression. The arguments to the internal method are a *this* value and a list containing the arguments passed to the function by a call expression. Objects that implement this internal method are _callable_.
+                    Executes code associated with this object. Invoked via a function call expression. The arguments to the internal method are a *this* value and a list containing the arguments passed to the function by a call expression. Objects that implement this internal method are <em>callable</em>.
                   </td>
                 </tr>
                 <tr>
@@ -1386,7 +1386,7 @@
                     (a List of _any_, Object) <b>&rarr;</b> Object
                   </td>
                   <td>
-                    Creates an object. Invoked via the `new` or `super` operators. The first argument to the internal method is a list containing the arguments of the operator. The second argument is the object to which the `new` operator was initially applied. Objects that implement this internal method are called _constructors_. A function object is not necessarily a constructor and such non-constructor function objects do not have a [[Construct]] internal method.
+                    Creates an object. Invoked via the `new` or `super` operators. The first argument to the internal method is a list containing the arguments of the operator. The second argument is the object to which the `new` operator was initially applied. Objects that implement this internal method are called <em>constructors</em>. A function object is not necessarily a constructor and such non-constructor function objects do not have a [[Construct]] internal method.
                   </td>
                 </tr>
                </tbody>
@@ -8427,7 +8427,7 @@ function* enumerate(obj) {
             </table>
           </figure>
           <p>When a handler method is called to provide the implementation of a proxy object internal method, the handler method is passed the proxy's target object as a parameter. A proxy's handler object does not necessarily have a method corresponding to every essential internal method. Invoking an internal method on the proxy results in the invocation of the corresponding internal method on the proxy's target object if the handler object does not have a method corresponding to the internal trap.</p>
-          <p>The [[ProxyHandler]] and [[ProxyTarget]] internal slots of a proxy object are always initialized when the object is created and typically may not be modified. Some proxy objects are created in a manner that permits them to be subsequently _revoked_. When a proxy is revoked, its [[ProxyHander]] and [[ProxyTarget]] internal slots are set to *null* causing subsequent invocations of internal methods on that proxy object to throw a *TypeError* exception.</p>
+          <p>The [[ProxyHandler]] and [[ProxyTarget]] internal slots of a proxy object are always initialized when the object is created and typically may not be modified. Some proxy objects are created in a manner that permits them to be subsequently <em>revoked</em>. When a proxy is revoked, its [[ProxyHander]] and [[ProxyTarget]] internal slots are set to *null* causing subsequent invocations of internal methods on that proxy object to throw a *TypeError* exception.</p>
           <p>Because proxy objects permit the implementation of internal methods to be provided by arbitrary ECMAScript code, it is possible to define a proxy object whose handler methods violates the invariants defined in <emu-internal-ref refid="sec-invariants-of-the-essential-internal-methods">NUM</emu-internal-ref>. Some of the internal method invariants defined in <emu-internal-ref refid="sec-invariants-of-the-essential-internal-methods">NUM</emu-internal-ref> are essential integrity invariants. These invariants are explicitly enforced by the proxy object internal methods specified in this section. An ECMAScript implementation must be robust in the presence of all possible invariant violations.</p>
           <p>In the following algorithm descriptions, assume _O_ is an ECMAScript proxy object, _P_ is a property key value, _V_ is any ECMAScript language value and _Desc_ is a Property Descriptor record.</p>
 
@@ -9510,7 +9510,7 @@ function* enumerate(obj) {
             <p>This standard specifies specific code point additions: U+0024 (DOLLAR SIGN) and U+005F (LOW LINE) are permitted anywhere in an |IdentifierName|, and the code points U+200C (ZERO WIDTH NON-JOINER) and U+200D (ZERO WIDTH JOINER) are permitted anywhere after the first code point of an |IdentifierName|.</p>
           </emu-note>
           <p>Unicode escape sequences are permitted in an |IdentifierName|, where they contribute a single Unicode code point to the |IdentifierName|. The code point is expressed by the |HexDigits| of the |UnicodeEscapeSequence| (see <emu-internal-ref refid="sec-literals-string-literals">NUM</emu-internal-ref>). The `\` preceding the |UnicodeEscapeSequence| and the `u` and `{ }` code units, if they appear, do not contribute code points to the |IdentifierName|. A |UnicodeEscapeSequence| cannot be used to put a code point into an |IdentifierName| that would otherwise be illegal. In other words, if a `\` |UnicodeEscapeSequence| sequence were replaced by the |SourceCharacter| it contributes, the result must still be a valid |IdentifierName| that has the exact same sequence of |SourceCharacter| elements as the original |IdentifierName|. All interpretations of |IdentifierName| within this specification are based upon their actual code points regardless of whether or not an escape sequence was used to contribute any particular code point.</p>
-          <p>Two |IdentifierName| that are canonically equivalent according to the Unicode standard are _not_ equal unless, after replacement of each |UnicodeEscapeSequence|, they are represented by the exact same sequence of code points.</p>
+          <p>Two |IdentifierName| that are canonically equivalent according to the Unicode standard are <em>not</em> equal unless, after replacement of each |UnicodeEscapeSequence|, they are represented by the exact same sequence of code points.</p>
           <h2>Syntax</h2>
           <emu-grammar>
             IdentifierName ::
@@ -9933,7 +9933,7 @@ function* enumerate(obj) {
                 The MV of <emu-grammar>HexDigits :: HexDigits HexDigit</emu-grammar> is (the MV of |HexDigits| &times; 16) plus the MV of |HexDigit|.
               </li>
             </ul>
-            <p>Once the exact MV for a numeric literal has been determined, it is then rounded to a value of the Number type. If the MV is 0, then the rounded value is *+0*; otherwise, the rounded value must be the Number value for the MV (as specified in <emu-internal-ref refid="sec-ecmascript-language-types-number-type">NUM</emu-internal-ref>), unless the literal is a |DecimalLiteral| and the literal has more than 20 significant digits, in which case the Number value may be either the Number value for the MV of a literal produced by replacing each significant digit after the 20th with a `0` digit or the Number value for the MV of a literal produced by replacing each significant digit after the 20th with a `0` digit and then incrementing the literal at the 20th significant digit position. A digit is _significant_ if it is not part of an |ExponentPart| and</p>
+            <p>Once the exact MV for a numeric literal has been determined, it is then rounded to a value of the Number type. If the MV is 0, then the rounded value is *+0*; otherwise, the rounded value must be the Number value for the MV (as specified in <emu-internal-ref refid="sec-ecmascript-language-types-number-type">NUM</emu-internal-ref>), unless the literal is a |DecimalLiteral| and the literal has more than 20 significant digits, in which case the Number value may be either the Number value for the MV of a literal produced by replacing each significant digit after the 20th with a `0` digit or the Number value for the MV of a literal produced by replacing each significant digit after the 20th with a `0` digit and then incrementing the literal at the 20th significant digit position. A digit is <em>significant</em> if it is not part of an |ExponentPart| and</p>
             <ul>
               <li>
                 it is not `0`; or
@@ -10701,7 +10701,7 @@ else c = d
 a = b + c
 (d + e).print()
           </pre>
-          <p>is _not_ transformed by automatic semicolon insertion, because the parenthesized expression that begins the second line can be interpreted as an argument list for a function call:</p>
+          <p>is <em>not</em> transformed by automatic semicolon insertion, because the parenthesized expression that begins the second line can be interpreted as an argument list for a function call:</p>
           <pre class="NoteCode">
 a = b + c(d + e).print()
           </pre>
@@ -25660,7 +25660,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="20.3.1.7" -->
           <emu-clause id="sec-local-time-zone-adjustment">
             <h1>Local Time Zone Adjustment</h1>
-            <p>An implementation of ECMAScript is expected to determine the local time zone adjustment. The local time zone adjustment is a value LocalTZA measured in milliseconds which when added to UTC represents the local _standard_ time. Daylight saving time is _not_ reflected by LocalTZA.</p>
+            <p>An implementation of ECMAScript is expected to determine the local time zone adjustment. The local time zone adjustment is a value LocalTZA measured in milliseconds which when added to UTC represents the local <em>standard</em> time. Daylight saving time is <em>not</em> reflected by LocalTZA.</p>
             <emu-note>
               <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <emu-external-ref href="http://www.iana.org/time-zones/" linktext="URL"></emu-external-ref>.</p>
             </emu-note>
@@ -28085,7 +28085,7 @@ Date.parse(<i>x</i>.toLocaleString())
                 A <em>Continuation</em> procedure is an internal closure (i.e. an internal procedure with some arguments already bound to values) that takes one <em>State</em> argument and returns a <em>MatchResult</em> result. If an internal closure references variables which are bound in the function that creates the closure, the closure uses the values that these variables had at the time the closure was created. The <em>Continuation</em> attempts to match the remaining portion (specified by the closure's already-bound arguments) of the pattern against _Input_, starting at the intermediate state given by its <em>State</em> argument. If the match succeeds, the <em>Continuation</em> returns the final <em>State</em> that it reached; if the match fails, the <em>Continuation</em> returns ~failure~.
               </li>
               <li>
-                A <em>Matcher</em> procedure is an internal closure that takes two arguments &mdash; a <em>State</em> and a <em>Continuation</em> &mdash; and returns a <em>MatchResult</em> result. A <em>Matcher</em> attempts to match a middle subpattern (specified by the closure's already-bound arguments) of the pattern against _Input_, starting at the intermediate state given by its <em>State</em> argument. The <em>Continuation</em> argument should be a closure that matches the rest of the pattern. After matching the subpattern of a pattern to obtain a new <em>State</em>, the <em>Matcher</em> then calls <em>Continuation</em> on that new <em>State</em> to test if the rest of the pattern can match as well. If it can, the _Matcher_ returns the <em>State</em> returned by <em>Continuation</em>; if not, the <em>Matcher</em> may try different choices at its choice points, repeatedly calling <em>Continuation</em> until it either succeeds or all possibilities have been exhausted.
+                A <em>Matcher</em> procedure is an internal closure that takes two arguments &mdash; a <em>State</em> and a <em>Continuation</em> &mdash; and returns a <em>MatchResult</em> result. A <em>Matcher</em> attempts to match a middle subpattern (specified by the closure's already-bound arguments) of the pattern against _Input_, starting at the intermediate state given by its <em>State</em> argument. The <em>Continuation</em> argument should be a closure that matches the rest of the pattern. After matching the subpattern of a pattern to obtain a new <em>State</em>, the <em>Matcher</em> then calls <em>Continuation</em> on that new <em>State</em> to test if the rest of the pattern can match as well. If it can, the <em>Matcher</em> returns the <em>State</em> returned by <em>Continuation</em>; if not, the <em>Matcher</em> may try different choices at its choice points, repeatedly calling <em>Continuation</em> until it either succeeds or all possibilities have been exhausted.
               </li>
               <li>
                 An <em>AssertionTester</em> procedure is an internal closure that takes a <em>State</em> argument and returns a Boolean result. The assertion tester tests a specific condition (specified by the closure's already-bound arguments) against the current place in _Input_ and returns *true* if the condition matched or *false* if not.
@@ -31141,7 +31141,7 @@ Date.parse(<i>x</i>.toLocaleString())
                 1. Let _len_ be ToLength(Get(_obj_, `"length"`)).
                 1. ReturnIfAbrupt(_len_).
               </emu-alg>
-              <p>Within this specification of the `sort` method, an object, _obj_, is said to be _sparse_ if the following algorithm returns *true*:</p>
+              <p>Within this specification of the `sort` method, an object, _obj_, is said to be <em>sparse</em> if the following algorithm returns *true*:</p>
               <emu-alg>
                 1. For each integer _i_ in the range 0&le;_i_&lt; _len_
                     1. Let _elem_ be _obj_.[[GetOwnProperty]](ToString(_i_)).
@@ -34886,15 +34886,15 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         <!-- es6num="25.1.1" -->
         <emu-clause id="sec-common-iteration-interfaces">
             <h1>Common Iteration Interfaces</h1>
-            <p>An interface is a set of property keys whose associated values match a specific specification. Any object that provides all the properties as described by an interface's specification _conforms_ to that interface. An interface is not represented by a distinct object. There may be many separately implemented objects that conform to any interface. An individual object may conform to multiple interfaces.</p>
+            <p>An interface is a set of property keys whose associated values match a specific specification. Any object that provides all the properties as described by an interface's specification <em>conforms</em> to that interface. An interface is not represented by a distinct object. There may be many separately implemented objects that conform to any interface. An individual object may conform to multiple interfaces.</p>
 
           <!-- es6num="25.1.1.1" -->
           <emu-clause id="sec-iterable-interface">
-            <h1>The _Iterable_ Interface</h1>
-            <p>The _Iterable_ interface includes the property described in <emu-internal-ref refid="table-52">TYPE NUM</emu-internal-ref>:</p>
+            <h1>The <em>Iterable</em> Interface</h1>
+            <p>The <em>Iterable</em> interface includes the property described in <emu-internal-ref refid="table-52">TYPE NUM</emu-internal-ref>:</p>
             <figure>
               <figcaption>
-                <span id="table-52">Table 52</span> &mdash; _Iterable_ Interface Required Properties
+                <span id="table-52">Table 52</span> &mdash; <em>Iterable</em> Interface Required Properties
               </figcaption>
               <table class="real-table">
                <tbody>
@@ -34914,10 +34914,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     `@@iterator`
                   </td>
                   <td>
-                    A function that returns an _Iterator_ object.
+                    A function that returns an <em>Iterator</em> object.
                   </td>
                   <td>
-                    The returned object must conform to the _Iterator_ interface.
+                    The returned object must conform to the <em>Iterator</em> interface.
                   </td>
                 </tr>
                </tbody>
@@ -34927,11 +34927,11 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
 
           <!-- es6num="25.1.1.2" -->
           <emu-clause id="sec-iterator-interface">
-            <h1>The _Iterator_ Interface</h1>
-            <p>An object that implements the _Iterator_ interface must include the property in <emu-internal-ref refid="table-53">TYPE NUM</emu-internal-ref>. Such objects may also implement the properties in <emu-internal-ref refid="table-54">TYPE NUM</emu-internal-ref>.</p>
+            <h1>The <em>Iterator</em> Interface</h1>
+            <p>An object that implements the <em>Iterator</em> interface must include the property in <emu-internal-ref refid="table-53">TYPE NUM</emu-internal-ref>. Such objects may also implement the properties in <emu-internal-ref refid="table-54">TYPE NUM</emu-internal-ref>.</p>
             <figure>
               <figcaption>
-                <span id="table-53">Table 53</span> &mdash; _Iterator_ Interface Required Properties
+                <span id="table-53">Table 53</span> &mdash; <em>Iterator</em> Interface Required Properties
               </figcaption>
               <table class="real-table">
                <tbody>
@@ -34951,21 +34951,21 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     `next`
                   </td>
                   <td>
-                    A function that returns an _IteratorResult_ object.
+                    A function that returns an <em>IteratorResult</em> object.
                   </td>
                   <td>
-                    The returned object must conform to the _IteratorResult_ interface. If a previous call to the `next` method of an _Iterator_ has returned an _IteratorResult_ object whose `done` property is *true*, then all subsequent calls to the `next` method of that object should also return an _IteratorResult_ object whose `done` property is *true*. However, this requirement is not enforced.
+                    The returned object must conform to the <em>IteratorResult</em> interface. If a previous call to the `next` method of an <em>Iterator</em> has returned an <em>IteratorResult</em> object whose `done` property is *true*, then all subsequent calls to the `next` method of that object should also return an <em>IteratorResult</em> object whose `done` property is *true*. However, this requirement is not enforced.
                   </td>
                 </tr>
                </tbody>
               </table>
             </figure>
             <emu-note>
-              <p>Arguments may be passed to the next function but their interpretation and validity is dependent upon the target _Iterator_. The for-of statement and other common users of _Iterators_ do not pass any arguments, so _Iterator_ objects that expect to be used in such a manner must be prepared to deal with being called with no arguments.</p>
+              <p>Arguments may be passed to the next function but their interpretation and validity is dependent upon the target <em>Iterator</em>. The for-of statement and other common users of <em>Iterators</em> do not pass any arguments, so <em>Iterator</em> objects that expect to be used in such a manner must be prepared to deal with being called with no arguments.</p>
             </emu-note>
             <figure>
               <figcaption>
-                <span id="table-54">Table 54</span> &mdash; _Iterator_ Interface Optional Properties
+                <span id="table-54">Table 54</span> &mdash; <em>Iterator</em> Interface Optional Properties
               </figcaption>
               <table class="real-table">
                <tbody>
@@ -34985,10 +34985,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     `return`
                   </td>
                   <td>
-                    A function that returns an _IteratorResult_ object.
+                    A function that returns an <em>IteratorResult</em> object.
                   </td>
                   <td>
-                    The returned object must conform to the _IteratorResult_ interface. Invoking this method notifies the _Iterator_ object that the caller does not intend to make any more `next` method calls to the _Iterator_. The returned _IteratorResult_ object will typically have a `done` property whose value is *true*, and a `value` property with the value passed as the argument of the `return` method. However, this requirement is not enforced.
+                    The returned object must conform to the <em>IteratorResult</em> interface. Invoking this method notifies the <em>Iterator</em> object that the caller does not intend to make any more `next` method calls to the <em>Iterator</em>. The returned <em>IteratorResult</em> object will typically have a `done` property whose value is *true*, and a `value` property with the value passed as the argument of the `return` method. However, this requirement is not enforced.
                   </td>
                 </tr>
                 <tr>
@@ -34996,27 +34996,27 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     `throw`
                   </td>
                   <td>
-                    A function that returns an _IteratorResult_ object.
+                    A function that returns an <em>IteratorResult</em> object.
                   </td>
                   <td>
-                    The returned object must conform to the _IteratorResult_ interface. Invoking this method notifies the _Iterator_ object that the caller has detected an error condition. The argument may be used to identify the error condition and typically will be an exception object. A typical response is to `throw` the value passed as the argument. If the method does not `throw`, the returned _IteratorResult_ object will typically have a `done` property whose value is *true*.
+                    The returned object must conform to the <em>IteratorResult</em> interface. Invoking this method notifies the <em>Iterator</em> object that the caller has detected an error condition. The argument may be used to identify the error condition and typically will be an exception object. A typical response is to `throw` the value passed as the argument. If the method does not `throw`, the returned <em>IteratorResult</em> object will typically have a `done` property whose value is *true*.
                   </td>
                 </tr>
                </tbody>
               </table>
             </figure>
             <emu-note>
-              <p>Typically callers of these methods should check for their existence before invoking them. Certain ECMAScript language features including `for`-`of`, `yield*`, and array destructuring call these methods after performing an existence check. Most ECMAScript library functions that accept _Iterable_ objects as arguments also conditionally call them.</p>
+              <p>Typically callers of these methods should check for their existence before invoking them. Certain ECMAScript language features including `for`-`of`, `yield*`, and array destructuring call these methods after performing an existence check. Most ECMAScript library functions that accept <em>Iterable</em> objects as arguments also conditionally call them.</p>
             </emu-note>
           </emu-clause>
 
           <!-- es6num="25.1.1.3" -->
           <emu-clause id="sec-iteratorresult-interface">
             <h1>The IteratorResult Interface</h1>
-            <p>The _IteratorResult_ interface includes the properties listed in <emu-internal-ref refid="table-55">TYPE NUM</emu-internal-ref>:</p>
+            <p>The <em>IteratorResult</em> interface includes the properties listed in <emu-internal-ref refid="table-55">TYPE NUM</emu-internal-ref>:</p>
             <figure>
               <figcaption>
-                <span id="table-55">Table 55</span> &mdash; _IteratorResult_ Interface Properties
+                <span id="table-55">Table 55</span> &mdash; <em>IteratorResult</em> Interface Properties
               </figcaption>
               <table class="real-table">
                <tbody>
@@ -35039,7 +35039,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     Either *true* or *false*.
                   </td>
                   <td>
-                    This is the result status of an _iterator_ `next` method call. If the end of the iterator was reached `done` is *true*. If the end was not reached `done` is *false* and a value is available. If a `done` property (either own or inherited) does not exist, it is consider to have the value *false*.
+                    This is the result status of an <em>iterator</em> `next` method call. If the end of the iterator was reached `done` is *true*. If the end was not reached `done` is *false* and a value is available. If a `done` property (either own or inherited) does not exist, it is consider to have the value *false*.
                   </td>
                 </tr>
                 <tr>
@@ -35200,7 +35200,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
       <!-- es6num="25.3" -->
       <emu-clause id="sec-generator-objects">
           <h1>Generator Objects</h1>
-          <p>A Generator object is an instance of a generator function and conforms to both the _Iterator_ and _Iterable_ interfaces.</p>
+          <p>A Generator object is an instance of a generator function and conforms to both the <em>Iterator</em> and <em>Iterable</em> interfaces.</p>
           <p>Generator instances directly inherit properties from the object that is the value of the `prototype` property of the Generator function that created the instance. Generator instances indirectly inherit properties from the Generator Prototype intrinsic, %GeneratorPrototype%.</p>
 
         <!-- es6num="25.3.1" -->
@@ -35392,7 +35392,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <h1>GeneratorYield ( iterNextObj )</h1>
             <p>The abstract operation GeneratorYield with argument _iterNextObj_ performs the following steps:</p>
             <emu-alg>
-              1. Assert: _iterNextObj_ is an Object that implements the _IteratorResult_ interface.
+              1. Assert: _iterNextObj_ is an Object that implements the <em>IteratorResult</em> interface.
               1. Let _genContext_ be the running execution context.
               1. Assert: _genContext_ is the execution context of a generator.
               1. Let _generator_ be the value of the Generator component of _genContext_.
@@ -35412,7 +35412,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
       <emu-clause id="sec-promise-objects">
           <h1>Promise Objects</h1>
           <p>A Promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation.</p>
-          <p>Any Promise object is in one of three mutually exclusive states: _fulfilled_, _rejected_, and _pending_:</p>
+          <p>Any Promise object is in one of three mutually exclusive states: <em>fulfilled</em>, <em>rejected</em>, and <em>pending</em>:</p>
           <ul>
             <li>
               A promise `p` is fulfilled if `p.then(f, r)` will immediately enqueue a Job to call the function `f`.
@@ -35424,8 +35424,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               A promise is pending if it is neither fulfilled nor rejected.
             </li>
           </ul>
-          <p>A promise is said to be _settled_ if it is not pending, i.e. if it is either fulfilled or rejected.</p>
-          <p>A promise is _resolved_ if it is settled or if it has been &ldquo;locked in&rdquo; to match the state of another promise. Attempting to resolve or reject a resolved promise has no effect. A promise is _unresolved_ if it is not resolved. An unresolved promise is always in the pending state. A resolved promise may be pending, fulfilled or rejected.</p>
+          <p>A promise is said to be <em>settled</em> if it is not pending, i.e. if it is either fulfilled or rejected.</p>
+          <p>A promise is <em>resolved</em> if it is settled or if it has been &ldquo;locked in&rdquo; to match the state of another promise. Attempting to resolve or reject a resolved promise has no effect. A promise is _unresolved_ if it is not resolved. An unresolved promise is always in the pending state. A resolved promise may be pending, fulfilled or rejected.</p>
 
         <!-- es6num="25.4.1" -->
         <emu-clause id="sec-promise-abstract-operations">
