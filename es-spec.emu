@@ -18786,7 +18786,7 @@ a = b + c(d + e).print()
           <emu-grammar>
             GeneratorDeclaration : `function` `*` BindingIdentifier `(` FormalParameters `)` `{` GeneratorBody `}`
 
-            GeneratorDeclaration `:` `function` `*` `(` FormalParameters `)` `{` GeneratorBody `}`
+            GeneratorDeclaration : `function` `*` `(` FormalParameters `)` `{` GeneratorBody `}`
           </emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -18855,7 +18855,7 @@ a = b + c(d + e).print()
           <emu-grammar>
             GeneratorDeclaration : `function` `*` BindingIdentifier `(` FormalParameters `)` `{` GeneratorBody `}`
 
-            GeneratorDeclaration `:` `function` `*` `(` FormalParameters `)` `{` GeneratorBody `}`
+            GeneratorDeclaration : `function` `*` `(` FormalParameters `)` `{` GeneratorBody `}`
           </emu-grammar>
           <emu-alg>
             1. Return *false*.
@@ -21476,7 +21476,7 @@ a = b + c(d + e).print()
             <emu-grammar>ExportDeclaration : `export` ExportClause `;`</emu-grammar>
             <ul>
               <li>
-                For each |IdentifierName| _n_ in ReferencedBindings of |ExportClause| : It is a Syntax Error if StringValue of _n_ is a |ReservedWord| or if the StringValue of _n_ is one of: `"implements"`, `"interface"`, `"let"`, `"package"`, `"private"`, `"protected"`, `"public"`, `"static"`, or `"yield"`.
+                For each |IdentifierName| _n_ in ReferencedBindings of |ExportClause|: It is a Syntax Error if StringValue of _n_ is a |ReservedWord| or if the StringValue of _n_ is one of: `"implements"`, `"interface"`, `"let"`, `"package"`, `"private"`, `"protected"`, `"public"`, `"static"`, or `"yield"`.
               </li>
             </ul>
             <emu-note>
@@ -22585,9 +22585,9 @@ a = b + c(d + e).print()
             <p>The `encodeURI` function computes a new version of a UTF-16 encoded (<emu-internal-ref refid="sec-ecmascript-language-types-string-type">NUM</emu-internal-ref>) URI in which each instance of certain code points is replaced by one, two, three, or four escape sequences representing the UTF-8 encoding of the code points.</p>
             <p>The `encodeURI` function is the %encodeURI% intrinsic object. When the `encodeURI` function is called with one argument _uri_, the following steps are taken:</p>
             <emu-alg>
-              1. Let _uriString_ be ToString(|uri|).
+              1. Let _uriString_ be ToString(_uri_).
               1. ReturnIfAbrupt(_uriString_).
-              1. Let _unescapedURISet_ be a String containing one instance of each code unit valid in |uriReserved| and |uriUnescaped| plus "`#`".
+              1. Let _unescapedURISet_ be a String containing one instance of each code unit valid in |uriReserved| and |uriUnescaped| plus `"#"`.
               1. Return Encode(_uriString_, _unescapedURISet_).
             </emu-alg>
             <emu-note>
@@ -37414,7 +37414,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           A conforming implementation, when processing strict mode code, may not extend the syntax of |EscapeSequence| to include |LegacyOctalEscapeSequence| as described in <emu-internal-ref refid="sec-additional-syntax-string-literals">NUM</emu-internal-ref>.
         </li>
         <li>
-          Assignment to an undeclared identifier or otherwise unresolvable reference does not create a property in the global object. When a simple assignment occurs within strict mode code, its _LeftHandSide_ must not evaluate to an unresolvable Reference. If it does a *ReferenceError* exception is thrown (<emu-internal-ref refid="sec-putvalue">NUM</emu-internal-ref>). The _LeftHandSide_ also may not be a reference to a data property with the attribute value {[[Writable]]:*false*}, to an accessor property with the attribute value {[[Set]]:*undefined*}, nor to a non-existent property of an object whose [[Extensible]] internal slot has the value *false*. In these cases a `TypeError` exception is thrown (<emu-internal-ref refid="sec-assignment-operators">NUM</emu-internal-ref>).
+          Assignment to an undeclared identifier or otherwise unresolvable reference does not create a property in the global object. When a simple assignment occurs within strict mode code, its |LeftHandSideExpression| must not evaluate to an unresolvable Reference. If it does a *ReferenceError* exception is thrown (<emu-internal-ref refid="sec-putvalue">NUM</emu-internal-ref>). The |LeftHandSideExpression| also may not be a reference to a data property with the attribute value {[[Writable]]:*false*}, to an accessor property with the attribute value {[[Set]]:*undefined*}, nor to a non-existent property of an object whose [[Extensible]] internal slot has the value *false*. In these cases a `TypeError` exception is thrown (<emu-internal-ref refid="sec-assignment-operators">NUM</emu-internal-ref>).
         </li>
         <li>
           The identifier `eval` or `arguments` may not appear as the |LeftHandSideExpression| of an Assignment operator (<emu-internal-ref refid="sec-assignment-operators">NUM</emu-internal-ref>) or of a |PostfixExpression| (<emu-internal-ref refid="sec-postfix-expressions">NUM</emu-internal-ref>) or as the |UnaryExpression| operated upon by a Prefix Increment (<emu-internal-ref refid="sec-prefix-increment-operator">NUM</emu-internal-ref>) or a Prefix Decrement (<emu-internal-ref refid="sec-prefix-decrement-operator">NUM</emu-internal-ref>) operator.
