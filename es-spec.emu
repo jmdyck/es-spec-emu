@@ -1230,7 +1230,7 @@
                     [[SetPrototypeOf]]
                   </td>
                   <td>
-                    (_Object_ | Null) <b>&rarr;</b> Boolean
+                    (Object | Null) <b>&rarr;</b> Boolean
                   </td>
                   <td>
                     Associate this object with another object that provides inherited properties. Passing *null* indicates that there are no inherited properties. Returns *true* indicating that the operation was completed successfully or *false* indicating that the operation was not successful.
@@ -15337,7 +15337,7 @@ a = b + c(d + e).print()
             </emu-alg>
             <emu-grammar>BindingElementList : BindingElementList `,` BindingElisionElement</emu-grammar>
             <emu-alg>
-              1. Let _status_ be the result of performing IteratorBindingInitialization for |BindingElementList| _with_ _iteratorRecord_ and _environment_ as arguments.
+              1. Let _status_ be the result of performing IteratorBindingInitialization for |BindingElementList| with _iteratorRecord_ and _environment_ as arguments.
               1. ReturnIfAbrupt(_status_).
               1. Return the result of performing IteratorBindingInitialization for |BindingElisionElement| using _iteratorRecord_ and _environment_ as arguments.
             </emu-alg>
@@ -20630,7 +20630,7 @@ a = b + c(d + e).print()
                    <tbody>
                     <tr>
                       <th>
-                        <i>Import Statement Form</i>
+                        Import Statement Form
                       </th>
                       <th>
                         [[ModuleRequest]]
@@ -20785,7 +20785,7 @@ a = b + c(d + e).print()
                    <tbody>
                     <tr>
                       <th>
-                        <i>Export Statement Form</i>
+                        Export Statement Form
                       </th>
                       <th>
                         [[ExportName]]
@@ -26763,7 +26763,7 @@ Date.parse(<i>x</i>.toLocaleString())
                 1. Return ToDateString(_tv_).
               </emu-alg>
               <emu-note>
-                <p>For any Date object <code><i>d</i></code> whose milliseconds amount is zero, the result of <code>Date.parse(<i>d</i>.toString())</code> is equal to <code><i>d</i>.valueOf()</code>. See <emu-internal-ref refid="sec-date.parse">NUM</emu-internal-ref>.</p>
+                <p>For any Date object `d` whose milliseconds amount is zero, the result of `Date.parse(d.toString())` is equal to `d.valueOf()`. See <emu-internal-ref refid="sec-date.parse">NUM</emu-internal-ref>.</p>
               </emu-note>
               <emu-note>
                 <p>The `toString` function is intentionally generic; it does not require that its *this* value be a Date object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
