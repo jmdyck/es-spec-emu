@@ -7186,7 +7186,7 @@ function* enumerate(obj) {
                 1. If _strict_ is *true* or if _simpleParameterList_ is *false*, then
                     1. Let _ao_ be CreateUnmappedArgumentsObject(_argumentsList_).
                 1. Else,
-                    1. NOTE mapped argument object is only provided for non-strict functions that don&rsquo;t have a rest parameter, any parameter default value initializers, or any destructured parameters .
+                    1. NOTE mapped argument object is only provided for non-strict functions that don't have a rest parameter, any parameter default value initializers, or any destructured parameters .
                     1. Let _ao_ be CreateMappedArgumentsObject(_func_, _formals_, _argumentsList_, _env_).
                 1. ReturnIfAbrupt(_ao_).
                 1. If _strict_ is *true*, then
@@ -20973,7 +20973,7 @@ a = b + c(d + e).print()
               <emu-alg>
                 1. Let _module_ be this Source Text Module Record.
                 1. If _exportStarSet_ contains _module_, then
-                    1. Assert: We&rsquo;ve reached the starting point of an import * circularity.
+                    1. Assert: We've reached the starting point of an import * circularity.
                     1. Return a new empty List.
                 1. Append _module_ to _exportStarSet_.
                 1. Let _exportedNames_ be a new empty List.
@@ -22034,7 +22034,7 @@ a = b + c(d + e).print()
                   1. Repeat while _thisLex_ is not the same as _varEnv_,
                       1. Let _thisEnvRec_ be _thisLex_'s EnvironmentRecord.
                       1. If _thisEnvRec_ is not an object Environment Record, then
-                          1. NOTE: The environment of with statements cannot contain any lexical declaration so it doesn&rsquo;t need to be checked for var/let hoisting conflicts.
+                          1. NOTE: The environment of with statements cannot contain any lexical declaration so it doesn't need to be checked for var/let hoisting conflicts.
                           1. For each _name_ in _varNames_, do
                               1. If _thisEnvRec_.HasBinding(_name_) is *true*, then
                                   1. Throw a *SyntaxError* exception.
@@ -28040,7 +28040,7 @@ Date.parse(<i>x</i>.toLocaleString())
                 A <em>CharSet</em> is a mathematical set of characters, either code units or code points depending up the state of the _Unicode_ flag. &ldquo;All characters&rdquo; means either all code unit values or all code point values also depending upon the state if _Unicode_.
               </li>
               <li>
-                A <em>State</em> is an ordered pair <emu-formula>(_endIndex_, _captures_)</emu-formula> where _endIndex_ is an integer and _captures_ is a List of _NcapturingParens_ values. States are used to represent partial match states in the regular expression matching algorithms. The _endIndex_ is one plus the index of the last input character matched so far by the pattern, while _captures_ holds the results of capturing parentheses. The _n_<sup>th</sup> element of _captures_ is either a List that represents the value obtained by the _n_<sup>th</sup> set of capturing parentheses or *undefined* if the _n_<sup>th</sup> set of capturing parentheses hasn&rsquo;t been reached yet. Due to backtracking, many States may be in use at any time during the matching process.
+                A <em>State</em> is an ordered pair <emu-formula>(_endIndex_, _captures_)</emu-formula> where _endIndex_ is an integer and _captures_ is a List of _NcapturingParens_ values. States are used to represent partial match states in the regular expression matching algorithms. The _endIndex_ is one plus the index of the last input character matched so far by the pattern, while _captures_ holds the results of capturing parentheses. The _n_<sup>th</sup> element of _captures_ is either a List that represents the value obtained by the _n_<sup>th</sup> set of capturing parentheses or *undefined* if the _n_<sup>th</sup> set of capturing parentheses hasn't been reached yet. Due to backtracking, many States may be in use at any time during the matching process.
               </li>
               <li>
                 A <em>MatchResult</em> is either a <em>State</em> or the special token ~failure~ that indicates that the match failed.
