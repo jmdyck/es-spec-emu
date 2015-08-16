@@ -10532,19 +10532,19 @@ function* enumerate(obj) {
                 The TRV of <emu-grammar>LineContinuation :: `\` LineTerminatorSequence</emu-grammar> is the sequence consisting of the code unit value 0x005C followed by the code units of TRV of |LineTerminatorSequence|.
               </li>
               <li>
-                The TRV of <emu-grammar>LineTerminatorSequence ::</emu-grammar> &lt;LF&gt; is the code unit value 0x000A.
+                The TRV of <emu-grammar>LineTerminatorSequence :: &lt;LF&gt;</emu-grammar> is the code unit value 0x000A.
               </li>
               <li>
-                The TRV of <emu-grammar>LineTerminatorSequence ::</emu-grammar> &lt;CR&gt; is the code unit value 0x000A.
+                The TRV of <emu-grammar>LineTerminatorSequence :: &lt;CR&gt;</emu-grammar> is the code unit value 0x000A.
               </li>
               <li>
-                The TRV of <emu-grammar>LineTerminatorSequence ::</emu-grammar> &lt;LS&gt; is the code unit value 0x2028.
+                The TRV of <emu-grammar>LineTerminatorSequence :: &lt;LS&gt;</emu-grammar> is the code unit value 0x2028.
               </li>
               <li>
-                The TRV of <emu-grammar>LineTerminatorSequence ::</emu-grammar> &lt;PS&gt; is the code unit value 0x2029.
+                The TRV of <emu-grammar>LineTerminatorSequence :: &lt;PS&gt;</emu-grammar> is the code unit value 0x2029.
               </li>
               <li>
-                The TRV of <emu-grammar>LineTerminatorSequence ::</emu-grammar> &lt;CR&gt;&lt;LF&gt; is the sequence consisting of the code unit value 0x000A.
+                The TRV of <emu-grammar>LineTerminatorSequence :: &lt;CR&gt;&lt;LF&gt;</emu-grammar> is the sequence consisting of the code unit value 0x000A.
               </li>
             </ul>
             <emu-note>
@@ -19513,9 +19513,12 @@ a = b + c(d + e).print()
                 BreakStatement
                 ThrowStatement
                 DebuggerStatement
-                Block `:` `{` `}`
-                ReturnStatement `:` `return` `;`
-                LabelledItem `:` FunctionDeclaration
+
+              Block : `{` `}`
+
+              ReturnStatement : `return` `;`
+
+              LabelledItem : FunctionDeclaration
 
               IterationStatement :
                 `for` `(` LeftHandSideExpression `in` Expression `)` Statement
@@ -19524,7 +19527,8 @@ a = b + c(d + e).print()
                 `for` `(` LeftHandSideExpression `of` AssignmentExpression `)` Statement
                 `for` `(` `var` ForBinding `of` AssignmentExpression `)` Statement
                 `for` `(` ForDeclaration `of` AssignmentExpression `)` Statement
-                CaseBlock `:` `{` `}`
+
+              CaseBlock : `{` `}`
             </emu-grammar>
             <emu-alg>
               1. Return *false*.
@@ -19544,7 +19548,8 @@ a = b + c(d + e).print()
                 `for` `(` Expression? `;` Expression? `;` Expression? `)` Statement
                 `for` `(` `var` VariableDeclarationList `;` Expression? `;` Expression? `)` Statement
                 `for` `(` LexicalDeclaration Expression? `;` Expression? `)` Statement
-                WithStatement `:` `with` `(` Expression `)` Statement
+
+              WithStatement : `with` `(` Expression `)` Statement
             </emu-grammar>
             <emu-alg>
               1. Return HasProductionInTailPosition of |Statement| with argument _nonterminal_.
@@ -19619,9 +19624,12 @@ a = b + c(d + e).print()
                 ArrowFunction
                 LeftHandSideExpression `=` AssignmentExpression
                 LeftHandSideExpression AssignmentOperator AssignmentExpression
-                BitwiseANDExpression `:` BitwiseANDExpression `&amp;` EqualityExpression
-                BitwiseXORExpression `:` BitwiseXORExpression `^` BitwiseANDExpression
-                BitwiseORExpression `:` BitwiseORExpression `|` BitwiseXORExpression
+
+              BitwiseANDExpression : BitwiseANDExpression `&amp;` EqualityExpression
+
+              BitwiseXORExpression : BitwiseXORExpression `^` BitwiseANDExpression
+
+              BitwiseORExpression : BitwiseORExpression `|` BitwiseXORExpression
 
               EqualityExpression :
                 EqualityExpression `==` RelationalExpression
@@ -19668,7 +19676,8 @@ a = b + c(d + e).print()
                 SuperCall
                 CallExpression `[` Expression `]`
                 CallExpression `.` IdentifierName
-                NewExpression `:` `new` NewExpression
+
+              NewExpression : `new` NewExpression
 
               MemberExpression :
                 MemberExpression `[` Expression `]`
