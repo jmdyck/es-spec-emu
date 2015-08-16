@@ -4566,9 +4566,9 @@
           <p>The abstract operation IteratorNext with argument _iterator_ and optional argument _value_ performs the following steps:</p>
           <emu-alg>
             1. If _value_ was not passed, then
-                1. Let _result_ be Invoke(_iterator_, `"next"`, &laquo;&zwj; &raquo;).
+                1. Let _result_ be Invoke(_iterator_, `"next"`, &laquo; &raquo;).
             1. Else,
-                1. Let _result_ be Invoke(_iterator_, `"next"`, &laquo;&zwj;_value_&raquo;).
+                1. Let _result_ be Invoke(_iterator_, `"next"`, &laquo;_value_&raquo;).
             1. ReturnIfAbrupt(_result_).
             1. If Type(_result_) is not Object, throw a *TypeError* exception.
             1. Return _result_.
@@ -4619,7 +4619,7 @@
             1. Let _return_ be GetMethod(_iterator_, `"return"`).
             1. ReturnIfAbrupt(_return_).
             1. If _return_ is *undefined*, return Completion(_completion_).
-            1. Let _innerResult_ be Call(_return_, _iterator_, &laquo;&zwj; &raquo;).
+            1. Let _innerResult_ be Call(_return_, _iterator_, &laquo; &raquo;).
             1. If _completion_.[[type]] is ~throw~, return Completion(_completion_).
             1. If _innerResult_.[[type]] is ~throw~, return Completion(_innerResult_).
             1. If Type(_innerResult_.[[value]]) is not Object, throw a *TypeError* exception.
@@ -7778,7 +7778,7 @@ function* enumerate(obj) {
             <p>The abstract operation CreateUnmappedArgumentsObject called with an argument _argumentsList_ performs the following steps:</p>
             <emu-alg>
               1. Let _len_ be the number of elements in _argumentsList_.
-              1. Let _obj_ be ObjectCreate(%ObjectPrototype%, &laquo;&zwj;[[ParameterMap]]&raquo;).
+              1. Let _obj_ be ObjectCreate(%ObjectPrototype%, &laquo;[[ParameterMap]]&raquo;).
               1. Set _obj_'s [[ParameterMap]] internal slot to *undefined*.
               1. Perform DefinePropertyOrThrow(_obj_, `"length"`, PropertyDescriptor{[[Value]]: _len_, [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true*}).
               1. Let _index_ be 0.
@@ -7844,7 +7844,7 @@ function* enumerate(obj) {
               <emu-alg>
                 1. Let _realm_ be the current Realm.
                 1. Let _steps_ be the steps of an ArgGetter function as specified below.
-                1. Let _getter_ be CreateBuiltinFunction(_realm_, _steps_, %FunctionPrototype%, &laquo;&zwj;[[name]], [[env]]&raquo; ).
+                1. Let _getter_ be CreateBuiltinFunction(_realm_, _steps_, %FunctionPrototype%, &laquo;[[name]], [[env]]&raquo; ).
                 1. Set _getter_'s [[name]] internal slot to _name_.
                 1. Set _getter_'s [[env]] internal slot to _env_.
                 1. Return _getter_.
@@ -7867,7 +7867,7 @@ function* enumerate(obj) {
               <emu-alg>
                 1. Let _realm_ be the current Realm.
                 1. Let _steps_ be the steps of an ArgSetter function as specified below.
-                1. Let _setter_ be CreateBuiltinFunction(_realm_, _steps_, %FunctionPrototype%, &laquo;&zwj;[[name]], [[env]]&raquo; ).
+                1. Let _setter_ be CreateBuiltinFunction(_realm_, _steps_, %FunctionPrototype%, &laquo;[[name]], [[env]]&raquo; ).
                 1. Set _setter_'s [[name]] internal slot to _name_.
                 1. Set _setter_'s [[env]] internal slot to _env_.
                 1. Return _setter_.
@@ -8879,7 +8879,7 @@ function* enumerate(obj) {
             1. If _trap_ is *undefined*, then
                 1. Return _target_.[[OwnPropertyKeys]]().
             1. Let _trapResultArray_ be Call(_trap_, _handler_, &laquo;_target_&raquo;).
-            1. Let _trapResult_ be CreateListFromArrayLike(_trapResultArray_, &laquo;&zwj;String, Symbol&raquo;).
+            1. Let _trapResult_ be CreateListFromArrayLike(_trapResultArray_, &laquo;String, Symbol&raquo;).
             1. ReturnIfAbrupt(_trapResult_).
             1. Let _extensibleTarget_ be IsExtensible(_target_).
             1. ReturnIfAbrupt(_extensibleTarget_).
@@ -18883,7 +18883,7 @@ a = b + c(d + e).print()
           <emu-see-also-para op="EvaluateBody"></emu-see-also-para>
           <emu-grammar>GeneratorBody : FunctionBody</emu-grammar>
           <emu-alg>
-            1. Let _G_ be OrdinaryCreateFromConstructor(_functionObject_, `"%GeneratorPrototype%"`, &laquo;&zwj;[[GeneratorState]], [[GeneratorContext]]&raquo; ).
+            1. Let _G_ be OrdinaryCreateFromConstructor(_functionObject_, `"%GeneratorPrototype%"`, &laquo;[[GeneratorState]], [[GeneratorContext]]&raquo; ).
             1. ReturnIfAbrupt(_G_).
             1. Perform GeneratorStart(_G_, |FunctionBody|).
             1. Return Completion{[[type]]: ~return~, [[value]]: _G_, [[target]]: ~empty~}.
@@ -19004,7 +19004,7 @@ a = b + c(d + e).print()
                     1. Let _throw_ be GetMethod(_iterator_, `"throw"`).
                     1. ReturnIfAbrupt(_throw_).
                     1. If _throw_ is not *undefined*, then
-                        1. Let _innerResult_ be Call(_throw_, _iterator_, &laquo;&zwj;_received_.[[value]]&raquo;).
+                        1. Let _innerResult_ be Call(_throw_, _iterator_, &laquo;_received_.[[value]]&raquo;).
                         1. ReturnIfAbrupt(_innerResult_).
                         1. NOTE: Exceptions from the inner iterator `throw` method are propagated. Normal completions from an inner `throw` method are processed similarly to an inner `next`.
                         1. If Type(_innerResult_) is not Object, throw a *TypeError* exception.
@@ -19026,7 +19026,7 @@ a = b + c(d + e).print()
                     1. Let _return_ be GetMethod(_iterator_, `"return"`).
                     1. ReturnIfAbrupt(_return_).
                     1. If _return_ is *undefined*, return Completion(_received_).
-                    1. Let _innerReturnResult_ be Call(_return_, _iterator_, &laquo;&zwj;_received_.[[value]]&raquo;).
+                    1. Let _innerReturnResult_ be Call(_return_, _iterator_, &laquo;_received_.[[value]]&raquo;).
                     1. ReturnIfAbrupt(_innerReturnResult_).
                     1. If Type(_innerReturnResult_) is not Object, throw a *TypeError* exception.
                     1. Let _done_ be IteratorComplete(_innerReturnResult_).
@@ -21066,7 +21066,7 @@ a = b + c(d + e).print()
                     1. Let _status_ be _requiredModule_.ModuleDeclarationInstantiation().
                     1. ReturnIfAbrupt(_status_).
                 1. For each ExportEntry Record _e_ in _module_.[[IndirectExportEntries]], do
-                    1. Let _resolution_ be _module_.ResolveExport(_e_.[[ExportName]], &laquo;&zwj; &raquo;, &laquo;&zwj; &raquo;).
+                    1. Let _resolution_ be _module_.ResolveExport(_e_.[[ExportName]], &laquo; &raquo;, &laquo; &raquo;).
                     1. ReturnIfAbrupt(_resolution_).
                     1. If _resolution_ is *null* or _resolution_ is `"ambiguous"`, throw a *SyntaxError* exception.
                 1. Assert: all named exports from _module_ are resolvable.
@@ -21081,7 +21081,7 @@ a = b + c(d + e).print()
                         1. Assert: _status_ is not an abrupt completion.
                         1. Call _envRec_.InitializeBinding(_in_.[[LocalName]], _namespace_).
                     1. else,
-                        1. Let _resolution_ be _importedModule_.ResolveExport(_in_.[[ImportName]], &laquo; &raquo;, &laquo;&zwj; &raquo;).
+                        1. Let _resolution_ be _importedModule_.ResolveExport(_in_.[[ImportName]], &laquo; &raquo;, &laquo; &raquo;).
                         1. ReturnIfAbrupt(_resolution_).
                         1. If _resolution_ is *null* or _resolution_ is `"ambiguous"`, throw a *SyntaxError* exception.
                         1. Call _envRec_.CreateImportBinding(_in_.[[LocalName]], _resolution_.[[module]], _resolution_.[[bindingName]]).
@@ -24152,7 +24152,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="20.1.2.1" -->
           <emu-clause id="sec-number.epsilon">
             <h1>Number.EPSILON</h1>
-            <p>The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1 that is representable as a Number value, which is approximately 2.2204460492503130808472633361816 x 10&zwj;<sup>-&zwj;16</sup>.</p>
+            <p>The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1 that is representable as a Number value, which is approximately 2.2204460492503130808472633361816 x 10<sup>-16</sup>.</p>
             <p>This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
           </emu-clause>
 
@@ -25967,7 +25967,7 @@ THH:mm:ss.sss
                   1. ReturnIfAbrupt(_milli_).
                   1. If _y_ is not *NaN* and 0 &le; ToInteger(_y_) &le; 99, let _yr_ be 1900+ToInteger(_y_); otherwise, let _yr_ be _y_.
                   1. Let _finalDate_ be MakeDate(MakeDay(_yr_, _m_, _dt_), MakeTime(_h_, _min_, _s_, _milli_)).
-                  1. Let _O_ be OrdinaryCreateFromConstructor(NewTarget, `"%DatePrototype%"`, &laquo;&zwj; [[DateValue]]&raquo;).
+                  1. Let _O_ be OrdinaryCreateFromConstructor(NewTarget, `"%DatePrototype%"`, &laquo; [[DateValue]]&raquo;).
                   1. ReturnIfAbrupt(_O_).
                   1. Set the [[DateValue]] internal slot of _O_ to TimeClip(UTC(_finalDate_)).
                   1. Return _O_.
@@ -25995,7 +25995,7 @@ THH:mm:ss.sss
                       1. Else,
                           1. Let _tv_ be ToNumber(_v_).
                   1. ReturnIfAbrupt(_tv_).
-                  1. Let _O_ be OrdinaryCreateFromConstructor(NewTarget, `"%DatePrototype%"`, &laquo;&zwj; [[DateValue]]&raquo;).
+                  1. Let _O_ be OrdinaryCreateFromConstructor(NewTarget, `"%DatePrototype%"`, &laquo; [[DateValue]]&raquo;).
                   1. ReturnIfAbrupt(_O_).
                   1. Set the [[DateValue]] internal slot of _O_ to TimeClip(_tv_).
                   1. Return _O_.
@@ -26014,7 +26014,7 @@ THH:mm:ss.sss
               1. Let _numberOfArgs_ be the number of arguments passed to this function call.
               1. Assert: _numberOfArgs_ = 0.
               1. If NewTarget is not *undefined*, then
-                  1. Let _O_ be OrdinaryCreateFromConstructor(NewTarget, `"%DatePrototype%"`, &laquo;&zwj; [[DateValue]]&raquo;).
+                  1. Let _O_ be OrdinaryCreateFromConstructor(NewTarget, `"%DatePrototype%"`, &laquo; [[DateValue]]&raquo;).
                   1. ReturnIfAbrupt(_O_).
                   1. Set the [[DateValue]] internal slot of _O_ to the time value (UTC) identifying the current time.
                   1. Return _O_.
@@ -27195,12 +27195,12 @@ Date.parse(<i>x</i>.toLocaleString())
                   1. Let _matcher_ be GetMethod(_regexp_, @@match).
                   1. ReturnIfAbrupt(_matcher_).
                   1. If _matcher_ is not *undefined*, then
-                      1. Return Call(_matcher_, _regexp_, &laquo;&zwj;_O_&raquo;).
+                      1. Return Call(_matcher_, _regexp_, &laquo;_O_&raquo;).
               1. Let _S_ be ToString(_O_).
               1. ReturnIfAbrupt(_S_).
               1. Let _rx_ be RegExpCreate(_regexp_, *undefined*) (see <emu-internal-ref refid="sec-regexpcreate">NUM</emu-internal-ref>).
               1. ReturnIfAbrupt(_rx_).
-              1. Return Invoke(_rx_, @@match, &laquo;&zwj;_S_&raquo;).
+              1. Return Invoke(_rx_, @@match, &laquo;_S_&raquo;).
             </emu-alg>
             <emu-note>
               <p>The `match` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
@@ -27433,7 +27433,7 @@ Date.parse(<i>x</i>.toLocaleString())
               1. ReturnIfAbrupt(_string_).
               1. Let _rx_ be RegExpCreate(_regexp_, *undefined*) (see <emu-internal-ref refid="sec-regexpcreate">NUM</emu-internal-ref>).
               1. ReturnIfAbrupt(_rx_).
-              1. Return Invoke(_rx_, @@search, &laquo;&zwj;_string_&raquo;).
+              1. Return Invoke(_rx_, @@search, &laquo;_string_&raquo;).
             </emu-alg>
             <emu-note>
               <p>The `search` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
@@ -27476,7 +27476,7 @@ Date.parse(<i>x</i>.toLocaleString())
                     1. Let _splitter_ be GetMethod(_separator_, @@split).
                     1. ReturnIfAbrupt(_splitter_).
                     1. If _splitter_ is not *undefined* , then
-                        1. Return Call(_splitter_, _separator_, &laquo;&zwj;_O_, _limit_&raquo;).
+                        1. Return Call(_splitter_, _separator_, &laquo;_O_, _limit_&raquo;).
                 1. Let _S_ be ToString(_O_).
                 1. ReturnIfAbrupt(_S_).
                 1. Let _A_ be ArrayCreate(0).
@@ -29381,7 +29381,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <h1>Runtime Semantics: RegExpAlloc ( newTarget )</h1>
               <p>When the abstract operation RegExpAlloc with argument _newTarget_ is called, the following steps are taken:</p>
               <emu-alg>
-                1. Let _obj_ be OrdinaryCreateFromConstructor(_newTarget_, `"%RegExpPrototype%"`, &laquo;&zwj;[[RegExpMatcher]], [[OriginalSource]], [[OriginalFlags]]&raquo;).
+                1. Let _obj_ be OrdinaryCreateFromConstructor(_newTarget_, `"%RegExpPrototype%"`, &laquo;[[RegExpMatcher]], [[OriginalSource]], [[OriginalFlags]]&raquo;).
                 1. ReturnIfAbrupt(_obj_).
                 1. Let _status_ be DefinePropertyOrThrow(_obj_, `"lastIndex"`, PropertyDescriptor {[[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *false*}).
                 1. Assert: _status_ is not an abrupt completion.
@@ -31505,7 +31505,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>Several methods of Array objects return Iterator objects. The abstract operation CreateArrayIterator with arguments _array_ and _kind_ is used to create such iterator objects. It performs the following steps:</p>
             <emu-alg>
               1. Assert: Type(_array_) is Object.
-              1. Let _iterator_ be ObjectCreate(%ArrayIteratorPrototype%, &laquo;&zwj;[[IteratedObject]], [[ArrayIteratorNextIndex]], [[ArrayIterationKind]]&raquo;).
+              1. Let _iterator_ be ObjectCreate(%ArrayIteratorPrototype%, &laquo;[[IteratedObject]], [[ArrayIteratorNextIndex]], [[ArrayIterationKind]]&raquo;).
               1. Set _iterator_'s [[IteratedObject]] internal slot to _array_.
               1. Set _iterator_'s [[ArrayIteratorNextIndex]] internal slot to 0.
               1. Set _iterator_'s [[ArrayIterationKind]] internal slot to _kind_.
@@ -31889,7 +31889,7 @@ Date.parse(<i>x</i>.toLocaleString())
                     1. ReturnIfAbrupt(_subclass_).
                 1. Let _proto_ be GetPrototypeFromConstructor(_newTarget_, `"%TypedArrayPrototype%"`).
                 1. ReturnIfAbrupt(_proto_).
-                1. Let _obj_ be IntegerIndexedObjectCreate (_proto_, &laquo;&zwj;[[ViewedArrayBuffer]], [[TypedArrayName]], [[ByteLength]], [[ByteOffset]], [[ArrayLength]]&raquo; ).
+                1. Let _obj_ be IntegerIndexedObjectCreate (_proto_, &laquo;[[ViewedArrayBuffer]], [[TypedArrayName]], [[ByteLength]], [[ByteOffset]], [[ArrayLength]]&raquo; ).
                 1. Assert: The [[ViewedArrayBuffer]] internal slot of _obj_ is *undefined*.
                 1. Set _obj_'s [[TypedArrayName]] internal slot to _constructorName_.
                 1. If _length_ was not passed, then
@@ -32797,7 +32797,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>When the `Map` function is called with optional argument the following steps are taken:</p>
             <emu-alg>
               1. If NewTarget is *undefined*, throw a *TypeError* exception.
-              1. Let _map_ be OrdinaryCreateFromConstructor(NewTarget, `"%MapPrototype%"`, &laquo;&zwj;[[MapData]]&raquo; ).
+              1. Let _map_ be OrdinaryCreateFromConstructor(NewTarget, `"%MapPrototype%"`, &laquo;[[MapData]]&raquo; ).
               1. ReturnIfAbrupt(_map_).
               1. Set _map_'s [[MapData]] internal slot to a new empty List.
               1. If _iterable_ is not present, let _iterable_ be *undefined*.
@@ -33063,7 +33063,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <emu-alg>
               1. If Type(_map_) is not Object, throw a *TypeError* exception.
               1. If _map_ does not have a [[MapData]] internal slot, throw a *TypeError* exception.
-              1. Let _iterator_ be ObjectCreate(%MapIteratorPrototype%, &laquo;&zwj;[[Map]], [[MapNextIndex]], [[MapIterationKind]]&raquo;).
+              1. Let _iterator_ be ObjectCreate(%MapIteratorPrototype%, &laquo;[[Map]], [[MapNextIndex]], [[MapIterationKind]]&raquo;).
               1. Set _iterator_'s [[Map]] internal slot to _map_.
               1. Set _iterator_'s [[MapNextIndex]] internal slot to 0.
               1. Set _iterator_'s [[MapIterationKind]] internal slot to _kind_.
@@ -33180,7 +33180,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>When the `Set` function is called with optional argument _iterable_ the following steps are taken:</p>
             <emu-alg>
               1. If NewTarget is *undefined*, throw a *TypeError* exception.
-              1. Let _set_ be OrdinaryCreateFromConstructor(NewTarget, `"%SetPrototype%"`, &laquo;&zwj;[[SetData]]&raquo; ).
+              1. Let _set_ be OrdinaryCreateFromConstructor(NewTarget, `"%SetPrototype%"`, &laquo;[[SetData]]&raquo; ).
               1. ReturnIfAbrupt(_set_).
               1. Set _set_'s [[SetData]] internal slot to a new empty List.
               1. If _iterable_ is not present, let _iterable_ be *undefined*.
@@ -33418,7 +33418,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <emu-alg>
               1. If Type(_set_) is not Object, throw a *TypeError* exception.
               1. If _set_ does not have a [[SetData]] internal slot, throw a *TypeError* exception.
-              1. Let _iterator_ be ObjectCreate(%SetIteratorPrototype%, &laquo;&zwj;[[IteratedSet]], [[SetNextIndex]], [[SetIterationKind]]&raquo;).
+              1. Let _iterator_ be ObjectCreate(%SetIteratorPrototype%, &laquo;[[IteratedSet]], [[SetNextIndex]], [[SetIterationKind]]&raquo;).
               1. Set _iterator_'s [[IteratedSet]] internal slot to _set_.
               1. Set _iterator_'s [[SetNextIndex]] internal slot to 0.
               1. Set _iterator_'s [[SetIterationKind]] internal slot to _kind_.
@@ -33538,7 +33538,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>When the `WeakMap` function is called with optional argument _iterable_ the following steps are taken:</p>
             <emu-alg>
               1. If NewTarget is *undefined*, throw a *TypeError* exception.
-              1. Let _map_ be OrdinaryCreateFromConstructor(NewTarget, `"%WeakMapPrototype%"`, &laquo;&zwj;[[WeakMapData]]&raquo; ).
+              1. Let _map_ be OrdinaryCreateFromConstructor(NewTarget, `"%WeakMapPrototype%"`, &laquo;[[WeakMapData]]&raquo; ).
               1. ReturnIfAbrupt(_map_).
               1. Set _map_'s [[WeakMapData]] internal slot to a new empty List.
               1. If _iterable_ is not present, let _iterable_ be *undefined*.
@@ -33708,7 +33708,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <p>When the `WeakSet` function is called with optional argument _iterable_ the following steps are taken:</p>
             <emu-alg>
               1. If NewTarget is *undefined*, throw a *TypeError* exception.
-              1. Let _set_ be OrdinaryCreateFromConstructor(NewTarget, `"%WeakSetPrototype%"`, &laquo;&zwj;[[WeakSetData]]&raquo; ).
+              1. Let _set_ be OrdinaryCreateFromConstructor(NewTarget, `"%WeakSetPrototype%"`, &laquo;[[WeakSetData]]&raquo; ).
               1. ReturnIfAbrupt(_set_).
               1. Set _set_'s [[WeakSetData]] internal slot to a new empty List.
               1. If _iterable_ is not present, let _iterable_ be *undefined*.
@@ -33845,7 +33845,7 @@ Date.parse(<i>x</i>.toLocaleString())
             <h1>AllocateArrayBuffer( constructor, byteLength )</h1>
             <p>The abstract operation AllocateArrayBuffer with arguments _constructor_ and _byteLength_ is used to create an ArrayBuffer object. It performs the following steps:</p>
             <emu-alg>
-              1. Let _obj_ be OrdinaryCreateFromConstructor(_constructor_, `"%ArrayBufferPrototype%"`, &laquo;&zwj;[[ArrayBufferData]], [[ArrayBufferByteLength]]&raquo; ).
+              1. Let _obj_ be OrdinaryCreateFromConstructor(_constructor_, `"%ArrayBufferPrototype%"`, &laquo;[[ArrayBufferData]], [[ArrayBufferByteLength]]&raquo; ).
               1. ReturnIfAbrupt(_obj_).
               1. Assert: _byteLength_ is a positive integer.
               1. Let _block_ be CreateByteDataBlock(_byteLength_).
@@ -34185,7 +34185,7 @@ Date.parse(<i>x</i>.toLocaleString())
                   1. Let _viewByteLength_ be ToLength(_byteLength_).
                   1. ReturnIfAbrupt(_viewByteLength_).
                   1. If _offset_+_viewByteLength_ &gt; _bufferByteLength_, throw a *RangeError* exception.
-              1. Let _O_ be OrdinaryCreateFromConstructor(NewTarget, `"%DataViewPrototype%"`, &laquo;&zwj;[[DataView]], [[ViewedArrayBuffer]], [[ByteLength]], [[ByteOffset]]&raquo; ).
+              1. Let _O_ be OrdinaryCreateFromConstructor(NewTarget, `"%DataViewPrototype%"`, &laquo;[[DataView]], [[ViewedArrayBuffer]], [[ByteLength]], [[ByteOffset]]&raquo; ).
               1. ReturnIfAbrupt(_O_).
               1. Set _O_'s [[DataView]] internal slot to *true*.
               1. Set _O_'s [[ViewedArrayBuffer]] internal slot to _buffer_.
@@ -35570,7 +35570,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 1. Let _thenAction_ be _then_.[[value]].
                 1. If IsCallable(_thenAction_) is *false*, then
                     1. Return FulfillPromise(_promise_, _resolution_).
-                1. Perform EnqueueJob (`"PromiseJobs"`, PromiseResolveThenableJob, &laquo;&zwj;_promise_, _resolution_, _thenAction_&raquo;)
+                1. Perform EnqueueJob (`"PromiseJobs"`, PromiseResolveThenableJob, &laquo;_promise_, _resolution_, _thenAction_&raquo;)
                 1. Return *undefined*.
               </emu-alg>
               <p>The `length` property of a promise resolve function is 1.</p>
@@ -35663,7 +35663,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <p>The abstract operation TriggerPromiseReactions takes a collection of PromiseReactionRecords and enqueues a new Job for each record. Each such Job processes the [[Handler]] of the PromiseReactionRecord, and if the [[Handler]] is a function calls it passing the given argument.</p>
             <emu-alg>
               1. Repeat for each _reaction_ in _reactions_, in original insertion order
-                  1. Perform EnqueueJob(`"PromiseJobs"`, PromiseReactionJob, &laquo;&zwj;_reaction_, _argument_&raquo;).
+                  1. Perform EnqueueJob(`"PromiseJobs"`, PromiseReactionJob, &laquo;_reaction_, _argument_&raquo;).
               1. Return *undefined*.
             </emu-alg>
           </emu-clause>
@@ -35723,7 +35723,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <emu-alg>
               1. If NewTarget is *undefined*, throw a *TypeError* exception.
               1. If IsCallable(_executor_) is *false*, throw a *TypeError* exception.
-              1. Let _promise_ be OrdinaryCreateFromConstructor(NewTarget, `"%PromisePrototype%"`, &laquo;&zwj;[[PromiseState]], [[PromiseResult]], [[PromiseFulfillReactions]], [[PromiseRejectReactions]]&raquo; ).
+              1. Let _promise_ be OrdinaryCreateFromConstructor(NewTarget, `"%PromisePrototype%"`, &laquo;[[PromiseState]], [[PromiseResult]], [[PromiseFulfillReactions]], [[PromiseRejectReactions]]&raquo; ).
               1. ReturnIfAbrupt(_promise_).
               1. Set _promise_'s [[PromiseState]] internal slot to `"pending"`.
               1. Set _promise_'s [[PromiseFulfillReactions]] internal slot to a new empty List.
@@ -35801,7 +35801,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     1. If _nextValue_ is an abrupt completion, set _iteratorRecord_.[[done]] to *true*.
                     1. ReturnIfAbrupt(_nextValue_).
                     1. Append *undefined* to _values_.
-                    1. Let _nextPromise_ be Invoke(_constructor_, `"resolve"`, &laquo;&zwj;_nextValue_&raquo;).
+                    1. Let _nextPromise_ be Invoke(_constructor_, `"resolve"`, &laquo;_nextValue_&raquo;).
                     1. ReturnIfAbrupt(_nextPromise_ ).
                     1. Let _resolveElement_ be a new built-in function object as defined in Promise.all Resolve Element Functions.
                     1. Set the [[AlreadyCalled]] internal slot of _resolveElement_ to a new Record {[[value]]: *false* }.
@@ -35810,7 +35810,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     1. Set the [[Capabilities]] internal slot of _resolveElement_ to _resultCapability_.
                     1. Set the [[RemainingElements]] internal slot of _resolveElement_ to _remainingElementsCount_.
                     1. Set _remainingElementsCount_.[[value]] to _remainingElementsCount_.[[value]] + 1.
-                    1. Let _result_ be Invoke(_nextPromise_, `"then"`, &laquo;&zwj;_resolveElement_, _resultCapability_.[[Reject]]&raquo;).
+                    1. Let _result_ be Invoke(_nextPromise_, `"then"`, &laquo;_resolveElement_, _resultCapability_.[[Reject]]&raquo;).
                     1. ReturnIfAbrupt(_result_).
                     1. Set _index_ to _index_ + 1.
               </emu-alg>
@@ -35890,9 +35890,9 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     1. Let _nextValue_ be IteratorValue(_next_).
                     1. If _nextValue_ is an abrupt completion, set _iteratorRecord_.[[done]] to *true*.
                     1. ReturnIfAbrupt(_nextValue_).
-                    1. Let _nextPromise_ be Invoke(_C_, `"resolve"`, &laquo;&zwj;_nextValue_&raquo;).
+                    1. Let _nextPromise_ be Invoke(_C_, `"resolve"`, &laquo;_nextValue_&raquo;).
                     1. ReturnIfAbrupt(_nextPromise_).
-                    1. Let _result_ be Invoke(_nextPromise_, `"then"`, &laquo;&zwj;_promiseCapability_.[[Resolve]], _promiseCapability_.[[Reject]]&raquo;).
+                    1. Let _result_ be Invoke(_nextPromise_, `"then"`, &laquo;_promiseCapability_.[[Resolve]], _promiseCapability_.[[Reject]]&raquo;).
                     1. ReturnIfAbrupt(_result_).
               </emu-alg>
             </emu-clause>
@@ -35963,7 +35963,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <p>When the `catch` method is called with argument _onRejected_ the following steps are taken:</p>
             <emu-alg>
               1. Let _promise_ be the *this* value.
-              1. Return Invoke(_promise_, `"then"`, &laquo;&zwj;*undefined*, _onRejected_&raquo;).
+              1. Return Invoke(_promise_, `"then"`, &laquo;*undefined*, _onRejected_&raquo;).
             </emu-alg>
           </emu-clause>
 
@@ -36005,10 +36005,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     1. Append _rejectReaction_ as the last element of the List that is the value of _promise_'s [[PromiseRejectReactions]] internal slot.
                 1. Else if the value of _promise_'s [[PromiseState]] internal slot is `"fulfilled"`,
                     1. Let _value_ be the value of _promise_'s [[PromiseResult]] internal slot.
-                    1. Perform EnqueueJob(`"PromiseJobs"`, PromiseReactionJob, &laquo;&zwj;_fulfillReaction_, _value_&raquo;).
+                    1. Perform EnqueueJob(`"PromiseJobs"`, PromiseReactionJob, &laquo;_fulfillReaction_, _value_&raquo;).
                 1. Else if the value of _promise_'s [[PromiseState]] internal slot is `"rejected"`,
                     1. Let _reason_ be the value of _promise_'s [[PromiseResult]] internal slot.
-                    1. Perform EnqueueJob(`"PromiseJobs"`, PromiseReactionJob, &laquo;&zwj;_rejectReaction_, _reason_&raquo;).
+                    1. Perform EnqueueJob(`"PromiseJobs"`, PromiseReactionJob, &laquo;_rejectReaction_, _reason_&raquo;).
                 1. Return _resultCapability_.[[Promise]].
               </emu-alg>
             </emu-clause>
