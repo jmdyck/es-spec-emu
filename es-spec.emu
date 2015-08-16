@@ -14012,7 +14012,7 @@ a = b + c(d + e).print()
               1. ReturnIfAbrupt(_P_).
               1. Let _v_ be GetV(_value_, _P_).
               1. ReturnIfAbrupt(_v_).
-              1. If |Initializer|<sub>opt</sub> is present and _v_ is *undefined*, then
+              1. If |Initializer_opt| is present and _v_ is *undefined*, then
                   1. Let _defaultValue_ be the result of evaluating |Initializer|.
                   1. Let _v_ be GetValue(_defaultValue_).
                   1. ReturnIfAbrupt(_v_).
@@ -19336,7 +19336,7 @@ a = b + c(d + e).print()
             1. Let _classScopeEnvRec_ be _classScope_'s EnvironmentRecord.
             1. If _className_ is not *undefined*, then
                 1. Perform _classScopeEnvRec_.CreateImmutableBinding(_className_, *true*).
-            1. If |ClassHeritage|<sub>opt</sub> is not present, then
+            1. If |ClassHeritage_opt| is not present, then
                 1. Let _protoParent_ be the intrinsic object %ObjectPrototype%.
                 1. Let _constructorParent_ be the intrinsic object %FunctionPrototype%.
             1. Else
@@ -19355,10 +19355,10 @@ a = b + c(d + e).print()
                     1. If Type(_protoParent_) is neither Object nor Null, throw a *TypeError* exception.
                     1. Let _constructorParent_ be _superclass_.
             1. Let _proto_ be ObjectCreate(_protoParent_).
-            1. If |ClassBody|<sub>opt</sub> is not present, let _constructor_ be ~empty~.
+            1. If |ClassBody_opt| is not present, let _constructor_ be ~empty~.
             1. Else, let _constructor_ be ConstructorMethod of |ClassBody|.
             1. If _constructor_ is ~empty~, then,
-                1. If |ClassHeritage|<sub>opt</sub> is present, then
+                1. If |ClassHeritage_opt| is present, then
                     1. Let _constructor_ be the result of parsing the source text
                       <pre>
                           constructor(... args){ super (...args);}
@@ -19374,11 +19374,11 @@ a = b + c(d + e).print()
             1. Let _constructorInfo_ be the result of performing DefineMethod for _constructor_ with arguments _proto_ and _constructorParent_ as the optional _functionPrototype_ argument.
             1. Assert: _constructorInfo_ is not an abrupt completion.
             1. Let _F_ be _constructorInfo_.[[closure]]
-            1. If |ClassHeritage|<sub>opt</sub> is present, set _F_'s [[ConstructorKind]] internal slot to `"derived"`.
+            1. If |ClassHeritage_opt| is present, set _F_'s [[ConstructorKind]] internal slot to `"derived"`.
             1. Perform MakeConstructor(_F_, *false*, _proto_).
             1. Perform MakeClassConstructor(_F_).
             1. Perform CreateMethodProperty(_proto_, `"constructor"`, _F_).
-            1. If |ClassBody|<sub>opt</sub> is not present, let _methods_ be a new empty List.
+            1. If |ClassBody_opt| is not present, let _methods_ be a new empty List.
             1. Else, let _methods_ be NonConstructorMethodDefinitions of |ClassBody|.
             1. For each |ClassElement| _m_ in order from _methods_
                 1. If IsStatic of _m_ is *false*, then
@@ -19434,7 +19434,7 @@ a = b + c(d + e).print()
           </emu-note>
           <emu-grammar>ClassExpression : `class` BindingIdentifier? ClassTail</emu-grammar>
           <emu-alg>
-            1. If |BindingIdentifier|<sub>opt</sub> is not present, let _className_ be *undefined*.
+            1. If |BindingIdentifier_opt| is not present, let _className_ be *undefined*.
             1. Else, let _className_ be StringValue of |BindingIdentifier|.
             1. Let _value_ be the result of ClassDefinitionEvaluation of |ClassTail| with argument _className_.
             1. ReturnIfAbrupt(_value_).
