@@ -10911,7 +10911,7 @@ a = b + c(d + e).print()
           </emu-grammar>
           <h2>Supplemental Syntax</h2>
           <p>When processing the production</p>
-          <p>      <emu-grammar>PrimaryExpression[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar></p>
+          <emu-grammar>PrimaryExpression[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar>
           <p>the interpretation of |CoverParenthesizedExpressionAndArrowParameterList| is refined using the following grammar:</p>
           <emu-grammar>
             ParenthesizedExpression[Yield] :
@@ -12870,7 +12870,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-multiplicative-operators-static-semantics-isfunctiondefinition">
           <h1>Static Semantics: IsFunctionDefinition</h1>
           <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
-          <p><emu-grammar>MultiplicativeExpression : MultiplicativeExpression MultiplicativeOperator UnaryExpression</emu-grammar></p>
+          <emu-grammar>MultiplicativeExpression : MultiplicativeExpression MultiplicativeOperator UnaryExpression</emu-grammar>
           <emu-alg>
             1. Return *false*.
           </emu-alg>
@@ -12880,7 +12880,7 @@ a = b + c(d + e).print()
         <emu-clause id="sec-multiplicative-operators-static-semantics-isvalidsimpleassignmenttarget">
           <h1>Static Semantics: IsValidSimpleAssignmentTarget</h1>
           <emu-see-also-para op="IsValidSimpleAssignmentTarget"></emu-see-also-para>
-          <p><emu-grammar>MultiplicativeExpression : MultiplicativeExpression MultiplicativeOperator UnaryExpression</emu-grammar></p>
+          <emu-grammar>MultiplicativeExpression : MultiplicativeExpression MultiplicativeOperator UnaryExpression</emu-grammar>
           <emu-alg>
             1. Return *false*.
           </emu-alg>
@@ -12889,7 +12889,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.6.3" -->
         <emu-clause id="sec-multiplicative-operators-runtime-semantics-evaluation">
             <h1>Runtime Semantics: Evaluation</h1>
-            <p><emu-grammar>MultiplicativeExpression : MultiplicativeExpression MultiplicativeOperator UnaryExpression</emu-grammar></p>
+            <emu-grammar>MultiplicativeExpression : MultiplicativeExpression MultiplicativeOperator UnaryExpression</emu-grammar>
             <emu-alg>
               1. Let _left_ be the result of evaluating |MultiplicativeExpression|.
               1. Let _leftValue_ be GetValue(_left_).
@@ -13816,7 +13816,7 @@ a = b + c(d + e).print()
         <!-- es6num="12.14.4" -->
         <emu-clause id="sec-assignment-operators-runtime-semantics-evaluation">
           <h1>Runtime Semantics: Evaluation</h1>
-          <p><emu-grammar>AssignmentExpression[In, Yield] : LeftHandSideExpression[?Yield] `=` AssignmentExpression[?In, ?Yield]</emu-grammar></p>
+          <emu-grammar>AssignmentExpression[In, Yield] : LeftHandSideExpression[?Yield] `=` AssignmentExpression[?In, ?Yield]</emu-grammar>
           <emu-alg>
             1. If |LeftHandSideExpression| is neither an |ObjectLiteral| nor an |ArrayLiteral|, then
                 1. Let _lref_ be the result of evaluating |LeftHandSideExpression|.
@@ -14074,7 +14074,7 @@ a = b + c(d + e).print()
                   1. If _next_ is *false*, set _iteratorRecord_.[[done]] to *true*.
               1. Return NormalCompletion(~empty~).
             </emu-alg>
-            <p><emu-grammar>AssignmentElement[Yield] : DestructuringAssignmentTarget Initializer?</emu-grammar></p>
+            <emu-grammar>AssignmentElement[Yield] : DestructuringAssignmentTarget Initializer?</emu-grammar>
             <emu-alg>
               1. If |DestructuringAssignmentTarget| is neither an |ObjectLiteral| nor an |ArrayLiteral|, then
                   1. Let _lref_ be the result of evaluating |DestructuringAssignmentTarget|.
@@ -14106,7 +14106,7 @@ a = b + c(d + e).print()
             <emu-note>
               <p>Left to right evaluation order is maintained by evaluating a |DestructuringAssignmentTarget| that is not a destructuring pattern prior to accessing the iterator or evaluating the |Initializer|.</p>
             </emu-note>
-            <p><emu-grammar>AssignmentRestElement[Yield] : `...` DestructuringAssignmentTarget</emu-grammar></p>
+            <emu-grammar>AssignmentRestElement[Yield] : `...` DestructuringAssignmentTarget</emu-grammar>
             <emu-alg>
               1. If |DestructuringAssignmentTarget| is neither an |ObjectLiteral| nor an |ArrayLiteral|, then
                   1. Let _lref_ be the result of evaluating |DestructuringAssignmentTarget|.
@@ -14136,7 +14136,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-runtime-semantics-keyeddestructuringassignmentevaluation">
             <h1>Runtime Semantics: KeyedDestructuringAssignmentEvaluation</h1>
             <p>with parameters _value_ and _propertyName_</p>
-            <p><emu-grammar>AssignmentElement[Yield] : DestructuringAssignmentTarget Initializer?</emu-grammar></p>
+            <emu-grammar>AssignmentElement[Yield] : DestructuringAssignmentTarget Initializer?</emu-grammar>
             <emu-alg>
               1. If |DestructuringAssignmentTarget| is neither an |ObjectLiteral| nor an |ArrayLiteral|, then
                   1. Let _lref_ be the result of evaluating |DestructuringAssignmentTarget|.
@@ -16453,8 +16453,11 @@ a = b + c(d + e).print()
         <!-- es6num="13.8.1" -->
         <emu-clause id="sec-continue-statement-static-semantics-early-errors">
           <h1>Static Semantics: Early Errors</h1>
-          <p><emu-grammar>ContinueStatement : `continue` `;`</emu-grammar></p>
-          <emu-grammar>ContinueStatement : `continue` LabelIdentifier `;`</emu-grammar>
+          <emu-grammar>
+            ContinueStatement : `continue` `;`
+
+            ContinueStatement : `continue` LabelIdentifier `;`
+          </emu-grammar>
           <ul>
             <li>
               It is a Syntax Error if this production is not nested, directly or indirectly (but not crossing function boundaries), within an |IterationStatement|.
@@ -17341,7 +17344,7 @@ a = b + c(d + e).print()
             1. Else,
                 1. Return the result of evaluating |Statement|.
           </emu-alg>
-          <p><emu-grammar>LabelledItem : FunctionDeclaration</emu-grammar></p>
+          <emu-grammar>LabelledItem : FunctionDeclaration</emu-grammar>
           <emu-alg>
             1. Return the result of evaluating |FunctionDeclaration|.
           </emu-alg>
@@ -17834,8 +17837,9 @@ a = b + c(d + e).print()
           <h1>Static Semantics: Contains</h1>
           <p>With parameter _symbol_.</p>
           <emu-see-also-para op="Contains"></emu-see-also-para>
-          <emu-grammar>FunctionDeclaration : `function` BindingIdentifier `(` FormalParameters `)` `{` FunctionBody `}`</emu-grammar>
           <emu-grammar>
+            FunctionDeclaration : `function` BindingIdentifier `(` FormalParameters `)` `{` FunctionBody `}`
+
             FunctionDeclaration : `function` `(` FormalParameters `)` `{` FunctionBody `}`
 
             FunctionExpression : `function` BindingIdentifier? `(` FormalParameters `)` `{` FunctionBody `}`
@@ -18211,7 +18215,7 @@ a = b + c(d + e).print()
           </emu-grammar>
           <h2>Supplemental Syntax</h2>
           <p>When the production</p>
-          <p>      <emu-grammar>ArrowParameters[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar></p>
+          <emu-grammar>ArrowParameters[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar>
           <p>is recognized the following grammar is used to refine the interpretation of |CoverParenthesizedExpressionAndArrowParameterList|:</p>
           <emu-grammar>
             ArrowFormalParameters[Yield] :
@@ -18233,7 +18237,7 @@ a = b + c(d + e).print()
               It is a Syntax Error if any element of the BoundNames of |ArrowParameters| also occurs in the LexicallyDeclaredNames of |ConciseBody|.
             </li>
           </ul>
-          <p><emu-grammar>ArrowParameters[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar></p>
+          <emu-grammar>ArrowParameters[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar>
           <ul>
             <li>
               If the <sub>[Yield]</sub> grammar parameter is present on |ArrowParameters|, it is a Syntax Error if the lexical token sequence matched by |CoverParenthesizedExpressionAndArrowParameterList[?Yield]| cannot be parsed with no tokens left over using |ArrowFormalParameters[Yield]| as the goal symbol.
@@ -18287,7 +18291,7 @@ a = b + c(d + e).print()
           <emu-alg>
             1. Return *false*.
           </emu-alg>
-          <p><emu-grammar>ArrowParameters : CoverParenthesizedExpressionAndArrowParameterList</emu-grammar></p>
+          <emu-grammar>ArrowParameters : CoverParenthesizedExpressionAndArrowParameterList</emu-grammar>
           <emu-alg>
             1. Let _formals_ be CoveredFormalsList of |CoverParenthesizedExpressionAndArrowParameterList|.
             1. Return the ContainsExpression of _formals_.
@@ -19220,8 +19224,11 @@ a = b + c(d + e).print()
         <emu-clause id="sec-class-definitions-static-semantics-isconstantdeclaration">
           <h1>Static Semantics: IsConstantDeclaration</h1>
           <emu-see-also-para op="IsConstantDeclaration"></emu-see-also-para>
-          <p><emu-grammar>ClassDeclaration : `class` BindingIdentifier ClassTail</emu-grammar></p>
-          <emu-grammar>ClassDeclaration : `class` ClassTail</emu-grammar>
+          <emu-grammar>
+            ClassDeclaration : `class` BindingIdentifier ClassTail
+
+            ClassDeclaration : `class` ClassTail
+          </emu-grammar>
           <emu-alg>
             1. Return *false*.
           </emu-alg>
@@ -19493,9 +19500,11 @@ a = b + c(d + e).print()
               1. If _has_ is *true*, return *true*.
               1. Return HasProductionInTailPosition of |StatementListItem| with argument _nonterminal_.
             </emu-alg>
-            <p><emu-grammar>FunctionStatementList : [empty]</emu-grammar></p>
-            <p><emu-grammar>StatementListItem : Declaration</emu-grammar></p>
             <emu-grammar>
+              FunctionStatementList : [empty]
+
+              StatementListItem : Declaration
+
               Statement :
                 VariableStatement
                 EmptyStatement
@@ -19526,8 +19535,9 @@ a = b + c(d + e).print()
               1. If _has_ is *true*, return *true*.
               1. Return HasProductionInTailPosition of the second |Statement| with argument _nonterminal_.
             </emu-alg>
-            <p><emu-grammar>IfStatement : `if` `(` Expression `)` Statement</emu-grammar></p>
             <emu-grammar>
+              IfStatement : `if` `(` Expression `)` Statement
+
               IterationStatement :
                 `do` Statement `while` `(` Expression `)` `;`
                 `while` `(` Expression `)` Statement
@@ -19570,8 +19580,11 @@ a = b + c(d + e).print()
               1. If _has_ is *true*, return *true*.
               1. Return HasProductionInTailPosition of |CaseClause| with argument _nonterminal_.
             </emu-alg>
-            <p><emu-grammar>CaseClause : `case` Expression `:` StatementList?</emu-grammar></p>
-            <emu-grammar>DefaultClause : `default` `:` StatementList?</emu-grammar>
+            <emu-grammar>
+              CaseClause : `case` Expression `:` StatementList?
+
+              DefaultClause : `default` `:` StatementList?
+            </emu-grammar>
             <emu-alg>
               1. If |StatementList| is present, return HasProductionInTailPosition of |StatementList| with argument _nonterminal_.
               1. Return *false*.
@@ -19580,8 +19593,11 @@ a = b + c(d + e).print()
             <emu-alg>
               1. Return HasProductionInTailPosition of |Catch| with argument _nonterminal_.
             </emu-alg>
-            <p><emu-grammar>TryStatement : `try` Block Finally</emu-grammar></p>
-            <emu-grammar>TryStatement : `try` Block Catch Finally</emu-grammar>
+            <emu-grammar>
+              TryStatement : `try` Block Finally
+
+              TryStatement : `try` Block Catch Finally
+            </emu-grammar>
             <emu-alg>
               1. Return HasProductionInTailPosition of |Finally| with argument _nonterminal_.
             </emu-alg>
@@ -20286,7 +20302,7 @@ a = b + c(d + e).print()
             <emu-alg>
               1. Return an empty List.
             </emu-alg>
-            <p><emu-grammar>ModuleItemList : ModuleItemList ModuleItem</emu-grammar></p>
+            <emu-grammar>ModuleItemList : ModuleItemList ModuleItem</emu-grammar>
             <emu-alg>
               1. Let _names_ be VarDeclaredNames of |ModuleItemList|.
               1. Append to _names_ the elements of the VarDeclaredNames of |ModuleItem|.
@@ -21364,7 +21380,7 @@ a = b + c(d + e).print()
               1. Append to _entries_ the elements of the ImportEntriesForModule of |NamedImports| with argument _module_.
               1. Return _entries_.
             </emu-alg>
-            <p><emu-grammar>ImportedDefaultBinding : ImportedBinding</emu-grammar></p>
+            <emu-grammar>ImportedDefaultBinding : ImportedBinding</emu-grammar>
             <emu-alg>
               1. Let _localName_ be the sole element of BoundNames of |ImportedBinding|.
               1. Let _defaultEntry_ be the Record {[[ModuleRequest]]: _module_, [[ImportName]]: `"default"`, [[LocalName]]: _localName_ }.
@@ -21492,7 +21508,7 @@ a = b + c(d + e).print()
               1. If _declarationNames_ does not include the element `"*default*"`, append `"*default*"` to _declarationNames_.
               1. Return _declarationNames_.
             </emu-alg>
-            <p><emu-grammar>ExportDeclaration : `export` `default` AssignmentExpression `;`</emu-grammar></p>
+            <emu-grammar>ExportDeclaration : `export` `default` AssignmentExpression `;`</emu-grammar>
             <emu-alg>
               1. Return &laquo;`"*default*"`&raquo;.
             </emu-alg>
@@ -21653,7 +21669,7 @@ a = b + c(d + e).print()
               1. Let _localName_ be the sole element of _names_.
               1. Return a new List containing the Record {[[ModuleRequest]]: *null*, [[ImportName]]: *null*, [[LocalName]]: _localName_, [[ExportName]]: `"default"`}.
             </emu-alg>
-            <p><emu-grammar>ExportDeclaration : `export` `default` AssignmentExpression `;`</emu-grammar></p>
+            <emu-grammar>ExportDeclaration : `export` `default` AssignmentExpression `;`</emu-grammar>
             <emu-alg>
               1. Let _entry_ be the Record {[[ModuleRequest]]: *null*, [[ImportName]]: *null*, [[LocalName]]: `"*default*"`, [[ExportName]]: `"default"`}.
               1. Return a new List containing _entry_.
@@ -21747,7 +21763,7 @@ a = b + c(d + e).print()
             <emu-alg>
               1. Return a new List containing |ClassDeclaration|.
             </emu-alg>
-            <p><emu-grammar>ExportDeclaration : `export` `default` AssignmentExpression `;`</emu-grammar></p>
+            <emu-grammar>ExportDeclaration : `export` `default` AssignmentExpression `;`</emu-grammar>
             <emu-alg>
               1. Return a new List containing this |ExportDeclaration|.
             </emu-alg>
@@ -21757,8 +21773,11 @@ a = b + c(d + e).print()
           <emu-clause id="sec-exports-static-semantics-modulerequests">
             <h1>Static Semantics: ModuleRequests</h1>
             <emu-see-also-para op="ModuleRequests"></emu-see-also-para>
-            <p><emu-grammar>ExportDeclaration : `export` `*` FromClause `;`</emu-grammar></p>
-            <emu-grammar>ExportDeclaration : `export` ExportClause FromClause `;`</emu-grammar>
+            <emu-grammar>
+              ExportDeclaration : `export` `*` FromClause `;`
+
+              ExportDeclaration : `export` ExportClause FromClause `;`
+            </emu-grammar>
             <emu-alg>
               1. Return the ModuleRequests of |FromClause|.
             </emu-alg>
@@ -21837,7 +21856,7 @@ a = b + c(d + e).print()
                   1. ReturnIfAbrupt(_status_).
               1. Return NormalCompletion(~empty~).
             </emu-alg>
-            <p><emu-grammar>ExportDeclaration : `export` `default` AssignmentExpression `;`</emu-grammar></p>
+            <emu-grammar>ExportDeclaration : `export` `default` AssignmentExpression `;`</emu-grammar>
             <emu-alg>
               1. Let _rhs_ be the result of evaluating |AssignmentExpression|.
               1. Let _value_ be GetValue(_rhs_).
@@ -22212,7 +22231,7 @@ a = b + c(d + e).print()
           <emu-clause id="sec-uri-syntax-and-semantics">
               <h1>URI Syntax and Semantics</h1>
               <p>A URI is composed of a sequence of components separated by component separators. The general form is:</p>
-              <p>        <emu-grammar>Scheme : First `/` Second `;` Third `?` Fourth</emu-grammar></p>
+              <emu-grammar>Scheme : First `/` Second `;` Third `?` Fourth</emu-grammar>
               <p>where the italicized names represent components and &ldquo;`:`&rdquo;, &ldquo;`/`&rdquo;, &ldquo;`;`&rdquo; and &ldquo;`?`&rdquo; are reserved for use as separators. The `encodeURI` and `decodeURI` functions are intended to work with complete URIs; they assume that any reserved code units in the URI are intended to have special meaning and so are not encoded. The `encodeURIComponent` and `decodeURIComponent` functions are intended to work with the individual component parts of a URI; they assume that any reserved code units represent text and so must be encoded so that they are not interpreted as reserved code units when the component is part of a complete URI.</p>
               <p>The following lexical grammar specifies the form of encoded URIs.</p>
               <h2>Syntax</h2>
