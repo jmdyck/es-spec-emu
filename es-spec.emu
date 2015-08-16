@@ -10927,7 +10927,7 @@ a = b + c(d + e).print()
             <h1>Static Semantics: CoveredParenthesizedExpression</h1>
             <emu-grammar>CoverParenthesizedExpressionAndArrowParameterList[Yield] : `(` Expression[In, ?Yield] `)`</emu-grammar>
             <emu-alg>
-              1. Return the result of parsing the lexical token stream matched by |CoverParenthesizedExpressionAndArrowParameterList|<sub>[Yield]</sub> using either |ParenthesizedExpression| or |ParenthesizedExpression|<sub>[Yield]</sub> as the goal symbol depending upon whether the <sub>[Yield]</sub> grammar parameter was present when |CoverParenthesizedExpressionAndArrowParameterList| was matched.
+              1. Return the result of parsing the lexical token stream matched by |CoverParenthesizedExpressionAndArrowParameterList[Yield]| using either |ParenthesizedExpression| or |ParenthesizedExpression[Yield]| as the goal symbol depending upon whether the <sub>[Yield]</sub> grammar parameter was present when |CoverParenthesizedExpressionAndArrowParameterList| was matched.
             </emu-alg>
           </emu-clause>
 
@@ -13830,7 +13830,7 @@ a = b + c(d + e).print()
                 1. Let _status_ be PutValue(_lref_, _rval_).
                 1. ReturnIfAbrupt(_status_).
                 1. Return _rval_.
-            1. Let _assignmentPattern_ be the parse of the source text corresponding to |LeftHandSideExpression| using |AssignmentPattern|<sub>[?Yield]</sub> as the goal symbol.
+            1. Let _assignmentPattern_ be the parse of the source text corresponding to |LeftHandSideExpression| using |AssignmentPattern[?Yield]| as the goal symbol.
             1. Let _rref_ be the result of evaluating |AssignmentExpression|.
             1. Let _rval_ be GetValue(_rref_).
             1. ReturnIfAbrupt(_rval_).
@@ -14095,7 +14095,7 @@ a = b + c(d + e).print()
                   1. ReturnIfAbrupt(_v_).
               1. Else, let _v_ be _value_.
               1. If |DestructuringAssignmentTarget| is an |ObjectLiteral| or an |ArrayLiteral|, then
-                  1. Let _nestedAssignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern|<sub>[Yield]</sub> as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
+                  1. Let _nestedAssignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
                   1. Return the result of performing DestructuringAssignmentEvaluation of _nestedAssignmentPattern_ with _v_ as the argument.
               1. If |Initializer| is present and _value_ is *undefined* and IsAnonymousFunctionDefinition(|Initializer|) and IsIdentifierRef of |DestructuringAssignmentTarget| are both *true*, then
                   1. Let _hasNameProperty_ be HasOwnProperty(_v_, `"name"`).
@@ -14127,7 +14127,7 @@ a = b + c(d + e).print()
                       1. Increment _n_ by 1.
               1. If |DestructuringAssignmentTarget| is neither an |ObjectLiteral| nor an |ArrayLiteral|, then
                   1. Return PutValue(_lref_, _A_).
-              1. Let _nestedAssignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern|<sub>[Yield]</sub> as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
+              1. Let _nestedAssignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
               1. Return the result of performing DestructuringAssignmentEvaluation of _nestedAssignmentPattern_ with _A_ as the argument.
             </emu-alg>
           </emu-clause>
@@ -14149,7 +14149,7 @@ a = b + c(d + e).print()
                   1. ReturnIfAbrupt(_rhsValue_).
               1. Else, let _rhsValue_ be _v_.
               1. If |DestructuringAssignmentTarget| is an |ObjectLiteral| or an |ArrayLiteral|, then
-                  1. Let _assignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern|<sub>[Yield]</sub> as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
+                  1. Let _assignmentPattern_ be the parse of the source text corresponding to |DestructuringAssignmentTarget| using either |AssignmentPattern| or |AssignmentPattern[Yield]| as the goal symbol depending upon whether this |AssignmentElement| has the <sub class="g-params">Yield</sub> parameter.
                   1. Return the result of performing DestructuringAssignmentEvaluation of _assignmentPattern_ with _rhsValue_ as the argument.
               1. If |Initializer| is present and _v_ is *undefined* and IsAnonymousFunctionDefinition(|Initializer|) and IsIdentifierRef of |DestructuringAssignmentTarget| are both *true*, then
                   1. Let _hasNameProperty_ be HasOwnProperty(_rhsValue_, `"name"`).
@@ -18236,13 +18236,13 @@ a = b + c(d + e).print()
           <p><emu-grammar>ArrowParameters[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar></p>
           <ul>
             <li>
-              If the <sub>[Yield]</sub> grammar parameter is present on |ArrowParameters|, it is a Syntax Error if the lexical token sequence matched by |CoverParenthesizedExpressionAndArrowParameterList|<sub>[?Yield]</sub> cannot be parsed with no tokens left over using |ArrowFormalParameters|<sub>[Yield]</sub> as the goal symbol.
+              If the <sub>[Yield]</sub> grammar parameter is present on |ArrowParameters|, it is a Syntax Error if the lexical token sequence matched by |CoverParenthesizedExpressionAndArrowParameterList[?Yield]| cannot be parsed with no tokens left over using |ArrowFormalParameters[Yield]| as the goal symbol.
             </li>
             <li>
-              If the <sub>[Yield]</sub> grammar parameter is not present on |ArrowParameters|, it is a Syntax Error if the lexical token sequence matched by |CoverParenthesizedExpressionAndArrowParameterList|<sub>[?Yield]</sub> cannot be parsed with no tokens left over using |ArrowFormalParameters| as the goal symbol.
+              If the <sub>[Yield]</sub> grammar parameter is not present on |ArrowParameters|, it is a Syntax Error if the lexical token sequence matched by |CoverParenthesizedExpressionAndArrowParameterList[?Yield]| cannot be parsed with no tokens left over using |ArrowFormalParameters| as the goal symbol.
             </li>
             <li>
-              All early errors rules for |ArrowFormalParameters| and its derived productions also apply to CoveredFormalsList of |CoverParenthesizedExpressionAndArrowParameterList|<sub>[?Yield]</sub>.
+              All early errors rules for |ArrowFormalParameters| and its derived productions also apply to CoveredFormalsList of |CoverParenthesizedExpressionAndArrowParameterList[?Yield]|.
             </li>
           </ul>
         </emu-clause>
@@ -18364,8 +18364,8 @@ a = b + c(d + e).print()
               `(` Expression `,` `...` BindingIdentifier `)`
           </emu-grammar>
           <emu-alg>
-            1. If the <sub>[Yield]</sub> grammar parameter is present for |CoverParenthesizedExpressionAndArrowParameterList|<sub>[Yield]</sub> return the result of parsing the lexical token stream matched by |CoverParenthesizedExpressionAndArrowParameterList|<sub>[Yield]</sub> using |ArrowFormalParameters|<sub>[Yield]</sub> as the goal symbol.
-            1. If the <sub>[Yield]</sub> grammar parameter is not present for |CoverParenthesizedExpressionAndArrowParameterList|<sub>[Yield]</sub> return the result of parsing the lexical token stream matched by |CoverParenthesizedExpressionAndArrowParameterList| using |ArrowFormalParameters| as the goal symbol.
+            1. If the <sub>[Yield]</sub> grammar parameter is present for |CoverParenthesizedExpressionAndArrowParameterList[Yield]| return the result of parsing the lexical token stream matched by |CoverParenthesizedExpressionAndArrowParameterList[Yield]| using |ArrowFormalParameters[Yield]| as the goal symbol.
+            1. If the <sub>[Yield]</sub> grammar parameter is not present for |CoverParenthesizedExpressionAndArrowParameterList[Yield]| return the result of parsing the lexical token stream matched by |CoverParenthesizedExpressionAndArrowParameterList| using |ArrowFormalParameters| as the goal symbol.
           </emu-alg>
         </emu-clause>
 
@@ -21887,7 +21887,7 @@ a = b + c(d + e).print()
             The behaviour of the following methods must not be extended except as specified in ECMA-402: `Object.prototype.toLocaleString`, `Array.prototype.toLocaleString`, `Number.prototype.toLocaleString`, `Date.prototype.toLocaleDateString`, `Date.prototype.toLocaleString`, `Date.prototype.toLocaleTimeString`, `String.prototype.localeCompare`.
           </li>
           <li>
-            The RegExp pattern grammars in <emu-internal-ref refid="sec-patterns">NUM</emu-internal-ref> and <emu-internal-ref refid="sec-regular-expressions-patterns">NUM</emu-internal-ref> must not be extended to recognize any of the source characters A-Z or a-z as |IdentityEscape|<sub>[U]</sub> when the U grammar parameter is present.
+            The RegExp pattern grammars in <emu-internal-ref refid="sec-patterns">NUM</emu-internal-ref> and <emu-internal-ref refid="sec-regular-expressions-patterns">NUM</emu-internal-ref> must not be extended to recognize any of the source characters A-Z or a-z as |IdentityEscape[U]| when the U grammar parameter is present.
           </li>
           <li>
             The Syntactic Grammar must not be extended in any manner that allows the token `:` to immediate follow source text that matches the |BindingIdentifier| nonterminal symbol.
@@ -23289,7 +23289,7 @@ new Function("a,b", "c", "return a+b+c")
                     1. Let _fallbackProto_ be `"%FunctionPrototype%"`.
                 1. Else,
                     1. Let _goal_ be the grammar symbol |GeneratorBody|.
-                    1. Let _parameterGoal_ be the grammar symbol |FormalParameters|<sub>[Yield]</sub>.
+                    1. Let _parameterGoal_ be the grammar symbol |FormalParameters[Yield]|.
                     1. Let _fallbackProto_ be `"%Generator%"`.
                 1. Let _argCount_ be the number of elements in _args_.
                 1. Let _P_ be the empty String.
@@ -29414,7 +29414,7 @@ Date.parse(<i>x</i>.toLocaleString())
                     1. Parse _P_ using the grammars in <emu-internal-ref refid="sec-patterns">NUM</emu-internal-ref> and interpreting each of its 16-bit elements as a Unicode BMP code point. UTF-16 decoding is not applied to the elements. The goal symbol for the parse is |Pattern|. Throw a *SyntaxError* exception if _P_ did not conform to the grammar, if any elements of _P_ were not matched by the parse, or if any Early Error conditions exist.
                     1. Let _patternCharacters_ be a List whose elements are the code unit elements of _P_.
                 1. Else
-                    1. Parse _P_ using the grammars in <emu-internal-ref refid="sec-patterns">NUM</emu-internal-ref> and interpreting _P_ as UTF-16 encoded Unicode code points (<emu-internal-ref refid="sec-ecmascript-language-types-string-type">NUM</emu-internal-ref>). The goal symbol for the parse is |Pattern|<sub>[U]</sub>. Throw a *SyntaxError* exception if _P_ did not conform to the grammar, if any elements of _P_ were not matched by the parse, or if any Early Error conditions exist.
+                    1. Parse _P_ using the grammars in <emu-internal-ref refid="sec-patterns">NUM</emu-internal-ref> and interpreting _P_ as UTF-16 encoded Unicode code points (<emu-internal-ref refid="sec-ecmascript-language-types-string-type">NUM</emu-internal-ref>). The goal symbol for the parse is |Pattern[U]|. Throw a *SyntaxError* exception if _P_ did not conform to the grammar, if any elements of _P_ were not matched by the parse, or if any Early Error conditions exist.
                     1. Let _patternCharacters_ be a List whose elements are the code points resulting from applying UTF-16 decoding to _P_'s sequence of elements.
                 1. Set the value of _obj_'s [[OriginalSource]] internal slot to _P_.
                 1. Set the value of _obj_'s [[OriginalFlags]] internal slot to _F_.
@@ -29441,7 +29441,7 @@ Date.parse(<i>x</i>.toLocaleString())
               <h1>Runtime Semantics: EscapeRegExpPattern ( P, F )</h1>
               <p>When the abstract operation EscapeRegExpPattern with arguments _P_ and _F_ is called, the following occurs:</p>
               <emu-alg>
-                1. Let _S_ be a String in the form of a |Pattern| (|Pattern|<sub>[U]</sub> if _F_ contains `"u"`) equivalent to _P_ interpreted as UTF-16 encoded Unicode code points (<emu-internal-ref refid="sec-ecmascript-language-types-string-type">NUM</emu-internal-ref>), in which certain code points are escaped as described below. _S_ may or may not be identical to _P_; however, the internal procedure that would result from evaluating _S_ as a |Pattern| (|Pattern|<sub>[U]</sub> if _F_ contains `"u"`) must behave identically to the internal procedure given by the constructed object's [[RegExpMatcher]] internal slot. Multiple calls to this abstract operation using the same values for _P_ and _F_ must produce identical results.
+                1. Let _S_ be a String in the form of a |Pattern| (|Pattern[U]| if _F_ contains `"u"`) equivalent to _P_ interpreted as UTF-16 encoded Unicode code points (<emu-internal-ref refid="sec-ecmascript-language-types-string-type">NUM</emu-internal-ref>), in which certain code points are escaped as described below. _S_ may or may not be identical to _P_; however, the internal procedure that would result from evaluating _S_ as a |Pattern| (|Pattern[U]| if _F_ contains `"u"`) must behave identically to the internal procedure given by the constructed object's [[RegExpMatcher]] internal slot. Multiple calls to this abstract operation using the same values for _P_ and _F_ must produce identical results.
                 1. The code points `/` or any |LineTerminator| occurring in the pattern shall be escaped in _S_ as necessary to ensure that the String value formed by concatenating the Strings `"/"`, _S_, `"/"`, and _F_ can be parsed (in an appropriate lexical context) as a |RegularExpressionLiteral| that behaves identically to the constructed regular expression. For example, if _P_ is `"/"`, then _S_ could be `"\/"` or `"\u002F"`, among other possibilities, but not `"/"`, because `///` followed by _F_ would be parsed as a |SingleLineComment| rather than a |RegularExpressionLiteral|. If _P_ is the empty String, this specification can be met by letting _S_ be `"(?:)"`.
                 1. Return _S_.
               </emu-alg>
@@ -37335,7 +37335,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               `if` `(` Expression[In, ?Yield] `)` FunctionDeclaration[?Yield] `else` FunctionDeclaration[?Yield]
               `if` `(` Expression[In, ?Yield] `)` FunctionDeclaration[?Yield]
           </emu-grammar>
-          <p>The above rules are only applied when parsing code that is not strict mode code. If any such code is match by one of these rules subsequent processing of that code takes places as if each matching occurrence of |FunctionDeclaration|<sub>[?Yield]</sub> was the sole |StatementListItem| of a |BlockStatement| occupying that position in the source code. The semantics of such a synthetic |BlockStatement| includes the web legacy compatibility semantics specified in <emu-internal-ref refid="sec-block-level-function-declarations-web-legacy-compatibility-semantics">NUM</emu-internal-ref>.</p>
+          <p>The above rules are only applied when parsing code that is not strict mode code. If any such code is match by one of these rules subsequent processing of that code takes places as if each matching occurrence of |FunctionDeclaration[?Yield]| was the sole |StatementListItem| of a |BlockStatement| occupying that position in the source code. The semantics of such a synthetic |BlockStatement| includes the web legacy compatibility semantics specified in <emu-internal-ref refid="sec-block-level-function-declarations-web-legacy-compatibility-semantics">NUM</emu-internal-ref>.</p>
         </emu-annex>
 
         <!-- es6num="B.3.5" -->
