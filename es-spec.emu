@@ -24386,8 +24386,8 @@ new Function("a,b", "c", "return a+b+c")
             <p>If the `toExponential` method is called with more than one argument, then the behaviour is undefined (see <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">TYPE NUM</emu-internal-ref>).</p>
             <emu-note>
               <p>For implementations that provide more accurate conversions than required by the rules above, it is recommended that the following alternative version of step 12.b.i be used as a guideline:</p>
-              <emu-alg>
-                i. Let _e_, _n_, and _f_ be integers such that _f_ &ge; 0, 10<sup>_f_</sup> &le; n &lt; 10<sup>_f_+1</sup>, the Number value for n &times; 10<sup>_e_-_f_</sup> is x, and _f_ is as small as possible. If there are multiple possibilities for _n_, choose the value of _n_ for which _n_ &times; 10<sup>_e_-_f_</sup> is closest in value to _x_. If there are two such possible values of _n_, choose the one that is even.
+              <emu-alg type="i">
+                1. Let _e_, _n_, and _f_ be integers such that _f_ &ge; 0, 10<sup>_f_</sup> &le; n &lt; 10<sup>_f_+1</sup>, the Number value for n &times; 10<sup>_e_-_f_</sup> is x, and _f_ is as small as possible. If there are multiple possibilities for _n_, choose the value of _n_ for which _n_ &times; 10<sup>_e_-_f_</sup> is closest in value to _x_. If there are two such possible values of _n_, choose the one that is even.
               </emu-alg>
             </emu-note>
           </emu-clause>
@@ -37391,8 +37391,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           </emu-note>
           <p>This modified behaviour also applies to `var` and `function` declarations introduced by direct evals contained within the |Block| of a |Catch| clause. This change is accomplished by modify the algorithm of <emu-internal-ref refid="sec-evaldeclarationinstantiation">NUM</emu-internal-ref> as follows:</p>
           <p>Step 5.d.ii.2.a.i is replaced by:</p>
-          <emu-alg>
-            i. If _thisEnvRec_ is not the Environment Record for a |Catch| clause, throw a *SyntaxError* exception.
+          <emu-alg type="i">
+            1. If _thisEnvRec_ is not the Environment Record for a |Catch| clause, throw a *SyntaxError* exception.
             1. If _name_ is bound by any syntactic form other than a |FunctionDeclaration|, a |VariableStatement|, the |VariableDeclarationList| of a for statement, or the |ForBinding| of a for-in statement, throw a *SyntaxError* exception.
           </emu-alg>
         </emu-annex>
