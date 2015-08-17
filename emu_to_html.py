@@ -810,6 +810,7 @@ def handle_emu_grammar_node(emu_grammar):
 
     if '\n' not in body_xml:
         # one single-line production
+
         assert not grammar_summary_part
 
         s = grammar_converter.process(body_xml)
@@ -828,7 +829,7 @@ def handle_emu_grammar_node(emu_grammar):
             assert 0, pn
 
     else:
-        # one multi-line production or multiple productions
+        # A set of one or more productions
 
         outer_indent = re.search(r'\n *$', body_xml).group(0)
 
@@ -837,43 +838,26 @@ def handle_emu_grammar_node(emu_grammar):
 
         production_texts = re.split(r'\n{2,}', body_xml)
 
-        if all( '\n' not in p_text for p_text in production_texts ):
-            # A set of single-line productions
-            # XXX RECONSTRUCTING
-            assert not grammar_summary_part
+        for (i,prodn_text) in enumerate(production_texts):
 
-            put('<p>')
-            for (i, prod1_text) in enumerate(production_texts):
-                (indent, body) = re.match(r'^( *)(.*)', prod1_text).groups()
-                s = grammar_converter.process(body)
+            lines = prodn_text.split('\n')
 
-                if i > 0:
-                    put(outer_indent + '  <br/>\n')
-                    put(indent)
+            line_tuples = [
+                re.match(r'^( *)(.+)$', line).groups()
+                for line in lines
+            ]
 
-                put('<span_prod>')
-                put(s)
-                put('</span_prod>')
-            put('</p>')
+            if len(lines) == 1:
+                # single-line production
+                div_class = "gp prod"
+                [(_, body)] = line_tuples
+                olines = ['  ' + grammar_converter.process(body)]
 
-        else:
-            # A set of multi-line productions
-            # put(emu_grammar.toxml()); return
+            else:
+                # multi-line production
 
-            for (i,prodn_text) in enumerate(production_texts):
-
-                lines = prodn_text.split('\n')
-
-                assert len(lines) > 1
-                # Conceivably, you could mix single-line prods
-                # with multi-line prods,
-                # but it's unclear how that should be marked up.
-
-                line_tuples = [
-                    re.match(r'^( *)(.+)$', line).groups()
-                    for line in lines
-                ]
-
+                # Second and subsequent lines must be indented
+                div_class = "gp"
                 lhs_indent = line_tuples[0][0]
                 rhs_indent = line_tuples[1][0]
                 assert rhs_indent.startswith(lhs_indent)
@@ -931,24 +915,24 @@ def handle_emu_grammar_node(emu_grammar):
 
                     olines.append('  </div>')
 
-                if i > 0: put(outer_indent)
-                put('<div class="gp">')
-                for oline in olines:
-                    put(outer_indent + oline)
-                put(outer_indent + '</div>')
+            if i > 0: put(outer_indent)
+            put('<div class="%s">' % div_class)
+            for oline in olines:
+                put(outer_indent + oline)
+            put(outer_indent + '</div>')
 
-                if grammar_summary_part:
-                    si = emu_grammar.parentNode._section_info
-                    extra = 'clause ' if si.level == 1 else ''
-                    def annex_put(line):
-                        annex_a[grammar_summary_part].write('\n        ' + line)
-                    annex_put('<div class="gp">')
-                    annex_put('  <div class="gsumxref">')
-                    annex_put('    <a href="#%s">See %s%s</a>' % (si.id, extra, si.dotnum))
-                    annex_put('  </div>')
-                    for oline in olines:
-                        annex_put(oline)
-                    annex_put('</div>')
+            if grammar_summary_part:
+                si = emu_grammar.parentNode._section_info
+                extra = 'clause ' if si.level == 1 else ''
+                def annex_put(line):
+                    annex_a[grammar_summary_part].write('\n        ' + line)
+                annex_put('<div class="%s">' % div_class)
+                annex_put('  <div class="gsumxref">')
+                annex_put('    <a href="#%s">See %s%s</a>' % (si.id, extra, si.dotnum))
+                annex_put('  </div>')
+                for oline in olines:
+                    annex_put(oline)
+                annex_put('</div>')
 
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -988,8 +972,11 @@ def handle_emu_alg(emu_alg):
             assert start_item_label.isdigit()
 
             list_type = 'ol'
+
             if start_i == 0:
                 list_attrs = ' class="proc"'
+                if emu_alg.hasAttribute('type'):
+                    list_attrs += ' type="%s"' % emu_alg.getAttribute('type')
             else:
                 prev_body = line_tuples[start_i-1][2]
                 if appears_to_introduce_a_nested_proc(prev_body):
@@ -1117,7 +1104,11 @@ emd_converter = LexerConverter([
         (r'\*(\w+|[+-](0|&infin;)|(positive|negative) (zero|Infinity))\*',   r'<span class="value">\1</span>'),
         (r'\b_([A-Za-z0-9]+)_',        r'<i>\1</i>'),
         (r'~(\w+|\[empty\])~',  r'<span class="specvalue">\1</span>'),
-        (r'\|(\w+)\|',          r'<span class="nt">\1</span>'),
+
+        (r'\|(\w+)(\[[^][]+\])\|', r'<span class="nt">\1</span><sub>\2</sub>'),
+        (r'\|(\w+)_opt\|',         r'<span class="nt">\1</span><sub>opt</sub>'),
+        (r'\|(\w+)\|',             r'<span class="nt">\1</span>'),
+
         (r'(<[^<>]+>)',         r'\1'),
         (r'`([^`]+)`',          r'<code>\1</code>'),
         (r'\\([\\*_~`|])',      r'\1'),
