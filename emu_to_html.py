@@ -478,6 +478,9 @@ def serialize(node, apply_emd_expansions):
         elif name == 'emu-alg':
             handle_emu_alg(node)
 
+        elif name == 'emu-eqn':
+            handle_emu_eqn(node)
+
         else:
             if node.hasAttributes():
                 attrs = dict(node.attributes.items())
@@ -1094,6 +1097,24 @@ def expand_emu_grammar_text(s):
         ),
         s
     )
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+def handle_emu_eqn(emu_eqn):
+    assert emu_eqn.nodeName == 'emu-eqn'
+
+    ps = emu_eqn.previousSibling
+    assert ps.nodeType == ps.TEXT_NODE
+    outer_indent = ps.nodeValue
+
+    body_xml = toxml_content(emu_eqn)
+    s = body_xml.rstrip()
+    s = re.sub(r'(\n +)', outer_indent + r'  <br/>\1', s)
+    s = add_xlinks(expand_ecmarkdown(s))
+
+    put('<p class="normalBullet">')
+    put(s)
+    put('</p>')
 
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
