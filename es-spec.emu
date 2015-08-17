@@ -2512,7 +2512,7 @@
         </emu-clause>
 
         <!-- es6num="6.2.2" -->
-        <emu-clause id="sec-completion-record-specification-type">
+        <emu-clause id="sec-completion-record-specification-type" aoid="Completion">
             <h1>The Completion Record Specification Type</h1>
             <p>The Completion type is a Record used to explain the runtime propagation of values and control flow such as the behaviour of statements (`break`, `continue`, `return` and `throw`) that perform nonlocal transfers of control.</p>
             <p>Values of the Completion type are Record values whose fields are defined as by <emu-internal-ref refid="table-8">TYPE NUM</emu-internal-ref>.</p>
@@ -2585,7 +2585,7 @@
           </emu-clause>
 
           <!-- es6num="6.2.2.2" -->
-          <emu-clause id="sec-implicit-completion-values" aoid="Completion">
+          <emu-clause id="sec-implicit-completion-values">
             <h1>Implicit Completion Values</h1>
             <p>The algorithms of this specification often implicitly return Completion Records whose [[type]] is ~normal~. Unless it is otherwise obvious from the context, an algorithm statement that returns a value that is not a Completion Record, such as:</p>
             <emu-alg>
