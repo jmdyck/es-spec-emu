@@ -1177,7 +1177,6 @@ ad_hoc_xlink_info = [
     ('sec-day-number-and-time-within-day', 'Day'),
     ('sec-day-number-and-time-within-day', 'TimeWithinDay'),
     ('sec-daylight-saving-time-adjustment', 'DaylightSavingTA'),
-    ('sec-ecmascript-data-types-and-values', 'Type'),
     ('sec-hours-minutes-second-and-milliseconds', 'HourFromTime'),
     ('sec-hours-minutes-second-and-milliseconds', 'MinFromTime'),
     ('sec-hours-minutes-second-and-milliseconds', 'SecFromTime'),

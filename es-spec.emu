@@ -737,7 +737,7 @@
     </emu-clause>
 
     <!-- es6num="6" -->
-    <emu-clause id="sec-ecmascript-data-types-and-values">
+    <emu-clause id="sec-ecmascript-data-types-and-values" aoid="Type">
         <h1>ECMAScript Data Types and Values</h1>
         <p>Algorithms within this specification manipulate values each of which has an associated type. The possible value types are exactly those defined in this clause. Types are further subclassified into ECMAScript language types and specification types.</p>
         <p>Within this specification, the notation &ldquo;<emu-formula>Type(_x_)</emu-formula>&rdquo; is used as shorthand for &ldquo;<emu-formula>the type of _x_</emu-formula>&rdquo; where &ldquo;<emu-formula>type</emu-formula>&rdquo; refers to the ECMAScript language and specification types defined in this clause. When the term &ldquo;empty&rdquo; is used as if it was naming a value, it is equivalent to saying &ldquo;no value of any type&rdquo;.</p>
