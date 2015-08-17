@@ -194,7 +194,7 @@ def infer_section_kind(si, expectation='general'):
             infer_section_kind(si_child, exp)
 
     if si.nodeName == 'body':
-        si.kind = None
+        si.kind = ''
         recurse(si, 'general')
         return
 
@@ -1165,11 +1165,8 @@ emd_converter = LexerConverter([
 #     convert_emu_internal_ref()
 
 def prep_for_add_xlinks(si):
-    if si.nodeName == 'body':
-        for (id, term) in ad_hoc_xlink_info:
-            section_is_target_for(id, term)
 
-    elif si.node.hasAttribute('aoid'):
+    if si.node.hasAttribute('aoid'):
         section_is_target_for(si.id, si.node.getAttribute('aoid'))
 
     elif si.kind == 'function_property':
@@ -1186,7 +1183,12 @@ def prep_for_add_xlinks(si):
     for si_child in si.children: 
         prep_for_add_xlinks(si_child)
 
+    # ----------------------------------
+
     if si.nodeName == 'body':
+        for (id, term) in ad_hoc_xlink_info:
+            section_is_target_for(id, term)
+
         bake_xlinks_stuff()
 
 ad_hoc_xlink_info = [
