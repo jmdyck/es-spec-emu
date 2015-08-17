@@ -10910,9 +10910,11 @@ a = b + c(d + e).print()
               `(` Expression[In, ?Yield] `,` `...` BindingIdentifier[?Yield] `)`
           </emu-grammar>
           <h2>Supplemental Syntax</h2>
-          <p>When processing the production</p>
-          <emu-grammar>PrimaryExpression[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar>
-          <p>the interpretation of |CoverParenthesizedExpressionAndArrowParameterList| is refined using the following grammar:</p>
+          <p>When processing the production
+            <br>
+            <emu-grammar>PrimaryExpression[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar>
+            <br>
+            the interpretation of |CoverParenthesizedExpressionAndArrowParameterList| is refined using the following grammar:</p>
           <emu-grammar>
             ParenthesizedExpression[Yield] :
               `(` Expression[In, ?Yield] `)`
@@ -18214,9 +18216,11 @@ a = b + c(d + e).print()
               `{` FunctionBody `}`
           </emu-grammar>
           <h2>Supplemental Syntax</h2>
-          <p>When the production</p>
-          <emu-grammar>ArrowParameters[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar>
-          <p>is recognized the following grammar is used to refine the interpretation of |CoverParenthesizedExpressionAndArrowParameterList|:</p>
+          <p>When the production
+            <br>
+            <emu-grammar>ArrowParameters[Yield] : CoverParenthesizedExpressionAndArrowParameterList[?Yield]</emu-grammar>
+            <br>
+            is recognized the following grammar is used to refine the interpretation of |CoverParenthesizedExpressionAndArrowParameterList|:</p>
           <emu-grammar>
             ArrowFormalParameters[Yield] :
               `(` StrictFormalParameters[?Yield] `)`
