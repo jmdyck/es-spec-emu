@@ -100,6 +100,7 @@ class SectionInfo:
     def __init__(self, bica):
         assert bica.nodeType == bica.ELEMENT_NODE
 
+        self.node = bica
         self.nodeName = bica.nodeName
 
         self.children = []
@@ -1147,10 +1148,8 @@ def prep_for_add_xlinks(si):
         for (id, term) in ad_hoc_xlink_info:
             section_is_target_for(id, term)
 
-    elif si.kind in ['shorthand', 'abstract_operation']:
-        op_name = si.kind_stuff['op_name']
-        section_is_target_for(si.id, op_name)
-        # print si.id + '\t' + op_name
+    elif si.node.hasAttribute('aoid'):
+        section_is_target_for(si.id, si.node.getAttribute('aoid'))
 
     elif si.kind == 'function_property':
         if 'property_fullname' in si.kind_stuff:
@@ -1174,7 +1173,6 @@ ad_hoc_xlink_info = [
     ('sec-algorithm-conventions', 'abs'),
     ('sec-algorithm-conventions', 'floor'),
     ('sec-algorithm-conventions', 'modulo'),
-    ('sec-completion-record-specification-type', 'Completion'),
     ('sec-date-number', 'DateFromTime'),
     ('sec-day-number-and-time-within-day', 'Day'),
     ('sec-day-number-and-time-within-day', 'TimeWithinDay'),
@@ -1331,7 +1329,7 @@ def section_is_target_for(id, term):
         return
 
     if term in target_id_for_term_:
-        print >> sys.stderr, "warning: target_id_for_term_ already has entry for '%s'" % term
+        print >> sys.stderr, "warning: target_id_for_term_ already has entry for '%s' (%s)" % (term, target_id_for_term_[term])
         assert id == target_id_for_term_[term]
     target_id_for_term_[term] = id
 
