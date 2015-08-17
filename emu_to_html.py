@@ -1186,6 +1186,12 @@ def prep_for_add_xlinks(si):
     # ----------------------------------
 
     if si.nodeName == 'body':
+        for emu_eqn in si.node.getElementsByTagName('emu-eqn'):
+            aoid = emu_eqn.getAttribute('aoid')
+            section = get_enclosing_section(emu_eqn)
+            id = section.getAttribute('id')
+            section_is_target_for(id, aoid)
+
         for (id, term) in ad_hoc_xlink_info:
             section_is_target_for(id, term)
 
@@ -1196,16 +1202,7 @@ ad_hoc_xlink_info = [
     ('sec-algorithm-conventions', 'abs'),
     ('sec-algorithm-conventions', 'floor'),
     ('sec-algorithm-conventions', 'modulo'),
-    ('sec-date-number', 'DateFromTime'),
-    ('sec-day-number-and-time-within-day', 'Day'),
-    ('sec-day-number-and-time-within-day', 'TimeWithinDay'),
     ('sec-daylight-saving-time-adjustment', 'DaylightSavingTA'),
-    ('sec-hours-minutes-second-and-milliseconds', 'HourFromTime'),
-    ('sec-hours-minutes-second-and-milliseconds', 'MinFromTime'),
-    ('sec-hours-minutes-second-and-milliseconds', 'SecFromTime'),
-    ('sec-hours-minutes-second-and-milliseconds', 'msFromTime'),
-    ('sec-month-number', 'DayWithinYear'),
-    ('sec-month-number', 'MonthFromTime'),
     ('sec-reference-specification-type', 'GetBase'),
     ('sec-reference-specification-type', 'GetReferencedName'),
     ('sec-reference-specification-type', 'HasPrimitiveBase'),
@@ -1213,9 +1210,6 @@ ad_hoc_xlink_info = [
     ('sec-reference-specification-type', 'IsStrictReference'),
     ('sec-reference-specification-type', 'IsSuperReference'),
     ('sec-reference-specification-type', 'IsUnresolvableReference'),
-    ('sec-week-day', 'WeekDay'),
-    ('sec-year-number', 'InLeapYear'),
-    ('sec-year-number', 'YearFromTime'),
     #
     ('sec-abstract-module-records', 'Module Record'),
     ('sec-algorithm-conventions', 'Assert'),
@@ -1233,7 +1227,6 @@ ad_hoc_xlink_info = [
     ('sec-context-free-grammars', 'chain productions'),
     ('sec-data-blocks', 'Data Block'),
     ('sec-dataview.prototype', 'DataView.prototype'),
-    ('sec-day-number-and-time-within-day', 'msPerDay'),
     ('sec-declarative-environment-records', 'Declarative Environment Record'),
     ('sec-directive-prologues-and-the-use-strict-directive', 'Directive Prologue'),
     ('sec-directive-prologues-and-the-use-strict-directive', 'Use Strict Directive'),
@@ -1261,9 +1254,6 @@ ad_hoc_xlink_info = [
     ('sec-getcapabilitiesexecutor-functions', 'GetCapabilitiesExecutor Functions'),
     ('sec-global-environment-records', 'Global Environment Records'),
     ('sec-global-environment-records', 'the global environment'),
-    ('sec-hours-minutes-second-and-milliseconds', 'msPerHour'),
-    ('sec-hours-minutes-second-and-milliseconds', 'msPerMinute'),
-    ('sec-hours-minutes-second-and-milliseconds', 'msPerSecond'),
     ('sec-int16array', 'Int16Array'),
     ('sec-int32array', 'Int32Array'),
     ('sec-int8array', 'Int8Array'),
