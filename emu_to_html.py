@@ -1209,10 +1209,29 @@ def prep_for_add_xlinks(si):
 
 ad_hoc_xlink_info = [
 
+    # 5.1.1 Context-Free Grammars
+    ('sec-context-free-grammars', 'chain productions'),
+
+    # 5.2 Algorithm Conventions
     ('sec-algorithm-conventions', 'abs'),
     ('sec-algorithm-conventions', 'floor'),
     ('sec-algorithm-conventions', 'modulo'),
-    ('sec-daylight-saving-time-adjustment', 'DaylightSavingTA'),
+    ('sec-algorithm-conventions', 'Assert'),
+
+    # 6.1 ECMAScript Language Types
+    ('sec-ecmascript-language-types', 'ECMAScript language values'),
+
+    # 6.1.7 The Object Type
+    ('sec-object-type', 'property key value'),
+    ('sec-object-type', 'property key'),
+
+    # 6.1.7.2 Object Internal Methods and Internal Slots
+    ('sec-object-internal-methods-and-internal-slots', 'internal slot'),
+
+    # 6.2.2 The Completion Record Specification Type
+    ('sec-completion-record-specification-type', 'Completion Record'),
+
+    # 6.2.3 The Reference Specification Type
     ('sec-reference-specification-type', 'GetBase'),
     ('sec-reference-specification-type', 'GetReferencedName'),
     ('sec-reference-specification-type', 'HasPrimitiveBase'),
@@ -1220,21 +1239,34 @@ ad_hoc_xlink_info = [
     ('sec-reference-specification-type', 'IsStrictReference'),
     ('sec-reference-specification-type', 'IsSuperReference'),
     ('sec-reference-specification-type', 'IsUnresolvableReference'),
-    #
-    ('sec-algorithm-conventions', 'Assert'),
-    ('sec-array-exotic-objects', 'Array exotic object'),
-    ('sec-arraybuffer.prototype', 'ArrayBuffer.prototype'),
-    ('sec-automatic-semicolon-insertion', 'automatic semicolon insertion'),
-    ('sec-bound-function-exotic-objects', 'Bound Function'),
-    ('sec-code-realms', 'Code Realm'),
-    ('sec-completion-record-specification-type', 'Completion Record'),
-    ('sec-constructor-properties-of-the-global-object-urierror', 'URIError'),
-    ('sec-context-free-grammars', 'chain productions'),
-    ('sec-dataview.prototype', 'DataView.prototype'),
+    ('sec-reference-specification-type', 'unresolvable Reference'),
+
+    # 7.2.9 SameValue(x, y)
+    ('sec-samevalue', 'the SameValue Algorithm'),
+    ('sec-samevalue', 'the SameValue algorithm'),
+
+    # 8.1 Lexical Environments
+    ('sec-lexical-environments', 'lexical environment'),
+    ('sec-lexical-environments', 'outer environment reference'),
+    ('sec-lexical-environments', 'outer lexical environment reference'),
+
+    # 8.1.1.1 Declarative Environment Records
     ('sec-declarative-environment-records', 'Declarative Environment Record'),
-    ('sec-ecmascript-function-objects', 'ECMAScript Function object'),
-    ('sec-ecmascript-function-objects', 'ECMAScript function object'),
-    ('sec-ecmascript-language-types', 'ECMAScript language values'),
+
+    # 8.1.1.2 Object Environment Records
+    ('sec-object-environment-records', 'Object Environment Record'),
+
+    # 8.1.1.3 Function Environment Records
+    ('sec-function-environment-records', 'Function Environment Records'),
+
+    # 8.1.1.4 Global Environment Records
+    ('sec-global-environment-records', 'Global Environment Records'),
+    ('sec-global-environment-records', 'the global environment'),
+
+    # 8.2 Code Realms
+    ('sec-code-realms', 'Code Realm'),
+
+    # 8.3 Execution Contexts
     ('sec-execution-contexts', 'ECMAScript code execution context'),
     ('sec-execution-contexts', 'LexicalEnvironment'),
     ('sec-execution-contexts', 'Suspend'),
@@ -1244,39 +1276,82 @@ ad_hoc_xlink_info = [
     ('sec-execution-contexts', 'the currently running execution context'),
     ('sec-execution-contexts', 'the execution context stack'),
     ('sec-execution-contexts', 'the running execution context'),
-    ('sec-float32array', 'Float32Array'),
-    ('sec-float64array', 'Float64Array'),
-    ('sec-function-environment-records', 'Function Environment Records'),
-    ('sec-generatorfunction.prototype', 'GeneratorFunction.prototype'),
-    ('sec-getcapabilitiesexecutor-functions', 'GetCapabilitiesExecutor Functions'),
-    ('sec-global-environment-records', 'Global Environment Records'),
-    ('sec-global-environment-records', 'the global environment'),
-    ('sec-int16array', 'Int16Array'),
-    ('sec-int32array', 'Int32Array'),
-    ('sec-int8array', 'Int8Array'),
-    ('sec-lexical-environments', 'lexical environment'),
-    ('sec-lexical-environments', 'outer environment reference'),
-    ('sec-lexical-environments', 'outer lexical environment reference'),
-    ('sec-object-environment-records', 'Object Environment Record'),
-    ('sec-object-internal-methods-and-internal-slots', 'internal slot'),
-    ('sec-object-type', 'property key value'),
-    ('sec-object-type', 'property key'),
-    ('sec-reference-specification-type', 'unresolvable Reference'),
-    ('sec-regexp.prototype', 'RegExp.prototype'),
-    ('sec-samevalue', 'the SameValue Algorithm'),
-    ('sec-samevalue', 'the SameValue algorithm'),
-    ('sec-strict-mode-code', 'strict code'),
-    ('sec-string-exotic-objects', 'String exotic object'),
-    ('sec-uint16array', 'Uint16Array'),
-    ('sec-uint32array', 'Uint32Array'),
-    ('sec-uint8array', 'Uint8Array'),
-    ('sec-uint8clampedarray', 'Uint8ClampedArray'),
-    ('sec-weakmap.prototype', 'WeakMap.prototype'),
-    ('sec-weakset.prototype', 'WeakSet.prototype'),
-    #
+
+    # 9.2 ECMAScript Function Objects
+    ('sec-ecmascript-function-objects', 'ECMAScript Function object'),
+    ('sec-ecmascript-function-objects', 'ECMAScript function object'),
+
+    # 9.4.1 Bound Function Exotic Objects
+    ('sec-bound-function-exotic-objects', 'Bound Function'),
     ('sec-bound-function-exotic-objects', '[[BoundTargetFunction]]'),
     ('sec-bound-function-exotic-objects', '[[BoundArguments]]'),
     ('sec-bound-function-exotic-objects', '[[BoundThis]]'),
+
+    # 9.4.2 Array Exotic Objects
+    ('sec-array-exotic-objects', 'Array exotic object'),
+
+    # 9.4.3 String Exotic Objects
+    ('sec-string-exotic-objects', 'String exotic object'),
+
+    # 10.2.1 Strict Mode Code
+    ('sec-strict-mode-code', 'strict code'),
+
+    # 11.9 Automatic Semicolon Insertion
+    ('sec-automatic-semicolon-insertion', 'automatic semicolon insertion'),
+
+    # 18.3.8 Float32Array ( . . . )
+    ('sec-float32array', 'Float32Array'),
+
+    # 18.3.9 Float64Array ( . . . )
+    ('sec-float64array', 'Float64Array'),
+
+    # 18.3.11 Int8Array ( . . . )
+    ('sec-int8array', 'Int8Array'),
+
+    # 18.3.12 Int16Array ( . . . )
+    ('sec-int16array', 'Int16Array'),
+
+    # 18.3.13 Int32Array ( . . . )
+    ('sec-int32array', 'Int32Array'),
+
+    # 18.3.27 Uint8Array ( . . . )
+    ('sec-uint8array', 'Uint8Array'),
+
+    # 18.3.28 Uint8ClampedArray ( . . . )
+    ('sec-uint8clampedarray', 'Uint8ClampedArray'),
+
+    # 18.3.29 Uint16Array ( . . . )
+    ('sec-uint16array', 'Uint16Array'),
+
+    # 18.3.30 Uint32Array ( . . . )
+    ('sec-uint32array', 'Uint32Array'),
+
+    # 18.3.31 URIError ( . . . )
+    ('sec-constructor-properties-of-the-global-object-urierror', 'URIError'),
+
+    # 20.3.1.8 Daylight Saving Time Adjustment
+    ('sec-daylight-saving-time-adjustment', 'DaylightSavingTA'),
+
+    # 21.2.4.1 RegExp.prototype
+    ('sec-regexp.prototype', 'RegExp.prototype'),
+
+    # 23.3.2.1 WeakMap.prototype
+    ('sec-weakmap.prototype', 'WeakMap.prototype'),
+
+    # 23.4.2.1 WeakSet.prototype
+    ('sec-weakset.prototype', 'WeakSet.prototype'),
+
+    # 24.1.3.2 ArrayBuffer.prototype
+    ('sec-arraybuffer.prototype', 'ArrayBuffer.prototype'),
+
+    # 24.2.3.1 DataView.prototype
+    ('sec-dataview.prototype', 'DataView.prototype'),
+
+    # 25.2.2.2 GeneratorFunction.prototype
+    ('sec-generatorfunction.prototype', 'GeneratorFunction.prototype'),
+
+    # 25.4.1.5.1 GetCapabilitiesExecutor Functions
+    ('sec-getcapabilitiesexecutor-functions', 'GetCapabilitiesExecutor Functions'),
 
 ]
 
