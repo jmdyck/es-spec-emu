@@ -745,7 +745,7 @@
       <!-- es6num="6.1" -->
       <emu-clause id="sec-ecmascript-language-types">
           <h1>ECMAScript Language Types</h1>
-          <p>An ECMAScript language type corresponds to values that are directly manipulated by an ECMAScript programmer using the ECMAScript language. The ECMAScript language types are Undefined, Null, Boolean, String, Symbol, Number, and Object. An ECMAScript language value is a value that is characterized by an ECMAScript language type.</p>
+          <p>An <dfn>ECMAScript language type</dfn> corresponds to values that are directly manipulated by an ECMAScript programmer using the ECMAScript language. The ECMAScript language types are Undefined, Null, Boolean, String, Symbol, Number, and Object. An <dfn>ECMAScript language value</dfn> is a value that is characterized by an ECMAScript language type.</p>
 
         <!-- es6num="6.1.1" -->
         <emu-clause id="sec-ecmascript-language-types-undefined-type">
@@ -2503,7 +2503,7 @@
         <!-- es6num="6.2.1" -->
         <emu-clause id="sec-list-and-record-specification-type">
           <h1>The List and Record Specification Type</h1>
-          <p>The List type is used to explain the evaluation of argument lists (see <emu-internal-ref refid="sec-argument-lists">NUM</emu-internal-ref>) in `new` expressions, in function calls, and in other algorithms where a simple ordered list of values is needed. Values of the List type are simply ordered sequences of list elements containing the individual values. These sequences may be of any length. The elements of a list may be randomly accessed using 0-origin indices. For notational convenience an array-like syntax can be used to access List elements. For example, _arguments_[2] is shorthand for saying the 3<sup>rd</sup> element of the List _arguments_.</p>
+          <p>The <dfn>List</dfn> type is used to explain the evaluation of argument lists (see <emu-internal-ref refid="sec-argument-lists">NUM</emu-internal-ref>) in `new` expressions, in function calls, and in other algorithms where a simple ordered list of values is needed. Values of the List type are simply ordered sequences of list elements containing the individual values. These sequences may be of any length. The elements of a list may be randomly accessed using 0-origin indices. For notational convenience an array-like syntax can be used to access List elements. For example, _arguments_[2] is shorthand for saying the 3<sup>rd</sup> element of the List _arguments_.</p>
           <p>For notational convenience within this specification, a literal syntax can be used to express a new List value. For example, &laquo;1, 2&raquo; defines a List value that has two elements each of which is initialized to a specific value. A new empty List can be expressed as &laquo;&raquo;.</p>
           <p>The Record type is used to describe data aggregations within the algorithms of this specification. A Record type value consists of one or more named fields. The value of each field is either an ECMAScript value or an abstract value represented by a name associated with the Record type. Field names are always enclosed in double brackets, for example [[value]].</p>
           <p>For notational convenience within this specification, an object literal-like syntax can be used to express a Record value. For example, {[[field1]]: 42, [[field2]]: *false*, [[field3]]: ~empty~} defines a Record value that has three fields, each of which is initialized to a specific value. Field name order is not significant. Any fields that are not explicitly listed are considered to be absent.</p>
@@ -2569,7 +2569,7 @@
                </tbody>
               </table>
             </figure>
-            <p>The term &ldquo;abrupt completion&rdquo; refers to any completion with a [[type]] value other than ~normal~.</p>
+            <p>The term &ldquo;<dfn>abrupt completion</dfn>&rdquo; refers to any completion with a [[type]] value other than ~normal~.</p>
 
           <!-- es6num="6.2.2.1" -->
           <emu-clause id="sec-normalcompletion" aoid="NormalCompletion">
@@ -2761,7 +2761,7 @@
         <!-- es6num="6.2.4" -->
         <emu-clause id="sec-property-descriptor-specification-type">
             <h1>The Property Descriptor Specification Type</h1>
-            <p>The Property Descriptor type is used to explain the manipulation and reification of Object property attributes. Values of the Property Descriptor type are Records. Each field's name is an attribute name and its value is a corresponding attribute value as specified in <emu-internal-ref refid="sec-property-attributes">NUM</emu-internal-ref>. In addition, any field may be present or absent. The schema name used within this specification to tag literal descriptions of Property Descriptor records is &ldquo;PropertyDescriptor&rdquo;.</p>
+            <p>The <dfn>Property Descriptor</dfn> type is used to explain the manipulation and reification of Object property attributes. Values of the Property Descriptor type are Records. Each field's name is an attribute name and its value is a corresponding attribute value as specified in <emu-internal-ref refid="sec-property-attributes">NUM</emu-internal-ref>. In addition, any field may be present or absent. The schema name used within this specification to tag literal descriptions of Property Descriptor records is &ldquo;PropertyDescriptor&rdquo;.</p>
             <p>Property Descriptor values may be further classified as data Property Descriptors and accessor Property Descriptors based upon the existence or use of certain fields. A data Property Descriptor is one that includes any fields named either [[Value]] or [[Writable]]. An accessor Property Descriptor is one that includes any fields named either [[Get]] or [[Set]]. Any Property Descriptor may have fields named [[Enumerable]] and [[Configurable]]. A Property Descriptor value may not be both a data Property Descriptor and an accessor Property Descriptor; however, it may be neither. A generic Property Descriptor is a Property Descriptor value that is neither a data Property Descriptor nor an accessor Property Descriptor. A fully populated Property Descriptor is one that is either an accessor Property Descriptor or a data Property Descriptor and that has all of the fields that correspond to the property attributes defined in either <emu-internal-ref refid="table-2">TYPE NUM</emu-internal-ref> or <emu-internal-ref refid="table-3">TYPE NUM</emu-internal-ref>.</p>
             <p>The following abstract operations are used in this specification to operate upon Property Descriptor values:</p>
 
@@ -2905,7 +2905,7 @@
         <!-- es6num="6.2.6" -->
         <emu-clause id="sec-data-blocks">
             <h1>Data Blocks</h1>
-            <p>The Data Block specification type is used to describe a distinct and mutable sequence of byte-sized (8 bit) numeric values. A Data Block value is created with a fixed number of bytes that each have the initial value 0.</p>
+            <p>The <dfn>Data Block</dfn> specification type is used to describe a distinct and mutable sequence of byte-sized (8 bit) numeric values. A Data Block value is created with a fixed number of bytes that each have the initial value 0.</p>
             <p>For notational convenience within this specification, an array-like syntax can be used to access the individual bytes of a Data Block value. This notation presents a Data Block value as a 0-origined integer indexed sequence of bytes. For example, if _db_ is a 5 byte Data Block value then _db_[2] can be used to access its 3<sup>rd</sup> byte.</p>
             <p>The following abstract operations are used in this specification to operate upon Data Block values:</p>
 
@@ -4693,7 +4693,7 @@
       <emu-clause id="sec-lexical-environments">
           <h1>Lexical Environments</h1>
           <p>A <dfn>Lexical Environment</dfn> is a specification type used to define the association of |Identifier|s to specific variables and functions based upon the lexical nesting structure of ECMAScript code. A Lexical Environment consists of an Environment Record and a possibly null reference to an _outer_ Lexical Environment. Usually a Lexical Environment is associated with some specific syntactic structure of ECMAScript code such as a |FunctionDeclaration|, a |BlockStatement|, or a |Catch| clause of a |TryStatement| and a new Lexical Environment is created each time such code is evaluated.</p>
-          <p>An Environment Record records the identifier bindings that are created within the scope of its associated Lexical Environment. It is referred to as the Lexical Environment's EnvironmentRecord</p>
+          <p>An Environment Record records the identifier bindings that are created within the scope of its associated Lexical Environment. It is referred to as the Lexical Environment's <dfn>EnvironmentRecord</dfn></p>
           <p>The outer environment reference is used to model the logical nesting of Lexical Environment values. The outer reference of a (inner) Lexical Environment is a reference to the Lexical Environment that logically surrounds the inner Lexical Environment. An outer Lexical Environment may, of course, have its own outer Lexical Environment. A Lexical Environment may serve as the outer environment for multiple inner Lexical Environments. For example, if a |FunctionDeclaration| contains two nested |FunctionDeclaration|s then the Lexical Environments of each of the nested functions will have as their outer Lexical Environment the Lexical Environment of the current evaluation of the surrounding function.</p>
           <p>A <em>global environment</em> is a Lexical Environment which does not have an outer environment. The global environment's outer environment reference is *null*. A global environment's EnvironmentRecord may be prepopulated with identifier bindings and includes an associated <em>global object</em> whose properties provide some of the global environment's identifier bindings. This global object is the value of a global environment's `this` binding. As ECMAScript code is executed, additional properties may be added to the global object and the initial properties may be modified.</p>
           <p>A <em>module environment</em> is a Lexical Environment that contains the bindings for the top level declarations of a |Module|. It also contains the bindings that are explicitly imported by the |Module|. The outer environment of a module environment is a global environment.</p>
@@ -4703,7 +4703,7 @@
         <!-- es6num="8.1.1" -->
         <emu-clause id="sec-environment-records">
             <h1>Environment Records</h1>
-            <p>There are two primary kinds of Environment Record values used in this specification: <em>declarative Environment Records</em> and <em>object Environment Records</em>. Declarative Environment Records are used to define the effect of ECMAScript language syntactic elements such as |FunctionDeclaration|s, |VariableDeclaration|s, and |Catch| clauses that directly associate identifier bindings with ECMAScript language values. Object Environment Records are used to define the effect of ECMAScript elements such as |WithStatement| that associate identifier bindings with the properties of some object. Global Environment Records and function Environment Records are specializations that are used for specifically for |Script| global declarations and for top-level declarations within functions.</p>
+            <p>There are two primary kinds of <dfn>Environment Record</dfn> values used in this specification: <em>declarative Environment Records</em> and <em>object Environment Records</em>. Declarative Environment Records are used to define the effect of ECMAScript language syntactic elements such as |FunctionDeclaration|s, |VariableDeclaration|s, and |Catch| clauses that directly associate identifier bindings with ECMAScript language values. Object Environment Records are used to define the effect of ECMAScript elements such as |WithStatement| that associate identifier bindings with the properties of some object. Global Environment Records and function Environment Records are specializations that are used for specifically for |Script| global declarations and for top-level declarations within functions.</p>
             <p>For specification purposes Environment Record values are values of the Record specification type and can be thought of as existing in a simple object-oriented hierarchy where Environment Record is an abstract class with three concrete subclasses, declarative Environment Record, object Environment Record, and global Environment Record. Function Environment Records and module Environment Records are subclasses of declarative Environment Record. The abstract class includes the abstract specification methods defined in <emu-internal-ref refid="table-15">TYPE NUM</emu-internal-ref>. These abstract methods have distinct concrete algorithms for each of the concrete subclasses.</p>
             <figure>
               <figcaption>
@@ -5872,7 +5872,7 @@ function f(){eval("var x; x = (delete x, 0);")}
       <!-- es6num="8.2" -->
       <emu-clause id="sec-code-realms">
           <h1>Code Realms</h1>
-          <p>Before it is evaluated, all ECMAScript code must be associated with a _Realm_. Conceptually, a realm consists of a set of intrinsic objects, an ECMAScript global environment, all of the ECMAScript code that is loaded within the scope of that global environment, and other associated state and resources.</p>
+          <p>Before it is evaluated, all ECMAScript code must be associated with a <dfn>Realm</dfn>. Conceptually, a realm consists of a set of intrinsic objects, an ECMAScript global environment, all of the ECMAScript code that is loaded within the scope of that global environment, and other associated state and resources.</p>
           <p>A Realm is specified as a Record with the fields specified in <emu-internal-ref refid="table-21">TYPE NUM</emu-internal-ref>:</p>
           <figure>
             <figcaption>
@@ -7067,7 +7067,7 @@ function* enumerate(obj) {
           <!-- es6num="9.2.7.1" -->
           <emu-clause id="sec-%throwtypeerror%">
             <h1>%ThrowTypeError% ( )</h1>
-            <p>The %ThrowTypeError% intrinsic is an anonymous built-in function object that is defined once for each Realm. When %ThrowTypeError% is called it performs the following steps:</p>
+            <p>The <dfn>%ThrowTypeError%</dfn> intrinsic is an anonymous built-in function object that is defined once for each Realm. When %ThrowTypeError% is called it performs the following steps:</p>
             <emu-alg>
               1. Throw a *TypeError* exception.
             </emu-alg>
@@ -17722,8 +17722,8 @@ a = b + c(d + e).print()
         <!-- es6num="14.1.1" -->
         <emu-clause id="sec-directive-prologues-and-the-use-strict-directive">
           <h1>Directive Prologues and the Use Strict Directive</h1>
-          <p>A Directive Prologue is the longest sequence of |ExpressionStatement| productions occurring as the initial |StatementListItem| or |ModuleItem| productions of a |FunctionBody|, a |ScriptBody|, or a |ModuleBody| and where each |ExpressionStatement| in the sequence consists entirely of a |StringLiteral| token followed by a semicolon. The semicolon may appear explicitly or may be inserted by automatic semicolon insertion. A Directive Prologue may be an empty sequence.</p>
-          <p>A Use Strict Directive is an |ExpressionStatement| in a Directive Prologue whose |StringLiteral| is either the exact code unit sequences `"use strict"` or `'use strict'`. A Use Strict Directive may not contain an |EscapeSequence| or |LineContinuation|.</p>
+          <p>A <dfn>Directive Prologue</dfn> is the longest sequence of |ExpressionStatement| productions occurring as the initial |StatementListItem| or |ModuleItem| productions of a |FunctionBody|, a |ScriptBody|, or a |ModuleBody| and where each |ExpressionStatement| in the sequence consists entirely of a |StringLiteral| token followed by a semicolon. The semicolon may appear explicitly or may be inserted by automatic semicolon insertion. A Directive Prologue may be an empty sequence.</p>
+          <p>A <dfn>Use Strict Directive</dfn> is an |ExpressionStatement| in a Directive Prologue whose |StringLiteral| is either the exact code unit sequences `"use strict"` or `'use strict'`. A Use Strict Directive may not contain an |EscapeSequence| or |LineContinuation|.</p>
           <p>A Directive Prologue may contain more than one Use Strict Directive. However, an implementation may issue a warning if this occurs.</p>
           <emu-note>
             <p>The |ExpressionStatement| productions of a Directive Prologue are evaluated normally during evaluation of the containing production. Implementations may define implementation specific meanings for |ExpressionStatement| productions which are not a Use Strict Directive and which occur in a Directive Prologue. If an appropriate notification mechanism exists, an implementation should issue a warning if it encounters in a Directive Prologue an |ExpressionStatement| that is not a Use Strict Directive and which does not have a meaning defined by the implementation.</p>
@@ -20360,7 +20360,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.15" -->
           <emu-clause id="sec-abstract-module-records">
             <h1>Abstract Module Records</h1>
-            <p>A Module Record encapsulates structural information about the imports and exports of a single module. This information is used to link the imports and exports of sets of connected modules. A Module Record includes four fields that are only used when evaluating a module.</p>
+            <p>A <dfn>Module Record</dfn> encapsulates structural information about the imports and exports of a single module. This information is used to link the imports and exports of sets of connected modules. A Module Record includes four fields that are only used when evaluating a module.</p>
             <p>For specification purposes Module Record values are values of the Record specification type and can be thought of as existing in a simple object-oriented hierarchy where Module Record is an abstract class with concrete subclasses. This specification only defines a single Module Record concrete subclass named Source Text Module Record. Other specifications and implementations may define additional Module Record subclasses corresponding to alternative module definition facilities that they defined.</p>
             <p>Module Record defines the fields listed in <emu-internal-ref refid="table-36">TYPE NUM</emu-internal-ref>. All Module Definition subclasses include at least those fields. Module Record also defines the abstract method list in <emu-internal-ref refid="table-37">TYPE NUM</emu-internal-ref>. All Module definition subclasses must provide concrete implementations of these abstract methods.</p>
             <figure>
@@ -20482,7 +20482,7 @@ a = b + c(d + e).print()
           <!-- es6num="15.2.1.16" -->
           <emu-clause id="sec-source-text-module-records">
               <h1>Source Text Module Records</h1>
-              <p>A Source Text Module Record is used to represent information about a module that was defined from ECMAScript source text (10) that was parsed using the goal symbol |Module|. Its fields contain digested information about the names that are imported by the module and its concrete methods use this digest to link, instantiate, and evaluate the module.</p>
+              <p>A <dfn>Source Text Module Record</dfn> is used to represent information about a module that was defined from ECMAScript source text (10) that was parsed using the goal symbol |Module|. Its fields contain digested information about the names that are imported by the module and its concrete methods use this digest to link, instantiate, and evaluate the module.</p>
               <p>In addition to the fields, defined in <emu-internal-ref refid="table-36">TYPE NUM</emu-internal-ref>, Source Text Module Records have the additional fields listed in <emu-internal-ref refid="table-38">TYPE NUM</emu-internal-ref>. Each of these fields initially has the value *undefined*.</p>
               <figure>
                 <figcaption>
@@ -25632,7 +25632,7 @@ new Function("a,b", "c", "return a+b+c")
           <!-- es6num="20.3.1.7" -->
           <emu-clause id="sec-local-time-zone-adjustment">
             <h1>Local Time Zone Adjustment</h1>
-            <p>An implementation of ECMAScript is expected to determine the local time zone adjustment. The local time zone adjustment is a value LocalTZA measured in milliseconds which when added to UTC represents the local <em>standard</em> time. Daylight saving time is <em>not</em> reflected by LocalTZA.</p>
+            <p>An implementation of ECMAScript is expected to determine the local time zone adjustment. The local time zone adjustment is a value <dfn>LocalTZA</dfn> measured in milliseconds which when added to UTC represents the local <em>standard</em> time. Daylight saving time is <em>not</em> reflected by LocalTZA.</p>
             <emu-note>
               <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <emu-external-ref href="http://www.iana.org/time-zones/" linktext="URL"></emu-external-ref>.</p>
             </emu-note>
@@ -26117,7 +26117,7 @@ Date.parse(<i>x</i>.toLocaleString())
                   1. Return the value of _value_'s [[DateValue]] internal slot.
               1. Throw a *TypeError* exception.
             </emu-alg>
-            <p>In following descriptions of functions that are properties of the Date prototype object, the phrase &ldquo;this Date object&rdquo; refers to the object that is the *this* value for the invocation of the function. If the Type of the *this* value is not Object, a *TypeError* exception is thrown. The phrase &ldquo;this time value&rdquo; within the specification of a method refers to the result returned by calling the abstract operation thisTimeValue with the *this* value of the method invocation passed as the argument.</p>
+            <p>In following descriptions of functions that are properties of the Date prototype object, the phrase &ldquo;this Date object&rdquo; refers to the object that is the *this* value for the invocation of the function. If the Type of the *this* value is not Object, a *TypeError* exception is thrown. The phrase &ldquo;<dfn>this time value</dfn>&rdquo; within the specification of a method refers to the result returned by calling the abstract operation thisTimeValue with the *this* value of the method invocation passed as the argument.</p>
 
           <!-- es6num="20.3.4.1" -->
           <emu-clause id="sec-date.prototype.constructor">
