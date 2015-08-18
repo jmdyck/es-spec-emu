@@ -1192,6 +1192,16 @@ def prep_for_add_xlinks(si):
             id = section.getAttribute('id')
             section_is_target_for(id, aoid)
 
+        for dfn in si.node.getElementsByTagName('dfn'):
+            assert dfn.nodeType == dfn.ELEMENT_NODE
+            assert len(dfn.childNodes) == 1
+            [text] = dfn.childNodes
+            assert text.nodeType == text.TEXT_NODE
+            term = text.nodeValue
+            section = get_enclosing_section(dfn)
+            id = section.getAttribute('id')
+            section_is_target_for(id, term)
+
         for (id, term) in ad_hoc_xlink_info:
             section_is_target_for(id, term)
 
@@ -1217,13 +1227,11 @@ ad_hoc_xlink_info = [
     ('sec-arraybuffer.prototype', 'ArrayBuffer.prototype'),
     ('sec-automatic-semicolon-insertion', 'automatic semicolon insertion'),
     ('sec-bound-function-exotic-objects', 'Bound Function'),
-    ('sec-bound-function-exotic-objects', 'bound function'),
     ('sec-code-realms', 'Code Realm'),
     ('sec-code-realms', 'Realm'),
     ('sec-completion-record-specification-type', 'Completion Record'),
     ('sec-completion-record-specification-type', 'abrupt completion'),
     ('sec-constructor-properties-of-the-global-object-urierror', 'URIError'),
-    ('sec-context-free-grammars', 'chain production'),
     ('sec-context-free-grammars', 'chain productions'),
     ('sec-data-blocks', 'Data Block'),
     ('sec-dataview.prototype', 'DataView.prototype'),
@@ -1241,9 +1249,7 @@ ad_hoc_xlink_info = [
     ('sec-execution-contexts', 'Suspend'),
     ('sec-execution-contexts', 'VariableEnvironment'),
     ('sec-execution-contexts', 'execution context stack'),
-    ('sec-execution-contexts', 'execution context'),
     ('sec-execution-contexts', 'suspended'),
-    ('sec-execution-contexts', 'the current Realm'),
     ('sec-execution-contexts', 'the currently running execution context'),
     ('sec-execution-contexts', 'the execution context stack'),
     ('sec-execution-contexts', 'the running execution context'),
@@ -1258,7 +1264,6 @@ ad_hoc_xlink_info = [
     ('sec-int32array', 'Int32Array'),
     ('sec-int8array', 'Int8Array'),
     ('sec-lexical-environments', 'EnvironmentRecord'),
-    ('sec-lexical-environments', 'Lexical Environment'),
     ('sec-lexical-environments', 'lexical environment'),
     ('sec-lexical-environments', 'outer environment reference'),
     ('sec-lexical-environments', 'outer lexical environment reference'),
@@ -1270,16 +1275,13 @@ ad_hoc_xlink_info = [
     ('sec-object-type', 'property key'),
     ('sec-properties-of-the-date-prototype-object', 'this time value'),
     ('sec-property-descriptor-specification-type', 'Property Descriptor'),
-    ('sec-reference-specification-type', 'Reference'),
     ('sec-reference-specification-type', 'unresolvable Reference'),
     ('sec-regexp.prototype', 'RegExp.prototype'),
     ('sec-samevalue', 'the SameValue Algorithm'),
     ('sec-samevalue', 'the SameValue algorithm'),
     ('sec-source-text-module-records', 'Source Text Module Record'),
     ('sec-strict-mode-code', 'strict code'),
-    ('sec-strict-mode-code', 'strict mode code'),
     ('sec-string-exotic-objects', 'String exotic object'),
-    ('sec-time-values-and-time-range', 'time value'),
     ('sec-uint16array', 'Uint16Array'),
     ('sec-uint32array', 'Uint32Array'),
     ('sec-uint8array', 'Uint8Array'),
