@@ -1403,87 +1403,158 @@
             <p>An implementation must not allow these invariants to be circumvented in any manner such as by providing alternative interfaces that implement the functionality of the essential internal methods without enforcing their invariants.</p>
             <h2>Definitions:</h2>
             <ul>
-              <li>The <em>target</em> of an internal method is the object upon which the internal method is called.</li>
-              <li>A target is <em>non-extensible</em> if it has been observed to return false from its [[IsExtensible]] internal method, or true from its [[PreventExtensions]] internal method.</li>
-              <li>A <em>non-existent</em> property is a property that does not exist as an own property on a non-extensible target.</li>
-              <li>All references to _SameValue_ are according to the definition of SameValue algorithm specified in <emu-internal-ref refid="sec-samevalue">NUM</emu-internal-ref>.</li>
+              <li>
+                The <em>target</em> of an internal method is the object upon which the internal method is called.
+              </li>
+              <li>
+                A target is <em>non-extensible</em> if it has been observed to return false from its [[IsExtensible]] internal method, or true from its [[PreventExtensions]] internal method.
+              </li>
+              <li>
+                A <em>non-existent</em> property is a property that does not exist as an own property on a non-extensible target.
+              </li>
+              <li>
+                All references to _SameValue_ are according to the definition of SameValue algorithm specified in <emu-internal-ref refid="sec-samevalue">NUM</emu-internal-ref>.
+              </li>
             </ul>
             <h2>[[GetPrototypeOf]] ( )</h2>
             <ul>
-              <li>The Type of the return value must be either Object or Null.</li>
-              <li>If target is non-extensible, and [[GetPrototypeOf]] returns a value v, then any future calls to [[GetPrototypeOf]] should return the SameValue as v.</li>
+              <li>
+                The Type of the return value must be either Object or Null.
+              </li>
+              <li>
+                If target is non-extensible, and [[GetPrototypeOf]] returns a value v, then any future calls to [[GetPrototypeOf]] should return the SameValue as v.
+              </li>
             </ul>
             <emu-note>
               <p>An object's prototype chain should have finite length (that is, starting from any object, recursively applying the [[GetPrototypeOf]] internal method to its result should eventually lead to the value null). However, this requirement is not enforceable as an object level invariant if the prototype chain includes any exotic objects that do not use the ordinary object definition of [[GetPrototypeOf]]. Such a circular prototype chain may result in infinite loops when accessing object properties.</p>
             </emu-note>
             <h2>[[SetPrototypeOf]] (V)</h2>
             <ul>
-              <li>The Type of the return value must be Boolean.</li>
-              <li>If target is non-extensible, [[SetPrototypeOf]] must return false, unless V is the SameValue as the target's observed [[GetPrototypeOf]] value.</li>
+              <li>
+                The Type of the return value must be Boolean.
+              </li>
+              <li>
+                If target is non-extensible, [[SetPrototypeOf]] must return false, unless V is the SameValue as the target's observed [[GetPrototypeOf]] value.
+              </li>
             </ul>
             <h2>[[PreventExtensions]] ( )</h2>
             <ul>
-              <li>The Type of the return value must be Boolean.</li>
-              <li>If [[PreventExtensions]] returns true, all future calls to [[IsExtensible]] on the target must return false and the target is now considered non-extensible.</li>
+              <li>
+                The Type of the return value must be Boolean.
+              </li>
+              <li>
+                If [[PreventExtensions]] returns true, all future calls to [[IsExtensible]] on the target must return false and the target is now considered non-extensible.
+              </li>
             </ul>
             <h2>[[GetOwnProperty]] (P)</h2>
             <ul>
-              <li>The Type of the return value must be either Property Descriptor or Undefined.</li>
-              <li>If the Type of the return value is Property Descriptor, the return value must be a complete property descriptor (see <emu-internal-ref refid="sec-completepropertydescriptor">NUM</emu-internal-ref>).</li>
-              <li>If a property P is described as a data property with Desc.[[Value]] equal to v and Desc.[[Writable]] and Desc.[[Configurable]] are both false, then the SameValue must be returned for the Desc.[[Value]] attribute of the property on all future calls to [[GetOwnProperty]] ( P ).</li>
-              <li>If P's attributes other than [[Writable]] may change over time or if the property might disappear, then P's [[Configurable]] attribute must be true.</li>
-              <li>If the [[Writable]] attribute may change from false to true, then the [[Configurable]] attribute must be true.</li>
-              <li>If the target is non-extensible and P is non-existent, then all future calls to [[GetOwnProperty]] (P) on the target must describe P as non-existent (i.e. [[GetOwnProperty]] (P) must return undefined).</li>
+              <li>
+                The Type of the return value must be either Property Descriptor or Undefined.
+              </li>
+              <li>
+                If the Type of the return value is Property Descriptor, the return value must be a complete property descriptor (see <emu-internal-ref refid="sec-completepropertydescriptor">NUM</emu-internal-ref>).
+              </li>
+              <li>
+                If a property P is described as a data property with Desc.[[Value]] equal to v and Desc.[[Writable]] and Desc.[[Configurable]] are both false, then the SameValue must be returned for the Desc.[[Value]] attribute of the property on all future calls to [[GetOwnProperty]] ( P ).
+              </li>
+              <li>
+                If P's attributes other than [[Writable]] may change over time or if the property might disappear, then P's [[Configurable]] attribute must be true.
+              </li>
+              <li>
+                If the [[Writable]] attribute may change from false to true, then the [[Configurable]] attribute must be true.
+              </li>
+              <li>
+                If the target is non-extensible and P is non-existent, then all future calls to [[GetOwnProperty]] (P) on the target must describe P as non-existent (i.e. [[GetOwnProperty]] (P) must return undefined).
+              </li>
             </ul>
             <emu-note>
               <p>As a consequence of the third invariant, if a property is described as a data property and it may return different values over time, then either or both of the Desc.[[Writable]] and Desc.[[Configurable]] attributes must be true even if no mechanism to change the value is exposed via the other internal methods.</p>
             </emu-note>
             <h2>[[DefineOwnProperty]] (P, Desc)</h2>
             <ul>
-              <li>The Type of the return value must be Boolean.</li>
-              <li>[[DefineOwnProperty]] must return false if P has previously been observed as a non-configurable own property of the target, unless either:
+              <li>
+                The Type of the return value must be Boolean.
+              </li>
+              <li>
+                [[DefineOwnProperty]] must return false if P has previously been observed as a non-configurable own property of the target, unless either:
                 <ol>
-                  <li>P is a non-configurable writable own data property. A non-configurable writable data property can be changed into a non-configurable non-writable data property.</li>
-                  <li>All attributes in Desc are the SameValue as P's attributes.</li>
+                  <li>
+                    P is a non-configurable writable own data property. A non-configurable writable data property can be changed into a non-configurable non-writable data property.
+                  </li>
+                  <li>
+                    All attributes in Desc are the SameValue as P's attributes.
+                  </li>
                 </ol>
               </li>
-              <li>[[DefineOwnProperty]] (P, Desc) must return false if target is non-extensible and P is a non-existent own property. That is, a non-extensible target object cannot be extended with new properties.</li>
+              <li>
+                [[DefineOwnProperty]] (P, Desc) must return false if target is non-extensible and P is a non-existent own property. That is, a non-extensible target object cannot be extended with new properties.
+              </li>
             </ul>
             <h2>[[HasProperty]] ( P )</h2>
             <ul>
-              <li>The Type of the return value must be Boolean.</li>
-              <li>If P was previously observed as a non-configurable data or accessor own property of the target, [[HasProperty]] must return true.</li>
+              <li>
+                The Type of the return value must be Boolean.
+              </li>
+              <li>
+                If P was previously observed as a non-configurable data or accessor own property of the target, [[HasProperty]] must return true.
+              </li>
             </ul>
             <h2>[[Get]] (P, Receiver)</h2>
             <ul>
-              <li>If P was previously observed as a non-configurable, non-writable own data property of the target with value v, then [[Get]] must return the SameValue.</li>
-              <li>If P was previously observed as a non-configurable own accessor property of the target whose [[Get]] attribute is undefined, the [[Get]] operation must return undefined.</li>
+              <li>
+                If P was previously observed as a non-configurable, non-writable own data property of the target with value v, then [[Get]] must return the SameValue.
+              </li>
+              <li>
+                If P was previously observed as a non-configurable own accessor property of the target whose [[Get]] attribute is undefined, the [[Get]] operation must return undefined.
+              </li>
             </ul>
             <h2>[[Set]] ( P, V, Receiver)</h2>
             <ul>
-              <li>The Type of the return value must be Boolean.</li>
-              <li>If P was previously observed as a non-configurable, non-writable own data property of the target, then [[Set]] must return false unless V is the SameValue as P's [[Value]] attribute.</li>
-              <li>If P was previously observed as a non-configurable own accessor property of the target whose [[Set]] attribute is undefined, the [[Set]] operation must return false.</li>
+              <li>
+                The Type of the return value must be Boolean.
+              </li>
+              <li>
+                If P was previously observed as a non-configurable, non-writable own data property of the target, then [[Set]] must return false unless V is the SameValue as P's [[Value]] attribute.
+              </li>
+              <li>
+                If P was previously observed as a non-configurable own accessor property of the target whose [[Set]] attribute is undefined, the [[Set]] operation must return false.
+              </li>
             </ul>
             <h2>[[Delete]] ( P )</h2>
             <ul>
-              <li>The Type of the return value must be Boolean.</li>
-              <li>If P was previously observed to be a non-configurable own data or accessor property of the target, [[Delete]] must return false.</li>
+              <li>
+                The Type of the return value must be Boolean.
+              </li>
+              <li>
+                If P was previously observed to be a non-configurable own data or accessor property of the target, [[Delete]] must return false.
+              </li>
             </ul>
             <h2>[[Enumerate]] ( )</h2>
             <ul>
-              <li>The Type of the return value must be Object.</li>
+              <li>
+                The Type of the return value must be Object.
+              </li>
             </ul>
             <h2>[[OwnPropertyKeys]] ( )</h2>
             <ul>
-              <li>The return value must be a List.</li>
-              <li>The Type of each element of the returned List is either String or Symbol.</li>
-              <li>The returned List must contain at least the keys of all non-configurable own properties that have previously been observed.</li>
-              <li>If the object is non-extensible, the returned List must contain only the keys of all own properties of the object that are observable using [[GetOwnProperty]].</li>
+              <li>
+                The return value must be a List.
+              </li>
+              <li>
+                The Type of each element of the returned List is either String or Symbol.
+              </li>
+              <li>
+                The returned List must contain at least the keys of all non-configurable own properties that have previously been observed.
+              </li>
+              <li>
+                If the object is non-extensible, the returned List must contain only the keys of all own properties of the object that are observable using [[GetOwnProperty]].
+              </li>
             </ul>
             <h2>[[Construct]] ( )</h2>
             <ul>
-              <li>The Type of the return value must be Object.</li>
+              <li>
+                The Type of the return value must be Object.
+              </li>
             </ul>
           </emu-clause>
 
