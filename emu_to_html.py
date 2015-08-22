@@ -1124,7 +1124,7 @@ def expand_ecmarkdown(s):
 
 emd_converter = LexerConverter([
         (r'\*(\w+|[+-](0|&infin;)|(positive|negative) (zero|Infinity))\*',   r'<span class="value">\1</span>'),
-        (r'\b_([A-Za-z0-9]+)_',        r'<i>\1</i>'),
+        (r'\b_([A-Za-z0-9]+)_',        r'<var>\1</var>'),
         (r'~(\w+|\[empty\])~',  r'<span class="specvalue">\1</span>'),
 
         (r'\|(\w+)(\[[^][]+\])\|', r'<span class="nt">\1</span><sub>\2</sub>'),
