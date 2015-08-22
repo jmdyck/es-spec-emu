@@ -1196,7 +1196,7 @@
             <p>Internal slots correspond to internal state that is associated with objects and used by various ECMAScript specification algorithms. Internal slots are not object properties and they are not inherited. Depending upon the specific internal slot specification, such state may consist of values of any ECMAScript language type or of specific ECMAScript specification type values. Unless explicitly specified otherwise, internal slots are allocated as part of the process of creating an object and may not be dynamically added to an object. Unless specified otherwise, the initial value of an internal slot is the value *undefined*. Various algorithms within this specification create objects that have internal slots. However, the ECMAScript language provides no direct way to associate internal slots with an object.</p>
             <p>Internal methods and internal slots are identified within this specification using names enclosed in double square brackets [[ ]].</p>
             <p><emu-internal-ref refid="table-5">TYPE NUM</emu-internal-ref> summarizes the <em>essential internal methods</em> used by this specification that are applicable to all objects created or manipulated by ECMAScript code. Every object must have algorithms for all of the essential internal methods. However, all objects do not necessarily use the same algorithms for those methods.</p>
-            <p>The &ldquo;Signature&rdquo; column of <emu-internal-ref refid="table-5">TYPE NUM</emu-internal-ref> and other similar tables describes the invocation pattern for each internal method. The invocation pattern always includes a parenthesized list of descriptive parameter names. If a parameter name is the same as an ECMAScript type name then the name describes the required type of the parameter value. If an internal method explicitly returns a value, its parameter list is followed by the symbol &ldquo;&rarr;&rdquo; and the type name of the returned value. The type names used in signatures refer to the types defined in <emu-internal-ref refid="sec-ecmascript-data-types-and-values">TYPE NUM</emu-internal-ref> augmented by the following additional names. &ldquo;_any_&rdquo; means the value may be any ECMAScript language type. An internal method implicitly returns a Completion Record as described in <emu-internal-ref refid="sec-completion-record-specification-type">NUM</emu-internal-ref>. In addition to its parameters, an internal method always has access to the object that is the target of the method invocation.</p>
+            <p>The &ldquo;Signature&rdquo; column of <emu-internal-ref refid="table-5">TYPE NUM</emu-internal-ref> and other similar tables describes the invocation pattern for each internal method. The invocation pattern always includes a parenthesized list of descriptive parameter names. If a parameter name is the same as an ECMAScript type name then the name describes the required type of the parameter value. If an internal method explicitly returns a value, its parameter list is followed by the symbol &ldquo;&rarr;&rdquo; and the type name of the returned value. The type names used in signatures refer to the types defined in <emu-internal-ref refid="sec-ecmascript-data-types-and-values">TYPE NUM</emu-internal-ref> augmented by the following additional names. &ldquo;<em>any</em>&rdquo; means the value may be any ECMAScript language type. An internal method implicitly returns a Completion Record as described in <emu-internal-ref refid="sec-completion-record-specification-type">NUM</emu-internal-ref>. In addition to its parameters, an internal method always has access to the object that is the target of the method invocation.</p>
             <figure>
               <figcaption>
                 <span id="table-5">Table 5</span> &mdash; Essential Internal Methods
@@ -1285,7 +1285,7 @@
                     [[Get]]
                   </td>
                   <td>
-                    (_propertyKey_, _Receiver_) <b>&rarr;</b> _any_
+                    (_propertyKey_, _Receiver_) <b>&rarr;</b> <em>any</em>
                   </td>
                   <td>
                     Return the value of the property whose key is _propertyKey_ from this object. If any ECMAScript code must be executed to retrieve the property value, _Receiver_ is used as the *this* value when evaluating the code.
@@ -1296,7 +1296,7 @@
                     [[Set]]
                   </td>
                   <td>
-                    (_propertyKey_,_value_, _Receiver_) <b>&rarr;</b> _Boolean_
+                    (_propertyKey_,_value_, _Receiver_) <b>&rarr;</b> Boolean
                   </td>
                   <td>
                     Set the value of the property whose key is _propertyKey_ to _value_. If any ECMAScript code must be executed to set the property value, _Receiver_ is used as the *this* value when evaluating the code. Returns *true* if the property value was set or *false* if it could not be set.
@@ -1372,7 +1372,7 @@
                     [[Call]]
                   </td>
                   <td>
-                    (_any_, a List of _any_) <b>&rarr;</b> _any_
+                    (<em>any</em>, a List of <em>any</em>) <b>&rarr;</b> <em>any</em>
                   </td>
                   <td>
                     Executes code associated with this object. Invoked via a function call expression. The arguments to the internal method are a *this* value and a list containing the arguments passed to the function by a call expression. Objects that implement this internal method are <em>callable</em>.
@@ -1383,7 +1383,7 @@
                     [[Construct]]
                   </td>
                   <td>
-                    (a List of _any_, Object) <b>&rarr;</b> Object
+                    (a List of <em>any</em>, Object) <b>&rarr;</b> Object
                   </td>
                   <td>
                     Creates an object. Invoked via the `new` or `super` operators. The first argument to the internal method is a list containing the arguments of the operator. The second argument is the object to which the `new` operator was initially applied. Objects that implement this internal method are called <em>constructors</em>. A function object is not necessarily a constructor and such non-constructor function objects do not have a [[Construct]] internal method.
@@ -1413,7 +1413,7 @@
                 A <em>non-existent</em> property is a property that does not exist as an own property on a non-extensible target.
               </li>
               <li>
-                All references to _SameValue_ are according to the definition of SameValue algorithm specified in <emu-internal-ref refid="sec-samevalue">NUM</emu-internal-ref>.
+                All references to <em>SameValue</em> are according to the definition of SameValue algorithm specified in <emu-internal-ref refid="sec-samevalue">NUM</emu-internal-ref>.
               </li>
             </ul>
             <h2>[[GetPrototypeOf]] ( )</h2>
