@@ -26123,14 +26123,8 @@ THH:mm:ss.sss
             <p>If `x` is any Date object whose milliseconds amount is zero within a particular implementation of ECMAScript, then all of the following expressions should produce the same numeric value in that implementation, if all the properties referenced have their initial values:</p>
             <pre>
 x.valueOf()
-            </pre>
-            <pre>
 Date.parse(x.toString())
-            </pre>
-            <pre>
 Date.parse(x.toUTCString())
-            </pre>
-            <pre>
 Date.parse(x.toISOString())
             </pre>
             <p>However, the expression</p>
@@ -28283,8 +28277,6 @@ Date.parse(x.toLocaleString())
                 <p>and not any of:</p>
                 <pre>
 ["aabaac", "aabaac"]
-                </pre>
-                <pre>
 ["aabaac", "c"]
                 </pre>
                 <p>The above ordering of choice points can be used to write a regular expression that calculates the greatest common divisor of two numbers (represented in unary notation). The following example calculates the gcd of 10 and 15:</p>
