@@ -4947,7 +4947,7 @@
               </emu-alg>
               <emu-note>
                 <p>An example of ECMAScript code that results in a missing binding at step 2 is:</p>
-                <pre class="NoteCode">
+                <pre>
 function f(){eval("var x; x = (delete x, 0);")}
                 </pre>
               </emu-note>
@@ -6732,7 +6732,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           <p>Enumerating the properties of the target object includes enumerating properties of its prototype, and the prototype of the prototype, and so on, recursively; but a property of a prototype is not processed if it has the same name as a property that has already been processed by the iterator's `next` method. The values of [[Enumerable]] attributes are not considered when determining if a property of a prototype object has already been processed. The enumerable property names of prototype objects must be obtained as if by invoking the prototype object's [[Enumerate]] internal method. [[Enumerate]] must obtain the own property keys of the target object as if by calling its [[OwnPropertyKeys]] internal method. Property attributes of the target object must be obtained as if by calling its [[GetOwnProperty]] internal method.</p>
           <emu-note>
             <p>The following is an informative definition of an ECMAScript generator function that conforms to these rules:</p>
-            <pre class="NoteCode">
+            <pre>
 function* enumerate(obj) {
   let visited=new Set;
   for (let key of Reflect.ownKeys(obj)) {
@@ -10715,33 +10715,33 @@ function* enumerate(obj) {
         <emu-clause id="sec-examples-of-automatic-semicolon-insertion">
           <h1>Examples of Automatic Semicolon Insertion</h1>
           <p>The source</p>
-          <pre class="NoteCode">
+          <pre>
 { 1 2 } 3
           </pre>
           <p>is not a valid sentence in the ECMAScript grammar, even with the automatic semicolon insertion rules. In contrast, the source</p>
-          <pre class="NoteCode">
+          <pre>
 { 1
 2 } 3
           </pre>
           <p>is also not a valid ECMAScript sentence, but is transformed by automatic semicolon insertion into the following:</p>
-          <pre class="NoteCode">
+          <pre>
 { 1
 ;2 ;} 3;
           </pre>
           <p>which is a valid ECMAScript sentence.</p>
           <p>The source</p>
-          <pre class="NoteCode">
+          <pre>
 for (a; b
 )
           </pre>
           <p>is not a valid ECMAScript sentence and is not altered by automatic semicolon insertion because the semicolon is needed for the header of a `for` statement. Automatic semicolon insertion never inserts one of the two semicolons in the header of a `for` statement.</p>
           <p>The source</p>
-          <pre class="NoteCode">
+          <pre>
 return
 a + b
           </pre>
           <p>is transformed by automatic semicolon insertion into the following:</p>
-          <pre class="NoteCode">
+          <pre>
 return;
 a + b;
           </pre>
@@ -10749,12 +10749,12 @@ a + b;
             <p>The expression `a + b` is not treated as a value to be returned by the `return` statement, because a |LineTerminator| separates it from the token `return`.</p>
           </emu-note>
           <p>The source</p>
-          <pre class="NoteCode">
+          <pre>
 a = b
 ++c
           </pre>
           <p>is transformed by automatic semicolon insertion into the following:</p>
-          <pre class="NoteCode">
+          <pre>
 a = b;
 ++c;
           </pre>
@@ -10762,18 +10762,18 @@ a = b;
             <p>The token `++` is not treated as a postfix operator applying to the variable `b`, because a |LineTerminator| occurs between `b` and `++`.</p>
           </emu-note>
           <p>The source</p>
-          <pre class="NoteCode">
+          <pre>
 if (a &gt; b)
 else c = d
           </pre>
           <p>is not a valid ECMAScript sentence and is not altered by automatic semicolon insertion before the `else` token, even though no production of the grammar applies at that point, because an automatically inserted semicolon would then be parsed as an empty statement.</p>
           <p>The source</p>
-          <pre class="NoteCode">
+          <pre>
 a = b + c
 (d + e).print()
           </pre>
           <p>is <em>not</em> transformed by automatic semicolon insertion, because the parenthesized expression that begins the second line can be interpreted as an argument list for a function call:</p>
-          <pre class="NoteCode">
+          <pre>
 a = b + c(d + e).print()
           </pre>
           <p>In the circumstance that an assignment statement must begin with a left parenthesis, it is a good idea for the programmer to provide an explicit semicolon at the end of the preceding statement rather than to rely on automatic semicolon insertion.</p>
@@ -23373,7 +23373,7 @@ a = b + c(d + e).print()
               </emu-alg>
               <emu-note>
                 <p>It is permissible but not necessary to have one argument for each formal parameter to be specified. For example, all three of the following expressions produce the same result:</p>
-                <pre class="NoteCode">
+                <pre>
 new Function("a", "b", "c", "return a+b+c")
 new Function("a, b, c", "return a+b+c")
 new Function("a,b", "c", "return a+b+c")
@@ -25952,58 +25952,58 @@ THH:mm:ss.sss
                    <tbody>
                     <tr>
                       <td>
-                        <p class="NoteCode">-283457-03-21T15:00:59.008Z</p>
+                        <p>-283457-03-21T15:00:59.008Z</p>
                       </td>
                       <td>
-                        <p class="NoteCode">283458 B.C.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="NoteCode">-000001-01-01T00:00:00Z</p>
-                      </td>
-                      <td>
-                        <p class="NoteCode">2 B.C.</p>
+                        <p>283458 B.C.</p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p class="NoteCode">+000000-01-01T00:00:00Z</p>
+                        <p>-000001-01-01T00:00:00Z</p>
                       </td>
                       <td>
-                        <p class="NoteCode">1 B.C.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="NoteCode">+000001-01-01T00:00:00Z</p>
-                      </td>
-                      <td>
-                        <p class="NoteCode">1 A.D.</p>
+                        <p>2 B.C.</p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p class="NoteCode">+001970-01-01T00:00:00Z</p>
+                        <p>+000000-01-01T00:00:00Z</p>
                       </td>
                       <td>
-                        <p class="NoteCode">1970 A.D.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="NoteCode">+002009-12-15T00:00:00Z</p>
-                      </td>
-                      <td>
-                        <p class="NoteCode">2009 A.D.</p>
+                        <p>1 B.C.</p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p class="NoteCode">+287396-10-12T08:59:00.992Z</p>
+                        <p>+000001-01-01T00:00:00Z</p>
                       </td>
                       <td>
-                        <p class="NoteCode">287396 A.D.</p>
+                        <p>1 A.D.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>+001970-01-01T00:00:00Z</p>
+                      </td>
+                      <td>
+                        <p>1970 A.D.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>+002009-12-15T00:00:00Z</p>
+                      </td>
+                      <td>
+                        <p>2009 A.D.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>+287396-10-12T08:59:00.992Z</p>
+                      </td>
+                      <td>
+                        <p>287396 A.D.</p>
                       </td>
                     </tr>
                    </tbody>
@@ -34681,7 +34681,7 @@ Date.parse(x.toLocaleString())
             </emu-alg>
             <emu-note>
               <p>JSON structures are allowed to be nested to any depth, but they must be acyclic. If _value_ is or contains a cyclic structure, then the stringify function must throw a *TypeError* exception. This is an example of a value that cannot be stringified:</p>
-              <pre class="NoteCode">
+              <pre>
 a = [];
 a[0] = a;
 my_text = JSON.stringify(a); // This must throw a TypeError.
