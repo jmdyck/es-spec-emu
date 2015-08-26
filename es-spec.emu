@@ -6086,7 +6086,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           <p>An execution context contains whatever implementation specific state is necessary to track the execution progress of its associated code. Each execution context has at least the state components listed in <emu-internal-ref refid="table-22">TYPE NUM</emu-internal-ref>.</p>
           <figure>
             <figcaption>
-              <span id="table-22">Table 22</span> &mdash;State Components for All Execution Contexts
+              <span id="table-22">Table 22</span> &mdash; State Components for All Execution Contexts
             </figcaption>
             <table class="real-table">
              <tbody>
@@ -31690,7 +31690,7 @@ Date.parse(x.toLocaleString())
           <p>_TypedArray_ objects present an array-like view of an underlying binary data buffer (<emu-internal-ref refid="sec-arraybuffer-objects">NUM</emu-internal-ref>). Each element of a _TypedArray_ instance has the same underlying binary scalar data type. There is a distinct _TypedArray_ constructor, listed in <emu-internal-ref refid="table-49">TYPE NUM</emu-internal-ref>, for each of the nine supported element types. Each constructor in <emu-internal-ref refid="table-49">TYPE NUM</emu-internal-ref> has a corresponding distinct prototype object.</p>
           <figure>
             <figcaption>
-              <span id="table-49">Table 49</span> &ndash; The _TypedArray_ Constructors
+              <span id="table-49">Table 49</span> &mdash; The _TypedArray_ Constructors
             </figcaption>
             <table class="real-table">
              <tbody>
