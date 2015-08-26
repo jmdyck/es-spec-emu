@@ -289,9 +289,6 @@ For section 6.1.7.3 "Invariants of the Essential Internal Methods",
 the markup in the HTML spec is very presentational. I converted it
 to something more structural, but you might want to go farther.
 
-Similarly, the markup for the Bibliography is fairly presentational. I
-haven't done much there other than make use of `<emu-external-ref>`.
-
 Each of 20.2.2.{13,31,34} has a note containing a formula in
 italic. Should be in code?
 
