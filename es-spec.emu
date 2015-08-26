@@ -67,8 +67,8 @@
       <p>A conforming implementation of ECMAScript must interpret source text input in conformance with the Unicode Standard, Version 5.1.0 or later and ISO/IEC 10646. If the adopted ISO/IEC 10646-1 subset is not otherwise specified, it is presumed to be the Unicode set, collection 10646.</p>
       <p>A conforming implementation of ECMAScript that provides an application programming interface that supports programs that need to adapt to the linguistic and cultural conventions used by different human languages and countries must implement the interface defined by the most recent edition of ECMA-402 that is compatible with this specification.</p>
       <p>A conforming implementation of ECMAScript may provide additional types, values, objects, properties, and functions beyond those described in this specification. In particular, a conforming implementation of ECMAScript may provide properties not described in this specification, and values for those properties, for objects that are described in this specification.</p>
-      <p>A conforming implementation of ECMAScript may support program and regular expression syntax not described in this specification. In particular, a conforming implementation of ECMAScript may support program syntax that makes use of the &ldquo;future reserved words&rdquo; listed in <emu-internal-ref refid="sec-future-reserved-words">TYPE NUM</emu-internal-ref> of this specification.</p>
-      <p>A conforming implementation of ECMAScript must not implement any extension that is listed as a Forbidden Extension in <emu-internal-ref refid="sec-forbidden-extensions">TYPE NUM</emu-internal-ref>.</p>
+      <p>A conforming implementation of ECMAScript may support program and regular expression syntax not described in this specification. In particular, a conforming implementation of ECMAScript may support program syntax that makes use of the &ldquo;future reserved words&rdquo; listed in subclause <emu-internal-ref refid="sec-future-reserved-words">NUM</emu-internal-ref> of this specification.</p>
+      <p>A conforming implementation of ECMAScript must not implement any extension that is listed as a Forbidden Extension in subclause <emu-internal-ref refid="sec-forbidden-extensions">NUM</emu-internal-ref>.</p>
     </emu-clause>
 
     <!-- es6num="3" -->
@@ -148,13 +148,13 @@
         <!-- es6num="4.3.1" -->
         <emu-clause id="sec-type">
           <h1>type</h1>
-          <p>set of data values as defined in <emu-internal-ref refid="sec-ecmascript-data-types-and-values">TYPE NUM</emu-internal-ref> of this specification</p>
+          <p>set of data values as defined in clause <emu-internal-ref refid="sec-ecmascript-data-types-and-values">NUM</emu-internal-ref> of this specification</p>
         </emu-clause>
 
         <!-- es6num="4.3.2" -->
         <emu-clause id="sec-primitive-value">
           <h1>primitive value</h1>
-          <p>member of one of the types Undefined, Null, Boolean, Number, Symbol, or String as defined in <emu-internal-ref refid="sec-ecmascript-data-types-and-values">TYPE NUM</emu-internal-ref></p>
+          <p>member of one of the types Undefined, Null, Boolean, Number, Symbol, or String as defined in clause <emu-internal-ref refid="sec-ecmascript-data-types-and-values">NUM</emu-internal-ref></p>
           <emu-note>
             <p>A primitive value is a datum that is represented directly at the lowest level of the language implementation.</p>
           </emu-note>
@@ -437,7 +437,7 @@
         <!-- es6num="5.1.2" -->
         <emu-clause id="sec-lexical-and-regexp-grammars">
           <h1>The Lexical and RegExp Grammars</h1>
-          <p>A <em>lexical grammar</em> for ECMAScript is given in <emu-internal-ref refid="sec-ecmascript-language-lexical-grammar">TYPE NUM</emu-internal-ref>. This grammar has as its terminal symbols Unicode code points that conform to the rules for |SourceCharacter| defined in <emu-internal-ref refid="sec-source-text">NUM</emu-internal-ref>. It defines a set of productions, starting from the goal symbol |InputElementDiv|, |InputElementTemplateTail|, or |InputElementRegExp|, or |InputElementRegExpOrTemplateTail|, that describe how sequences of such code points are translated into a sequence of input elements.</p>
+          <p>A <em>lexical grammar</em> for ECMAScript is given in clause <emu-internal-ref refid="sec-ecmascript-language-lexical-grammar">NUM</emu-internal-ref>. This grammar has as its terminal symbols Unicode code points that conform to the rules for |SourceCharacter| defined in <emu-internal-ref refid="sec-source-text">NUM</emu-internal-ref>. It defines a set of productions, starting from the goal symbol |InputElementDiv|, |InputElementTemplateTail|, or |InputElementRegExp|, or |InputElementRegExpOrTemplateTail|, that describe how sequences of such code points are translated into a sequence of input elements.</p>
           <p>Input elements other than white space and comments form the terminal symbols for the syntactic grammar for ECMAScript and are called ECMAScript <em>tokens</em>. These tokens are the reserved words, identifiers, literals, and punctuators of the ECMAScript language. Moreover, line terminators, although not considered to be tokens, also become part of the stream of input elements and guide the process of automatic semicolon insertion (<emu-internal-ref refid="sec-automatic-semicolon-insertion">NUM</emu-internal-ref>). Simple white space and single-line comments are discarded and do not appear in the stream of input elements for the syntactic grammar. A |MultiLineComment| (that is, a comment of the form `/*`&hellip;`*/` regardless of whether it spans more than one line) is likewise simply discarded if it contains no line terminator; but if a |MultiLineComment| contains one or more line terminators, then it is replaced by a single line terminator, which becomes part of the stream of input elements for the syntactic grammar.</p>
           <p>A <em>RegExp grammar</em> for ECMAScript is given in <emu-internal-ref refid="sec-patterns">NUM</emu-internal-ref>. This grammar also has as its terminal symbols the code points as defined by |SourceCharacter|. It defines a set of productions, starting from the goal symbol |Pattern|, that describe how sequences of code points are translated into regular expression patterns.</p>
           <p>Productions of the lexical and RegExp grammars are distinguished by having two colons &ldquo;<b>::</b>&rdquo; as separating punctuation. The lexical and RegExp grammars share some productions.</p>
@@ -729,7 +729,7 @@
           1. Return *false*.
         </emu-alg>
         <p>The above definition is explicitly over-ridden for specific productions.</p>
-        <p>A special kind of static semantic rule is an Early Error Rule. Early error rules define early error conditions (see <emu-internal-ref refid="sec-error-handling-and-language-extensions">TYPE NUM</emu-internal-ref>) that are associated with specific grammar productions. Evaluation of most early error rules are not explicitly invoked within the algorithms of this specification. A conforming implementation must, prior to the first evaluation of a |Script| or |Module|, validate all of the early error rules of the productions used to parse that |Script| or |Module|. If any of the early error rules are violated the |Script| or |Module| is invalid and cannot be evaluated.</p>
+        <p>A special kind of static semantic rule is an Early Error Rule. Early error rules define early error conditions (see clause <emu-internal-ref refid="sec-error-handling-and-language-extensions">NUM</emu-internal-ref>) that are associated with specific grammar productions. Evaluation of most early error rules are not explicitly invoked within the algorithms of this specification. A conforming implementation must, prior to the first evaluation of a |Script| or |Module|, validate all of the early error rules of the productions used to parse that |Script| or |Module|. If any of the early error rules are violated the |Script| or |Module| is invalid and cannot be evaluated.</p>
       </emu-clause>
     </emu-clause>
 
@@ -1181,7 +1181,7 @@
             <p>Internal slots correspond to internal state that is associated with objects and used by various ECMAScript specification algorithms. Internal slots are not object properties and they are not inherited. Depending upon the specific internal slot specification, such state may consist of values of any ECMAScript language type or of specific ECMAScript specification type values. Unless explicitly specified otherwise, internal slots are allocated as part of the process of creating an object and may not be dynamically added to an object. Unless specified otherwise, the initial value of an internal slot is the value *undefined*. Various algorithms within this specification create objects that have internal slots. However, the ECMAScript language provides no direct way to associate internal slots with an object.</p>
             <p>Internal methods and internal slots are identified within this specification using names enclosed in double square brackets [[ ]].</p>
             <p><emu-internal-ref refid="table-5">TYPE NUM</emu-internal-ref> summarizes the <em>essential internal methods</em> used by this specification that are applicable to all objects created or manipulated by ECMAScript code. Every object must have algorithms for all of the essential internal methods. However, all objects do not necessarily use the same algorithms for those methods.</p>
-            <p>The &ldquo;Signature&rdquo; column of <emu-internal-ref refid="table-5">TYPE NUM</emu-internal-ref> and other similar tables describes the invocation pattern for each internal method. The invocation pattern always includes a parenthesized list of descriptive parameter names. If a parameter name is the same as an ECMAScript type name then the name describes the required type of the parameter value. If an internal method explicitly returns a value, its parameter list is followed by the symbol &ldquo;&rarr;&rdquo; and the type name of the returned value. The type names used in signatures refer to the types defined in <emu-internal-ref refid="sec-ecmascript-data-types-and-values">TYPE NUM</emu-internal-ref> augmented by the following additional names. &ldquo;<em>any</em>&rdquo; means the value may be any ECMAScript language type. An internal method implicitly returns a Completion Record as described in <emu-internal-ref refid="sec-completion-record-specification-type">NUM</emu-internal-ref>. In addition to its parameters, an internal method always has access to the object that is the target of the method invocation.</p>
+            <p>The &ldquo;Signature&rdquo; column of <emu-internal-ref refid="table-5">TYPE NUM</emu-internal-ref> and other similar tables describes the invocation pattern for each internal method. The invocation pattern always includes a parenthesized list of descriptive parameter names. If a parameter name is the same as an ECMAScript type name then the name describes the required type of the parameter value. If an internal method explicitly returns a value, its parameter list is followed by the symbol &ldquo;&rarr;&rdquo; and the type name of the returned value. The type names used in signatures refer to the types defined in clause <emu-internal-ref refid="sec-ecmascript-data-types-and-values">NUM</emu-internal-ref> augmented by the following additional names. &ldquo;<em>any</em>&rdquo; means the value may be any ECMAScript language type. An internal method implicitly returns a Completion Record as described in <emu-internal-ref refid="sec-completion-record-specification-type">NUM</emu-internal-ref>. In addition to its parameters, an internal method always has access to the object that is the target of the method invocation.</p>
             <emu-table id="table-5" caption="Essential Internal Methods">
               <table>
                <tbody>
@@ -1371,7 +1371,7 @@
                </tbody>
               </table>
             </emu-table>
-            <p>The semantics of the essential internal methods for ordinary objects and standard exotic objects are specified in <emu-internal-ref refid="sec-ordinary-and-exotic-objects-behaviours">TYPE NUM</emu-internal-ref>. If any specified use of an internal method of an exotic object is not supported by an implementation, that usage must throw a *TypeError* exception when attempted.</p>
+            <p>The semantics of the essential internal methods for ordinary objects and standard exotic objects are specified in clause <emu-internal-ref refid="sec-ordinary-and-exotic-objects-behaviours">NUM</emu-internal-ref>. If any specified use of an internal method of an exotic object is not supported by an implementation, that usage must throw a *TypeError* exception when attempted.</p>
           </emu-clause>
 
           <!-- es6num="6.1.7.3" -->
@@ -4687,7 +4687,7 @@
           <!-- es6num="7.4.8.1" -->
           <emu-clause id="sec-listiterator-next">
             <h1>ListIterator next( )</h1>
-            <p>The ListIterator `next` method is a standard built-in function object (<emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">TYPE NUM</emu-internal-ref>) that performs the following steps:</p>
+            <p>The ListIterator `next` method is a standard built-in function object (clause <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">NUM</emu-internal-ref>) that performs the following steps:</p>
             <emu-alg>
               1. Let _O_ be the *this* value.
               1. Let _f_ be the active function object.
@@ -5266,8 +5266,8 @@ function f(){eval("var x; x = (delete x, 0);")}
           <!-- es6num="8.1.1.4" -->
           <emu-clause id="sec-global-environment-records">
               <h1>Global Environment Records</h1>
-              <p>A global Environment Record is used to represent the outer most scope that is shared by all of the ECMAScript |Script| elements that are processed in a common Realm (<emu-internal-ref refid="sec-code-realms">NUM</emu-internal-ref>). A global Environment Record provides the bindings for built-in globals (<emu-internal-ref refid="sec-global-object">TYPE NUM</emu-internal-ref>), properties of the global object, and for all top-level declarations (<emu-internal-ref refid="sec-block-static-semantics-toplevellexicallyscopeddeclarations">NUM</emu-internal-ref>, <emu-internal-ref refid="sec-block-static-semantics-toplevelvarscopeddeclarations">NUM</emu-internal-ref>) that occur within a |Script|.</p>
-              <p>A global Environment Record is logically a single record but it is specified as a composite encapsulating an object Environment Record and a declarative Environment Record. The object Environment Record has as its base object the global object of the associated Realm. This global object is the value returned by the global Environment Record's GetThisBinding concrete method. The object Environment Record component of a global Environment Record contains the bindings for all built-in globals (<emu-internal-ref refid="sec-global-object">TYPE NUM</emu-internal-ref>) and all bindings introduced by a |FunctionDeclaration|, |GeneratorDeclaration|, or |VariableStatement| contained in global code. The bindings for all other ECMAScript declarations in global code are contained in the declarative Environment Record component of the global Environment Record.</p>
+              <p>A global Environment Record is used to represent the outer most scope that is shared by all of the ECMAScript |Script| elements that are processed in a common Realm (<emu-internal-ref refid="sec-code-realms">NUM</emu-internal-ref>). A global Environment Record provides the bindings for built-in globals (clause <emu-internal-ref refid="sec-global-object">NUM</emu-internal-ref>), properties of the global object, and for all top-level declarations (<emu-internal-ref refid="sec-block-static-semantics-toplevellexicallyscopeddeclarations">NUM</emu-internal-ref>, <emu-internal-ref refid="sec-block-static-semantics-toplevelvarscopeddeclarations">NUM</emu-internal-ref>) that occur within a |Script|.</p>
+              <p>A global Environment Record is logically a single record but it is specified as a composite encapsulating an object Environment Record and a declarative Environment Record. The object Environment Record has as its base object the global object of the associated Realm. This global object is the value returned by the global Environment Record's GetThisBinding concrete method. The object Environment Record component of a global Environment Record contains the bindings for all built-in globals (clause <emu-internal-ref refid="sec-global-object">NUM</emu-internal-ref>) and all bindings introduced by a |FunctionDeclaration|, |GeneratorDeclaration|, or |VariableStatement| contained in global code. The bindings for all other ECMAScript declarations in global code are contained in the declarative Environment Record component of the global Environment Record.</p>
               <p>Properties may be created directly on a global object. Hence, the object Environment Record component of a global Environment Record may contain both bindings created explicitly by |FunctionDeclaration|, |GeneratorDeclaration|, or |VariableDeclaration| declarations and binding created implicitly as properties of the global object. In order to identify which bindings were explicitly created using declarations, a global Environment Record maintains a list of the names bound using its CreateGlobalVarBindings and CreateGlobalFunctionBindings concrete methods.</p>
               <p>Global Environment Records have the additional fields listed in <emu-internal-ref refid="table-18">TYPE NUM</emu-internal-ref> and the additional methods listed in <emu-internal-ref refid="table-19">TYPE NUM</emu-internal-ref>.</p>
               <emu-table id="table-18" caption="Additional Fields of Global Environment Records">
@@ -6003,7 +6003,7 @@ function f(){eval("var x; x = (delete x, 0);")}
           <p>The abstract operation SetDefaultGlobalBindings with argument _realmRec_ performs the following steps:</p>
           <emu-alg>
             1. Let _global_ be _realmRec_.[[globalThis]].
-            1. For each property of the Global Object specified in <emu-internal-ref refid="sec-global-object">TYPE NUM</emu-internal-ref>, do
+            1. For each property of the Global Object specified in clause <emu-internal-ref refid="sec-global-object">NUM</emu-internal-ref>, do
                 1. Let _name_ be the String value of the property name.
                 1. Let _desc_ be the fully populated data property descriptor for the property containing the specified attributes for the property. For properties listed in <emu-internal-ref refid="sec-function-properties-of-the-global-object">NUM</emu-internal-ref>, <emu-internal-ref refid="sec-constructor-properties-of-the-global-object">NUM</emu-internal-ref>, or <emu-internal-ref refid="sec-other-properties-of-the-global-object">NUM</emu-internal-ref> the value of the [[Value]] attribute is the corresponding intrinsic object from _realmRec_.
                 1. Let _status_ be DefinePropertyOrThrow(_global_, _name_, _desc_).
@@ -6345,7 +6345,7 @@ function f(){eval("var x; x = (delete x, 0);")}
             1. If _status_ is an abrupt completion, then
                 1. Assert: The first realm could not be created.
                 1. Terminate ECMAScript execution.
-            1. In an implementation dependent manner, obtain the ECMAScript source texts (see <emu-internal-ref refid="sec-ecmascript-language-source-code">TYPE NUM</emu-internal-ref>) for zero or more ECMAScript scripts and/or ECMAScript modules. For each such _sourceText_ do,
+            1. In an implementation dependent manner, obtain the ECMAScript source texts (see clause <emu-internal-ref refid="sec-ecmascript-language-source-code">NUM</emu-internal-ref>) for zero or more ECMAScript scripts and/or ECMAScript modules. For each such _sourceText_ do,
                 1. If _sourceText_ is the source code of a script, then
                     1. Perform EnqueueJob(`"ScriptJobs"`, ScriptEvaluationJob, &laquo; _sourceText_ &raquo;).
                 1. Else _sourceText_ is the source code of a module,
@@ -10528,7 +10528,7 @@ function* enumerate(obj) {
         <!-- es6num="11.9.1" -->
         <emu-clause id="sec-rules-of-automatic-semicolon-insertion">
           <h1>Rules of Automatic Semicolon Insertion</h1>
-          <p>In the following rules, &ldquo;token&rdquo; means the actual recognized lexical token determined using the current lexical goal symbol as described in <emu-internal-ref refid="sec-ecmascript-language-lexical-grammar">TYPE NUM</emu-internal-ref>.</p>
+          <p>In the following rules, &ldquo;token&rdquo; means the actual recognized lexical token determined using the current lexical goal symbol as described in clause <emu-internal-ref refid="sec-ecmascript-language-lexical-grammar">NUM</emu-internal-ref>.</p>
           <p>There are three basic rules of semicolon insertion:</p>
           <ol>
             <li>
@@ -19942,7 +19942,7 @@ a = b + c(d + e).print()
           <h1>Runtime Semantics: ScriptEvaluationJob ( sourceText )</h1>
           <p>The job ScriptEvaluationJob with parameter _sourceText_ parses, validates, and evaluates _sourceText_ as a |Script|.</p>
           <emu-alg>
-            1. Assert: _sourceText_ is an ECMAScript source text (see <emu-internal-ref refid="sec-ecmascript-language-source-code">TYPE NUM</emu-internal-ref>).
+            1. Assert: _sourceText_ is an ECMAScript source text (see clause <emu-internal-ref refid="sec-ecmascript-language-source-code">NUM</emu-internal-ref>).
             1. Parse _sourceText_ using |Script| as the goal symbol and analyze the parse result for any Early Error conditions. If the parse was successful and no early errors were found, let _code_ be the resulting parse tree. Otherwise, let _code_ be an indication of one or more parsing errors and/or early errors. Parsing and early error detection may be interweaved in an implementation dependent manner. If more than one parse or early error is present, the number and ordering of reported errors is implementation dependent but at least one error must be reported.
             1. If _code_ is an error indication, then
                 1. Report or log the error(s) in an implementation dependent manner.
@@ -20910,7 +20910,7 @@ a = b + c(d + e).print()
               <h1>Runtime Semantics: ParseModule ( sourceText )</h1>
               <p>The abstract operation ParseModule with argument _sourceText_ creates a Source Text Module Record based upon the result of parsing _sourceText_ as a |Module|. ParseModule performs the following steps:</p>
               <emu-alg>
-                1. Assert: _sourceText_ is an ECMAScript source text (see <emu-internal-ref refid="sec-ecmascript-language-source-code">TYPE NUM</emu-internal-ref>).
+                1. Assert: _sourceText_ is an ECMAScript source text (see clause <emu-internal-ref refid="sec-ecmascript-language-source-code">NUM</emu-internal-ref>).
                 1. Parse _sourceText_ using |Module| as the goal symbol and analyze the parse result for any Early Error conditions. If the parse was successful and no early errors were found, let _body_ be the resulting parse tree. Otherwise, let _body_ be an indication of one or more parsing errors and/or early errors. Parsing and early error detection may be interweaved in an implementation dependent manner. If more than one parse or early error is present, the number and ordering of reported errors is implementation dependent but at least one error must be reported.
                 1. If _body_ is an abrupt completion or error indication, then
                     1. Throw a *SyntaxError* exception.
@@ -21159,7 +21159,7 @@ a = b + c(d + e).print()
             <h1>Runtime Semantics: TopLevelModuleEvaluationJob ( sourceText)</h1>
             <p>A TopLevelModuleEvaluationJob with parameter _sourceText_ is a job that parses, validates, and evaluates _sourceText_ as a |Module|.</p>
             <emu-alg>
-              1. Assert: _sourceText_ is an ECMAScript source text (see <emu-internal-ref refid="sec-ecmascript-language-source-code">TYPE NUM</emu-internal-ref>).
+              1. Assert: _sourceText_ is an ECMAScript source text (see clause <emu-internal-ref refid="sec-ecmascript-language-source-code">NUM</emu-internal-ref>).
               1. Let _realm_ be the running execution context's Realm.
               1. Let _m_ be ParseModule(_sourceText_).
               1. If _m_ is an abrupt completion or any other implementation defined error indication, then
@@ -21904,8 +21904,8 @@ a = b + c(d + e).print()
       <p>Unless otherwise specified, the `length` property of a built-in Function object has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</p>
       <p>Every built-in Function object, including constructors, that is not identified as an anonymous function has a `name` property whose value is a String. Unless otherwise specified, this value is the name that is given to the function in this specification. For functions that are specified as properties of objects, the name value is the property name string used to access the function. Functions that are specified as get or set accessor functions of built-in properties have `"get "` or `"set "` prepended to the property name string. The value of the `name` property is explicitly specified for each built-in functions whose property key is a Symbol value.</p>
       <p>Unless otherwise specified, the `name` property of a built-in Function object, if it exists, has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *true* }.</p>
-      <p>Every other data property described in clauses 18 through 26 and in <emu-internal-ref refid="sec-additional-built-in-properties">TYPE NUM</emu-internal-ref> has the attributes { [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* } unless otherwise specified.</p>
-      <p>Every accessor property described in clauses 18 through 26 and in <emu-internal-ref refid="sec-additional-built-in-properties">TYPE NUM</emu-internal-ref> has the attributes {[[Enumerable]]: *false*, [[Configurable]]: *true* } unless otherwise specified. If only a get accessor function is described, the set accessor function is the default value, *undefined*. If only a set accessor is described the get accessor is the default value, *undefined*.</p>
+      <p>Every other data property described in clauses 18 through 26 and in Annex <emu-internal-ref refid="sec-additional-built-in-properties">NUM</emu-internal-ref> has the attributes { [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *true* } unless otherwise specified.</p>
+      <p>Every accessor property described in clauses 18 through 26 and in Annex <emu-internal-ref refid="sec-additional-built-in-properties">NUM</emu-internal-ref> has the attributes {[[Enumerable]]: *false*, [[Configurable]]: *true* } unless otherwise specified. If only a get accessor function is described, the set accessor function is the default value, *undefined*. If only a set accessor is described the get accessor is the default value, *undefined*.</p>
     </emu-clause>
 
     <!-- es6num="18" -->
@@ -21962,7 +21962,7 @@ a = b + c(d + e).print()
             <emu-alg>
               1. Assert: If _direct_ is *false* then _strictCaller_ is also *false*.
               1. If Type(_x_) is not String, return _x_.
-              1. Let _script_ be the ECMAScript code that is the result of parsing _x_, interpreted as UTF-16 encoded Unicode text as described in <emu-internal-ref refid="sec-ecmascript-language-types-string-type">NUM</emu-internal-ref>, for the goal symbol |Script|. If the parse fails or any early errors are detected, throw a *SyntaxError* exception (but see also <emu-internal-ref refid="sec-error-handling-and-language-extensions">TYPE NUM</emu-internal-ref>).
+              1. Let _script_ be the ECMAScript code that is the result of parsing _x_, interpreted as UTF-16 encoded Unicode text as described in <emu-internal-ref refid="sec-ecmascript-language-types-string-type">NUM</emu-internal-ref>, for the goal symbol |Script|. If the parse fails or any early errors are detected, throw a *SyntaxError* exception (but see also clause <emu-internal-ref refid="sec-error-handling-and-language-extensions">NUM</emu-internal-ref>).
               1. If _script_ Contains |ScriptBody| is *false*, return *undefined*.
               1. Let _body_ be the |ScriptBody| of _script_.
               1. If _strictCaller_ is *true*, let _strictEval_ be *true*.
@@ -24325,7 +24325,7 @@ new Function("a,b", "c", "return a+b+c")
               1. Return the concatenation of the Strings _s_ and _m_.
             </emu-alg>
             <p>The `length` property of the `toExponential` method is 1.</p>
-            <p>If the `toExponential` method is called with more than one argument, then the behaviour is undefined (see <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">TYPE NUM</emu-internal-ref>).</p>
+            <p>If the `toExponential` method is called with more than one argument, then the behaviour is undefined (see clause <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">NUM</emu-internal-ref>).</p>
             <emu-note>
               <p>For implementations that provide more accurate conversions than required by the rules above, it is recommended that the following alternative version of step 12.b.i be used as a guideline:</p>
               <emu-alg type="i">
@@ -24368,7 +24368,7 @@ new Function("a,b", "c", "return a+b+c")
               1. Return the concatenation of the Strings _s_ and _m_.
             </emu-alg>
             <p>The `length` property of the `toFixed` method is 1.</p>
-            <p>If the `toFixed` method is called with more than one argument, then the behaviour is undefined (see <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">TYPE NUM</emu-internal-ref>).</p>
+            <p>If the `toFixed` method is called with more than one argument, then the behaviour is undefined (see clause <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">NUM</emu-internal-ref>).</p>
             <emu-note>
               <p>The output of `toFixed` may be more precise than `toString` for some values because toString only prints enough significant digits to distinguish the number from adjacent number values. For example,</p>
               <p>`(1000000000000000128).toString()` returns `"1000000000000000100"`, while
@@ -24429,7 +24429,7 @@ new Function("a,b", "c", "return a+b+c")
               1. Return the String that is the concatenation of _s_ and _m_.
             </emu-alg>
             <p>The `length` property of the `toPrecision` method is 1.</p>
-            <p>If the `toPrecision` method is called with more than one argument, then the behaviour is undefined (see <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">TYPE NUM</emu-internal-ref>).</p>
+            <p>If the `toPrecision` method is called with more than one argument, then the behaviour is undefined (see clause <emu-internal-ref refid="sec-ecmascript-standard-built-in-objects">NUM</emu-internal-ref>).</p>
           </emu-clause>
 
           <!-- es6num="20.1.3.6" -->
@@ -37183,7 +37183,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             </li>
           </ol>
           <p>The first use case is interoperable with the semantics of |Block| level function declarations provided by ECMAScript 2015. Any pre-existing ECMAScript code that employees that use case will operate using the Block level function declarations semantics defined by clauses 9, 13, and 14 of this specification.</p>
-          <p>ECMAScript 2015 interoperability for the second and third use cases requires the following extensions to the <emu-internal-ref refid="sec-ordinary-and-exotic-objects-behaviours">TYPE NUM</emu-internal-ref> and <emu-internal-ref refid="sec-ecmascript-language-functions-and-classes">TYPE NUM</emu-internal-ref> semantics. During FunctionDeclarationInstantiation (<emu-internal-ref refid="sec-functiondeclarationinstantiation">NUM</emu-internal-ref>) the following steps are performed in place of step 29:</p>
+          <p>ECMAScript 2015 interoperability for the second and third use cases requires the following extensions to the clause <emu-internal-ref refid="sec-ordinary-and-exotic-objects-behaviours">NUM</emu-internal-ref> and clause <emu-internal-ref refid="sec-ecmascript-language-functions-and-classes">NUM</emu-internal-ref> semantics. During FunctionDeclarationInstantiation (<emu-internal-ref refid="sec-functiondeclarationinstantiation">NUM</emu-internal-ref>) the following steps are performed in place of step 29:</p>
           <emu-alg>
             1. If _strict_ is *false*, then
                 1. For each |FunctionDeclaration| _f_ in _varDeclarations_ that is directly contained in the |StatementList| of a |Block|, |CaseClause|, or |DefaultClause|,
@@ -37224,7 +37224,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         <!-- es6num="B.3.5" -->
         <emu-annex id="sec-variablestatements-in-catch-blocks">
           <h1>VariableStatements in Catch blocks</h1>
-          <p>The content of <emu-internal-ref refid="sec-try-statement-static-semantics-early-errors">TYPE NUM</emu-internal-ref> is replaced with the following:</p>
+          <p>The content of subclause <emu-internal-ref refid="sec-try-statement-static-semantics-early-errors">NUM</emu-internal-ref> is replaced with the following:</p>
           <emu-grammar>Catch : `catch` `(` CatchParameter `)` Block</emu-grammar>
           <ul>
             <li>
