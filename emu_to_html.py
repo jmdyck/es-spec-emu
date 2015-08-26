@@ -455,14 +455,14 @@ def serialize(node, apply_emd_expansions):
             else:
                 assert 0, f
 
-        elif name == 'emu-external-ref':
-            href = node.getAttribute('href')
-            linktext_template = node.getAttribute('linktext')
-            if linktext_template == 'URL':
-                linktext = href
-            else:
-                assert 0, linktext_template
-            put('<a href="%s">%s</a>' % (href, linktext))
+        # elif name == 'emu-external-ref':
+        #     href = node.getAttribute('href')
+        #     linktext_template = node.getAttribute('linktext')
+        #     if linktext_template == 'URL':
+        #         linktext = href
+        #     else:
+        #         assert 0, linktext_template
+        #     put('<a href="%s">%s</a>' % (href, linktext))
 
         elif name == 'emu-xref':
             href = node.getAttribute('href')
@@ -1509,9 +1509,9 @@ def bake_xlinks_stuff():
         (r'<emu-xref href="([^"]+)"/>',
             lambda mo: convert_emu_xref(mo.group(1))),
 
-        # 21.1.3.12:
-        (r'<emu-external-ref href="([^"]+)" linktext="URL"/>',
-            r'<a href="\1">\1</a>'),
+        # # 21.1.3.12:
+        # (r'<emu-external-ref href="([^"]+)" linktext="URL"/>',
+        #     r'<a href="\1">\1</a>'),
 
         (term_re, term_repl),
 

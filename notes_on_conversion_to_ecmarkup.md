@@ -33,17 +33,6 @@ subclause, but having it in the attribute is a little easier.  Of
 course, you might choose to not generate the "See also" paragraphs
 as such.
 
-### `<emu-external-ref>`
-
-When the PDF refers to an external web resource by URL, the HTML
-version naturally turns that into a link, so you get an 'a' element
-in which the 'href' attribute value and the element content are
-the same. That repetition seemed error-prone to me, so I invented
-`<emu-external-ref>`, where the attribute 'href' gives the URL. I
-also added a 'linktext' attribute, to indicate what the text of the
-generated link should be -- so far, it's always "URL", but you might
-want something else.
-
 ### `<emu-formula>`
 
 When a prose paragraph includes text that would normally appear only in
@@ -157,7 +146,7 @@ its substep (`<ol>` and `<li>`).
 I assume that the content of an `<emu-alg>` can include child elements:
  - `<emu-grammar>`      (e.g., for 13.2.5 / group 3 / step 1)
  - `<emu-xref>`         (e.g., for 6.2.3.1 / step 6.a)
- - `<emu-external-ref>` (e.g., for 21.1.3.12 / step 8)
+ - `<a>`                (e.g., for 21.1.3.12 / step 8)
 
 Also, there are two places where an `<emu-alg>` contains a `<table>` (or a
 `<figure>` containing a `<table>`):

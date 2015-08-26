@@ -12,7 +12,7 @@
       <p class="ECMAaddress">CH-1204 Geneva</p>
       <p class="ECMAaddress">Tel: +41 22 849 6000</p>
       <p class="ECMAaddress">Fax: +41 22 849 6001</p>
-      <p class="ECMAaddress">Web: <emu-external-ref href="http://www.ecma-international.org" linktext="URL"></emu-external-ref></p>
+      <p class="ECMAaddress">Web: <a href="http://www.ecma-international.org">http://www.ecma-international.org</a></p>
       <p><i>COPYRIGHT NOTICE</i></p>
       <p><i>&copy; 2015 Ecma International</i></p>
       <p><i>This document may be copied, published and distributed to others, and certain derivative works of it may be prepared, copied, published, and distributed, in whole or in part, provided that the above copyright notice and this Copyright License and Disclaimer are included on all such copies and derivative works. The only derivative works that are permissible under this Copyright License and Disclaimer are:</i></p>
@@ -25,7 +25,7 @@
       <p><i>The limited permissions granted above are perpetual and will not be revoked by Ecma International or its successors or assigns.</i></p>
       <p><i>This document and the information contained herein is provided on an "AS IS" basis and ECMA INTERNATIONAL DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY OWNERSHIP RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE."</i></p>
       <p><b>Software License</b></p>
-      <p>All Software contained in this document ("Software)" is protected by copyright and is being made available under the "BSD License", included below. This Software may be subject to third party rights (rights from parties other than Ecma International), including patent rights, and no licenses under such third party rights are granted under this license even if the third party concerned is a member of Ecma International. SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT <emu-external-ref href="http://www.ecma-international.org/memento/codeofconduct.htm" linktext="URL"></emu-external-ref> FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS\*.</p>
+      <p>All Software contained in this document ("Software)" is protected by copyright and is being made available under the "BSD License", included below. This Software may be subject to third party rights (rights from parties other than Ecma International), including patent rights, and no licenses under such third party rights are granted under this license even if the third party concerned is a member of Ecma International. SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT <a href="http://www.ecma-international.org/memento/codeofconduct.htm">http://www.ecma-international.org/memento/codeofconduct.htm</a> FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS\*.</p>
       <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
       <p>1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p>
       <p>2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
@@ -78,10 +78,10 @@
       <p>ISO/IEC 10646:2003: <i>Information Technology &ndash; Universal Multiple-Octet Coded Character Set (UCS) plus Amendment 1:2005, Amendment 2:2006, Amendment 3:2008, and Amendment 4:2008</i>, plus additional amendments and corrigenda, or successor</p>
       <p>ECMA-402, <i>ECMAScript 2015 Internationalization API Specification</i>.
         <br>
-        <emu-external-ref href="http://www.ecma-international.org/publications/standards/Ecma-402.htm" linktext="URL"></emu-external-ref></p>
+        <a href="http://www.ecma-international.org/publications/standards/Ecma-402.htm">http://www.ecma-international.org/publications/standards/Ecma-402.htm</a></p>
       <p>ECMA-404, <i>The JSON Data Interchange Format</i>.
         <br>
-        <emu-external-ref href="http://www.ecma-international.org/publications/standards/Ecma-404.htm" linktext="URL"></emu-external-ref></p>
+        <a href="http://www.ecma-international.org/publications/standards/Ecma-404.htm">http://www.ecma-international.org/publications/standards/Ecma-404.htm</a></p>
     </emu-clause>
 
     <!-- es6num="4" -->
@@ -3725,11 +3725,11 @@
               <p>Implementers of ECMAScript may find useful the paper and code written by David M. Gay for binary-to-decimal conversion of floating-point numbers:</p>
               <p>Gay, David M. Correctly Rounded Binary-Decimal and Decimal-Binary Conversions. Numerical Analysis, Manuscript 90-10. AT&amp;T Bell Laboratories (Murray Hill, New Jersey). November 30, 1990. Available as
                 <br>
-                <emu-external-ref href="http://cm.bell-labs.com/cm/cs/doc/90/4-10.ps.gz" linktext="URL"></emu-external-ref>. Associated code available as
+                <a href="http://cm.bell-labs.com/cm/cs/doc/90/4-10.ps.gz">http://cm.bell-labs.com/cm/cs/doc/90/4-10.ps.gz</a>. Associated code available as
                 <br>
-                <emu-external-ref href="http://netlib.sandia.gov/fp/dtoa.c" linktext="URL"></emu-external-ref> and as
+                <a href="http://netlib.sandia.gov/fp/dtoa.c">http://netlib.sandia.gov/fp/dtoa.c</a> and as
                 <br>
-                <emu-external-ref href="http://netlib.sandia.gov/fp/g_fmt.c" linktext="URL"></emu-external-ref> and may also be found at the various `netlib` mirror sites.</p>
+                <a href="http://netlib.sandia.gov/fp/g_fmt.c">http://netlib.sandia.gov/fp/g_fmt.c</a> and may also be found at the various `netlib` mirror sites.</p>
             </emu-note>
           </emu-clause>
         </emu-clause>
@@ -24564,7 +24564,7 @@ new Function("a,b", "c", "return a+b+c")
             <p>In the function descriptions below, the symbols NaN, -0, +0, *-&infin;* and *+&infin;* refer to the Number values described in <emu-xref href="#sec-ecmascript-language-types-number-type"></emu-xref>.</p>
             <emu-note>
               <p>The behaviour of the functions `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `cos`, `cosh`, `exp`, `expm1`, `hypot`, `log`,`log1p`, `log2`, `log10`, `pow`, `random`, `sin`, `sinh`, `sqrt`, `tan`, and `tanh` is not precisely specified here except to require specific results for certain argument values that represent boundary cases of interest. For other argument values, these functions are intended to compute approximations to the results of familiar mathematical functions, but some latitude is allowed in the choice of approximation algorithms. The general intent is that an implementer should be able to use the same mathematical library for ECMAScript on a given hardware platform that is available to C programmers on that platform.</p>
-              <p>Although the choice of algorithms is left to the implementation, it is recommended (but not specified by this standard) that implementations use the approximation algorithms for IEEE 754-2008 arithmetic contained in `fdlibm`, the freely distributable mathematical library from Sun Microsystems (<emu-external-ref href="http://www.netlib.org/fdlibm" linktext="URL"></emu-external-ref>).</p>
+              <p>Although the choice of algorithms is left to the implementation, it is recommended (but not specified by this standard) that implementations use the approximation algorithms for IEEE 754-2008 arithmetic contained in `fdlibm`, the freely distributable mathematical library from Sun Microsystems (<a href="http://www.netlib.org/fdlibm">http://www.netlib.org/fdlibm</a>).</p>
             </emu-note>
 
           <!-- es6num="20.2.2.1" -->
@@ -25572,7 +25572,7 @@ new Function("a,b", "c", "return a+b+c")
             <h1>Local Time Zone Adjustment</h1>
             <p>An implementation of ECMAScript is expected to determine the local time zone adjustment. The local time zone adjustment is a value <dfn>LocalTZA</dfn> measured in milliseconds which when added to UTC represents the local <em>standard</em> time. Daylight saving time is <em>not</em> reflected by LocalTZA.</p>
             <emu-note>
-              <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <emu-external-ref href="http://www.iana.org/time-zones/" linktext="URL"></emu-external-ref>.</p>
+              <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <a href="http://www.iana.org/time-zones/">http://www.iana.org/time-zones/</a>.</p>
             </emu-note>
           </emu-clause>
 
@@ -25581,7 +25581,7 @@ new Function("a,b", "c", "return a+b+c")
             <h1>Daylight Saving Time Adjustment</h1>
             <p>An implementation dependent algorithm using best available information on time zones to determine the local daylight saving time adjustment DaylightSavingTA(_t_), measured in milliseconds. An implementation of ECMAScript is expected to make its best effort to determine the local daylight saving time adjustment.</p>
             <emu-note>
-              <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <emu-external-ref href="http://www.iana.org/time-zones/" linktext="URL"></emu-external-ref>.</p>
+              <p>It is recommended that implementations use the time zone information of the IANA Time Zone Database <a href="http://www.iana.org/time-zones/">http://www.iana.org/time-zones/</a>.</p>
             </emu-note>
           </emu-clause>
 
@@ -27117,7 +27117,7 @@ Date.parse(x.toLocaleString())
               <p>The `localeCompare` method itself is not directly suitable as an argument to `Array.prototype.sort` because the latter requires a function of two arguments.</p>
             </emu-note>
             <emu-note>
-              <p>This function is intended to rely on whatever language-sensitive comparison functionality is available to the ECMAScript environment from the host environment, and to compare according to the rules of the host environment's current locale. However, regardless of the host provided comparison capabilities, this function must treat Strings that are canonically equivalent according to the Unicode standard as identical. It is recommended that this function should not honour Unicode compatibility equivalences or decompositions. For a definition and discussion of canonical equivalence see the Unicode Standard, chapters 2 and 3, as well as Unicode Standard Annex #15, Unicode Normalization Forms (<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"></emu-external-ref>) and Unicode Technical Note #5, Canonical Equivalence in Applications (<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"></emu-external-ref>). Also see Unicode Technical Standard #10, Unicode Collation Algorithm (<emu-external-ref href="http://www.unicode.org/reports/tr10/" linktext="URL"></emu-external-ref>).</p>
+              <p>This function is intended to rely on whatever language-sensitive comparison functionality is available to the ECMAScript environment from the host environment, and to compare according to the rules of the host environment's current locale. However, regardless of the host provided comparison capabilities, this function must treat Strings that are canonically equivalent according to the Unicode standard as identical. It is recommended that this function should not honour Unicode compatibility equivalences or decompositions. For a definition and discussion of canonical equivalence see the Unicode Standard, chapters 2 and 3, as well as Unicode Standard Annex #15, Unicode Normalization Forms (<a href="http://www.unicode.org/reports/tr15/">http://www.unicode.org/reports/tr15/</a>) and Unicode Technical Note #5, Canonical Equivalence in Applications (<a href="http://www.unicode.org/notes/tn5/">http://www.unicode.org/notes/tn5/</a>). Also see Unicode Technical Standard #10, Unicode Collation Algorithm (<a href="http://www.unicode.org/reports/tr10/">http://www.unicode.org/reports/tr10/</a>).</p>
             </emu-note>
             <emu-note>
               <p>The `localeCompare` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
@@ -27159,7 +27159,7 @@ Date.parse(x.toLocaleString())
               1. Let _f_ be ToString(_form_).
               1. ReturnIfAbrupt(_f_).
               1. If _f_ is not one of `"NFC"`, `"NFD"`, `"NFKC"`, or `"NFKD"`, throw a *RangeError* exception.
-              1. Let _ns_ be the String value that is the result of normalizing _S_ into the normalization form named by _f_ as specified in <emu-external-ref href="http://www.unicode.org/reports/tr15/tr15-29.html" linktext="URL"></emu-external-ref>.
+              1. Let _ns_ be the String value that is the result of normalizing _S_ into the normalization form named by _f_ as specified in <a href="http://www.unicode.org/reports/tr15/tr15-29.html">http://www.unicode.org/reports/tr15/tr15-29.html</a>.
               1. Return _ns_.
             </emu-alg>
             <p>The `length` property of the `normalize` method is 0.</p>
@@ -33443,8 +33443,8 @@ Date.parse(x.toLocaleString())
           <p>WeakMap objects must be implemented using either hash tables or other mechanisms that, on average, provide access times that are sublinear on the number of key/value pairs in the collection. The data structure used in this WeakMap objects specification are only intended to describe the required observable semantics of WeakMap objects. It is not intended to be a viable implementation model.</p>
           <emu-note>
             <p>WeakMap and WeakSets are intended to provide mechanisms for dynamically associating state with an object in a manner that does not &ldquo;leak&rdquo; memory resources if, in the absence of the WeakMap or WeakSet, the object otherwise became inaccessible and subject to resource reclamation by the implementation's garbage collection mechanisms. Achieving this characteristic can be achieved by using an inverted per-object mapping of weak map instances to keys. Alternatively each weak map may internally store its key to value mappings but this approach requires coordination between the WeakMap or WeakSet implementation and the garbage collector. The following references describe mechanism that may be useful to implementations of WeakMap and WeakSets:</p>
-            <p>Barry Hayes. 1997. Ephemerons: a new finalization mechanism. In <i>Proceedings of the 12th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications (OOPSLA '97)</i>, A. Michael Berman (Ed.). ACM, New York, NY, USA, 176-183, <emu-external-ref href="http://doi.acm.org/10.1145/263698.263733" linktext="URL"></emu-external-ref>.</p>
-            <p>Alexandra Barros, Roberto Ierusalimschy, Eliminating Cycles in Weak Tables. Journal of Universal Computer Science - J.UCS , vol. 14, no. 21, pp. 3481-3497, 2008, <emu-external-ref href="http://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak" linktext="URL"></emu-external-ref></p>
+            <p>Barry Hayes. 1997. Ephemerons: a new finalization mechanism. In <i>Proceedings of the 12th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications (OOPSLA '97)</i>, A. Michael Berman (Ed.). ACM, New York, NY, USA, 176-183, <a href="http://doi.acm.org/10.1145/263698.263733">http://doi.acm.org/10.1145/263698.263733</a>.</p>
+            <p>Alexandra Barros, Roberto Ierusalimschy, Eliminating Cycles in Weak Tables. Journal of Universal Computer Science - J.UCS , vol. 14, no. 21, pp. 3481-3497, 2008, <a href="http://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak">http://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak</a></p>
           </emu-note>
 
         <!-- es6num="23.3.1" -->
@@ -37379,36 +37379,36 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         <li>
           <i>The Unicode Standard, Version 5.0</i>, as amended by Unicode 5.1.0, or successor.
         <br>
-        &lt;<emu-external-ref href="http://www.unicode.org/versions/latest" linktext="URL"></emu-external-ref>&gt;
+        &lt;<a href="http://www.unicode.org/versions/latest">http://www.unicode.org/versions/latest</a>&gt;
         </li>
         <li>
           <i>Unicode Standard Annex #15, Unicode Normalization Forms, version Unicode 5.1.0</i>, or successor.
         <br>
-        &lt;<emu-external-ref href="http://www.unicode.org/reports/tr15/" linktext="URL"></emu-external-ref>&gt;
+        &lt;<a href="http://www.unicode.org/reports/tr15/">http://www.unicode.org/reports/tr15/</a>&gt;
         </li>
         <li>
-          <i>Unicode Standard Annex #31, Unicode Identifiers and Pattern Syntax, version Unicode 5.1.0</i>, or successor. &lt;<emu-external-ref href="http://www.unicode.org/reports/tr31/" linktext="URL"></emu-external-ref>&gt;
+          <i>Unicode Standard Annex #31, Unicode Identifiers and Pattern Syntax, version Unicode 5.1.0</i>, or successor. &lt;<a href="http://www.unicode.org/reports/tr31/">http://www.unicode.org/reports/tr31/</a>&gt;
         </li>
         <li>
-          Unicode Technical Note #5: Canonical Equivalence in Applications, available at &lt;<emu-external-ref href="http://www.unicode.org/notes/tn5/" linktext="URL"></emu-external-ref>&gt;
+          Unicode Technical Note #5: Canonical Equivalence in Applications, available at &lt;<a href="http://www.unicode.org/notes/tn5/">http://www.unicode.org/notes/tn5/</a>&gt;
         </li>
         <li>
-          Unicode Technical Standard #10: Unicode Collation Algorithm version 5.1.0, or successor, available at &lt;<emu-external-ref href="http://www.unicode.org/reports/tr10/" linktext="URL"></emu-external-ref>&gt;
+          Unicode Technical Standard #10: Unicode Collation Algorithm version 5.1.0, or successor, available at &lt;<a href="http://www.unicode.org/reports/tr10/">http://www.unicode.org/reports/tr10/</a>&gt;
         </li>
         <li>
-          <i>IANA Time Zone Database</i> at &lt;<emu-external-ref href="http://www.iana.org/time-zones" linktext="URL"></emu-external-ref>&gt;
+          <i>IANA Time Zone Database</i> at &lt;<a href="http://www.iana.org/time-zones">http://www.iana.org/time-zones</a>&gt;
         </li>
         <li>
           ISO 8601:2004(E) <i>Data elements and interchange formats &ndash; Information interchange</i> &mdash; <i>Representation of dates and times</i>
         </li>
         <li>
-          RFC 1738 &ldquo;Uniform Resource Locators (URL)&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc1738" linktext="URL"></emu-external-ref>&gt;
+          RFC 1738 &ldquo;Uniform Resource Locators (URL)&rdquo;, available at &lt;<a href="http://tools.ietf.org/html/rfc1738">http://tools.ietf.org/html/rfc1738</a>&gt;
         </li>
         <li>
-          RFC 2396 &ldquo;Uniform Resource Identifiers (URI): Generic Syntax&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc2396" linktext="URL"></emu-external-ref>&gt;
+          RFC 2396 &ldquo;Uniform Resource Identifiers (URI): Generic Syntax&rdquo;, available at &lt;<a href="http://tools.ietf.org/html/rfc2396">http://tools.ietf.org/html/rfc2396</a>&gt;
         </li>
         <li>
-          RFC 3629 &ldquo;UTF-8, a transformation format of ISO 10646&rdquo;, available at &lt;<emu-external-ref href="http://tools.ietf.org/html/rfc3629" linktext="URL"></emu-external-ref>&gt;
+          RFC 3629 &ldquo;UTF-8, a transformation format of ISO 10646&rdquo;, available at &lt;<a href="http://tools.ietf.org/html/rfc3629">http://tools.ietf.org/html/rfc3629</a>&gt;
         </li>
       </ol>
     </emu-annex>
