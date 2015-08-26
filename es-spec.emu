@@ -121,12 +121,9 @@
           <h1>Objects</h1>
           <p>Even though ECMAScript includes syntax for class definitions, ECMAScript objects are not fundamentally class-based such as those in C++, Smalltalk, or Java. Instead objects may be created in various ways including via a literal notation or via <em>constructors</em> which create objects and then execute code that initializes all or part of them by assigning initial values to their properties. Each constructor is a function that has a property named `"prototype"` that is used to implement <em>prototype-based inheritance</em> and <em>shared properties</em>. Objects are created by using constructors in <b>new</b> expressions; for example, `new Date(2009,11)` creates a new Date object. Invoking a constructor without using <b>new</b> has consequences that depend on the constructor. For example, `Date()` produces a string representation of the current date and time rather than an object.</p>
           <p>Every object created by a constructor has an implicit reference (called the object's <em>prototype</em>) to the value of its constructor's `"prototype"` property. Furthermore, a prototype may have a non-null implicit reference to its prototype, and so on; this is called the <em>prototype chain</em>. When a reference is made to a property in an object, that reference is to the property of that name in the first object in the prototype chain that contains a property of that name. In other words, first the object mentioned directly is examined for such a property; if that object contains the named property, that is the property to which the reference refers; if that object does not contain the named property, the prototype for that object is examined next; and so on.</p>
-          <figure>
+          <emu-figure id="figure-1" caption="Object/Prototype Relationships">
             <object data="figure-1.svg" height="354" type="image/svg+xml" width="719"> <img alt="An image of lots of boxes and arrows." height="354" src="figure-1.png" width="719"> </object>
-            <figcaption>
-              Figure 1 &mdash; Object/Prototype Relationships
-            </figcaption>
-          </figure>
+          </emu-figure>
           <p>In a class-based object-oriented language, in general, state is carried by instances, methods are carried by classes, and inheritance is only of structure and behaviour. In ECMAScript, the state and methods are carried by objects, while structure, behaviour, and state are all inherited.</p>
           <p>All objects that do not directly contain a particular property that their prototype contains share that property and its value. Figure 1 illustrates this:</p>
           <p><b>CF</b> is a constructor (and also an object). Five objects have been created by using `new` expressions: <b>cf<sub>1</sub></b>, <b>cf<sub>2</sub></b>, <b>cf<sub>3</sub></b>, <b>cf<sub>4</sub></b>, and <b>cf<sub>5</sub></b>. Each of these objects contains properties named `q1` and `q2`. The dashed lines represent the implicit prototype relationship; so, for example, <b>cf<sub>3</sub></b>'s prototype is <b>CF<sub>p</sub></b>. The constructor, <b>CF</b>, has two properties itself, named `P1` and `P2`, which are not visible to <b>CF<sub>p</sub></b>, <b>cf<sub>1</sub></b>, <b>cf<sub>2</sub></b>, <b>cf<sub>3</sub></b>, <b>cf<sub>4</sub></b>, or <b>cf<sub>5</sub></b>. The property named `CFP1` in <b>CF<sub>p</sub></b> is shared by <b>cf<sub>1</sub></b>, <b>cf<sub>2</sub></b>, <b>cf<sub>3</sub></b>, <b>cf<sub>4</sub></b>, and <b>cf<sub>5</sub></b> (but not by <b>CF</b>), as are any properties found in <b>CF<sub>p</sub></b>'s implicit prototype chain that are not named `q1`, `q2`, or `CFP1`. Notice that there is no implicit prototype link between <b>CF</b> and <b>CF<sub>p</sub></b>.</p>
@@ -34959,12 +34956,9 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
       <emu-clause id="sec-generatorfunction-objects">
           <h1>GeneratorFunction Objects</h1>
           <p>Generator Function objects are constructor functions that are usually created by evaluating |GeneratorDeclaration|, |GeneratorExpression|, and |GeneratorMethod| syntactic productions. They may also be created by calling the %GeneratorFunction% intrinsic.</p>
-          <figure>
+          <emu-figure id="figure-2" caption="Generator Objects Relationships" informative>
             <img alt="A staggering variety of boxes and arrows." height="958" src="figure-2.png" width="968">
-            <figcaption>
-              Figure 2 (informative) &mdash; Generator Objects Relationships
-            </figcaption>
-          </figure>
+          </emu-figure>
 
         <!-- es6num="25.2.1" -->
         <emu-clause id="sec-generatorfunction-constructor">

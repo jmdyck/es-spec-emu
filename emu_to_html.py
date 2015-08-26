@@ -484,6 +484,9 @@ def serialize(node, apply_emd_expansions):
         elif name == 'emu-table':
             handle_emu_table(node)
 
+        elif name == 'emu-figure':
+            handle_emu_figure(node)
+
         else:
             if node.hasAttributes():
                 attrs = dict(node.attributes.items())
@@ -1150,13 +1153,41 @@ def handle_emu_table(emu_table):
 
     put(outer_indent + '</figure>')
 
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+def handle_emu_figure(emu_figure):
+    assert emu_figure.nodeName == 'emu-figure'
+
+    ps = emu_figure.previousSibling
+    assert ps.nodeType == ps.TEXT_NODE
+    outer_indent = ps.nodeValue
+
+    id = emu_figure.getAttribute('id')
+    figure_number = id.replace('figure-', '')
+    caption = emu_figure.getAttribute('caption')
+    maybe_informative = ' (informative)' if emu_figure.hasAttribute('informative') else ''
+
+    put('<figure>')
+    put(outer_indent + '  ')
+
+    assert len(emu_figure.childNodes) == 3
+    [ws1, img_or_object, ws2] = emu_figure.childNodes
+    assert is_whitespace_text_node(ws1)
+    assert is_whitespace_text_node(ws2)
+    serialize(img_or_object, True)
+
+    put(outer_indent + '  <figcaption>')
+    put(outer_indent + '    Figure %s%s &mdash; %s' % (
+        figure_number, maybe_informative, expand_ecmarkdown(caption)))
+    put(outer_indent + '  </figcaption>')
+    put(outer_indent + '</figure>')
+
 def is_whitespace_text_node(node):
     return (
         node.nodeType == node.TEXT_NODE
         and
         re.match(r'^\s+$', node.nodeValue)
     )
-    
 
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
