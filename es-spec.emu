@@ -34927,11 +34927,11 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
 
           <!-- es6num="25.1.1.1" -->
           <emu-clause id="sec-iterable-interface">
-            <h1>The <em>Iterable</em> Interface</h1>
-            <p>The <em>Iterable</em> interface includes the property described in <emu-internal-ref refid="table-52">TYPE NUM</emu-internal-ref>:</p>
+            <h1>The <i>Iterable</i> Interface</h1>
+            <p>The <i>Iterable</i> interface includes the property described in <emu-internal-ref refid="table-52">TYPE NUM</emu-internal-ref>:</p>
             <figure>
               <figcaption>
-                <span id="table-52">Table 52</span> &mdash; <em>Iterable</em> Interface Required Properties
+                <span id="table-52">Table 52</span> &mdash; <i>Iterable</i> Interface Required Properties
               </figcaption>
               <table class="real-table">
                <tbody>
@@ -34951,10 +34951,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     `@@iterator`
                   </td>
                   <td>
-                    A function that returns an <em>Iterator</em> object.
+                    A function that returns an <i>Iterator</i> object.
                   </td>
                   <td>
-                    The returned object must conform to the <em>Iterator</em> interface.
+                    The returned object must conform to the <i>Iterator</i> interface.
                   </td>
                 </tr>
                </tbody>
@@ -34964,11 +34964,11 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
 
           <!-- es6num="25.1.1.2" -->
           <emu-clause id="sec-iterator-interface">
-            <h1>The <em>Iterator</em> Interface</h1>
-            <p>An object that implements the <em>Iterator</em> interface must include the property in <emu-internal-ref refid="table-53">TYPE NUM</emu-internal-ref>. Such objects may also implement the properties in <emu-internal-ref refid="table-54">TYPE NUM</emu-internal-ref>.</p>
+            <h1>The <i>Iterator</i> Interface</h1>
+            <p>An object that implements the <i>Iterator</i> interface must include the property in <emu-internal-ref refid="table-53">TYPE NUM</emu-internal-ref>. Such objects may also implement the properties in <emu-internal-ref refid="table-54">TYPE NUM</emu-internal-ref>.</p>
             <figure>
               <figcaption>
-                <span id="table-53">Table 53</span> &mdash; <em>Iterator</em> Interface Required Properties
+                <span id="table-53">Table 53</span> &mdash; <i>Iterator</i> Interface Required Properties
               </figcaption>
               <table class="real-table">
                <tbody>
@@ -34988,21 +34988,21 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     `next`
                   </td>
                   <td>
-                    A function that returns an <em>IteratorResult</em> object.
+                    A function that returns an <i>IteratorResult</i> object.
                   </td>
                   <td>
-                    The returned object must conform to the <em>IteratorResult</em> interface. If a previous call to the `next` method of an <em>Iterator</em> has returned an <em>IteratorResult</em> object whose `done` property is *true*, then all subsequent calls to the `next` method of that object should also return an <em>IteratorResult</em> object whose `done` property is *true*. However, this requirement is not enforced.
+                    The returned object must conform to the <i>IteratorResult</i> interface. If a previous call to the `next` method of an <i>Iterator</i> has returned an <i>IteratorResult</i> object whose `done` property is *true*, then all subsequent calls to the `next` method of that object should also return an <i>IteratorResult</i> object whose `done` property is *true*. However, this requirement is not enforced.
                   </td>
                 </tr>
                </tbody>
               </table>
             </figure>
             <emu-note>
-              <p>Arguments may be passed to the next function but their interpretation and validity is dependent upon the target <em>Iterator</em>. The for-of statement and other common users of <em>Iterators</em> do not pass any arguments, so <em>Iterator</em> objects that expect to be used in such a manner must be prepared to deal with being called with no arguments.</p>
+              <p>Arguments may be passed to the next function but their interpretation and validity is dependent upon the target <i>Iterator</i>. The for-of statement and other common users of <em>Iterators</em> do not pass any arguments, so <i>Iterator</i> objects that expect to be used in such a manner must be prepared to deal with being called with no arguments.</p>
             </emu-note>
             <figure>
               <figcaption>
-                <span id="table-54">Table 54</span> &mdash; <em>Iterator</em> Interface Optional Properties
+                <span id="table-54">Table 54</span> &mdash; <i>Iterator</i> Interface Optional Properties
               </figcaption>
               <table class="real-table">
                <tbody>
@@ -35022,10 +35022,10 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     `return`
                   </td>
                   <td>
-                    A function that returns an <em>IteratorResult</em> object.
+                    A function that returns an <i>IteratorResult</i> object.
                   </td>
                   <td>
-                    The returned object must conform to the <em>IteratorResult</em> interface. Invoking this method notifies the <em>Iterator</em> object that the caller does not intend to make any more `next` method calls to the <em>Iterator</em>. The returned <em>IteratorResult</em> object will typically have a `done` property whose value is *true*, and a `value` property with the value passed as the argument of the `return` method. However, this requirement is not enforced.
+                    The returned object must conform to the <i>IteratorResult</i> interface. Invoking this method notifies the <i>Iterator</i> object that the caller does not intend to make any more `next` method calls to the <i>Iterator</i>. The returned <i>IteratorResult</i> object will typically have a `done` property whose value is *true*, and a `value` property with the value passed as the argument of the `return` method. However, this requirement is not enforced.
                   </td>
                 </tr>
                 <tr>
@@ -35033,27 +35033,27 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                     `throw`
                   </td>
                   <td>
-                    A function that returns an <em>IteratorResult</em> object.
+                    A function that returns an <i>IteratorResult</i> object.
                   </td>
                   <td>
-                    The returned object must conform to the <em>IteratorResult</em> interface. Invoking this method notifies the <em>Iterator</em> object that the caller has detected an error condition. The argument may be used to identify the error condition and typically will be an exception object. A typical response is to `throw` the value passed as the argument. If the method does not `throw`, the returned <em>IteratorResult</em> object will typically have a `done` property whose value is *true*.
+                    The returned object must conform to the <i>IteratorResult</i> interface. Invoking this method notifies the <i>Iterator</i> object that the caller has detected an error condition. The argument may be used to identify the error condition and typically will be an exception object. A typical response is to `throw` the value passed as the argument. If the method does not `throw`, the returned <i>IteratorResult</i> object will typically have a `done` property whose value is *true*.
                   </td>
                 </tr>
                </tbody>
               </table>
             </figure>
             <emu-note>
-              <p>Typically callers of these methods should check for their existence before invoking them. Certain ECMAScript language features including `for`-`of`, `yield*`, and array destructuring call these methods after performing an existence check. Most ECMAScript library functions that accept <em>Iterable</em> objects as arguments also conditionally call them.</p>
+              <p>Typically callers of these methods should check for their existence before invoking them. Certain ECMAScript language features including `for`-`of`, `yield*`, and array destructuring call these methods after performing an existence check. Most ECMAScript library functions that accept <i>Iterable</i> objects as arguments also conditionally call them.</p>
             </emu-note>
           </emu-clause>
 
           <!-- es6num="25.1.1.3" -->
           <emu-clause id="sec-iteratorresult-interface">
             <h1>The IteratorResult Interface</h1>
-            <p>The <em>IteratorResult</em> interface includes the properties listed in <emu-internal-ref refid="table-55">TYPE NUM</emu-internal-ref>:</p>
+            <p>The <i>IteratorResult</i> interface includes the properties listed in <emu-internal-ref refid="table-55">TYPE NUM</emu-internal-ref>:</p>
             <figure>
               <figcaption>
-                <span id="table-55">Table 55</span> &mdash; <em>IteratorResult</em> Interface Properties
+                <span id="table-55">Table 55</span> &mdash; <i>IteratorResult</i> Interface Properties
               </figcaption>
               <table class="real-table">
                <tbody>
@@ -35237,7 +35237,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
       <!-- es6num="25.3" -->
       <emu-clause id="sec-generator-objects">
           <h1>Generator Objects</h1>
-          <p>A Generator object is an instance of a generator function and conforms to both the <em>Iterator</em> and <em>Iterable</em> interfaces.</p>
+          <p>A Generator object is an instance of a generator function and conforms to both the <i>Iterator</i> and <i>Iterable</i> interfaces.</p>
           <p>Generator instances directly inherit properties from the object that is the value of the `prototype` property of the Generator function that created the instance. Generator instances indirectly inherit properties from the Generator Prototype intrinsic, %GeneratorPrototype%.</p>
 
         <!-- es6num="25.3.1" -->
@@ -35429,7 +35429,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <h1>GeneratorYield ( iterNextObj )</h1>
             <p>The abstract operation GeneratorYield with argument _iterNextObj_ performs the following steps:</p>
             <emu-alg>
-              1. Assert: _iterNextObj_ is an Object that implements the <em>IteratorResult</em> interface.
+              1. Assert: _iterNextObj_ is an Object that implements the <i>IteratorResult</i> interface.
               1. Let _genContext_ be the running execution context.
               1. Assert: _genContext_ is the execution context of a generator.
               1. Let _generator_ be the value of the Generator component of _genContext_.
