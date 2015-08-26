@@ -799,11 +799,8 @@
             <h1>Well-Known Symbols</h1>
             <p>Well-known symbols are built-in Symbol values that are explicitly referenced by algorithms of this specification. They are typically used as the keys of properties whose values serve as extension points of a specification algorithm. Unless otherwise specified, well-known symbols values are shared by all Code Realms (<emu-internal-ref refid="sec-code-realms">NUM</emu-internal-ref>).</p>
             <p>Within this specification a well-known symbol is referred to by using a notation of the form @@name, where &ldquo;name&rdquo; is one of the values listed in <emu-internal-ref refid="table-1">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-1">Table 1</span> &mdash; Well-known Symbols
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-1" caption="Well-known Symbols">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -939,7 +936,7 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
         </emu-clause>
 
@@ -991,11 +988,8 @@
           <emu-clause id="sec-property-attributes">
             <h1>Property Attributes</h1>
             <p>Attributes are used in this specification to define and explain the state of Object properties. A data property associates a key value with the attributes listed in <emu-internal-ref refid="table-2">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-2">Table 2</span> &mdash; Attributes of a Data Property
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-2" caption="Attributes of a Data Property">
+              <table>
                <tbody>
                 <tr>
                   <th style="border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid #000000; border-top: 1px solid black">
@@ -1054,13 +1048,10 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <p>An accessor property associates a key value with the attributes listed in <emu-internal-ref refid="table-3">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-3">Table 3</span> &mdash; Attributes of an Accessor Property
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-3" caption="Attributes of an Accessor Property">
+              <table>
                <tbody>
                 <tr>
                   <th style="border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid #000000; border-top: 1px solid black">
@@ -1119,13 +1110,10 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <p>If the initial values of a property's attributes are not explicitly specified by this specification, the default value defined in <emu-internal-ref refid="table-4">TYPE NUM</emu-internal-ref> is used.</p>
-            <figure>
-              <figcaption>
-                <span id="table-4">Table 4</span> &mdash; Default Attribute Values
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-4" caption="Default Attribute Values">
+              <table>
                <tbody>
                 <tr>
                   <th style="border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid #000000; border-top: 1px solid black">
@@ -1185,7 +1173,7 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
 
           <!-- es6num="6.1.7.2" -->
@@ -1197,11 +1185,8 @@
             <p>Internal methods and internal slots are identified within this specification using names enclosed in double square brackets [[ ]].</p>
             <p><emu-internal-ref refid="table-5">TYPE NUM</emu-internal-ref> summarizes the <em>essential internal methods</em> used by this specification that are applicable to all objects created or manipulated by ECMAScript code. Every object must have algorithms for all of the essential internal methods. However, all objects do not necessarily use the same algorithms for those methods.</p>
             <p>The &ldquo;Signature&rdquo; column of <emu-internal-ref refid="table-5">TYPE NUM</emu-internal-ref> and other similar tables describes the invocation pattern for each internal method. The invocation pattern always includes a parenthesized list of descriptive parameter names. If a parameter name is the same as an ECMAScript type name then the name describes the required type of the parameter value. If an internal method explicitly returns a value, its parameter list is followed by the symbol &ldquo;&rarr;&rdquo; and the type name of the returned value. The type names used in signatures refer to the types defined in <emu-internal-ref refid="sec-ecmascript-data-types-and-values">TYPE NUM</emu-internal-ref> augmented by the following additional names. &ldquo;<em>any</em>&rdquo; means the value may be any ECMAScript language type. An internal method implicitly returns a Completion Record as described in <emu-internal-ref refid="sec-completion-record-specification-type">NUM</emu-internal-ref>. In addition to its parameters, an internal method always has access to the object that is the target of the method invocation.</p>
-            <figure>
-              <figcaption>
-                <span id="table-5">Table 5</span> &mdash; Essential Internal Methods
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-5" caption="Essential Internal Methods">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -1348,13 +1333,10 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <p><emu-internal-ref refid="table-6">TYPE NUM</emu-internal-ref> summarizes additional essential internal methods that are supported by objects that may be called as functions. A <em>function object</em> is an object that supports the [[Call]] internal methods. A <em>constructor</em> (also referred to as a <em>constructor function</em>) is a function object that supports the [[Construct]] internal method.</p>
-            <figure>
-              <figcaption>
-                <span id="table-6">Table 6</span> &mdash; Additional Essential Internal Methods of Function Objects
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-6" caption="Additional Essential Internal Methods of Function Objects">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -1391,7 +1373,7 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <p>The semantics of the essential internal methods for ordinary objects and standard exotic objects are specified in <emu-internal-ref refid="sec-ordinary-and-exotic-objects-behaviours">TYPE NUM</emu-internal-ref>. If any specified use of an internal method of an exotic object is not supported by an implementation, that usage must throw a *TypeError* exception when attempted.</p>
           </emu-clause>
 
@@ -1563,11 +1545,8 @@
             <h1>Well-Known Intrinsic Objects</h1>
             <p>Well-known intrinsics are built-in objects that are explicitly referenced by the algorithms of this specification and which usually have Realm specific identities. Unless otherwise specified each intrinsic object actually corresponds to a set of similar objects, one per Realm.</p>
             <p>Within this specification a reference such as %name% means the intrinsic object, associated with the current Realm, corresponding to the name. Determination of the current Realm and its intrinsics is described in <emu-internal-ref refid="sec-execution-contexts">NUM</emu-internal-ref>. The well-known intrinsics are listed in <emu-internal-ref refid="table-7">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-7">Table 7</span> &mdash; Well-known Intrinsic Objects
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-7" caption="Well-known Intrinsic Objects">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -2561,7 +2540,7 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
         </emu-clause>
       </emu-clause>
@@ -2587,11 +2566,8 @@
             <h1>The Completion Record Specification Type</h1>
             <p>The Completion type is a Record used to explain the runtime propagation of values and control flow such as the behaviour of statements (`break`, `continue`, `return` and `throw`) that perform nonlocal transfers of control.</p>
             <p>Values of the Completion type are Record values whose fields are defined as by <emu-internal-ref refid="table-8">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-8">Table 8</span> &mdash; Completion Record Fields
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-8" caption="Completion Record Fields">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -2639,7 +2615,7 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <p>The term &ldquo;<dfn>abrupt completion</dfn>&rdquo; refers to any completion with a [[type]] value other than ~normal~.</p>
 
           <!-- es6num="6.2.2.1" -->
@@ -3028,11 +3004,8 @@
         <emu-clause id="sec-toprimitive" aoid="ToPrimitive">
           <h1>ToPrimitive ( input [, PreferredType] )</h1>
           <p>The abstract operation ToPrimitive takes an _input_ argument and an optional argument _PreferredType_. The abstract operation ToPrimitive converts its _input_ argument to a non-Object type. If an object is capable of converting to more than one primitive type, it may use the optional hint _PreferredType_ to favour that type. Conversion occurs according to <emu-internal-ref refid="table-9">TYPE NUM</emu-internal-ref>:</p>
-          <figure>
-            <figcaption>
-              <span id="table-9">Table 9</span> &mdash; ToPrimitive Conversions
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-9" caption="ToPrimitive Conversions">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -3108,7 +3081,7 @@
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>When <emu-formula>Type(_input_)</emu-formula> is Object, the following steps are taken:</p>
           <emu-alg>
             1. If _PreferredType_ was not passed, let _hint_ be `"default"`.
@@ -3150,11 +3123,8 @@
         <emu-clause id="sec-toboolean" aoid="ToBoolean">
           <h1>ToBoolean ( argument )</h1>
           <p>The abstract operation ToBoolean converts _argument_ to a value of type Boolean according to <emu-internal-ref refid="table-10">TYPE NUM</emu-internal-ref>:</p>
-          <figure>
-            <figcaption>
-              <span id="table-10">Table 10</span> &mdash; ToBoolean Conversions
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-10" caption="ToBoolean Conversions">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -3230,18 +3200,15 @@
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
         </emu-clause>
 
         <!-- es6num="7.1.3" -->
         <emu-clause id="sec-tonumber" aoid="ToNumber">
             <h1>ToNumber ( argument )</h1>
             <p>The abstract operation ToNumber converts _argument_ to a value of type Number according to <emu-internal-ref refid="table-11">TYPE NUM</emu-internal-ref>:</p>
-            <figure>
-              <figcaption>
-                <span id="table-11">Table 11</span> &mdash; ToNumber Conversions
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-11" caption="ToNumber Conversions">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -3321,7 +3288,7 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
 
           <!-- es6num="7.1.3.1" -->
           <emu-clause id="sec-tonumber-applied-to-the-string-type">
@@ -3640,11 +3607,8 @@
         <emu-clause id="sec-tostring" aoid="ToString">
             <h1>ToString ( argument )</h1>
             <p>The abstract operation ToString converts _argument_ to a value of type String according to <emu-internal-ref refid="table-12">TYPE NUM</emu-internal-ref>:</p>
-            <figure>
-              <figcaption>
-                <span id="table-12">Table 12</span> &mdash; ToString Conversions
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-12" caption="ToString Conversions">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -3725,7 +3689,7 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
 
           <!-- es6num="7.1.12.1" -->
           <emu-clause id="sec-tostring-applied-to-the-number-type" aoid="ToString Applied to the Number Type">
@@ -3777,11 +3741,8 @@
         <emu-clause id="sec-toobject" aoid="ToObject">
           <h1>ToObject ( argument )</h1>
           <p>The abstract operation ToObject converts _argument_ to a value of type Object according to <emu-internal-ref refid="table-13">TYPE NUM</emu-internal-ref>:</p>
-          <figure>
-            <figcaption>
-              <span id="table-13">Table 13</span> &mdash; ToObject Conversions
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-13" caption="ToObject Conversions">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -3857,7 +3818,7 @@
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
         </emu-clause>
 
         <!-- es6num="7.1.14" -->
@@ -3910,11 +3871,8 @@
         <emu-clause id="sec-requireobjectcoercible" aoid="RequireObjectCoercible">
           <h1>RequireObjectCoercible ( argument )</h1>
           <p>The abstract operation RequireObjectCoercible throws an error if _argument_ is a value that cannot be converted to an Object using ToObject. It is defined by <emu-internal-ref refid="table-14">TYPE NUM</emu-internal-ref>:</p>
-          <figure>
-            <figcaption>
-              <span id="table-14">Table 14</span> &mdash; RequireObjectCoercible Results
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-14" caption="RequireObjectCoercible Results">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -3990,7 +3948,7 @@
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
         </emu-clause>
 
         <!-- es6num="7.2.2" -->
@@ -4776,11 +4734,8 @@
             <h1>Environment Records</h1>
             <p>There are two primary kinds of <dfn>Environment Record</dfn> values used in this specification: <em>declarative Environment Records</em> and <em>object Environment Records</em>. Declarative Environment Records are used to define the effect of ECMAScript language syntactic elements such as |FunctionDeclaration|s, |VariableDeclaration|s, and |Catch| clauses that directly associate identifier bindings with ECMAScript language values. Object Environment Records are used to define the effect of ECMAScript elements such as |WithStatement| that associate identifier bindings with the properties of some object. Global Environment Records and function Environment Records are specializations that are used for specifically for |Script| global declarations and for top-level declarations within functions.</p>
             <p>For specification purposes Environment Record values are values of the Record specification type and can be thought of as existing in a simple object-oriented hierarchy where Environment Record is an abstract class with three concrete subclasses, declarative Environment Record, object Environment Record, and global Environment Record. Function Environment Records and module Environment Records are subclasses of declarative Environment Record. The abstract class includes the abstract specification methods defined in <emu-internal-ref refid="table-15">TYPE NUM</emu-internal-ref>. These abstract methods have distinct concrete algorithms for each of the concrete subclasses.</p>
-            <figure>
-              <figcaption>
-                <span id="table-15">Table 15</span> &mdash; Abstract Methods of Environment Records
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-15" caption="Abstract Methods of Environment Records">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -4872,7 +4827,7 @@
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
 
           <!-- es6num="8.1.1.1" -->
           <emu-clause id="sec-declarative-environment-records">
@@ -5142,11 +5097,8 @@ function f(){eval("var x; x = (delete x, 0);")}
               <h1>Function Environment Records</h1>
               <p>A function Environment Record is a declarative Environment Record that is used to represent the top-level scope of a function and, if the function is not an |ArrowFunction|, provides a `this` binding. If a function is not an |ArrowFunction| function and references `super`, its function Environment Record also contains the state that is used to perform `super` method invocations from within the function.</p>
               <p>Function Environment Records have the additional state fields listed in <emu-internal-ref refid="table-16">TYPE NUM</emu-internal-ref>.</p>
-              <figure>
-                <figcaption>
-                  <span id="table-16">Table 16</span> &mdash; Additional Fields of Function Environment Records
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-16" caption="Additional Fields of Function Environment Records">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -5216,13 +5168,10 @@ function f(){eval("var x; x = (delete x, 0);")}
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
               <p>Function Environment Records support all of the declarative Environment Record methods listed in <emu-internal-ref refid="table-15">TYPE NUM</emu-internal-ref> and share the same specifications for all of those methods except for HasThisBinding and HasSuperBinding. In addition, function Environment Records support the methods listed in <emu-internal-ref refid="table-17">TYPE NUM</emu-internal-ref>:</p>
-              <figure>
-                <figcaption>
-                  <span id="table-17">Table 17</span> &mdash; Additional Methods of Function Environment Records
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-17" caption="Additional Methods of Function Environment Records">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -5258,7 +5207,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
               <p>The behaviour of the additional concrete specification methods for function Environment Records is defined by the following algorithms:</p>
 
             <!-- es6num="8.1.1.3.1" -->
@@ -5324,11 +5273,8 @@ function f(){eval("var x; x = (delete x, 0);")}
               <p>A global Environment Record is logically a single record but it is specified as a composite encapsulating an object Environment Record and a declarative Environment Record. The object Environment Record has as its base object the global object of the associated Realm. This global object is the value returned by the global Environment Record's GetThisBinding concrete method. The object Environment Record component of a global Environment Record contains the bindings for all built-in globals (<emu-internal-ref refid="sec-global-object">TYPE NUM</emu-internal-ref>) and all bindings introduced by a |FunctionDeclaration|, |GeneratorDeclaration|, or |VariableStatement| contained in global code. The bindings for all other ECMAScript declarations in global code are contained in the declarative Environment Record component of the global Environment Record.</p>
               <p>Properties may be created directly on a global object. Hence, the object Environment Record component of a global Environment Record may contain both bindings created explicitly by |FunctionDeclaration|, |GeneratorDeclaration|, or |VariableDeclaration| declarations and binding created implicitly as properties of the global object. In order to identify which bindings were explicitly created using declarations, a global Environment Record maintains a list of the names bound using its CreateGlobalVarBindings and CreateGlobalFunctionBindings concrete methods.</p>
               <p>Global Environment Records have the additional fields listed in <emu-internal-ref refid="table-18">TYPE NUM</emu-internal-ref> and the additional methods listed in <emu-internal-ref refid="table-19">TYPE NUM</emu-internal-ref>.</p>
-              <figure>
-                <figcaption>
-                  <span id="table-18">Table 18</span> &mdash; Additional Fields of Global Environment Records
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-18" caption="Additional Fields of Global Environment Records">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -5376,12 +5322,9 @@ function f(){eval("var x; x = (delete x, 0);")}
                   </tr>
                  </tbody>
                 </table>
-              </figure>
-              <figure>
-                <figcaption>
-                  <span id="table-19">Table 19</span> &mdash; Additional Methods of Global Environment Records
-                </figcaption>
-                <table class="real-table">
+              </emu-table>
+              <emu-table id="table-19" caption="Additional Methods of Global Environment Records">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -5457,7 +5400,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
               <p>The behaviour of the concrete specification methods for global Environment Records is defined by the following algorithms.</p>
 
             <!-- es6num="8.1.1.4.1" -->
@@ -5734,11 +5677,8 @@ function f(){eval("var x; x = (delete x, 0);")}
               <h1>Module Environment Records</h1>
               <p>A module Environment Record is a declarative Environment Record that is used to represent the outer scope of an ECMAScript |Module|. In additional to normal mutable and immutable bindings, module Environment Records also provide immutable import bindings which are bindings that provide indirect access to a target binding that exists in another Environment Record.</p>
               <p>Module Environment Records support all of the declarative Environment Record methods listed in <emu-internal-ref refid="table-15">TYPE NUM</emu-internal-ref> and share the same specifications for all of those methods except for GetBindingValue, DeleteBinding, HasThisBinding and GetThisBinding. In addition, module Environment Records support the methods listed in <emu-internal-ref refid="table-20">TYPE NUM</emu-internal-ref>:</p>
-              <figure>
-                <figcaption>
-                  <span id="table-20">Table 20</span> &mdash; Additional Methods of Module Environment Records
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-20" caption="Additional Methods of Module Environment Records">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -5766,7 +5706,7 @@ function f(){eval("var x; x = (delete x, 0);")}
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
               <p>The behaviour of the additional concrete specification methods for module Environment Records are defined by the following algorithms:</p>
 
             <!-- es6num="8.1.1.5.1" -->
@@ -5945,11 +5885,8 @@ function f(){eval("var x; x = (delete x, 0);")}
           <h1>Code Realms</h1>
           <p>Before it is evaluated, all ECMAScript code must be associated with a <dfn>Realm</dfn>. Conceptually, a realm consists of a set of intrinsic objects, an ECMAScript global environment, all of the ECMAScript code that is loaded within the scope of that global environment, and other associated state and resources.</p>
           <p>A Realm is specified as a Record with the fields specified in <emu-internal-ref refid="table-21">TYPE NUM</emu-internal-ref>:</p>
-          <figure>
-            <figcaption>
-              <span id="table-21">Table 21</span> &mdash; Realm Record Fields
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-21" caption="Realm Record Fields">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -6008,7 +5945,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>An implementation may define other, implementation specific fields.</p>
 
         <!-- es6num="8.2.1" -->
@@ -6084,11 +6021,8 @@ function f(){eval("var x; x = (delete x, 0);")}
           <h1>Execution Contexts</h1>
           <p>An <dfn>execution context</dfn> is a specification device that is used to track the runtime evaluation of code by an ECMAScript implementation. At any point in time, there is at most one execution context that is actually executing code. This is known as the <em>running</em> execution context. A stack is used to track execution contexts. The running execution context is always the top element of this stack. A new execution context is created whenever control is transferred from the executable code associated with the currently running execution context to executable code that is not associated with that execution context. The newly created execution context is pushed onto the stack and becomes the running execution context.</p>
           <p>An execution context contains whatever implementation specific state is necessary to track the execution progress of its associated code. Each execution context has at least the state components listed in <emu-internal-ref refid="table-22">TYPE NUM</emu-internal-ref>.</p>
-          <figure>
-            <figcaption>
-              <span id="table-22">Table 22</span> &mdash; State Components for All Execution Contexts
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-22" caption="State Components for All Execution Contexts">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -6124,15 +6058,12 @@ function f(){eval("var x; x = (delete x, 0);")}
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>Evaluation of code by the running execution context may be suspended at various points defined within this specification. Once the running execution context has been suspended a different execution context may become the running execution context and commence evaluating its code. At some later time a suspended execution context may again become the running execution context and continue evaluating its code at the point where it had previously been suspended. Transition of the running execution context status among execution contexts usually occurs in stack-like last-in/first-out manner. However, some ECMAScript features require non-LIFO transitions of the running execution context.</p>
           <p>The value of the Realm component of the running execution context is also called <dfn>the current Realm</dfn>. The value of the Function component of the running execution context is also called the <em>active function object</em>.</p>
           <p>Execution contexts for ECMAScript code have the additional state components listed in <emu-internal-ref refid="table-23">TYPE NUM</emu-internal-ref>.</p>
-          <figure>
-            <figcaption>
-              <span id="table-23">Table 23</span> &mdash; Additional State Components for ECMAScript Code Execution Contexts
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-23" caption="Additional State Components for ECMAScript Code Execution Contexts">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -6160,14 +6091,11 @@ function f(){eval("var x; x = (delete x, 0);")}
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>The LexicalEnvironment and VariableEnvironment components of an execution context are always Lexical Environments. When an execution context is created its LexicalEnvironment and VariableEnvironment components initially have the same value.</p>
           <p>Execution contexts representing the evaluation of generator objects have the additional state components listed in <emu-internal-ref refid="table-24">TYPE NUM</emu-internal-ref>.</p>
-          <figure>
-            <figcaption>
-              <span id="table-24">Table 24</span> &mdash; Additional State Components for Generator Execution Contexts
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-24" caption="Additional State Components for Generator Execution Contexts">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -6187,7 +6115,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>In most situations only the running execution context (the top of the execution context stack) is directly manipulated by algorithms within this specification. Hence when the terms &ldquo;LexicalEnvironment&rdquo;, and &ldquo;VariableEnvironment&rdquo; are used without qualification they are in reference to those components of the running execution context.</p>
           <p>An execution context is purely a specification mechanism and need not correspond to any particular artefact of an ECMAScript implementation. It is impossible for ECMAScript code to directly access or observe an execution context.</p>
 
@@ -6263,11 +6191,8 @@ function f(){eval("var x; x = (delete x, 0);")}
           <h1>Jobs and Job Queues</h1>
           <p>A Job is an abstract operation that initiates an ECMAScript computation when no other ECMAScript computation is currently in progress. A Job abstract operation may be defined to accept an arbitrary set of job parameters.</p>
           <p>Execution of a Job can be initiated only when there is no running execution context and the execution context stack is empty. A PendingJob is a request for the future execution of a Job. A PendingJob is an internal Record whose fields are specified in <emu-internal-ref refid="table-25">TYPE NUM</emu-internal-ref>. Once execution of a Job is initiated, the Job always executes to completion. No other Job may be initiated until the currently running Job completes. However, the currently running Job or external events may cause the enqueuing of additional PendingJobs that may be initiated sometime after completion of the currently running Job.</p>
-          <figure>
-            <figcaption>
-              <span id="table-25">Table 25</span> &mdash; PendingJob Record Fields
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-25" caption="PendingJob Record Fields">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -6326,13 +6251,10 @@ function f(){eval("var x; x = (delete x, 0);")}
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>A Job Queue is a FIFO queue of PendingJob records. Each Job Queue has a name and the full set of available Job Queues are defined by an ECMAScript implementation. Every ECMAScript implementation has at least the Job Queues defined in <emu-internal-ref refid="table-26">TYPE NUM</emu-internal-ref>.</p>
-          <figure>
-            <figcaption>
-              <span id="table-26">Table 26</span> &mdash; Required Job Queues
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-26" caption="Required Job Queues">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -6360,7 +6282,7 @@ function f(){eval("var x; x = (delete x, 0);")}
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>A request for the future execution of a Job is made by enqueueing, on a Job Queue, a PendingJob record that includes a Job abstract operation name and any necessary argument values. When there is no running execution context and the execution context stack is empty, the ECMAScript implementation removes the first PendingJob from a Job Queue and uses the information contained in it to create an execution context and starts execution of the associated Job abstract operation.</p>
           <p>The PendingJob records from a single Job Queue are always initiated in FIFO order. This specification does not define the order in which multiple Job Queues are serviced. An ECMAScript implementation may interweave the FIFO evaluation of the PendingJob records of a Job Queue with the evaluation of the PendingJob records of one or more other Job Queues. An implementation must define what occurs when there are no running execution context and all Job Queues are empty.</p>
           <emu-note>
@@ -6822,11 +6744,8 @@ function* enumerate(obj) {
           <h1>ECMAScript Function Objects</h1>
           <p>ECMAScript function objects encapsulate parameterized ECMAScript code closed over a lexical environment and support the dynamic evaluation of that code. An ECMAScript function object is an ordinary object and has the same internal slots and the same internal methods as other ordinary objects. The code of an ECMAScript function object may be either strict mode code (<emu-internal-ref refid="sec-strict-mode-code">NUM</emu-internal-ref>) or non-strict mode code. An ECMAScript function object whose code is strict mode code is called a <em>strict function</em>. One whose code is not strict mode code is called a <em>non-strict function</em>.</p>
           <p>ECMAScript function objects have the additional internal slots listed in <emu-internal-ref refid="table-27">TYPE NUM</emu-internal-ref>.</p>
-          <figure>
-            <figcaption>
-              <span id="table-27">Table 27</span> &mdash; Internal Slots of ECMAScript Function Objects
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-27" caption="Internal Slots of ECMAScript Function Objects">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -6940,7 +6859,7 @@ function* enumerate(obj) {
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>All ECMAScript function objects have the [[Call]] internal method defined here. ECMAScript functions that are also constructors in addition have the [[Construct]] internal method. ECMAScript function objects whose code is not strict mode code have the [[GetOwnProperty]] internal method defined here.</p>
 
         <!-- es6num="9.2.1" -->
@@ -7405,11 +7324,8 @@ function* enumerate(obj) {
             <h1>Bound Function Exotic Objects</h1>
             <p>A <dfn>bound function</dfn> is an exotic object that wraps another function object. A bound function is callable (it has a [[Call]] internal method and may have a [[Construct]] internal method). Calling a bound function generally results in a call of its wrapped function.</p>
             <p>Bound function objects do not have the internal slots of ECMAScript function objects defined in <emu-internal-ref refid="table-27">TYPE NUM</emu-internal-ref>. Instead they have the internal slots defined in <emu-internal-ref refid="table-28">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-28">Table 28</span> &mdash; Internal Slots of Exotic Bound Function Objects
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-28" caption="Internal Slots of Exotic Bound Function Objects">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -7457,7 +7373,7 @@ function* enumerate(obj) {
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <p>Unlike ECMAScript function objects, bound function objects do not use an alternative definition of the [[GetOwnProperty]] internal methods. Bound function objects provide all of the essential internal methods as specified in <emu-internal-ref refid="sec-ordinary-object-internal-methods-and-internal-slots">NUM</emu-internal-ref>. However, they use the following definitions for the essential internal methods of function objects.</p>
 
           <!-- es6num="9.4.1.1" -->
@@ -8159,11 +8075,8 @@ function* enumerate(obj) {
             <h1>Module Namespace Exotic Objects</h1>
             <p>A <em>module namespace object</em> is an exotic object that exposes the bindings exported from an ECMAScript |Module| (See <emu-internal-ref refid="sec-exports">NUM</emu-internal-ref>). There is a one-to-one correspondence between the String-keyed own properties of a module namespace exotic object and the binding names exported by the |Module|. The exported bindings include any bindings that are indirectly exported using `export *` export items. Each String-valued own property key is the StringValue of the corresponding exported binding name. These are the only String-keyed properties of a module namespace exotic object. Each such property has the attributes {[[Configurable]]: *false*, [[Enumerable]]: *true*}. Module namespace objects are not extensible.</p>
             <p>Module namespace objects have the internal slots defined in <emu-internal-ref refid="table-29">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-29">Table 29</span> &mdash; Internal Slots of Module Namespace Exotic Objects
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-29" caption="Internal Slots of Module Namespace Exotic Objects">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -8200,7 +8113,7 @@ function* enumerate(obj) {
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <p>Module namespace exotic objects provide alternative definitions for all of the internal methods.</p>
 
           <!-- es6num="9.4.6.1" -->
@@ -8368,11 +8281,8 @@ function* enumerate(obj) {
       <emu-clause id="sec-proxy-object-internal-methods-and-internal-slots">
           <h1>Proxy Object Internal Methods and Internal Slots</h1>
           <p>A proxy object is an exotic object whose essential internal methods are partially implemented using ECMAScript code. Every proxy objects has an internal slot called [[ProxyHandler]]. The value of [[ProxyHandler]] is an object, called the proxy's <em>handler object</em>, or *null*. Methods (see <emu-internal-ref refid="table-30">TYPE NUM</emu-internal-ref>) of a handler object may be used to augment the implementation for one or more of the proxy object's internal methods. Every proxy object also has an internal slot called [[ProxyTarget]] whose value is either an object or the *null* value. This object is called the proxy's <em>target object</em>.</p>
-          <figure>
-            <figcaption>
-              <span id="table-30">Table 30</span> &mdash; Proxy Handler Methods
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-30" caption="Proxy Handler Methods">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -8496,7 +8406,7 @@ function* enumerate(obj) {
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>When a handler method is called to provide the implementation of a proxy object internal method, the handler method is passed the proxy's target object as a parameter. A proxy's handler object does not necessarily have a method corresponding to every essential internal method. Invoking an internal method on the proxy results in the invocation of the corresponding internal method on the proxy's target object if the handler object does not have a method corresponding to the internal trap.</p>
           <p>The [[ProxyHandler]] and [[ProxyTarget]] internal slots of a proxy object are always initialized when the object is created and typically may not be modified. Some proxy objects are created in a manner that permits them to be subsequently <em>revoked</em>. When a proxy is revoked, its [[ProxyHander]] and [[ProxyTarget]] internal slots are set to *null* causing subsequent invocations of internal methods on that proxy object to throw a *TypeError* exception.</p>
           <p>Because proxy objects permit the implementation of internal methods to be provided by arbitrary ECMAScript code, it is possible to define a proxy object whose handler methods violates the invariants defined in <emu-internal-ref refid="sec-invariants-of-the-essential-internal-methods">NUM</emu-internal-ref>. Some of the internal method invariants defined in <emu-internal-ref refid="sec-invariants-of-the-essential-internal-methods">NUM</emu-internal-ref> are essential integrity invariants. These invariants are explicitly enforced by the proxy object internal methods specified in this section. An ECMAScript implementation must be robust in the presence of all possible invariant violations.</p>
@@ -9241,11 +9151,8 @@ function* enumerate(obj) {
         <p>U+200C (ZERO WIDTH NON-JOINER) and U+200D (ZERO WIDTH JOINER) are format-control characters that are used to make necessary distinctions when forming words or phrases in certain languages. In ECMAScript source text these code points may also be used in an |IdentifierName| (see <emu-internal-ref refid="sec-identifier-names">NUM</emu-internal-ref>) after the first character.</p>
         <p>U+FEFF (ZERO WIDTH NO-BREAK SPACE) is a format-control character used primarily at the start of a text to mark it as Unicode and to allow detection of the text's encoding and byte order. &lt;ZWNBSP&gt; characters intended for this purpose can sometimes also appear after the start of a text, for example as a result of concatenating files. In ECMAScript source text &lt;ZWNBSP&gt; code points are treated as white space characters (see <emu-internal-ref refid="sec-white-space">NUM</emu-internal-ref>).</p>
         <p>The special treatment of certain format-control characters outside of comments, string literals, and regular expression literals is summarized in <emu-internal-ref refid="table-31">TYPE NUM</emu-internal-ref>.</p>
-        <figure>
-          <figcaption>
-            <span id="table-31">Table 31</span> &mdash; Format-Control Code Point Usage
-          </figcaption>
-          <table class="real-table">
+        <emu-table id="table-31" caption="Format-Control Code Point Usage">
+          <table>
            <tbody>
             <tr>
               <th>
@@ -9305,7 +9212,7 @@ function* enumerate(obj) {
             </tr>
            </tbody>
           </table>
-        </figure>
+        </emu-table>
       </emu-clause>
 
       <!-- es6num="11.2" -->
@@ -9313,11 +9220,8 @@ function* enumerate(obj) {
         <h1>White Space</h1>
         <p>White space code points are used to improve source text readability and to separate tokens (indivisible lexical units) from each other, but are otherwise insignificant. White space code points may occur between any two tokens and at the start or end of input. White space code points may occur within a |StringLiteral|, a |RegularExpressionLiteral|, a |Template|, or a |TemplateSubstitutionTail| where they are considered significant code points forming part of a literal value. They may also occur within a |Comment|, but cannot appear within any other kind of token.</p>
         <p>The ECMAScript white space code points are listed in <emu-internal-ref refid="table-32">TYPE NUM</emu-internal-ref>.</p>
-        <figure>
-          <figcaption>
-            <span id="table-32">Table 32</span> &mdash; White Space Code Points
-          </figcaption>
-          <table class="real-table">
+        <emu-table id="table-32" caption="White Space Code Points">
+          <table>
            <tbody>
             <tr>
               <th>
@@ -9409,7 +9313,7 @@ function* enumerate(obj) {
             </tr>
            </tbody>
           </table>
-        </figure>
+        </emu-table>
         <p>ECMAScript implementations must recognize as |WhiteSpace| code points listed in the &ldquo;Separator, space&rdquo; (Zs) category by Unicode 5.1. ECMAScript implementations may also recognize as |WhiteSpace| additional category Zs code points from subsequent editions of the Unicode Standard.</p>
         <emu-note>
           <p>Other than for the code points listed in <emu-internal-ref refid="table-32">TYPE NUM</emu-internal-ref>, ECMAScript |WhiteSpace| intentionally excludes all code points that have the Unicode &ldquo;White_Space&rdquo; property but which are not classified in category &ldquo;Zs&rdquo;.</p>
@@ -9434,11 +9338,8 @@ function* enumerate(obj) {
         <p>A line terminator can occur within a |MultiLineComment| (<emu-internal-ref refid="sec-comments">NUM</emu-internal-ref>) but cannot occur within a |SingleLineComment|.</p>
         <p>Line terminators are included in the set of white space code points that are matched by the `\s` class in regular expressions.</p>
         <p>The ECMAScript line terminator code points are listed in <emu-internal-ref refid="table-33">TYPE NUM</emu-internal-ref>.</p>
-        <figure>
-          <figcaption>
-            <span id="table-33">Table 33</span> &mdash; Line Terminator Code Points
-          </figcaption>
-          <table class="real-table">
+        <emu-table id="table-33" caption="Line Terminator Code Points">
+          <table>
            <tbody>
             <tr>
               <th>
@@ -9497,7 +9398,7 @@ function* enumerate(obj) {
             </tr>
            </tbody>
           </table>
-        </figure>
+        </emu-table>
         <p>Only the Unicode code points in <emu-internal-ref refid="table-33">TYPE NUM</emu-internal-ref> are treated as line terminators. Other new line or line breaking Unicode code points are not treated as line terminators but are treated as white space if they meet the requirements listed in <emu-internal-ref refid="table-32">TYPE NUM</emu-internal-ref>. The sequence &lt;CR&gt;&lt;LF&gt; is commonly used as a line terminator. It should be considered a single |SourceCharacter| for the purpose of reporting line numbers.</p>
         <h2>Syntax</h2>
         <emu-grammar>
@@ -10174,11 +10075,8 @@ function* enumerate(obj) {
                 The SV of <emu-grammar>CharacterEscapeSequence :: SingleEscapeCharacter</emu-grammar> is the code unit whose value is determined by the |SingleEscapeCharacter| according to <emu-internal-ref refid="table-34">TYPE NUM</emu-internal-ref>.
               </li>
             </ul>
-            <figure>
-              <figcaption>
-                <span id="table-34">Table 34</span> &mdash; String Single Character Escape Sequences
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-34" caption="String Single Character Escape Sequences">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -10322,7 +10220,7 @@ function* enumerate(obj) {
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <ul>
               <li>
                 The SV of <emu-grammar>CharacterEscapeSequence :: NonEscapeCharacter</emu-grammar> is the SV of the |NonEscapeCharacter|.
@@ -12708,11 +12606,8 @@ a = b + c(d + e).print()
               1. ReturnIfAbrupt(_val_).
               1. Return a String according to <emu-internal-ref refid="table-35">TYPE NUM</emu-internal-ref>.
             </emu-alg>
-            <figure>
-              <figcaption>
-                <span id="table-35">Table 35</span> &mdash; typeof Operator Results
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-35" caption="typeof Operator Results">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -12804,7 +12699,7 @@ a = b + c(d + e).print()
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <emu-note>
               <p>Implementations are discouraged from defining new `typeof` result values for non-standard exotic objects. If possible `"object"`should be used for such objects.</p>
             </emu-note>
@@ -20434,11 +20329,8 @@ a = b + c(d + e).print()
             <p>A <dfn>Module Record</dfn> encapsulates structural information about the imports and exports of a single module. This information is used to link the imports and exports of sets of connected modules. A Module Record includes four fields that are only used when evaluating a module.</p>
             <p>For specification purposes Module Record values are values of the Record specification type and can be thought of as existing in a simple object-oriented hierarchy where Module Record is an abstract class with concrete subclasses. This specification only defines a single Module Record concrete subclass named Source Text Module Record. Other specifications and implementations may define additional Module Record subclasses corresponding to alternative module definition facilities that they defined.</p>
             <p>Module Record defines the fields listed in <emu-internal-ref refid="table-36">TYPE NUM</emu-internal-ref>. All Module Definition subclasses include at least those fields. Module Record also defines the abstract method list in <emu-internal-ref refid="table-37">TYPE NUM</emu-internal-ref>. All Module definition subclasses must provide concrete implementations of these abstract methods.</p>
-            <figure>
-              <figcaption>
-                <span id="table-36">Table 36</span> &mdash; Module Record Fields
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-36" caption="Module Record Fields">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -20497,12 +20389,9 @@ a = b + c(d + e).print()
                 </tr>
                </tbody>
               </table>
-            </figure>
-            <figure>
-              <figcaption>
-                <span id="table-37">Table 37</span> &mdash; Abstract Methods of Module Records
-              </figcaption>
-              <table class="real-table">
+            </emu-table>
+            <emu-table id="table-37" caption="Abstract Methods of Module Records">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -20547,7 +20436,7 @@ a = b + c(d + e).print()
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
 
           <!-- es6num="15.2.1.16" -->
@@ -20555,11 +20444,8 @@ a = b + c(d + e).print()
               <h1>Source Text Module Records</h1>
               <p>A <dfn>Source Text Module Record</dfn> is used to represent information about a module that was defined from ECMAScript source text (10) that was parsed using the goal symbol |Module|. Its fields contain digested information about the names that are imported by the module and its concrete methods use this digest to link, instantiate, and evaluate the module.</p>
               <p>In addition to the fields, defined in <emu-internal-ref refid="table-36">TYPE NUM</emu-internal-ref>, Source Text Module Records have the additional fields listed in <emu-internal-ref refid="table-38">TYPE NUM</emu-internal-ref>. Each of these fields initially has the value *undefined*.</p>
-              <figure>
-                <figcaption>
-                  <span id="table-38">Table 38</span> &mdash; Additional Fields of Source Text Module Records
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-38" caption="Additional Fields of Source Text Module Records">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -20640,13 +20526,10 @@ a = b + c(d + e).print()
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
               <p>An ImportEntry Record is a Record that digests information about a single declarative import. Each ImportEntry Record has the fields defined in <emu-internal-ref refid="table-39">TYPE NUM</emu-internal-ref>:</p>
-              <figure>
-                <figcaption>
-                  <span id="table-39">Table 39</span> &mdash; ImportEntry Record Fields
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-39" caption="ImportEntry Record Fields">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -20694,14 +20577,11 @@ a = b + c(d + e).print()
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
               <emu-note>
                 <p><emu-internal-ref refid="table-40">TYPE NUM</emu-internal-ref> gives examples of ImportEntry records fields used to represent the syntactic import forms:</p>
-                <figure>
-                  <figcaption>
-                    <span id="table-40">Table 40</span> (Informative) &mdash; Import Forms Mappings to ImportEntry Records
-                  </figcaption>
-                  <table class="real-table">
+                <emu-table id="table-40" caption="Import Forms Mappings to ImportEntry Records" informative>
+                  <table>
                    <tbody>
                     <tr>
                       <th>
@@ -20783,14 +20663,11 @@ a = b + c(d + e).print()
                     </tr>
                    </tbody>
                   </table>
-                </figure>
+                </emu-table>
               </emu-note>
               <p>An ExportEntry Record is a Record that digests information about a single declarative export. Each ExportEntry Record has the fields defined in <emu-internal-ref refid="table-41">TYPE NUM</emu-internal-ref>:</p>
-              <figure>
-                <figcaption>
-                  <span id="table-41">Table 41</span> &mdash; ExportEntry Record Fields
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-41" caption="ExportEntry Record Fields">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -20849,14 +20726,11 @@ a = b + c(d + e).print()
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
               <emu-note>
                 <p><emu-internal-ref refid="table-42">TYPE NUM</emu-internal-ref> gives examples of the ExportEntry record fields used to represent the syntactic export forms:</p>
-                <figure>
-                  <figcaption>
-                    <span id="table-42">Table 42</span> (Informative) &mdash; Export Forms Mappings to ExportEntry Records
-                  </figcaption>
-                  <table class="real-table">
+                <emu-table id="table-42" caption="Export Forms Mappings to ExportEntry Records" informative>
+                  <table>
                    <tbody>
                     <tr>
                       <th>
@@ -21030,7 +20904,7 @@ a = b + c(d + e).print()
                     </tr>
                    </tbody>
                   </table>
-                </figure>
+                </emu-table>
               </emu-note>
               <p>The following definitions specify the required concrete methods and other abstract operations for Source Text Module Records</p>
 
@@ -22450,11 +22324,8 @@ a = b + c(d + e).print()
               <emu-note>
                 <p>This syntax of Uniform Resource Identifiers is based upon RFC 2396 and does not reflect the more recent RFC 3986 which replaces RFC 2396. A formal description and implementation of UTF-8 is given in RFC 3629.</p>
                 <p>In UTF-8, characters are encoded using sequences of 1 to 6 octets. The only octet of a sequence of one has the higher-order bit set to 0, the remaining 7 bits being used to encode the character value. In a sequence of n octets, n&gt;1, the initial octet has the n higher-order bits set to 1, followed by a bit set to 0. The remaining bits of that octet contain bits from the value of the character to be encoded. The following octets all have the higher-order bit set to 1 and the following bit set to 0, leaving 6 bits in each to contain bits from the character to be encoded. The possible UTF-8 encodings of ECMAScript characters are specified in <emu-internal-ref refid="table-43">TYPE NUM</emu-internal-ref>.</p>
-                <figure>
-                  <figcaption>
-                    <span id="table-43">Table 43</span> (Informative) &mdash; UTF-8 Encodings
-                  </figcaption>
-                  <table class="real-table">
+                <emu-table id="table-43" caption="UTF-8 Encodings" informative>
+                  <table>
                    <tbody>
                     <tr>
                       <th>
@@ -22615,7 +22486,7 @@ a = b + c(d + e).print()
                     </tr>
                    </tbody>
                   </table>
-                </figure>
+                </emu-table>
                 <p>Where
                   <br>
                         _uuuuu_ = _vvvv_ + 1
@@ -23780,11 +23651,8 @@ new Function("a,b", "c", "return a+b+c")
               1. Return _newSymbol_.
             </emu-alg>
             <p>The GlobalSymbolRegistry is a List that is globally available. It is shared by all Code Realms. Prior to the evaluation of any ECMAScript code it is initialized as an empty List. Elements of the GlobalSymbolRegistry are Records with the structure defined in <emu-internal-ref refid="table-44">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-44">Table 44</span> &mdash; GlobalSymbolRegistry Record Fields
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-44" caption="GlobalSymbolRegistry Record Fields">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -23821,7 +23689,7 @@ new Function("a,b", "c", "return a+b+c")
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
 
           <!-- es6num="19.4.2.2" -->
@@ -27380,11 +27248,8 @@ Date.parse(x.toLocaleString())
                 1. Let _result_ be a String value derived from _replacement_ by copying code unit elements from _replacement_ to _result_ while performing replacements as specified in <emu-internal-ref refid="table-45">TYPE NUM</emu-internal-ref>. These `$` replacements are done left-to-right, and, once such a replacement is performed, the new replacement text is not subject to further replacements.
                 1. Return _result_.
               </emu-alg>
-              <figure>
-                <figcaption>
-                  <span id="table-45">Table 45</span> &mdash; Replacement Text Symbol Substitutions
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-45" caption="Replacement Text Symbol Substitutions">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -27488,7 +27353,7 @@ Date.parse(x.toLocaleString())
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
             </emu-clause>
           </emu-clause>
 
@@ -27877,11 +27742,8 @@ Date.parse(x.toLocaleString())
           <emu-clause id="sec-properties-of-string-iterator-instances">
             <h1>Properties of String Iterator Instances</h1>
             <p>String Iterator instances are ordinary objects that inherit properties from the %StringIteratorPrototype% intrinsic object. String Iterator instances are initially created with the internal slots listed in <emu-internal-ref refid="table-46">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-46">Table 46</span> &mdash; Internal Slots of String Iterator Instances
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-46" caption="Internal Slots of String Iterator Instances">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -27909,7 +27771,7 @@ Date.parse(x.toLocaleString())
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
         </emu-clause>
       </emu-clause>
@@ -28838,11 +28700,8 @@ Date.parse(x.toLocaleString())
           <emu-clause id="sec-characterescape">
             <h1>CharacterEscape</h1>
             <p>The production <emu-grammar>CharacterEscape :: ControlEscape</emu-grammar> evaluates by returning the character according to <emu-internal-ref refid="table-47">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-47">Table 47</span> &mdash; ControlEscape Character Values
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-47" caption="ControlEscape Character Values">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -28948,7 +28807,7 @@ Date.parse(x.toLocaleString())
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <p>The production <emu-grammar>CharacterEscape :: `c` ControlLetter</emu-grammar> evaluates as follows:</p>
             <emu-alg>
               1. Let _ch_ be the character matched by |ControlLetter|.
@@ -31639,11 +31498,8 @@ Date.parse(x.toLocaleString())
           <emu-clause id="sec-properties-of-array-iterator-instances">
             <h1>Properties of Array Iterator Instances</h1>
             <p>Array Iterator instances are ordinary objects that inherit properties from the %ArrayIteratorPrototype% intrinsic object. Array Iterator instances are initially created with the internal slots listed in <emu-internal-ref refid="table-48">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-48">Table 48</span> &mdash; Internal Slots of Array Iterator Instances
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-48" caption="Internal Slots of Array Iterator Instances">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -31679,7 +31535,7 @@ Date.parse(x.toLocaleString())
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
         </emu-clause>
       </emu-clause>
@@ -31688,11 +31544,8 @@ Date.parse(x.toLocaleString())
       <emu-clause id="sec-typedarray-objects">
           <h1>TypedArray Objects</h1>
           <p>_TypedArray_ objects present an array-like view of an underlying binary data buffer (<emu-internal-ref refid="sec-arraybuffer-objects">NUM</emu-internal-ref>). Each element of a _TypedArray_ instance has the same underlying binary scalar data type. There is a distinct _TypedArray_ constructor, listed in <emu-internal-ref refid="table-49">TYPE NUM</emu-internal-ref>, for each of the nine supported element types. Each constructor in <emu-internal-ref refid="table-49">TYPE NUM</emu-internal-ref> has a corresponding distinct prototype object.</p>
-          <figure>
-            <figcaption>
-              <span id="table-49">Table 49</span> &mdash; The _TypedArray_ Constructors
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-49" caption="The _TypedArray_ Constructors">
+            <table>
              <tbody>
               <tr>
                 <th style="background-color: #BFBFBF">
@@ -31912,7 +31765,7 @@ Date.parse(x.toLocaleString())
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
           <p>In the definitions below, references to _TypedArray_ should be replaced with the appropriate constructor name from the above table. The phrase &ldquo;the element size in bytes&rdquo; refers to the value in the Element Size column of the table in the row corresponding to the constructor. The phrase &ldquo;element Type&rdquo; refers to the value in the Element Type column for that row.</p>
 
         <!-- es6num="22.2.1" -->
@@ -33194,11 +33047,8 @@ Date.parse(x.toLocaleString())
           <emu-clause id="sec-properties-of-map-iterator-instances">
             <h1>Properties of Map Iterator Instances</h1>
             <p>Map Iterator instances are ordinary objects that inherit properties from the %MapIteratorPrototype% intrinsic object. Map Iterator instances are initially created with the internal slots described in <emu-internal-ref refid="table-50">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-50">Table 50</span> &mdash; Internal Slots of Map Iterator Instances
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-50" caption="Internal Slots of Map Iterator Instances">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -33234,7 +33084,7 @@ Date.parse(x.toLocaleString())
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
         </emu-clause>
       </emu-clause>
@@ -33546,11 +33396,8 @@ Date.parse(x.toLocaleString())
           <emu-clause id="sec-properties-of-set-iterator-instances">
             <h1>Properties of Set Iterator Instances</h1>
             <p>Set Iterator instances are ordinary objects that inherit properties from the %SetIteratorPrototype% intrinsic object. Set Iterator instances are initially created with the internal slots specified in <emu-internal-ref refid="table-51">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-51">Table 51</span> &mdash; Internal Slots of Set Iterator Instances
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-51" caption="Internal Slots of Set Iterator Instances">
+              <table>
                <tbody>
                 <tr>
                   <th style="background-color: #BFBFBF">
@@ -33586,7 +33433,7 @@ Date.parse(x.toLocaleString())
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
         </emu-clause>
       </emu-clause>
@@ -34929,11 +34776,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           <emu-clause id="sec-iterable-interface">
             <h1>The <i>Iterable</i> Interface</h1>
             <p>The <i>Iterable</i> interface includes the property described in <emu-internal-ref refid="table-52">TYPE NUM</emu-internal-ref>:</p>
-            <figure>
-              <figcaption>
-                <span id="table-52">Table 52</span> &mdash; <i>Iterable</i> Interface Required Properties
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-52" caption="<i>Iterable</i> Interface Required Properties">
+              <table>
                <tbody>
                 <tr>
                   <th style="background-color: #A6A6A6">
@@ -34959,18 +34803,15 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
 
           <!-- es6num="25.1.1.2" -->
           <emu-clause id="sec-iterator-interface">
             <h1>The <i>Iterator</i> Interface</h1>
             <p>An object that implements the <i>Iterator</i> interface must include the property in <emu-internal-ref refid="table-53">TYPE NUM</emu-internal-ref>. Such objects may also implement the properties in <emu-internal-ref refid="table-54">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-53">Table 53</span> &mdash; <i>Iterator</i> Interface Required Properties
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-53" caption="<i>Iterator</i> Interface Required Properties">
+              <table>
                <tbody>
                 <tr>
                   <th style="background-color: #A6A6A6">
@@ -34996,15 +34837,12 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <emu-note>
               <p>Arguments may be passed to the next function but their interpretation and validity is dependent upon the target <i>Iterator</i>. The for-of statement and other common users of <em>Iterators</em> do not pass any arguments, so <i>Iterator</i> objects that expect to be used in such a manner must be prepared to deal with being called with no arguments.</p>
             </emu-note>
-            <figure>
-              <figcaption>
-                <span id="table-54">Table 54</span> &mdash; <i>Iterator</i> Interface Optional Properties
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-54" caption="<i>Iterator</i> Interface Optional Properties">
+              <table>
                <tbody>
                 <tr>
                   <th style="background-color: #A6A6A6">
@@ -35041,7 +34879,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
             <emu-note>
               <p>Typically callers of these methods should check for their existence before invoking them. Certain ECMAScript language features including `for`-`of`, `yield*`, and array destructuring call these methods after performing an existence check. Most ECMAScript library functions that accept <i>Iterable</i> objects as arguments also conditionally call them.</p>
             </emu-note>
@@ -35051,11 +34889,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
           <emu-clause id="sec-iteratorresult-interface">
             <h1>The IteratorResult Interface</h1>
             <p>The <i>IteratorResult</i> interface includes the properties listed in <emu-internal-ref refid="table-55">TYPE NUM</emu-internal-ref>:</p>
-            <figure>
-              <figcaption>
-                <span id="table-55">Table 55</span> &mdash; <i>IteratorResult</i> Interface Properties
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-55" caption="<i>IteratorResult</i> Interface Properties">
+              <table>
                <tbody>
                 <tr>
                   <th style="background-color: #A6A6A6">
@@ -35092,7 +34927,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
         </emu-clause>
 
@@ -35299,11 +35134,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         <emu-clause id="sec-properties-of-generator-instances">
           <h1>Properties of Generator Instances</h1>
           <p>Generator instances are initially created with the internal slots described in <emu-internal-ref refid="table-56">TYPE NUM</emu-internal-ref>.</p>
-          <figure>
-            <figcaption>
-              <span id="table-56">Table 56</span> &mdash; Internal Slots of Generator Instances
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-56" caption="Internal Slots of Generator Instances">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -35331,7 +35163,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
         </emu-clause>
 
         <!-- es6num="25.3.3" -->
@@ -35473,11 +35305,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               <h1>PromiseCapability Records</h1>
               <p>A PromiseCapability is a Record value used to encapsulate a promise object along with the functions that are capable of resolving or rejecting that promise object. PromiseCapability records are produced by the NewPromiseCapability abstract operation.</p>
               <p>PromiseCapability Records have the fields listed in <emu-internal-ref refid="table-57">TYPE NUM</emu-internal-ref>.</p>
-              <figure>
-                <figcaption>
-                  <span id="table-57">Table 57</span> &mdash; PromiseCapability Record Fields
-                </figcaption>
-                <table class="real-table">
+              <emu-table id="table-57" caption="PromiseCapability Record Fields">
+                <table>
                  <tbody>
                   <tr>
                     <th>
@@ -35525,7 +35354,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                   </tr>
                  </tbody>
                 </table>
-              </figure>
+              </emu-table>
 
             <!-- es6num="25.4.1.1.1" -->
             <emu-clause id="sec-ifabruptrejectpromise" aoid="IfAbruptRejectPromise">
@@ -35550,11 +35379,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
             <h1>PromiseReaction Records</h1>
             <p>The PromiseReaction is a Record value used to store information about how a promise should react when it becomes resolved or rejected with a given value. PromiseReaction records are created by the `then` method of the Promise prototype, and are used by a PromiseReactionJob.</p>
             <p>PromiseReaction records have the fields listed in <emu-internal-ref refid="table-58">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-58">Table 58</span> &mdash; PromiseReaction Record Fields
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-58" caption="PromiseReaction Record Fields">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -35591,7 +35417,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
           </emu-clause>
 
           <!-- es6num="25.4.1.3" -->
@@ -36103,11 +35929,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         <emu-clause id="sec-properties-of-promise-instances">
           <h1>Properties of Promise Instances</h1>
           <p>Promise instances are ordinary objects that inherit properties from the Promise prototype object (the intrinsic, %PromisePrototype%). Promise instances are initially created with the internal slots described in <emu-internal-ref refid="table-59">TYPE NUM</emu-internal-ref>.</p>
-          <figure>
-            <figcaption>
-              <span id="table-59">Table 59</span> &mdash; Internal Slots of Promise Instances
-            </figcaption>
-            <table class="real-table">
+          <emu-table id="table-59" caption="Internal Slots of Promise Instances">
+            <table>
              <tbody>
               <tr>
                 <th>
@@ -36151,7 +35974,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </tr>
              </tbody>
             </table>
-          </figure>
+          </emu-table>
         </emu-clause>
       </emu-clause>
     </emu-clause>
@@ -36849,11 +36672,8 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
         <emu-annex id="sec-additional-properties-of-the-global-object">
             <h1>Additional Properties of the Global Object</h1>
             <p>The entries in <emu-internal-ref refid="table-60">TYPE NUM</emu-internal-ref> are added to <emu-internal-ref refid="table-7">TYPE NUM</emu-internal-ref>.</p>
-            <figure>
-              <figcaption>
-                <span id="table-60">Table 60</span> &mdash; Additional Well-known Intrinsic Objects
-              </figcaption>
-              <table class="real-table">
+            <emu-table id="table-60" caption="Additional Well-known Intrinsic Objects">
+              <table>
                <tbody>
                 <tr>
                   <th>
@@ -36890,7 +36710,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
                 </tr>
                </tbody>
               </table>
-            </figure>
+            </emu-table>
 
           <!-- es6num="B.2.1.1" -->
           <emu-annex id="sec-escape-string">

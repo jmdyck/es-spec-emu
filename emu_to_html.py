@@ -481,6 +481,9 @@ def serialize(node, apply_emd_expansions):
         elif name == 'emu-eqn':
             handle_emu_eqn(node)
 
+        elif name == 'emu-table':
+            handle_emu_table(node)
+
         else:
             if node.hasAttributes():
                 attrs = dict(node.attributes.items())
@@ -1115,6 +1118,45 @@ def handle_emu_eqn(emu_eqn):
     put('<p class="normalBullet">')
     put(s)
     put('</p>')
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+def handle_emu_table(emu_table):
+    assert emu_table.nodeName == 'emu-table'
+
+    ps = emu_table.previousSibling
+    assert ps.nodeType == ps.TEXT_NODE
+    outer_indent = ps.nodeValue
+
+    id = emu_table.getAttribute('id')
+    table_number = id.replace('table-', '')
+    caption = emu_table.getAttribute('caption')
+    maybe_informative = ' (Informative)' if emu_table.hasAttribute('informative') else ''
+
+    put('<figure>')
+    put(outer_indent + '  <figcaption>')
+    put(outer_indent + '    <span id="%s">Table %s</span>%s &mdash; %s' % (
+        id, table_number, maybe_informative, expand_ecmarkdown(caption)))
+    put(outer_indent + '  </figcaption>')
+    put(outer_indent + '  ')
+
+    assert len(emu_table.childNodes) == 3
+    [ws1, table, ws2] = emu_table.childNodes
+    assert is_whitespace_text_node(ws1)
+    assert is_whitespace_text_node(ws2)
+
+    table.setAttribute('class', 'real-table')
+    serialize(table, True)
+
+    put(outer_indent + '</figure>')
+
+def is_whitespace_text_node(node):
+    return (
+        node.nodeType == node.TEXT_NODE
+        and
+        re.match(r'^\s+$', node.nodeValue)
+    )
+    
 
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
