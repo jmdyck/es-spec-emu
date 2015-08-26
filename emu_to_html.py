@@ -464,10 +464,9 @@ def serialize(node, apply_emd_expansions):
                 assert 0, linktext_template
             put('<a href="%s">%s</a>' % (href, linktext))
 
-        elif name == 'emu-internal-ref':
-            refid = node.getAttribute('refid')
-            linktext_template = node.firstChild.nodeValue
-            put(convert_emu_internal_ref(refid, linktext_template))
+        elif name == 'emu-xref':
+            href = node.getAttribute('href')
+            put(convert_emu_xref(href))
 
         elif name == 'emu-see-also-para':
             handle_emu_see_also_para(node)
@@ -1235,7 +1234,7 @@ emd_converter = LexerConverter([
 #     prep_for_add_xlinks()
 #     current_section_id (as a settable variable)
 #     add_xlinks()
-#     convert_emu_internal_ref()
+#     convert_emu_xref()
 
 def prep_for_add_xlinks(si):
 
@@ -1507,8 +1506,8 @@ def bake_xlinks_stuff():
 
     global xlinks_multisub
     xlinks_multisub = MultiSub([
-        (r'<emu-internal-ref refid="([^"]+)">([^<>]+)</emu-internal-ref>',
-            lambda mo: convert_emu_internal_ref(mo.group(1), mo.group(2))),
+        (r'<emu-xref href="([^"]+)"/>',
+            lambda mo: convert_emu_xref(mo.group(1))),
 
         # 21.1.3.12:
         (r'<emu-external-ref href="([^"]+)" linktext="URL"/>',
@@ -1523,25 +1522,20 @@ def add_xlinks(s):
     s = xlinks_multisub.apply(s)
     return s
 
-def convert_emu_internal_ref(refid, linktext_template):
+def convert_emu_xref(href):
+    assert href[0] == '#'
+    refid = href[1:]
+
     try:
         si = info_for_id_[refid]
-        num = si.dotnum
-        typ = si.type_for_internal_refs
+        linktext = si.dotnum
 
     except KeyError:
-        # XXX
         mo = re.match(r'^(table)-(\d+)$', refid)
         assert mo, refid
         typ = mo.group(1).capitalize()
         num = mo.group(2)
-
-    if linktext_template == 'NUM':
-        linktext = num
-    elif linktext_template == 'TYPE NUM':
         linktext = typ + ' ' + num
-    else:
-        assert 0, linktext_template
 
     return '<a href="#%s">%s</a>' % (refid, linktext)
 

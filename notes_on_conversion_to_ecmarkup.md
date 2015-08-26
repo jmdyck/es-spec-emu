@@ -20,19 +20,6 @@ What do you think?")
 
 ## Additional 'emu' elements I created:
 
-### `<emu-internal-ref>`
-
-The PDF usually makes explicit internal references by section number or
-table number, which the HTML version turns into links.  Since, going
-forward, section numbers will change from draft to draft, I assumed
-that the emu doc should make internal cross-references via element-id,
-so I invented the `<emu-internal-ref>` element. It has one attribute,
-'refid', the id of the thing being referenced. The element's content
-indicates what the text of the resulting link should be -- so far
-it's either "NUM" (for linktext that is just the clause/annex/table
-number) or "TYPE NUM" (for linktext such as "subclause 11.6.2.2" or
-"Annex B" or "Table 42").
-
 ### `<emu-see-also-para>`
 
 The content of all the "See also" paragraphs can be generated based on
@@ -55,9 +42,7 @@ the same. That repetition seemed error-prone to me, so I invented
 `<emu-external-ref>`, where the attribute 'href' gives the URL. I
 also added a 'linktext' attribute, to indicate what the text of the
 generated link should be -- so far, it's always "URL", but you might
-want something else. (Yes, specifying link-text via an attribute is
-inconsistent with `<emu-internal-ref>`'s specifying it via content. I
-couldn't decide.)
+want something else.
 
 ### `<emu-formula>`
 
@@ -171,7 +156,7 @@ its substep (`<ol>` and `<li>`).
 
 I assume that the content of an `<emu-alg>` can include child elements:
  - `<emu-grammar>`      (e.g., for 13.2.5 / group 3 / step 1)
- - `<emu-internal-ref>` (e.g., for 6.2.3.1 / step 6.a)
+ - `<emu-xref>`         (e.g., for 6.2.3.1 / step 6.a)
  - `<emu-external-ref>` (e.g., for 21.1.3.12 / step 8)
 
 Also, there are two places where an `<emu-alg>` contains a `<table>` (or a
