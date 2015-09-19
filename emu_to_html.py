@@ -1204,7 +1204,7 @@ emd_converter = LexerConverter([
         (r'\|(\w+)\|',             r'<span class="nt">\1</span>'),
 
         (r'(<[^<>]+>)',         r'\1'),
-        (r'`([^`]+)`',          r'<code>\1</code>'),
+        (r'`([^`]+)`',          lambda mo: ('<code>' + mo.group(1).replace('\\\\', '\\') + '</code>') ),
         (r'\\([\\*_~`|])',      r'\1'),
         (r'''(?x)
             (

@@ -9004,7 +9004,7 @@ function* enumerate(obj) {
           <p>The components of a combining character sequence are treated as individual Unicode code points even though a user might think of the whole sequence as a single character.</p>
           <emu-note>
             <p>In string literals, regular expression literals, template literals and identifiers, any Unicode code point may also be expressed using Unicode escape sequences that explicitly express a code point's numeric value. Within a comment, such an escape sequence is effectively ignored as part of the comment.</p>
-            <p>ECMAScript differs from the Java programming language in the behaviour of Unicode escape sequences. In a Java program, if the Unicode escape sequence `\u000A`, for example, occurs within a single-line comment, it is interpreted as a line terminator (Unicode code point U+000A is LINE FEED (LF) and therefore the next code point is not part of the comment. Similarly, if the Unicode escape sequence `\u000A` occurs within a string literal in a Java program, it is likewise interpreted as a line terminator, which is not allowed within a string literal&mdash;one must write `\n` instead of `\u000A` to cause a LINE FEED (LF) to be part of the String value of a string literal. In an ECMAScript program, a Unicode escape sequence occurring within a comment is never interpreted and therefore cannot contribute to termination of the comment. Similarly, a Unicode escape sequence occurring within a string literal in an ECMAScript program always contributes to the literal and is never interpreted as a line terminator or as a code point that might terminate the string literal.</p>
+            <p>ECMAScript differs from the Java programming language in the behaviour of Unicode escape sequences. In a Java program, if the Unicode escape sequence `\\u000A`, for example, occurs within a single-line comment, it is interpreted as a line terminator (Unicode code point U+000A is LINE FEED (LF) and therefore the next code point is not part of the comment. Similarly, if the Unicode escape sequence `\\u000A` occurs within a string literal in a Java program, it is likewise interpreted as a line terminator, which is not allowed within a string literal&mdash;one must write `\\n` instead of `\\u000A` to cause a LINE FEED (LF) to be part of the String value of a string literal. In an ECMAScript program, a Unicode escape sequence occurring within a comment is never interpreted and therefore cannot contribute to termination of the comment. Similarly, a Unicode escape sequence occurring within a string literal in an ECMAScript program always contributes to the literal and is never interpreted as a line terminator or as a code point that might terminate the string literal.</p>
           </emu-note>
 
         <!-- es6num="10.1.1" -->
@@ -9333,7 +9333,7 @@ function* enumerate(obj) {
         <h1>Line Terminators</h1>
         <p>Like white space code points, line terminator code points are used to improve source text readability and to separate tokens (indivisible lexical units) from each other. However, unlike white space code points, line terminators have some influence over the behaviour of the syntactic grammar. In general, line terminators may occur between any two tokens, but there are a few places where they are forbidden by the syntactic grammar. Line terminators also affect the process of automatic semicolon insertion (<emu-xref href="#sec-automatic-semicolon-insertion"></emu-xref>). A line terminator cannot occur within any token except a |StringLiteral|, |Template|, or |TemplateSubstitutionTail|. Line terminators may only occur within a |StringLiteral| token as part of a |LineContinuation|.</p>
         <p>A line terminator can occur within a |MultiLineComment| (<emu-xref href="#sec-comments"></emu-xref>) but cannot occur within a |SingleLineComment|.</p>
-        <p>Line terminators are included in the set of white space code points that are matched by the `\s` class in regular expressions.</p>
+        <p>Line terminators are included in the set of white space code points that are matched by the `\\s` class in regular expressions.</p>
         <p>The ECMAScript line terminator code points are listed in <emu-xref href="#table-33"></emu-xref>.</p>
         <emu-table id="table-33" caption="Line Terminator Code Points">
           <table>
@@ -9478,7 +9478,7 @@ function* enumerate(obj) {
           <emu-note>
             <p>This standard specifies specific code point additions: U+0024 (DOLLAR SIGN) and U+005F (LOW LINE) are permitted anywhere in an |IdentifierName|, and the code points U+200C (ZERO WIDTH NON-JOINER) and U+200D (ZERO WIDTH JOINER) are permitted anywhere after the first code point of an |IdentifierName|.</p>
           </emu-note>
-          <p>Unicode escape sequences are permitted in an |IdentifierName|, where they contribute a single Unicode code point to the |IdentifierName|. The code point is expressed by the |HexDigits| of the |UnicodeEscapeSequence| (see <emu-xref href="#sec-literals-string-literals"></emu-xref>). The `\` preceding the |UnicodeEscapeSequence| and the `u` and `{ }` code units, if they appear, do not contribute code points to the |IdentifierName|. A |UnicodeEscapeSequence| cannot be used to put a code point into an |IdentifierName| that would otherwise be illegal. In other words, if a `\` |UnicodeEscapeSequence| sequence were replaced by the |SourceCharacter| it contributes, the result must still be a valid |IdentifierName| that has the exact same sequence of |SourceCharacter| elements as the original |IdentifierName|. All interpretations of |IdentifierName| within this specification are based upon their actual code points regardless of whether or not an escape sequence was used to contribute any particular code point.</p>
+          <p>Unicode escape sequences are permitted in an |IdentifierName|, where they contribute a single Unicode code point to the |IdentifierName|. The code point is expressed by the |HexDigits| of the |UnicodeEscapeSequence| (see <emu-xref href="#sec-literals-string-literals"></emu-xref>). The `\\` preceding the |UnicodeEscapeSequence| and the `u` and `{ }` code units, if they appear, do not contribute code points to the |IdentifierName|. A |UnicodeEscapeSequence| cannot be used to put a code point into an |IdentifierName| that would otherwise be illegal. In other words, if a `\\` |UnicodeEscapeSequence| sequence were replaced by the |SourceCharacter| it contributes, the result must still be a valid |IdentifierName| that has the exact same sequence of |SourceCharacter| elements as the original |IdentifierName|. All interpretations of |IdentifierName| within this specification are based upon their actual code points regardless of whether or not an escape sequence was used to contribute any particular code point.</p>
           <p>Two |IdentifierName| that are canonically equivalent according to the Unicode standard are <em>not</em> equal unless, after replacement of each |UnicodeEscapeSequence|, they are represented by the exact same sequence of code points.</p>
           <h2>Syntax</h2>
           <emu-grammar>
@@ -9542,7 +9542,7 @@ function* enumerate(obj) {
                 IdentifierName IdentifierPart
             </emu-grammar>
             <emu-alg>
-              1. Return the String value consisting of the sequence of code units corresponding to |IdentifierName|. In determining the sequence any occurrences of `\` |UnicodeEscapeSequence| are first replaced with the code point represented by the |UnicodeEscapeSequence| and then the code points of the entire |IdentifierName| are converted to code units by UTF16Encoding (<emu-xref href="#sec-utf16encoding"></emu-xref>) each code point.
+              1. Return the String value consisting of the sequence of code units corresponding to |IdentifierName|. In determining the sequence any occurrences of `\\` |UnicodeEscapeSequence| are first replaced with the code point represented by the |UnicodeEscapeSequence| and then the code points of the entire |IdentifierName| are converted to code units by UTF16Encoding (<emu-xref href="#sec-utf16encoding"></emu-xref>) each code point.
             </emu-alg>
           </emu-clause>
         </emu-clause>
@@ -9560,7 +9560,7 @@ function* enumerate(obj) {
                 BooleanLiteral
             </emu-grammar>
             <emu-note>
-              <p>The |ReservedWord| definitions are specified as literal sequences of specific |SourceCharacter| elements. A code point in a |ReservedWord| cannot be expressed by a `\` |UnicodeEscapeSequence|.</p>
+              <p>The |ReservedWord| definitions are specified as literal sequences of specific |SourceCharacter| elements. A code point in a |ReservedWord| cannot be expressed by a `\\` |UnicodeEscapeSequence|.</p>
             </emu-note>
 
           <!-- es6num="11.6.2.1" -->
@@ -9981,7 +9981,7 @@ function* enumerate(obj) {
             </emu-grammar>
             <p>The definition of the nonterminal |HexDigit| is given in <emu-xref href="#sec-literals-numeric-literals"></emu-xref>. |SourceCharacter| is defined in <emu-xref href="#sec-source-text"></emu-xref>.</p>
             <emu-note>
-              <p>A line terminator code point cannot appear in a string literal, except as part of a |LineContinuation| to produce the empty code points sequence. The proper way to cause a line terminator code point to be part of the String value of a string literal is to use an escape sequence such as `\n` or `\u000A`.</p>
+              <p>A line terminator code point cannot appear in a string literal, except as part of a |LineContinuation| to produce the empty code points sequence. The proper way to cause a line terminator code point to be part of the String value of a string literal is to use an escape sequence such as `\\n` or `\\u000A`.</p>
             </emu-note>
 
           <!-- es6num="11.8.4.1" -->
@@ -10091,7 +10091,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\b`
+                    `\\b`
                   </td>
                   <td>
                     `0x0008`
@@ -10105,7 +10105,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\t`
+                    `\\t`
                   </td>
                   <td>
                     `0x0009`
@@ -10119,7 +10119,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\n`
+                    `\\n`
                   </td>
                   <td>
                     `0x000A`
@@ -10133,7 +10133,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\v`
+                    `\\v`
                   </td>
                   <td>
                     `0x000B`
@@ -10147,7 +10147,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\f`
+                    `\\f`
                   </td>
                   <td>
                     `0x000C`
@@ -10161,7 +10161,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\r`
+                    `\\r`
                   </td>
                   <td>
                     `0x000D`
@@ -10175,7 +10175,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\"`
+                    `\\"`
                   </td>
                   <td>
                     `0x0022`
@@ -10189,7 +10189,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\'`
+                    `\\'`
                   </td>
                   <td>
                     `0x0027`
@@ -10203,7 +10203,7 @@ function* enumerate(obj) {
                 </tr>
                 <tr>
                   <td>
-                    `\\`
+                    `\\\\`
                   </td>
                   <td>
                     `0x005C`
@@ -10212,7 +10212,7 @@ function* enumerate(obj) {
                     REVERSE SOLIDUS
                   </td>
                   <td>
-                    `\`
+                    `\\`
                   </td>
                 </tr>
                </tbody>
@@ -27864,7 +27864,7 @@ Date.parse(x.toLocaleString())
                 [~U] `u` Hex4Digits
                 [+U] `u{` HexDigits `}`
             </emu-grammar>
-            <p copy_to_summary="yes">Each `\u` |TrailSurrogate| for which the choice of associated `u` |LeadSurrogate| is ambiguous shall be associated with the nearest possible `u` |LeadSurrogate| that would otherwise have no corresponding `\u` |TrailSurrogate|.</p>
+            <p copy_to_summary="yes">Each `\\u` |TrailSurrogate| for which the choice of associated `u` |LeadSurrogate| is ambiguous shall be associated with the nearest possible `u` |LeadSurrogate| that would otherwise have no corresponding `\\u` |TrailSurrogate|.</p>
             <emu-grammar>
               LeadSurrogate ::
                 Hex4Digits [match only if the SV of Hex4Digits is in the inclusive range 0xD800 to 0xDBFF]
@@ -28611,7 +28611,7 @@ Date.parse(x.toLocaleString())
                     1. Return _cu_.
               </emu-alg>
               <emu-note>
-                <p>Parentheses of the form `(` |Disjunction| `)` serve both to group the components of the |Disjunction| pattern together and to save the result of the match. The result can be used either in a backreference (`\` followed by a nonzero decimal number), referenced in a replace String, or returned as part of an array from the regular expression matching internal procedure. To inhibit the capturing behaviour of parentheses, use the form `(?:` |Disjunction| `)` instead.</p>
+                <p>Parentheses of the form `(` |Disjunction| `)` serve both to group the components of the |Disjunction| pattern together and to save the result of the match. The result can be used either in a backreference (`\\` followed by a nonzero decimal number), referenced in a replace String, or returned as part of an array from the regular expression matching internal procedure. To inhibit the capturing behaviour of parentheses, use the form `(?:` |Disjunction| `)` instead.</p>
               </emu-note>
               <emu-note>
                 <p>The form `(?=` |Disjunction| `)` specifies a zero-width positive lookahead. In order for it to succeed, the pattern inside |Disjunction| must match at the current position, but the current position is not advanced before matching the sequel. If |Disjunction| can match at the current position in several ways, only the first one is tried. Unlike other regular expression operators, there is no backtracking into a `(?=` form (this unusual behaviour is inherited from Perl). This only matters when the |Disjunction| contains capturing parentheses and the sequel of the pattern contains backreferences to those captures.</p>
@@ -28641,7 +28641,7 @@ Date.parse(x.toLocaleString())
                 <pre>
 /(.*?)a(?!(a+)b\2c)\2(.*)/.exec("baaabaac")
                 </pre>
-                <p>looks for an `a` not immediately followed by some positive number n of `a`'s, a `b`, another n `a`'s (specified by the first `\2`) and a `c`. The second `\2` is outside the negative lookahead, so it matches against *undefined* and therefore always succeeds. The whole expression returns the array:</p>
+                <p>looks for an `a` not immediately followed by some positive number n of `a`'s, a `b`, another n `a`'s (specified by the first `\\2`) and a `c`. The second `\\2` is outside the negative lookahead, so it matches against *undefined* and therefore always succeeds. The whole expression returns the array:</p>
                 <pre>
 ["baaabaac", "ba", undefined, "abaac"]
                 </pre>
@@ -28689,7 +28689,7 @@ Date.parse(x.toLocaleString())
               1. Call CharacterSetMatcher(_A_, *false*) and return its Matcher result.
             </emu-alg>
             <emu-note>
-              <p>An escape sequence of the form `\` followed by a nonzero decimal number _n_ matches the result of the _n_th set of capturing parentheses (see 0). It is an error if the regular expression has fewer than _n_ capturing parentheses. If the regular expression has _n_ or more capturing parentheses but the _n_th one is *undefined* because it has not captured anything, then the backreference always succeeds.</p>
+              <p>An escape sequence of the form `\\` followed by a nonzero decimal number _n_ matches the result of the _n_th set of capturing parentheses (see 0). It is an error if the regular expression has fewer than _n_ capturing parentheses. If the regular expression has _n_ or more capturing parentheses but the _n_th one is *undefined* because it has not captured anything, then the backreference always succeeds.</p>
             </emu-note>
           </emu-clause>
 
@@ -28876,7 +28876,7 @@ Date.parse(x.toLocaleString())
             </emu-alg>
             <p>The definition of &ldquo;the MV of |DecimalIntegerLiteral|&rdquo; is in <emu-xref href="#sec-literals-numeric-literals"></emu-xref>.</p>
             <emu-note>
-              <p>If `\` is followed by a decimal number _n_ whose first digit is not `0`, then the escape sequence is considered to be a backreference. It is an error if _n_ is greater than the total number of left capturing parentheses in the entire regular expression. `\0` represents the &lt;NUL&gt; character and cannot be followed by a decimal digit.</p>
+              <p>If `\\` is followed by a decimal number _n_ whose first digit is not `0`, then the escape sequence is considered to be a backreference. It is an error if _n_ is greater than the total number of left capturing parentheses in the entire regular expression. `\\0` represents the &lt;NUL&gt; character and cannot be followed by a decimal digit.</p>
             </emu-note>
           </emu-clause>
 
@@ -29199,7 +29199,7 @@ Date.parse(x.toLocaleString())
               <p>|ClassRanges| can expand into a single |ClassAtom| and/or ranges of two |ClassAtom| separated by dashes. In the latter case the |ClassRanges| includes all characters between the first |ClassAtom| and the second |ClassAtom|, inclusive; an error occurs if either |ClassAtom| does not represent a single character (for example, if one is \w) or if the first |ClassAtom|'s character value is greater than the second |ClassAtom|'s character value.</p>
             </emu-note>
             <emu-note>
-              <p>Even if the pattern ignores case, the case of the two ends of a range is significant in determining which characters belong to the range. Thus, for example, the pattern `/[E-F]/i` matches only the letters `E`, `F`, `e`, and `f`, while the pattern `/[E-f]/i` matches all upper and lower-case letters in the Unicode Basic Latin block as well as the symbols `[`, `\`, `]`, `^`, `_`, and <code>`</code>.</p>
+              <p>Even if the pattern ignores case, the case of the two ends of a range is significant in determining which characters belong to the range. Thus, for example, the pattern `/[E-F]/i` matches only the letters `E`, `F`, `e`, and `f`, while the pattern `/[E-f]/i` matches all upper and lower-case letters in the Unicode Basic Latin block as well as the symbols `[`, `\\`, `]`, `^`, `_`, and <code>`</code>.</p>
             </emu-note>
             <emu-note>
               <p>A `-` character can be treated literally or it can denote a range. It is treated literally if it is the first or last character of |ClassRanges|, the beginning or end limit of a range specification, or immediately follows a range specification.</p>
@@ -29253,7 +29253,7 @@ Date.parse(x.toLocaleString())
               1. Return the CharSet that is the result of evaluating |CharacterClassEscape|.
             </emu-alg>
             <emu-note>
-              <p>A |ClassAtom| can use any of the escape sequences that are allowed in the rest of the regular expression except for `\b`, `\B`, and backreferences. Inside a |CharacterClass|, `\b` means the backspace character, while `\B` and backreferences raise errors. Using a backreference inside a |ClassAtom| causes an error.</p>
+              <p>A |ClassAtom| can use any of the escape sequences that are allowed in the rest of the regular expression except for `\\b`, `\\B`, and backreferences. Inside a |CharacterClass|, `\\b` means the backspace character, while `\\B` and backreferences raise errors. Using a backreference inside a |ClassAtom| causes an error.</p>
             </emu-note>
           </emu-clause>
         </emu-clause>
@@ -29363,7 +29363,7 @@ Date.parse(x.toLocaleString())
               <p>When the abstract operation EscapeRegExpPattern with arguments _P_ and _F_ is called, the following occurs:</p>
               <emu-alg>
                 1. Let _S_ be a String in the form of a |Pattern| (|Pattern[U]| if _F_ contains `"u"`) equivalent to _P_ interpreted as UTF-16 encoded Unicode code points (<emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>), in which certain code points are escaped as described below. _S_ may or may not be identical to _P_; however, the internal procedure that would result from evaluating _S_ as a |Pattern| (|Pattern[U]| if _F_ contains `"u"`) must behave identically to the internal procedure given by the constructed object's [[RegExpMatcher]] internal slot. Multiple calls to this abstract operation using the same values for _P_ and _F_ must produce identical results.
-                1. The code points `/` or any |LineTerminator| occurring in the pattern shall be escaped in _S_ as necessary to ensure that the String value formed by concatenating the Strings `"/"`, _S_, `"/"`, and _F_ can be parsed (in an appropriate lexical context) as a |RegularExpressionLiteral| that behaves identically to the constructed regular expression. For example, if _P_ is `"/"`, then _S_ could be `"\/"` or `"\u002F"`, among other possibilities, but not `"/"`, because `///` followed by _F_ would be parsed as a |SingleLineComment| rather than a |RegularExpressionLiteral|. If _P_ is the empty String, this specification can be met by letting _S_ be `"(?:)"`.
+                1. The code points `/` or any |LineTerminator| occurring in the pattern shall be escaped in _S_ as necessary to ensure that the String value formed by concatenating the Strings `"/"`, _S_, `"/"`, and _F_ can be parsed (in an appropriate lexical context) as a |RegularExpressionLiteral| that behaves identically to the constructed regular expression. For example, if _P_ is `"/"`, then _S_ could be `"\\/"` or `"\\u002F"`, among other possibilities, but not `"/"`, because `///` followed by _F_ would be parsed as a |SingleLineComment| rather than a |RegularExpressionLiteral|. If _P_ is the empty String, this specification can be met by letting _S_ be `"(?:)"`.
                 1. Return _S_.
               </emu-alg>
             </emu-clause>
@@ -34543,7 +34543,7 @@ my_text = JSON.stringify(a); // This must throw a TypeError.
               </ul>
             </emu-note>
             <emu-note>
-              <p>String values are wrapped in QUOTATION MARK (`"`) code units. The code units `"` and `\` are escaped with `\` prefixes. Control characters code units are replaced with escape sequences `\u`HHHH, or with the shorter forms, `\b` (BACKSPACE), `\f` (FORM FEED), `\n` (LINE FEED), `\r` (CARRIAGE RETURN), `\t` (CHARACTER TABULATION).</p>
+              <p>String values are wrapped in QUOTATION MARK (`"`) code units. The code units `"` and `\\` are escaped with `\\` prefixes. Control characters code units are replaced with escape sequences `\\u`HHHH, or with the shorter forms, `\\b` (BACKSPACE), `\\f` (FORM FEED), `\\n` (LINE FEED), `\\r` (CARRIAGE RETURN), `\\t` (CHARACTER TABULATION).</p>
             </emu-note>
             <emu-note>
               <p>Finite numbers are stringified as if by calling <emu-formula>ToString(_number_)</emu-formula>. *NaN* and Infinity regardless of sign are represented as the String `null`.</p>
