@@ -824,18 +824,15 @@ def handle_emu_grammar_node(emu_grammar):
 
         s = grammar_converter.process(body_xml)
 
-        pn = emu_grammar.parentNode.nodeName
-        if pn in ['emu-clause', 'emu-annex']:
-            indent = emu_grammar.previousSibling.nodeValue
-            put('<div class="gp prod">')
-            put(indent + '  ' + s)
-            put(indent + '</div>')
-        elif pn in ['p', 'li']:
+        if emu_grammar.getAttribute('class') == 'inline':
             put('<span_prod>') # XXX RECONSTRUCTING
             put(s)
             put('</span_prod>')
         else:
-            assert 0, pn
+            indent = emu_grammar.previousSibling.nodeValue
+            put('<div class="gp prod">')
+            put(indent + '  ' + s)
+            put(indent + '</div>')
 
     else:
         # A set of one or more productions
@@ -1094,9 +1091,9 @@ def appears_to_introduce_a_nested_proc(body):
 
 def expand_emu_grammar_text(s):
     return re.sub(
-        r'<emu-grammar>(.+?)</emu-grammar>',
+        r'<emu-grammar class="inline">(.+?)</emu-grammar>',
         lambda mo: (
-            '<span_prod>'
+            '<span_prod>' # XXX RECONSTRUCTING
             + grammar_converter.process(mo.group(1))
             + '</span_prod>'
         ),
