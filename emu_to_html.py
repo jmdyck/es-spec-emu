@@ -824,7 +824,15 @@ def handle_emu_grammar_node(emu_grammar):
 
         s = grammar_converter.process(body_xml)
 
-        if emu_grammar.getAttribute('class') == 'inline':
+        pn = emu_grammar.parentNode.nodeName
+        if pn in ['emu-clause', 'emu-annex']:
+            context = 'block'
+        elif pn in ['p', 'li']:
+            context = 'inline'
+        else:
+            assert 0, pn
+
+        if emu_grammar.getAttribute('class') == 'inline' and context == 'inline':
             put('<span_prod>') # XXX RECONSTRUCTING
             put(s)
             put('</span_prod>')
