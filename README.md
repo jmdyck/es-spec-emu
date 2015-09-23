@@ -1,5 +1,10 @@
+I believe this repo has now served its purpose,
+and I don't expect to do any more commits to it.
+For further development of the ECMAScript spec in ecmarkup,
+see https://github.com/tc39/ecma262/ and/or http://tc39.github.io/ecma262/
+
 # es-spec-emu
-The current (6th edition) ECMAScript language specification,
+The ECMAScript 2015 (= 6th Edition) language specification,
 formatted in [ecmarkup](https://github.com/bterlson/ecmarkup/)
 (with [ecmarkdown](https://github.com/domenic/ecmarkdown)
 and [grammarkdown](https://github.com/rbuckton/grammarkdown)).
