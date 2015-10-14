@@ -832,7 +832,7 @@ def handle_emu_grammar_node(emu_grammar):
         else:
             assert 0, pn
 
-        if emu_grammar.getAttribute('class') == 'inline' and context == 'inline':
+        if context == 'inline':
             put('<span_prod>') # XXX RECONSTRUCTING
             put(s)
             put('</span_prod>')
@@ -1099,7 +1099,7 @@ def appears_to_introduce_a_nested_proc(body):
 
 def expand_emu_grammar_text(s):
     return re.sub(
-        r'<emu-grammar class="inline">(.+?)</emu-grammar>',
+        r'<emu-grammar>(.+?)</emu-grammar>',
         lambda mo: (
             '<span_prod>' # XXX RECONSTRUCTING
             + grammar_converter.process(mo.group(1))
